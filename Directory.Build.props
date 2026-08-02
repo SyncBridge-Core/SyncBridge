@@ -1,0 +1,18 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Language and compiler settings -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Consistent framework baseline -->
+    <TargetFramework>net10.0</TargetFramework>
+
+    <!-- Treat warnings as quality gates -->
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+
+    <!-- Enable modern code analysis -->
+    <AnalysisLevel>latest</AnalysisLevel>
+  </PropertyGroup>
+
+</Project>

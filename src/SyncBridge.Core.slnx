@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../tests/SyncBridge.Core.Tests/SyncBridge.Core.Tests.csproj" Id="fe36bd20-bc6a-43cd-b25c-b2d100e900df" />
+  <Project Path="SyncBridge.Core.Application/SyncBridge.Core.Application.csproj" Id="52d3426a-8361-4fb3-88a1-0ee58b7c0306" />
+  <Project Path="SyncBridge.Core.Domain/SyncBridge.Core.Domain.csproj" Id="35bb2ec5-7380-421b-a038-1b345282d73a" />
+  <Project Path="SyncBridge.Core.Infrastructure/SyncBridge.Core.Infrastructure.csproj" Id="35c111e9-ab7b-4cf1-837f-9e03e7559d78" />
+  <Project Path="SyncBridge.Core/SyncBridge.Core.csproj" />
+</Solution>

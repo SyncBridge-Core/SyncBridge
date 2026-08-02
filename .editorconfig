@@ -1,0 +1,51 @@
+# SyncBridge Core Engineering Standards
+# Repository-wide code style configuration
+
+root = true
+
+[*]
+
+# General formatting
+indent_style = space
+indent_size = 4
+
+# Encoding
+charset = utf-8
+
+# Line endings
+end_of_line = crlf
+
+# Final newline
+insert_final_newline = true
+
+
+[*.cs]
+
+# C# formatting
+
+# Braces
+csharp_new_line_before_open_brace = all
+
+# Namespace style
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# Using directives
+dotnet_sort_system_directives_first = true
+
+
+# Nullable reference type awareness
+dotnet_diagnostic.CS8600.severity = warning
+dotnet_diagnostic.CS8602.severity = warning
+dotnet_diagnostic.CS8603.severity = warning
+
+
+# Naming conventions
+
+dotnet_naming_rule.interfaces_should_begin_with_i.severity = suggestion
+dotnet_naming_rule.interfaces_should_begin_with_i.symbols = interface_symbols
+dotnet_naming_rule.interfaces_should_begin_with_i.style = interface_prefix
+
+
+dotnet_naming_symbols.interface_symbols.applicable_kinds = interface
+
+dotnet_naming_style.interface_prefix.required_prefix = I
