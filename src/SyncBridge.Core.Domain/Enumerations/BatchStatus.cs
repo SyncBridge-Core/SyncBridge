@@ -6,11 +6,8 @@ namespace SyncBridge.Core.Domain.Enumerations;
 public enum BatchStatus
 {
     Created,
-    Prepared,
-    MaterialVerified,
-    EquipmentVerified,
-    InProcess,
-    QualityReview,
-    Completed,
-    Cancelled
+    Ready,
+    InProgress,
+    Exception,
+    Completed
 }

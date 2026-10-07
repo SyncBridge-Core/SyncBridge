@@ -12,40 +12,60 @@ public sealed class ProductionOrder
     /// <summary>
     /// Initializes a new production order in the planned state.
     /// </summary>
+    /// <param name="productionOrderId">The production-order identity.</param>
     /// <param name="productionOrderNumber">The production order identifier.</param>
     /// <param name="productCode">The product code.</param>
-    /// <param name="description">The production order description.</param>
-    /// <param name="plannedStart">The planned start date and time.</param>
-    /// <param name="plannedEnd">The planned end date and time.</param>
+    /// <param name="productName">The product name used for display and reporting.</param>
+    /// <param name="recipeId">The selected approved Recipe identity.</param>
+    /// <param name="quantity">The planned manufacturing quantity.</param>
+    /// <param name="createdAt">The production-order creation timestamp.</param>
     public ProductionOrder(
+        ProductionOrderId productionOrderId,
         ProductionOrderNumber productionOrderNumber,
         ProductCode productCode,
-        string description,
-        DateTimeOffset plannedStart,
-        DateTimeOffset plannedEnd)
+        string productName,
+        RecipeId recipeId,
+        decimal quantity,
+        DateTimeOffset createdAt)
     {
+        ArgumentNullException.ThrowIfNull(productionOrderId);
         ArgumentNullException.ThrowIfNull(productionOrderNumber);
         ArgumentNullException.ThrowIfNull(productCode);
+        ArgumentNullException.ThrowIfNull(recipeId);
 
-        if (string.IsNullOrWhiteSpace(description))
-        {
-            throw new ArgumentException("Description is required.", nameof(description));
-        }
-
-        if (plannedStart >= plannedEnd)
+        if (productionOrderId.Value == Guid.Empty)
         {
             throw new ArgumentException(
-                "Planned start must be earlier than planned end.",
-                nameof(plannedStart));
+                "Production-order identity is required.",
+                nameof(productionOrderId));
         }
 
+        if (string.IsNullOrWhiteSpace(productName))
+        {
+            throw new ArgumentException("Product name is required.", nameof(productName));
+        }
+
+        if (quantity <= 0)
+        {
+            throw new ArgumentOutOfRangeException(
+                nameof(quantity),
+                "Production-order quantity must be greater than zero.");
+        }
+
+        ProductionOrderId = productionOrderId;
         ProductionOrderNumber = productionOrderNumber;
         ProductCode = productCode;
-        Description = description;
+        ProductName = productName;
+        RecipeId = recipeId;
+        Quantity = quantity;
         ProductionOrderStatus = ProductionOrderStatus.Planned;
-        PlannedStart = plannedStart;
-        PlannedEnd = plannedEnd;
+        CreatedAt = createdAt;
     }
+
+    /// <summary>
+    /// Gets the production-order identity.
+    /// </summary>
+    public ProductionOrderId ProductionOrderId { get; }
 
     /// <summary>
     /// Gets the production order identifier.
@@ -58,9 +78,19 @@ public sealed class ProductionOrder
     public ProductCode ProductCode { get; private set; }
 
     /// <summary>
-    /// Gets the production order description.
+    /// Gets the product name used for display and reporting.
     /// </summary>
-    public string Description { get; private set; }
+    public string ProductName { get; }
+
+    /// <summary>
+    /// Gets the selected approved Recipe identity.
+    /// </summary>
+    public RecipeId RecipeId { get; }
+
+    /// <summary>
+    /// Gets the planned manufacturing quantity.
+    /// </summary>
+    public decimal Quantity { get; }
 
     /// <summary>
     /// Gets the current production order status.
@@ -68,14 +98,9 @@ public sealed class ProductionOrder
     public ProductionOrderStatus ProductionOrderStatus { get; private set; }
 
     /// <summary>
-    /// Gets the planned start date and time.
+    /// Gets the production-order creation timestamp.
     /// </summary>
-    public DateTimeOffset PlannedStart { get; private set; }
-
-    /// <summary>
-    /// Gets the planned end date and time.
-    /// </summary>
-    public DateTimeOffset PlannedEnd { get; private set; }
+    public DateTimeOffset CreatedAt { get; }
 
     /// <summary>
     /// Releases the planned production order.

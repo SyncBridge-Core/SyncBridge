@@ -1,0 +1,11 @@
+  SyncBridge.Core.Domain -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Domain\bin\Debug\net10.0\SyncBridge.Core.Domain.dll
+  SyncBridge.Core.Application -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\bin\Debug\net10.0\SyncBridge.Core.Application.dll
+  SyncBridge.Core -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core\bin\Debug\net10.0\SyncBridge.Core.dll
+  SyncBridge.Core.Infrastructure -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\bin\Debug\net10.0\SyncBridge.Core.Infrastructure.dll
+  SyncBridge.Core.Tests -> C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:11.01
