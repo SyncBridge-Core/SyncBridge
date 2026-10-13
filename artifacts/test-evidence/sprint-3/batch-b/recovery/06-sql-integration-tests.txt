@@ -1,0 +1,29 @@
+Command: dotnet test tests\SyncBridge.Core.Tests\SyncBridge.Core.Tests.csproj --no-restore --no-build --verbosity normal --filter FullyQualifiedName~SqlServerRecoveryIntegrationTests -m:1
+Execution context: approved unsandboxed Windows process with process-local SyncBridgeCore configuration.
+
+Result:
+- Passed: 6
+- Failed: 0
+- Skipped: 0
+- Build warnings/errors: 0/0
+
+Passing tests:
+1. DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory
+2. RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer
+3. BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence
+4. BatchRepository_ReconstructsAllFiveStatesAndRichEvidence
+5. SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges
+6. DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite
+
+Coverage demonstrated:
+- Recipe and ProductionOrder repository round trips.
+- Batch add/load, stable identifiers, stable surrogate, and no load-time evidence generation.
+- Created, Ready, InProgress, Exception, and Completed reconstruction.
+- Ordered execution, material/equipment verification evidence, signature evidence, deviations, and canonical audit IDs.
+- Duplicate business code, composite key, missing FK, required field, restricted delete, string length, unique DeviationCode, and invalid signature target rejection.
+- One-save multi-record persistence and induced-failure rollback with no partial marker row.
+- Human-readable DeviationCode and stable DeviationId.
+- Exact 180 UTF-16-unit BMP/supplementary Unicode audit identifier and 257-unit rejection without truncation.
+- DB-only optional values retained across supported no-tracking load operations.
+
+Isolation: non-seed fixtures ran in rollback-scoped transactions. Final database counts confirmed no integration manufacturing residue.

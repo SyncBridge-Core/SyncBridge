@@ -1,0 +1,13 @@
+Reviewed artifact: EF Core idempotent SQL generated from 20261013010705_InitialCreate.
+Generated SQL size: 18,837 bytes.
+
+Review results:
+- Exactly 15 dbo CREATE TABLE statements are represented.
+- One __EFMigrationsHistory framework metadata table is represented separately.
+- All approved primary keys, foreign keys, unique constraints/indexes, ordinary indexes, nullability, precision, scale, and configured SQL types are present in the generated model/migration.
+- All 23 foreign keys use NO ACTION/Restrict behavior; no cascade delete is generated.
+- DBDS-AMD-001 verified: Deviation.DeviationCode is nvarchar(40), required, with UQ_Deviation_DeviationCode.
+- DBDS-AMD-002 verified: AuditEvent.AffectedEntityId is nvarchar(256), required.
+- No unsupported manufacturing table is generated.
+
+This is source and generated-SQL inspection only. SQL Server metadata verification was not possible because preflight connectivity failed.

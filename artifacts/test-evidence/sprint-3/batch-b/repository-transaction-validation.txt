@@ -1,0 +1,30 @@
+Implemented contracts:
+- IProductionOrderRepository
+- IRecipeRepository
+- IBatchRepository
+- IApplicationUnitOfWork
+
+Implemented assemblers:
+- ProductionOrderAssembler
+- RecipeAssembler
+- BatchAggregateAssembler
+
+Offline validation:
+- Infrastructure registrations are scoped for DbContext, all three repositories, unit of work, and development seeder.
+- Unit of work commits through one shared scoped SyncBridgeDbContext and one SaveChangesAsync call.
+- AuditEvent and ElectronicSignature modifications/deletions are rejected before database access.
+- Ordinary modification/deletion of an originally Completed Batch is rejected before database access.
+- Repository loads use AsNoTracking and explicit queries; lazy loading and proxies are not used.
+- Domain and Application contain zero EF Core/UseSqlServer references.
+
+Automated Batch B tests:
+- AddSyncBridgePersistence_RegistersRepositoriesAndUnitOfWorkAsScoped
+- UnitOfWork_RejectsAuditEventUpdatesBeforeDatabaseAccess
+- UnitOfWork_RejectsCompletedBatchUpdatesBeforeDatabaseAccess
+
+Not demonstrated because SQL Server preflight failed:
+- SQL round trips and constraint enforcement
+- Atomic multi-record rollback under a database fault
+- Stable surrogate round trips
+- Database-only optional-field preservation during a persisted update
+- Complete aggregate SQL integration loading

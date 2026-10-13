@@ -1,0 +1,29 @@
+WP-6 Sprint 3 Task 3 - EF Model Metadata Verification
+
+Verification method:
+- Construct SyncBridgeDbContext with SQL Server options and a non-routable, credential-free placeholder connection string.
+- Inspect EF Core relational model metadata without opening a database connection.
+- Execute the ten tests in PersistenceModelTests.
+
+Model inventory:
+- dbo.AppUser
+- dbo.Recipe
+- dbo.RecipeStep
+- dbo.RecipeMaterialRequirement
+- dbo.RecipeEquipmentRequirement
+- dbo.Material
+- dbo.Equipment
+
+Verified model rules:
+- Exactly seven mapped entity types and exactly seven dbo tables.
+- AppUser: PK_AppUser; UserId nvarchar(64); UserName nvarchar(100), required and unique through UQ_AppUser_UserName; DisplayName nvarchar(100), required; IsActive bit, required.
+- Recipe: PK_Recipe; RecipeId uniqueidentifier; RecipeCode nvarchar(40), required and unique through UQ_Recipe_RecipeCode; Name nvarchar(160), required; Version nvarchar(32), required; IsApproved bit, required.
+- RecipeStep: PK_RecipeStep; RecipeStepId uniqueidentifier; RecipeId uniqueidentifier; StepNumber int; Name nvarchar(160), required; Instructions nvarchar(2000), required; RequiresSignature bit; unique UQ_RecipeStep_Recipe_StepNumber on RecipeId and StepNumber; FK_RecipeStep_Recipe with restricted delete.
+- RecipeMaterialRequirement: composite PK_RecipeMaterialRequirement on RecipeId and MaterialId; both columns uniqueidentifier; RequiredQuantity nullable decimal(18,3); FK_RecipeMaterialRequirement_Recipe and FK_RecipeMaterialRequirement_Material with restricted delete; IX_RecipeMaterialRequirement_Material supports the Material foreign key.
+- RecipeEquipmentRequirement: composite PK_RecipeEquipmentRequirement on RecipeId and EquipmentId; both columns uniqueidentifier; FK_RecipeEquipmentRequirement_Recipe and FK_RecipeEquipmentRequirement_Equipment with restricted delete; IX_RecipeEquipmentRequirement_Equipment supports the Equipment foreign key.
+- Material: PK_Material; MaterialId uniqueidentifier; MaterialCode nvarchar(40), required and unique through UQ_Material_MaterialCode; Name nvarchar(160), required.
+- Equipment: PK_Equipment; EquipmentId uniqueidentifier; EquipmentCode nvarchar(40), required and unique through UQ_Equipment_EquipmentCode; Name nvarchar(160), required; CalibrationDueDate nullable date.
+- Guid primary-key properties are configured ValueGeneratedNever.
+- No redundant RecipeId index is added where the composite key or unique index already supplies the required leading-key coverage.
+
+Result: 10 passed, 0 failed, 0 skipped.

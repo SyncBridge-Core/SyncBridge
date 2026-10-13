@@ -1,0 +1,41 @@
+WP-6 Sprint 3 Task 3 - Source and Change Inventory
+
+Created Infrastructure persistence source:
+- src/SyncBridge.Core.Infrastructure/Persistence/SyncBridgeDbContext.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/PersistenceServiceCollectionExtensions.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Rows/AppUserRow.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Rows/RecipeRow.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Rows/RecipeStepRow.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Rows/RecipeMaterialRequirementRow.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Rows/RecipeEquipmentRequirementRow.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Rows/MaterialRow.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Rows/EquipmentRow.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Configurations/AppUserConfiguration.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Configurations/RecipeConfiguration.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Configurations/RecipeStepConfiguration.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Configurations/RecipeMaterialRequirementConfiguration.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Configurations/RecipeEquipmentRequirementConfiguration.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Configurations/MaterialConfiguration.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Configurations/EquipmentConfiguration.cs
+
+Created tests:
+- tests/SyncBridge.Core.Tests/PersistenceModelTests.cs
+
+Modified test project:
+- tests/SyncBridge.Core.Tests/SyncBridge.Core.Tests.csproj
+
+Created documentation and evidence:
+- docs/sprint-3/Sprint3_Task3_Completion_Report.md
+- artifacts/test-evidence/sprint-3/task-3/build-output.txt
+- artifacts/test-evidence/sprint-3/task-3/test-output.txt
+- artifacts/test-evidence/sprint-3/task-3/ef-model-metadata-verification.txt
+- artifacts/test-evidence/sprint-3/task-3/source-change-inventory.txt
+- artifacts/test-evidence/sprint-3/task-3/git-diff-status-summary.txt
+
+Scope checks:
+- No Domain source was modified.
+- No Application source was modified.
+- No Presentation source was modified.
+- No ProductionOrder, Batch, execution, verification, deviation, signature, or audit mapping was added.
+- No repository or unit-of-work implementation was added.
+- No migration, SQL script, schema creation, seed data, authentication, service, UI, REST, or reporting implementation was added.

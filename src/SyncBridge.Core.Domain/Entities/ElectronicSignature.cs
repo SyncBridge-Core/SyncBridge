@@ -4,31 +4,167 @@ using SyncBridge.Core.Domain.ValueObjects;
 namespace SyncBridge.Core.Domain.Entities;
 
 /// <summary>
-/// Represents an electronic signature applied to a production batch.
+/// Represents immutable electronic-signature evidence for a controlled Batch record.
 /// </summary>
 public sealed class ElectronicSignature
 {
+    /// <summary>
+    /// Initializes electronic-signature evidence.
+    /// </summary>
+    /// <param name="electronicSignatureId">The signature identity.</param>
+    /// <param name="batchNumber">The associated Batch identity.</param>
+    /// <param name="relatedRecordType">The signed controlled-record type.</param>
+    /// <param name="relatedRecordId">The signed controlled-record identity.</param>
+    /// <param name="operatorId">The signing operator identity.</param>
+    /// <param name="meaning">The meaning attributed to the signature.</param>
+    /// <param name="signedAt">The signature timestamp.</param>
     public ElectronicSignature(
+        ElectronicSignatureId electronicSignatureId,
         BatchNumber batchNumber,
+        RelatedRecordType relatedRecordType,
+        RelatedRecordId relatedRecordId,
         OperatorId operatorId,
-        ElectronicSignatureMeaning electronicSignatureMeaning,
-        DateTimeOffset signedAt,
-        string? comment)
+        ElectronicSignatureMeaning meaning,
+        DateTimeOffset signedAt)
     {
+        ArgumentNullException.ThrowIfNull(electronicSignatureId);
+        ArgumentNullException.ThrowIfNull(batchNumber);
+        ArgumentNullException.ThrowIfNull(relatedRecordType);
+        ArgumentNullException.ThrowIfNull(relatedRecordId);
+        ArgumentNullException.ThrowIfNull(operatorId);
+
+        if (!Enum.IsDefined(meaning))
+        {
+            throw new ArgumentOutOfRangeException(nameof(meaning));
+        }
+
+        ElectronicSignatureId = electronicSignatureId;
         BatchNumber = batchNumber;
+        RelatedRecordType = relatedRecordType;
+        RelatedRecordId = relatedRecordId;
         OperatorId = operatorId;
-        ElectronicSignatureMeaning = electronicSignatureMeaning;
+        Meaning = meaning;
         SignedAt = signedAt;
-        Comment = comment;
+        AuditEvidence = AuditEvent.Create(
+            batchNumber,
+            operatorId,
+            AuditEventType.ElectronicSignatureApplied,
+            nameof(ElectronicSignature),
+            electronicSignatureId.Value,
+            signedAt,
+            meaning.ToString(),
+            $"Signed {relatedRecordType.Value} {relatedRecordId.Value}");
     }
 
-    public BatchNumber BatchNumber { get; private set; }
+    private ElectronicSignature(
+        ElectronicSignatureId electronicSignatureId,
+        BatchNumber batchNumber,
+        RelatedRecordType relatedRecordType,
+        RelatedRecordId relatedRecordId,
+        OperatorId operatorId,
+        ElectronicSignatureMeaning meaning,
+        DateTimeOffset signedAt,
+        AuditEvent auditEvidence)
+    {
+        ArgumentNullException.ThrowIfNull(electronicSignatureId);
+        ArgumentNullException.ThrowIfNull(batchNumber);
+        ArgumentNullException.ThrowIfNull(relatedRecordType);
+        ArgumentNullException.ThrowIfNull(relatedRecordId);
+        ArgumentNullException.ThrowIfNull(operatorId);
+        ArgumentNullException.ThrowIfNull(auditEvidence);
 
-    public OperatorId OperatorId { get; private set; }
+        if (!Enum.IsDefined(meaning))
+        {
+            throw new ArgumentOutOfRangeException(nameof(meaning));
+        }
 
-    public ElectronicSignatureMeaning ElectronicSignatureMeaning { get; private set; }
+        if (relatedRecordType != RelatedRecordType.BatchStepExecution)
+        {
+            throw new ArgumentException(
+                "Only BatchStepExecution signatures are supported.",
+                nameof(relatedRecordType));
+        }
 
-    public DateTimeOffset SignedAt { get; private set; }
+        if (auditEvidence.BatchNumber != batchNumber ||
+            auditEvidence.OperatorId != operatorId ||
+            auditEvidence.Action != AuditEventType.ElectronicSignatureApplied ||
+            auditEvidence.AffectedEntity != nameof(ElectronicSignature) ||
+            auditEvidence.OccurredAt != signedAt ||
+            auditEvidence.AffectedEntityId != electronicSignatureId.Value)
+        {
+            throw new ArgumentException(
+                "The audit evidence does not match the electronic signature.",
+                nameof(auditEvidence));
+        }
 
-    public string? Comment { get; private set; }
+        ElectronicSignatureId = electronicSignatureId;
+        BatchNumber = batchNumber;
+        RelatedRecordType = relatedRecordType;
+        RelatedRecordId = relatedRecordId;
+        OperatorId = operatorId;
+        Meaning = meaning;
+        SignedAt = signedAt;
+        AuditEvidence = auditEvidence;
+    }
+
+    internal static ElectronicSignature Rehydrate(
+        ElectronicSignatureId electronicSignatureId,
+        BatchNumber batchNumber,
+        RelatedRecordType relatedRecordType,
+        RelatedRecordId relatedRecordId,
+        OperatorId operatorId,
+        ElectronicSignatureMeaning meaning,
+        DateTimeOffset signedAt,
+        AuditEvent auditEvidence)
+    {
+        return new ElectronicSignature(
+            electronicSignatureId,
+            batchNumber,
+            relatedRecordType,
+            relatedRecordId,
+            operatorId,
+            meaning,
+            signedAt,
+            auditEvidence);
+    }
+
+    /// <summary>
+    /// Gets the signature identity.
+    /// </summary>
+    public ElectronicSignatureId ElectronicSignatureId { get; }
+
+    /// <summary>
+    /// Gets the associated Batch identity.
+    /// </summary>
+    public BatchNumber BatchNumber { get; }
+
+    /// <summary>
+    /// Gets the signed controlled-record type.
+    /// </summary>
+    public RelatedRecordType RelatedRecordType { get; }
+
+    /// <summary>
+    /// Gets the signed controlled-record identity.
+    /// </summary>
+    public RelatedRecordId RelatedRecordId { get; }
+
+    /// <summary>
+    /// Gets the signing operator identity.
+    /// </summary>
+    public OperatorId OperatorId { get; }
+
+    /// <summary>
+    /// Gets the meaning attributed to the signature.
+    /// </summary>
+    public ElectronicSignatureMeaning Meaning { get; }
+
+    /// <summary>
+    /// Gets the signature timestamp.
+    /// </summary>
+    public DateTimeOffset SignedAt { get; }
+
+    /// <summary>
+    /// Gets the immutable audit evidence produced for this signature.
+    /// </summary>
+    public AuditEvent AuditEvidence { get; }
 }

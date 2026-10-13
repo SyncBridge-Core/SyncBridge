@@ -1,0 +1,8 @@
+Command: dotnet test src\SyncBridge.Core.slnx --no-restore --no-build --verbosity minimal -m:1
+Execution note: The restricted sandbox stalled during test discovery, so the approved dotnet test command was rerun outside that sandbox against the same built binaries.
+
+Passed! - Failed: 0, Passed: 191, Skipped: 0, Total: 191, Duration: 3 s
+
+Baseline retained: 188 tests.
+Batch B additions: 3 tests.
+SQL Server integration tests: Not executed; the approved localhost SQL Server target was unreachable during mandatory preflight.

@@ -1,0 +1,17 @@
+Actual SQL Server metadata reconciled to the amended DBDS:
+
+- Exactly 15 approved core dbo tables: PASS
+- Unsupported core tables: none
+- Composite primary keys on both Recipe requirement tables: PASS
+- All 23 FK delete actions NO_ACTION: PASS
+- Approved unique and nonunique indexes: PASS
+- ProductionOrder.Quantity decimal(18,3): PASS
+- RecipeMaterialRequirement.RequiredQuantity decimal(18,3) nullable: PASS
+- Manufacturing timestamps datetimeoffset(7): PASS
+- Deviation.DeviationCode nvarchar(40) NOT NULL and unique: PASS
+- AuditEvent.AffectedEntityId nvarchar(256) NOT NULL: PASS
+- Batch has no Quantity or UnitOfMeasure column: PASS
+- No unapproved trigger, stored procedure, or view: PASS
+- EF history is framework metadata, not a core manufacturing table.
+
+Result: no DBDS mismatch detected.

@@ -1,0 +1,33 @@
+Read-only SQL Server metadata verification against SyncBridgeCore:
+
+- Core dbo tables: 15
+- Primary keys: 15
+- Foreign keys: 23
+- Foreign keys with NO_ACTION/restricted delete: 23
+- Unique non-primary indexes: 11
+- Nonunique indexes: 18
+- datetimeoffset(7) columns: 12
+- Batch.Quantity/Batch.UnitOfMeasure columns: 0
+- User triggers: 0
+- User stored procedures: 0
+- User views: 0
+- Applied migrations: 1
+
+Tables:
+- AppUser
+- AuditEvent
+- Batch
+- BatchStepExecution
+- Deviation
+- ElectronicSignature
+- Equipment
+- EquipmentVerification
+- Material
+- MaterialVerification
+- ProductionOrder
+- Recipe
+- RecipeEquipmentRequirement
+- RecipeMaterialRequirement
+- RecipeStep
+
+Detailed metadata queries also verified every deployed column's type, length, precision, scale, and nullability; every PK/composite PK; every named index and indexed-column order; and all named FK parent/referenced tables.

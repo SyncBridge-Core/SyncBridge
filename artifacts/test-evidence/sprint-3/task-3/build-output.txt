@@ -1,0 +1,21 @@
+WP-6 Sprint 3 Task 3 - Sanitized Build Evidence
+Command: dotnet build src\SyncBridge.Core.slnx --no-restore --verbosity minimal
+Exit code: 0
+
+Projects built:
+- SyncBridge.Core.Domain
+- SyncBridge.Core.Application
+- SyncBridge.Core.Infrastructure
+- SyncBridge.Core
+- SyncBridge.Core.Tests
+
+Build succeeded.
+Warnings: 0
+Errors: 0
+Elapsed time: 00:00:05.93
+
+Task-scoped formatting verification:
+Command: dotnet format src\SyncBridge.Core.slnx --verify-no-changes --no-restore --include src\SyncBridge.Core.Infrastructure\Persistence tests\SyncBridge.Core.Tests\PersistenceModelTests.cs --verbosity minimal
+Exit code: 0
+
+Note: A repository-wide formatting check also inspected pre-existing files and reported unrelated baseline line-ending, encoding, and import-order findings. No unrelated file was modified. The Task 3 source set was formatted and independently verified as shown above.

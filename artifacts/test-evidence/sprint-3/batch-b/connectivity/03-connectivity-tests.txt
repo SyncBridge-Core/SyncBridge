@@ -1,0 +1,25 @@
+All queries were read-only and executed in master. Login identity was confirmed but sanitized from this evidence.
+
+sqlcmd outside restricted sandbox:
+- lpc:localhost: exit 0; Shared memory; local default instance; master.
+- lpc:.: exit 0; Shared memory; local default instance; master.
+- (local): exit 0; local default instance; master.
+- localhost: exit 0; Shared memory; local default instance; master.
+- tcp:localhost,1433: exit 1; bounded timeout.
+- tcp:127.0.0.1,1434: exit 0; TCP; local default instance; master.
+
+.NET Microsoft.Data.SqlClient inside restricted sandbox:
+- localhost: failed; provider could not open a connection.
+- tcp:127.0.0.1,1434: failed; TCP Provider reported access denied.
+
+.NET Microsoft.Data.SqlClient outside restricted sandbox:
+- localhost: connected successfully with Windows authentication.
+- tcp:127.0.0.1,1434: connected successfully with Windows authentication.
+- Current database: master.
+- SyncBridgeCore exists: no.
+- Current approved identity has CREATE ANY DATABASE permission: yes.
+
+SSMS protocol comparison:
+- The read-only active-session query returned no active SSMS connection.
+- Therefore an existing SSMS transport could not be compared directly.
+- The successful local sqlcmd/.NET endpoint uses Shared Memory when addressed as localhost outside the sandbox.

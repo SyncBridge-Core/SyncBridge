@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f6f9ac56-2e11-4b58-bab0-59798e22252d" name="Carlos@SB-DEV-01 2026-10-05 20:48:57" runUser="SB-DEV-01\Carlos" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-05T20:48:57.4349256-04:00" queuing="2026-10-05T20:48:57.4349277-04:00" start="2026-10-05T20:48:55.3547755-04:00" finish="2026-10-05T20:48:57.5371113-04:00" />
+  <TestSettings name="default" id="acb2de81-66ee-4de2-b0df-18c247ea79e6">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-05_20_48_57" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="28a8a129-bac4-41f9-9c90-c2d68c86d86c" testId="f41494c2-daec-24f4-9814-f5b0ddffe14f" testName="SyncBridge.Core.Tests.BatchLifecycleTests.ResumeProcessing_WhenInException_SetsStatusToInProgress" computerName="SB-DEV-01" duration="00:00:00.0001823" startTime="2026-10-05T20:48:57.3434733-04:00" endTime="2026-10-05T20:48:57.3435856-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28a8a129-bac4-41f9-9c90-c2d68c86d86c" />
+    <UnitTestResult executionId="b1046b44-b598-4d70-bb9b-1b446dc84b85" testId="bc383172-84f5-744c-7381-e6d999358e84" testName="SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenCreated_ThrowsInvalidTransition" computerName="SB-DEV-01" duration="00:00:00.0001832" startTime="2026-10-05T20:48:57.3451431-04:00" endTime="2026-10-05T20:48:57.3452282-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1046b44-b598-4d70-bb9b-1b446dc84b85" />
+    <UnitTestResult executionId="4121ae52-e4c7-41ef-bd34-eb3144310074" testId="8434ce17-6c9a-16f5-968f-4dc77e170c0d" testName="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenCreated_ThrowsInvalidTransition" computerName="SB-DEV-01" duration="00:00:00.0004994" startTime="2026-10-05T20:48:57.2943774-04:00" endTime="2026-10-05T20:48:57.2944453-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4121ae52-e4c7-41ef-bd34-eb3144310074" />
+    <UnitTestResult executionId="a589b972-04c0-4923-8278-b232cdbc83f5" testId="45ee4ff1-e72e-31ca-e20a-48ac0e91b4f8" testName="SyncBridge.Core.Tests.BatchLifecycleTests.LifecycleMethods_WhenCompleted_RejectAllFurtherTransitions" computerName="SB-DEV-01" duration="00:00:00.0071810" startTime="2026-10-05T20:48:57.2937530-04:00" endTime="2026-10-05T20:48:57.2939457-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a589b972-04c0-4923-8278-b232cdbc83f5" />
+    <UnitTestResult executionId="a3659295-b2a0-4115-98ba-62804cf14e73" testId="91b688b5-ca61-ea73-e74e-545e7789bdae" testName="SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenCreated_ThrowsInvalidTransition" computerName="SB-DEV-01" duration="00:00:00.0001706" startTime="2026-10-05T20:48:57.2949892-04:00" endTime="2026-10-05T20:48:57.2950626-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3659295-b2a0-4115-98ba-62804cf14e73" />
+    <UnitTestResult executionId="b0df3ccd-4597-473f-b728-15baba5f476c" testId="8c5ef086-6e92-a484-ea88-91c91e631f83" testName="SyncBridge.Core.Tests.BatchLifecycleTests.MarkReady_WhenCreated_SetsStatusToReady" computerName="SB-DEV-01" duration="00:00:00.0002008" startTime="2026-10-05T20:48:57.2952015-04:00" endTime="2026-10-05T20:48:57.2955681-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0df3ccd-4597-473f-b728-15baba5f476c" />
+    <UnitTestResult executionId="06175c58-cfcb-4048-8ff6-4daa5d412e32" testId="eba87d29-e6ac-ab24-50cc-2309e62ec958" testName="SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenInProgress_SetsStatusToException" computerName="SB-DEV-01" duration="00:00:00.0002370" startTime="2026-10-05T20:48:57.2945877-04:00" endTime="2026-10-05T20:48:57.2946471-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06175c58-cfcb-4048-8ff6-4daa5d412e32" />
+    <UnitTestResult executionId="35973d29-15f4-4ce6-b2d5-dfc73d6e54e0" testId="4d0de791-5d7a-f698-4484-c31fc2847944" testName="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInProgress_SetsStatusToCompleted" computerName="SB-DEV-01" duration="00:00:00.0002593" startTime="2026-10-05T20:48:57.2947914-04:00" endTime="2026-10-05T20:48:57.2948498-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35973d29-15f4-4ce6-b2d5-dfc73d6e54e0" />
+    <UnitTestResult executionId="44457826-0ee8-4bcd-a2b1-3a2ae5224475" testId="0514327d-c1a0-275a-cf66-6f1f108fed9e" testName="SyncBridge.Core.Tests.BatchLifecycleTests.ExceptionLifecycle_ResumesAndReachesCompleted" computerName="SB-DEV-01" duration="00:00:00.0001455" startTime="2026-10-05T20:48:57.3454697-04:00" endTime="2026-10-05T20:48:57.3455572-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44457826-0ee8-4bcd-a2b1-3a2ae5224475" />
+    <UnitTestResult executionId="fa9965f9-1819-4798-8ccf-3b0301197134" testId="844f3c8e-2f77-86f9-874c-c4d4fb9f77fd" testName="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInException_ThrowsInvalidTransition" computerName="SB-DEV-01" duration="00:00:00.0004012" startTime="2026-10-05T20:48:57.3447288-04:00" endTime="2026-10-05T20:48:57.3449637-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa9965f9-1819-4798-8ccf-3b0301197134" />
+    <UnitTestResult executionId="d63797c4-6152-4e46-a4d3-5b8986af4d6b" testId="e487a04a-9d7c-6398-4b1e-a25dd0c1f274" testName="SyncBridge.Core.Tests.BatchLifecycleTests.Constructor_SetsStatusToCreated" computerName="SB-DEV-01" duration="00:00:00.0004003" startTime="2026-10-05T20:48:57.3441303-04:00" endTime="2026-10-05T20:48:57.3441994-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d63797c4-6152-4e46-a4d3-5b8986af4d6b" />
+    <UnitTestResult executionId="a519dd77-bb1f-403a-81b8-24697038d20f" testId="db764415-d4b8-0352-6a6c-92b5d14b0507" testName="SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenReady_ThrowsInvalidTransition" computerName="SB-DEV-01" duration="00:00:00.0092312" startTime="2026-10-05T20:48:57.2432592-04:00" endTime="2026-10-05T20:48:57.2646599-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a519dd77-bb1f-403a-81b8-24697038d20f" />
+    <UnitTestResult executionId="e8f82fd8-b4a7-42d7-ba3b-4d4be3f063f7" testId="080b30a5-63f6-07c1-c252-f4a4f7aae700" testName="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenReady_ThrowsInvalidTransition" computerName="SB-DEV-01" duration="00:00:00.0003687" startTime="2026-10-05T20:48:57.2926925-04:00" endTime="2026-10-05T20:48:57.2928034-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8f82fd8-b4a7-42d7-ba3b-4d4be3f063f7" />
+    <UnitTestResult executionId="55388a3a-31db-4791-b923-bfe7f439d4ca" testId="cff25592-a0dc-1331-f8ec-bb01b3321b9d" testName="SyncBridge.Core.Tests.BatchLifecycleTests.NormalLifecycle_ReachesCompleted" computerName="SB-DEV-01" duration="00:00:00.0005546" startTime="2026-10-05T20:48:57.2941537-04:00" endTime="2026-10-05T20:48:57.2942093-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55388a3a-31db-4791-b923-bfe7f439d4ca" />
+    <UnitTestResult executionId="524944fd-bf7d-483a-bb17-70afb7f8834b" testId="f5b423b4-32d9-fcc9-6edc-6c9659f9c622" testName="SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenReady_SetsStatusToInProgress" computerName="SB-DEV-01" duration="00:00:00.0003468" startTime="2026-10-05T20:48:57.3443716-04:00" endTime="2026-10-05T20:48:57.3445319-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="524944fd-bf7d-483a-bb17-70afb7f8834b" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.NormalLifecycle_ReachesCompleted" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="cff25592-a0dc-1331-f8ec-bb01b3321b9d">
+      <Execution id="55388a3a-31db-4791-b923-bfe7f439d4ca" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="NormalLifecycle_ReachesCompleted" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenCreated_ThrowsInvalidTransition" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="91b688b5-ca61-ea73-e74e-545e7789bdae">
+      <Execution id="a3659295-b2a0-4115-98ba-62804cf14e73" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="StartProcessing_WhenCreated_ThrowsInvalidTransition" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.LifecycleMethods_WhenCompleted_RejectAllFurtherTransitions" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="45ee4ff1-e72e-31ca-e20a-48ac0e91b4f8">
+      <Execution id="a589b972-04c0-4923-8278-b232cdbc83f5" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="LifecycleMethods_WhenCompleted_RejectAllFurtherTransitions" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.MarkReady_WhenCreated_SetsStatusToReady" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="8c5ef086-6e92-a484-ea88-91c91e631f83">
+      <Execution id="b0df3ccd-4597-473f-b728-15baba5f476c" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="MarkReady_WhenCreated_SetsStatusToReady" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.ResumeProcessing_WhenInException_SetsStatusToInProgress" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="f41494c2-daec-24f4-9814-f5b0ddffe14f">
+      <Execution id="28a8a129-bac4-41f9-9c90-c2d68c86d86c" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="ResumeProcessing_WhenInException_SetsStatusToInProgress" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenReady_SetsStatusToInProgress" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="f5b423b4-32d9-fcc9-6edc-6c9659f9c622">
+      <Execution id="524944fd-bf7d-483a-bb17-70afb7f8834b" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="StartProcessing_WhenReady_SetsStatusToInProgress" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.Constructor_SetsStatusToCreated" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="e487a04a-9d7c-6398-4b1e-a25dd0c1f274">
+      <Execution id="d63797c4-6152-4e46-a4d3-5b8986af4d6b" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="Constructor_SetsStatusToCreated" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.ExceptionLifecycle_ResumesAndReachesCompleted" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="0514327d-c1a0-275a-cf66-6f1f108fed9e">
+      <Execution id="44457826-0ee8-4bcd-a2b1-3a2ae5224475" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="ExceptionLifecycle_ResumesAndReachesCompleted" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInProgress_SetsStatusToCompleted" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="4d0de791-5d7a-f698-4484-c31fc2847944">
+      <Execution id="35973d29-15f4-4ce6-b2d5-dfc73d6e54e0" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="Complete_WhenInProgress_SetsStatusToCompleted" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInException_ThrowsInvalidTransition" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="844f3c8e-2f77-86f9-874c-c4d4fb9f77fd">
+      <Execution id="fa9965f9-1819-4798-8ccf-3b0301197134" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="Complete_WhenInException_ThrowsInvalidTransition" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenReady_ThrowsInvalidTransition" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="080b30a5-63f6-07c1-c252-f4a4f7aae700">
+      <Execution id="e8f82fd8-b4a7-42d7-ba3b-4d4be3f063f7" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="Complete_WhenReady_ThrowsInvalidTransition" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenCreated_ThrowsInvalidTransition" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="bc383172-84f5-744c-7381-e6d999358e84">
+      <Execution id="b1046b44-b598-4d70-bb9b-1b446dc84b85" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="EnterException_WhenCreated_ThrowsInvalidTransition" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenCreated_ThrowsInvalidTransition" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="8434ce17-6c9a-16f5-968f-4dc77e170c0d">
+      <Execution id="4121ae52-e4c7-41ef-bd34-eb3144310074" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="Complete_WhenCreated_ThrowsInvalidTransition" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenReady_ThrowsInvalidTransition" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="db764415-d4b8-0352-6a6c-92b5d14b0507">
+      <Execution id="a519dd77-bb1f-403a-81b8-24697038d20f" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="EnterException_WhenReady_ThrowsInvalidTransition" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenInProgress_SetsStatusToException" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="eba87d29-e6ac-ab24-50cc-2309e62ec958">
+      <Execution id="06175c58-cfcb-4048-8ff6-4daa5d412e32" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.BatchLifecycleTests" name="EnterException_WhenInProgress_SetsStatusToException" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f41494c2-daec-24f4-9814-f5b0ddffe14f" executionId="28a8a129-bac4-41f9-9c90-c2d68c86d86c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc383172-84f5-744c-7381-e6d999358e84" executionId="b1046b44-b598-4d70-bb9b-1b446dc84b85" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8434ce17-6c9a-16f5-968f-4dc77e170c0d" executionId="4121ae52-e4c7-41ef-bd34-eb3144310074" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45ee4ff1-e72e-31ca-e20a-48ac0e91b4f8" executionId="a589b972-04c0-4923-8278-b232cdbc83f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91b688b5-ca61-ea73-e74e-545e7789bdae" executionId="a3659295-b2a0-4115-98ba-62804cf14e73" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c5ef086-6e92-a484-ea88-91c91e631f83" executionId="b0df3ccd-4597-473f-b728-15baba5f476c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eba87d29-e6ac-ab24-50cc-2309e62ec958" executionId="06175c58-cfcb-4048-8ff6-4daa5d412e32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d0de791-5d7a-f698-4484-c31fc2847944" executionId="35973d29-15f4-4ce6-b2d5-dfc73d6e54e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0514327d-c1a0-275a-cf66-6f1f108fed9e" executionId="44457826-0ee8-4bcd-a2b1-3a2ae5224475" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="844f3c8e-2f77-86f9-874c-c4d4fb9f77fd" executionId="fa9965f9-1819-4798-8ccf-3b0301197134" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e487a04a-9d7c-6398-4b1e-a25dd0c1f274" executionId="d63797c4-6152-4e46-a4d3-5b8986af4d6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="db764415-d4b8-0352-6a6c-92b5d14b0507" executionId="a519dd77-bb1f-403a-81b8-24697038d20f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="080b30a5-63f6-07c1-c252-f4a4f7aae700" executionId="e8f82fd8-b4a7-42d7-ba3b-4d4be3f063f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cff25592-a0dc-1331-f8ec-bb01b3321b9d" executionId="55388a3a-31db-4791-b923-bfe7f439d4ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5b423b4-32d9-fcc9-6edc-6c9659f9c622" executionId="524944fd-bf7d-483a-bb17-70afb7f8834b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.22]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.32]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.37]   Starting:    SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.54]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

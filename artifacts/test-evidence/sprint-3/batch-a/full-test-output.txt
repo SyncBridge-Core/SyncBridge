@@ -1,0 +1,16 @@
+WP-6 Sprint 3 Accelerated Batch A - Sanitized Full Test Evidence
+
+Command:
+dotnet test src\SyncBridge.Core.slnx --no-restore --no-build --verbosity minimal
+
+Exit code: 0
+Result: Passed
+Failed: 0
+Passed: 188
+Skipped: 0
+Total: 188
+Duration: 2 seconds
+
+Accepted pre-Task-3 baseline: 159 tests.
+Task 3 completion baseline: 169 tests.
+Batch A final total: 188 tests.

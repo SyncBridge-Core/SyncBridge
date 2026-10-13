@@ -1,0 +1,19 @@
+WP-6 Sprint 3 Task 2 - Regression Test Evidence
+Execution date: 2026-10-12
+
+Command:
+dotnet test src\SyncBridge.Core.slnx --no-restore --verbosity minimal --results-directory artifacts\test-evidence\sprint-3\task-2 --logger "trx;LogFileName=test-results.trx"
+
+Exit code: 0
+
+Output summary:
+Test assembly: SyncBridge.Core.Tests.dll
+Target framework: net10.0
+Matched test files: 1
+Total: 159
+Passed: 159
+Failed: 0
+Skipped: 0
+Test duration: 387 ms
+
+The generated TRX included local run-user and workstation identifiers. It was removed before delivery and replaced by this sanitized aggregate evidence so the evidence package contains no sensitive environment details.

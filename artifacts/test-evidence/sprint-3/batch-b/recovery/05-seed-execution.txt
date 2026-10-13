@@ -1,0 +1,29 @@
+Seeder: DevelopmentDataSeeder
+Database state before seeding: newly migrated, all 15 core tables empty.
+Execution: invoked repeatedly by the SQL integration fixture, including two consecutive calls in the idempotency test.
+
+Final approved seed counts:
+- Fictional AppUsers: 2
+- Material: 1
+- Equipment: 1
+- Recipe: 1
+- Ordered RecipeSteps: 2
+- Recipe material requirements: 1
+- Recipe equipment requirements: 1
+- Demonstration ProductionOrders: 2
+- Total persistent seed rows: 11
+
+Idempotency result:
+- Second consecutive SeedAsync call returned 0 changes.
+- Subsequent integration-test seed checks also introduced no duplicates.
+- Deterministic Recipe identity remained stable.
+
+Manufacturing-history counts after all tests:
+- Batches: 0
+- Step executions: 0
+- Material/equipment verifications: 0/0
+- Deviations: 0
+- Electronic signatures: 0
+- Audit events: 0
+
+No seed-management table or fabricated manufacturing history was created.

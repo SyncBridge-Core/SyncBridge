@@ -1,0 +1,22 @@
+Execution environment:
+- Native Windows x64 PowerShell process running from the repository on the Windows VM.
+- Identity: approved current VM Windows user (sanitized).
+- localhost resolves to IPv6 and IPv4 loopback in the Windows VM namespace.
+- Codex sandbox indicators include network-disabled Windows sandbox configuration.
+
+SQL Server services:
+- Default Database Engine service: running; automatic startup.
+- SQL Server Browser: stopped and disabled. Browser is not required for the default local instance.
+
+Configured protocols for the default instance:
+- Shared Memory: enabled.
+- TCP/IP registry setting: disabled; configured static value 1433 was not treated as an active endpoint.
+- Named Pipes: disabled.
+
+Observed active server endpoint:
+- SQL Server owns IPv4 and IPv6 loopback listeners on port 1434.
+- Filtered SQL Server startup log evidence confirms listening on 127.0.0.1:1434 and [::1]:1434.
+- An explicit TCP connection to 1433 timed out.
+- An explicit TCP connection to 127.0.0.1:1434 succeeded outside the sandbox.
+
+No service, registry, protocol, or firewall setting was changed.

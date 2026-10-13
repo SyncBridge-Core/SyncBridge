@@ -1,0 +1,30 @@
+EF Core runtime/tool version: 10.0.12
+Migration: 20261013010705_InitialCreate
+Migration source CreateTable operations: 15
+Migration source DropTable operations: 15
+Cascade delete operations: 0
+Restrict delete operations: 23
+
+Generated files:
+- src/SyncBridge.Core.Infrastructure/Persistence/Migrations/20261013010705_InitialCreate.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Migrations/20261013010705_InitialCreate.Designer.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Migrations/SyncBridgeDbContextModelSnapshot.cs
+
+Approved dbo tables:
+- AppUser
+- AuditEvent
+- Batch
+- BatchStepExecution
+- Deviation
+- ElectronicSignature
+- Equipment
+- EquipmentVerification
+- Material
+- MaterialVerification
+- ProductionOrder
+- Recipe
+- RecipeEquipmentRequirement
+- RecipeMaterialRequirement
+- RecipeStep
+
+The generated idempotent SQL also creates EF Core's __EFMigrationsHistory metadata table. It is not a manufacturing core table.

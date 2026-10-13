@@ -1,0 +1,17 @@
+Branch: feature/wp6-sprint3-core-domain
+HEAD: 62b615e1068e65de36f1ec10e5949de1eedd4a88
+
+Recovery source/test change:
+- Added tests/SyncBridge.Core.Tests/SqlServerRecoveryIntegrationTests.cs
+
+Recovery deliverables:
+- Added docs/sprint-3/Sprint3_BatchB_Recovery_Completion_Report.md
+- Added eight sanitized evidence files under artifacts/test-evidence/sprint-3/batch-b/recovery/
+
+Preservation and safety:
+- All accepted uncommitted Task 3, Batch A, and Batch B work remains present.
+- No commit, push, merge, reset, stash, clean, rebase, or branch change was performed.
+- No golden engineering document was modified.
+- No Domain, Application, Presentation, migration, or production Infrastructure source was modified during deployment recovery.
+- The only database changed was SyncBridgeCore.
+- The legacy database was not connected to, enumerated, inspected, queried, altered, or otherwise operated on.

@@ -1,0 +1,38 @@
+WP-6 Sprint 3 Accelerated Batch A - EF Core Model Metadata Verification
+
+Command:
+dotnet test tests\SyncBridge.Core.Tests\SyncBridge.Core.Tests.csproj --no-restore --no-build --verbosity normal --filter FullyQualifiedName~PersistenceModelTests
+
+Exit code: 0
+Passed: 19
+Failed: 0
+Skipped: 0
+
+Verified exactly 15 dbo tables:
+- AppUser
+- Recipe
+- RecipeStep
+- RecipeMaterialRequirement
+- RecipeEquipmentRequirement
+- Material
+- Equipment
+- ProductionOrder
+- Batch
+- BatchStepExecution
+- MaterialVerification
+- EquipmentVerification
+- Deviation
+- ElectronicSignature
+- AuditEvent
+
+Verified primary keys, composite keys, unique indexes, practical indexes, foreign keys, restricted deletes, SQL types, lengths, required/optional fields, decimal(18,3), datetimeoffset(7), nullable date, and closed enum conversions.
+
+Amendments verified:
+- DeviationCode is required nvarchar(40) with UQ_Deviation_DeviationCode.
+- AuditEvent.AffectedEntityId is required nvarchar(256).
+
+OQ-1 schema verification:
+- Batch has no quantity column.
+- Batch has no unit-of-measure column.
+
+No database connection was opened. Verification used EF Core relational metadata with a non-routable credential-free placeholder connection string.

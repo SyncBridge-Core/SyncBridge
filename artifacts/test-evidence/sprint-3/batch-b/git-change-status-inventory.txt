@@ -1,0 +1,31 @@
+Branch: feature/wp6-sprint3-core-domain
+HEAD: 62b615e1068e65de36f1ec10e5949de1eedd4a88
+
+Git policy compliance:
+- No commit, push, merge, rebase, reset, stash, clean, or branch change was performed.
+- Accepted Task 3 and Batch A uncommitted work remains present.
+
+Batch B source files created:
+- src/SyncBridge.Core.Infrastructure/Persistence/ApplicationUnitOfWork.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Assembly/BatchAggregateAssembler.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Assembly/ProductionOrderAssembler.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Assembly/RecipeAssembler.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Exceptions/PersistenceIntegrityException.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchRepository.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Repositories/ProductionOrderRepository.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Repositories/RecipeRepository.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Seeding/DevelopmentDataSeeder.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/SyncBridgeDbContextFactory.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Migrations/20261013010705_InitialCreate.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Migrations/20261013010705_InitialCreate.Designer.cs
+- src/SyncBridge.Core.Infrastructure/Persistence/Migrations/SyncBridgeDbContextModelSnapshot.cs
+
+Batch B existing files modified:
+- src/SyncBridge.Core.Infrastructure/Persistence/PersistenceServiceCollectionExtensions.cs
+- tests/SyncBridge.Core.Tests/PersistenceModelTests.cs
+
+Batch B documentation/evidence created:
+- docs/sprint-3/Sprint3_BatchB_Database_Operations_Completion_Report.md
+- artifacts/test-evidence/sprint-3/batch-b/ (eight evidence files)
+
+The working tree remains intentionally dirty with accepted Task 3, Batch A, and current Batch B changes.

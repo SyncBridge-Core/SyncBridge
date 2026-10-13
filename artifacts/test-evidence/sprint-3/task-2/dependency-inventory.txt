@@ -1,0 +1,27 @@
+WP-6 Sprint 3 Task 2 - Dependency and Project Reference Inventory
+Execution date: 2026-10-12
+
+All projects target net10.0.
+
+Project references:
+SyncBridge.Core -> SyncBridge.Core.Application
+SyncBridge.Core.Application -> SyncBridge.Core.Domain
+SyncBridge.Core.Domain -> none
+SyncBridge.Core.Infrastructure -> SyncBridge.Core.Application
+SyncBridge.Core.Infrastructure -> SyncBridge.Core.Domain
+SyncBridge.Core.Tests -> SyncBridge.Core.Application
+SyncBridge.Core.Tests -> SyncBridge.Core.Domain
+
+Package-boundary result:
+- Entity Framework Core and SQL Server provider packages exist only in SyncBridge.Core.Infrastructure.
+- SyncBridge.Core.Domain has no package references.
+- SyncBridge.Core.Application has no package references.
+- SyncBridge.Core does not directly reference Entity Framework Core or SQL Server packages.
+- Existing Application repository and unit-of-work contracts were not modified.
+
+Task 2 exclusions verified:
+- No SyncBridgeDbContext or DbSet exists.
+- No persistence row model or IEntityTypeConfiguration exists.
+- No repository or unit-of-work implementation exists.
+- No migration, seed data, SQL file, schema, or database operation was created.
+- No Domain, Application, or test source file was modified.

@@ -1,0 +1,16 @@
+Connection configuration findings:
+- Tracked appsettings contains the approved ConnectionStrings:SyncBridgeCore key with an empty value.
+- The project has a UserSecretsId.
+- No user-secrets file exists for that project identity.
+- The current session did not initially contain ConnectionStrings__SyncBridgeCore.
+- Design-time EF operations require ConnectionStrings__SyncBridgeCore.
+
+No secret or persistent connection-string value was created during diagnostics. Temporary connection invocations used the already approved localhost/Windows-authentication convention.
+
+Safety confirmation:
+- SyncBridgeCore was confirmed absent through an exact DB_ID lookup.
+- No database was created or modified.
+- No migration or seed was executed.
+- No login, permission, authentication mode, SQL service, protocol, registry, or firewall change was made.
+- No unrelated database name was enumerated.
+- The legacy database remained untouched and was not inspected, queried, connected to, or modified.

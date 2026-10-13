@@ -1,0 +1,15 @@
+Representative rollback-scoped fixture:
+Batch=1
+BatchStepExecution=1
+MaterialVerification=1
+EquipmentVerification=1
+ElectronicSignature=1
+Direct AuditEvent=4
+
+Controlled multi-record SaveChanges: 3.952 ms
+ProductionOrder lookup: 1.390 ms
+Recipe aggregate retrieval: 14.215 ms
+Batch aggregate retrieval with evidence: 16.222 ms
+
+Environment: local development SQL Server, single bounded run after deterministic seed verification.
+Interpretation: Sprint 3 baseline only; not production capacity qualification and not EBR-generation measurement.

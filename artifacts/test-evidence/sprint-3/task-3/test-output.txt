@@ -1,0 +1,36 @@
+WP-6 Sprint 3 Task 3 - Sanitized Test Evidence
+
+Full solution regression test command:
+dotnet test src\SyncBridge.Core.slnx --no-restore --no-build --verbosity minimal
+
+Exit code: 0
+Result: Passed
+Failed: 0
+Passed: 169
+Skipped: 0
+Total: 169
+Duration: 2 seconds
+
+Targeted Task 3 metadata test command:
+dotnet test tests\SyncBridge.Core.Tests\SyncBridge.Core.Tests.csproj --no-restore --no-build --verbosity normal --filter FullyQualifiedName~PersistenceModelTests
+
+Exit code: 0
+Result: Passed
+Failed: 0
+Passed: 10
+Skipped: 0
+Total: 10
+
+Targeted tests:
+- AppUserMapping_MatchesDbds
+- RecipeMapping_MatchesDbds
+- RecipeStepMapping_MatchesDbds
+- RecipeMaterialRequirementMapping_MatchesDbds
+- RecipeEquipmentRequirementMapping_MatchesDbds
+- MaterialMapping_MatchesDbds
+- EquipmentMapping_MatchesDbds
+- Model_ContainsExactlySevenTask3TablesInDboSchema
+- AddSyncBridgePersistence_WithBlankConnectionString_ThrowsArgumentException
+- AddSyncBridgePersistence_RegistersDbContextAsScoped
+
+No database connection was attempted. Tests inspected EF Core relational model metadata created with a non-routable placeholder connection string containing no credential.

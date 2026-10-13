@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\SyncBridge.Core.Application\SyncBridge.Core.Application.csproj" />
     <ProjectReference Include="..\..\src\SyncBridge.Core.Domain\SyncBridge.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\src\SyncBridge.Core.Infrastructure\SyncBridge.Core.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
