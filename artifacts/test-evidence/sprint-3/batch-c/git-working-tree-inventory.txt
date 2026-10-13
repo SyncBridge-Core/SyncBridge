@@ -1,0 +1,18 @@
+Branch: feature/wp6-sprint3-core-domain
+HEAD: 62b615e1068e65de36f1ec10e5949de1eedd4a88
+
+The working tree intentionally contains uncommitted Sprint 3 Task 3 and Batch A/B/C work. Major inventory groups:
+- Modified Domain entities and Domain project metadata from accepted Sprint 3 work.
+- Modified and new Domain/persistence tests.
+- New Infrastructure persistence directory, including configurations, rows, converters, assemblers, repositories, seed, migration, and snapshot.
+- Task 3 and Batch A/B/C evidence directories.
+- Task 3 and Batch A/B/C completion, diagnostic, verification, closure, and evidence-index documents.
+
+Batch C additions:
+- tests/SyncBridge.Core.Tests/SqlServerRecoveryIntegrationTests.cs (four focused tests added to the accepted uncommitted file)
+- docs/sprint-3/Sprint3_BatchC_Integrated_Verification_Report.md
+- docs/sprint-3/Sprint3_Final_Closure_Report.md
+- docs/sprint-3/Sprint3_Final_Evidence_Index.md
+- artifacts/test-evidence/sprint-3/batch-c/*
+
+No commit, push, merge, rebase, reset, stash, clean, or branch switch occurred.

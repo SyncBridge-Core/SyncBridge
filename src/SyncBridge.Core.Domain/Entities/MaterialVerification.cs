@@ -43,6 +43,62 @@ public sealed class MaterialVerification
             $"Material {materialCode.Value}");
     }
 
+    private MaterialVerification(
+        BatchNumber batchNumber,
+        MaterialCode materialCode,
+        OperatorId operatorId,
+        DateTimeOffset verifiedAt,
+        VerificationResult verificationResult,
+        AuditEvent auditEvidence)
+    {
+        ArgumentNullException.ThrowIfNull(batchNumber);
+        ArgumentNullException.ThrowIfNull(materialCode);
+        ArgumentNullException.ThrowIfNull(operatorId);
+        ArgumentNullException.ThrowIfNull(auditEvidence);
+
+        if (!Enum.IsDefined(verificationResult))
+        {
+            throw new ArgumentOutOfRangeException(nameof(verificationResult));
+        }
+
+        if (auditEvidence.BatchNumber != batchNumber ||
+            auditEvidence.OperatorId != operatorId ||
+            auditEvidence.Action != AuditEventType.MaterialVerified ||
+            auditEvidence.AffectedEntity != nameof(MaterialVerification) ||
+            auditEvidence.AffectedEntityId !=
+                $"{batchNumber.Value}:{materialCode.Value}:{operatorId.Value}:{verifiedAt:O}" ||
+            auditEvidence.OccurredAt != verifiedAt)
+        {
+            throw new ArgumentException(
+                "The audit evidence does not match the material verification.",
+                nameof(auditEvidence));
+        }
+
+        BatchNumber = batchNumber;
+        MaterialCode = materialCode;
+        OperatorId = operatorId;
+        VerifiedAt = verifiedAt;
+        VerificationResult = verificationResult;
+        AuditEvidence = auditEvidence;
+    }
+
+    internal static MaterialVerification Rehydrate(
+        BatchNumber batchNumber,
+        MaterialCode materialCode,
+        OperatorId operatorId,
+        DateTimeOffset verifiedAt,
+        VerificationResult verificationResult,
+        AuditEvent auditEvidence)
+    {
+        return new MaterialVerification(
+            batchNumber,
+            materialCode,
+            operatorId,
+            verifiedAt,
+            verificationResult,
+            auditEvidence);
+    }
+
     /// <summary>
     /// Gets the associated Batch identity.
     /// </summary>

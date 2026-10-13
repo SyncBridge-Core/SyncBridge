@@ -1,0 +1,16 @@
+Command: dotnet restore src\SyncBridge.Core.slnx --verbosity minimal
+Result: Exit code 0. All projects are up-to-date for restore.
+
+Command: dotnet build src\SyncBridge.Core.slnx --no-restore --verbosity minimal -m:1
+Result: Exit code 0.
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Projects built:
+- SyncBridge.Core.Domain
+- SyncBridge.Core.Application
+- SyncBridge.Core.Infrastructure
+- SyncBridge.Core.Tests
+- SyncBridge.Core

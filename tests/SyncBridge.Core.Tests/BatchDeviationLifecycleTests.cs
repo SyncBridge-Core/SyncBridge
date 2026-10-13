@@ -240,10 +240,8 @@ public sealed class BatchDeviationLifecycleTests
     private static Batch CreateBatch(string batchNumber = "BATCH-001") =>
         new(
             new BatchNumber(batchNumber),
-            new ProductionOrderNumber("PO-001"),
+            DomainTestFixtureExtensions.CreateProductionOrder(),
             new RecipeCode("RECIPE-001"),
-            100m,
-            new UnitOfMeasure("kg"),
             new OperatorId("OP-TEST"),
             Timestamp(0));
 

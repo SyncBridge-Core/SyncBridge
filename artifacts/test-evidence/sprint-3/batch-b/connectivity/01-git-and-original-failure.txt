@@ -1,0 +1,14 @@
+Branch: feature/wp6-sprint3-core-domain
+HEAD: 62b615e1068e65de36f1ec10e5949de1eedd4a88
+Working tree: intentionally dirty with accepted Task 3, Batch A, and Batch B work.
+
+Original failure:
+- Tool: sqlcmd with Windows integrated authentication.
+- Target: localhost, master database.
+- Result: exit code 1; login timeout and server-not-accessible error.
+- No database metadata was returned.
+- No database or system mutation occurred.
+
+Recovery Git controls:
+- No reset, stash, clean, commit, push, merge, rebase, or branch change was performed.
+- Manufacturing source code was not modified during recovery.

@@ -1,0 +1,14 @@
+Tool: dotnet-ef 10.0.12
+Migration: 20261013010705_InitialCreate
+Execution context: approved unsandboxed Windows process with process-local configuration.
+Target selected by EF: database SyncBridgeCore on server localhost.
+
+Observed operations:
+- CREATE DATABASE SyncBridgeCore.
+- Enabled READ_COMMITTED_SNAPSHOT through EF Core's standard SQL Server creation path.
+- Created EF Core migration-history metadata.
+- Applied the reviewed initial migration in a transaction.
+- Inserted migration-history row 20261013010705_InitialCreate, product version 10.0.12.
+- Command completed with exit code 0 and message Done.
+
+No migration was regenerated. No drop, reset, EnsureCreated, or EnsureDeleted operation was used.

@@ -1,0 +1,27 @@
+WP-6 Sprint 3 Accelerated Batch A - Domain and Boundary Regression Evidence
+
+Full regression result:
+- 188 passed
+- 0 failed
+- 0 skipped
+
+Focused command:
+dotnet test tests\SyncBridge.Core.Tests\SyncBridge.Core.Tests.csproj --no-restore --no-build --verbosity normal --filter FullyQualifiedName~PersistenceBoundaryTests
+
+Focused result:
+- 10 passed
+- 0 failed
+- 0 skipped
+
+Verified:
+- Batch derives ProductionOrderNumber and full PlannedQuantity from the supplied ProductionOrder.
+- Multiple Batches for one ProductionOrder each retain the full order quantity.
+- Exact lowercase canonical GUID D text round-trips unchanged.
+- Blank, compact, uppercase, empty-GUID, and invalid technical identifiers are rejected.
+- A 180-code-unit verification audit identifier is accepted unchanged.
+- UTF-16 storage units are counted without truncation, including supplementary Unicode characters.
+- Values over the 256-code-unit audit limit are rejected.
+
+All accepted lifecycle, prerequisite, ordered-workflow, deviation, signature, audit, and completed-record protection tests remain passing.
+
+Seven internal entity-specific Rehydrate factories compile under the Infrastructure-only friend assembly grant. Database/repository round-trip execution remains intentionally deferred because Batch A authorizes neither repositories nor database operations.

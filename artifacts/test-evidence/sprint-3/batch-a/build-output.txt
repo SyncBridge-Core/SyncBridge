@@ -1,0 +1,13 @@
+WP-6 Sprint 3 Accelerated Batch A - Sanitized Build Evidence
+
+Command:
+dotnet build src\SyncBridge.Core.slnx --no-restore --verbosity minimal
+
+Exit code: 0
+Projects built: Domain, Application, Infrastructure, Presentation, Tests
+Build succeeded.
+Warnings: 0
+Errors: 0
+Elapsed time: 00:00:10.26
+
+Task-scoped formatting was applied and verified for the Batch A source set without modifying unrelated baseline files.

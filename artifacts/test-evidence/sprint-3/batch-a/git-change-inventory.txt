@@ -1,0 +1,38 @@
+WP-6 Sprint 3 Accelerated Batch A - Sanitized Git Change Inventory
+
+Branch: feature/wp6-sprint3-core-domain
+Starting HEAD: 62b615e1068e65de36f1ec10e5949de1eedd4a88
+Final HEAD: 62b615e1068e65de36f1ec10e5949de1eedd4a88
+Starting state: intentionally dirty with accepted uncommitted Task 3 changes.
+Final state: intentionally dirty with preserved Task 3 and new Batch A changes.
+
+Batch A tracked modifications:
+- src/SyncBridge.Core.Domain/SyncBridge.Core.Domain.csproj
+- src/SyncBridge.Core.Domain/Entities/ProductionOrder.cs
+- src/SyncBridge.Core.Domain/Entities/Batch.cs
+- src/SyncBridge.Core.Domain/Entities/BatchStepExecution.cs
+- src/SyncBridge.Core.Domain/Entities/MaterialVerification.cs
+- src/SyncBridge.Core.Domain/Entities/EquipmentVerification.cs
+- src/SyncBridge.Core.Domain/Entities/Deviation.cs
+- src/SyncBridge.Core.Domain/Entities/ElectronicSignature.cs
+- tests/SyncBridge.Core.Tests/DomainTestFixtureExtensions.cs
+- tests/SyncBridge.Core.Tests/BatchAuditEvidenceTests.cs
+- tests/SyncBridge.Core.Tests/BatchDeviationLifecycleTests.cs
+- tests/SyncBridge.Core.Tests/BatchLifecycleTests.cs
+- tests/SyncBridge.Core.Tests/BatchPrerequisiteVerificationTests.cs
+- tests/SyncBridge.Core.Tests/BatchStepExecutionTests.cs
+- tests/SyncBridge.Core.Tests/CompletedRecordProtectionTests.cs
+- tests/SyncBridge.Core.Tests/ElectronicSignatureGateTests.cs
+- tests/SyncBridge.Core.Tests/OrderedWorkflowExecutionTests.cs
+
+Deleted under approved OQ-1:
+- src/SyncBridge.Core.Domain/ValueObjects/UnitOfMeasure.cs
+
+The complete untracked Persistence, test, report, and evidence inventory is recorded in the completion report. Task 3 source and evidence remain preserved.
+
+git diff --check: exit 0
+Commit: none
+Push: none
+Merge/rebase: none
+Branch change: none
+Reset/stash/clean: none

@@ -27,6 +27,27 @@ public sealed class ProductionOrder
         RecipeId recipeId,
         decimal quantity,
         DateTimeOffset createdAt)
+        : this(
+            productionOrderId,
+            productionOrderNumber,
+            productCode,
+            productName,
+            recipeId,
+            quantity,
+            ProductionOrderStatus.Planned,
+            createdAt)
+    {
+    }
+
+    private ProductionOrder(
+        ProductionOrderId productionOrderId,
+        ProductionOrderNumber productionOrderNumber,
+        ProductCode productCode,
+        string productName,
+        RecipeId recipeId,
+        decimal quantity,
+        ProductionOrderStatus productionOrderStatus,
+        DateTimeOffset createdAt)
     {
         ArgumentNullException.ThrowIfNull(productionOrderId);
         ArgumentNullException.ThrowIfNull(productionOrderNumber);
@@ -58,8 +79,34 @@ public sealed class ProductionOrder
         ProductName = productName;
         RecipeId = recipeId;
         Quantity = quantity;
-        ProductionOrderStatus = ProductionOrderStatus.Planned;
+        if (!Enum.IsDefined(productionOrderStatus))
+        {
+            throw new ArgumentOutOfRangeException(nameof(productionOrderStatus));
+        }
+
+        ProductionOrderStatus = productionOrderStatus;
         CreatedAt = createdAt;
+    }
+
+    internal static ProductionOrder Rehydrate(
+        ProductionOrderId productionOrderId,
+        ProductionOrderNumber productionOrderNumber,
+        ProductCode productCode,
+        string productName,
+        RecipeId recipeId,
+        decimal quantity,
+        ProductionOrderStatus productionOrderStatus,
+        DateTimeOffset createdAt)
+    {
+        return new ProductionOrder(
+            productionOrderId,
+            productionOrderNumber,
+            productCode,
+            productName,
+            recipeId,
+            quantity,
+            productionOrderStatus,
+            createdAt);
     }
 
     /// <summary>

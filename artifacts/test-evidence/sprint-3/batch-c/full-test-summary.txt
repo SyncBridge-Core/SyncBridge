@@ -1,0 +1,16 @@
+Command: dotnet test src/SyncBridge.Core.slnx --no-restore --verbosity minimal
+Connection configuration: process-local environment setting; value omitted
+Exit code: 0
+Target framework: net10.0
+Failed: 0
+Passed: 201
+Skipped: 0
+Total: 201
+Duration: 8 seconds
+
+Focused SQL Server integration run:
+Failed: 0
+Passed: 10
+Skipped: 0
+Total: 10
+Duration: 7.9778 seconds

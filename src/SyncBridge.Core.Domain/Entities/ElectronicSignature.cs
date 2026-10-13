@@ -56,6 +56,78 @@ public sealed class ElectronicSignature
             $"Signed {relatedRecordType.Value} {relatedRecordId.Value}");
     }
 
+    private ElectronicSignature(
+        ElectronicSignatureId electronicSignatureId,
+        BatchNumber batchNumber,
+        RelatedRecordType relatedRecordType,
+        RelatedRecordId relatedRecordId,
+        OperatorId operatorId,
+        ElectronicSignatureMeaning meaning,
+        DateTimeOffset signedAt,
+        AuditEvent auditEvidence)
+    {
+        ArgumentNullException.ThrowIfNull(electronicSignatureId);
+        ArgumentNullException.ThrowIfNull(batchNumber);
+        ArgumentNullException.ThrowIfNull(relatedRecordType);
+        ArgumentNullException.ThrowIfNull(relatedRecordId);
+        ArgumentNullException.ThrowIfNull(operatorId);
+        ArgumentNullException.ThrowIfNull(auditEvidence);
+
+        if (!Enum.IsDefined(meaning))
+        {
+            throw new ArgumentOutOfRangeException(nameof(meaning));
+        }
+
+        if (relatedRecordType != RelatedRecordType.BatchStepExecution)
+        {
+            throw new ArgumentException(
+                "Only BatchStepExecution signatures are supported.",
+                nameof(relatedRecordType));
+        }
+
+        if (auditEvidence.BatchNumber != batchNumber ||
+            auditEvidence.OperatorId != operatorId ||
+            auditEvidence.Action != AuditEventType.ElectronicSignatureApplied ||
+            auditEvidence.AffectedEntity != nameof(ElectronicSignature) ||
+            auditEvidence.OccurredAt != signedAt ||
+            auditEvidence.AffectedEntityId != electronicSignatureId.Value)
+        {
+            throw new ArgumentException(
+                "The audit evidence does not match the electronic signature.",
+                nameof(auditEvidence));
+        }
+
+        ElectronicSignatureId = electronicSignatureId;
+        BatchNumber = batchNumber;
+        RelatedRecordType = relatedRecordType;
+        RelatedRecordId = relatedRecordId;
+        OperatorId = operatorId;
+        Meaning = meaning;
+        SignedAt = signedAt;
+        AuditEvidence = auditEvidence;
+    }
+
+    internal static ElectronicSignature Rehydrate(
+        ElectronicSignatureId electronicSignatureId,
+        BatchNumber batchNumber,
+        RelatedRecordType relatedRecordType,
+        RelatedRecordId relatedRecordId,
+        OperatorId operatorId,
+        ElectronicSignatureMeaning meaning,
+        DateTimeOffset signedAt,
+        AuditEvent auditEvidence)
+    {
+        return new ElectronicSignature(
+            electronicSignatureId,
+            batchNumber,
+            relatedRecordType,
+            relatedRecordId,
+            operatorId,
+            meaning,
+            signedAt,
+            auditEvidence);
+    }
+
     /// <summary>
     /// Gets the signature identity.
     /// </summary>

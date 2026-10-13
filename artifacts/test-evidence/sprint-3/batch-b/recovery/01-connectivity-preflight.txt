@@ -1,0 +1,16 @@
+Execution context: explicitly approved unsandboxed Windows process.
+Authentication: Windows integrated authentication; account identity sanitized.
+Target: local default SQL Server instance, exact database SyncBridgeCore.
+
+Preflight result before deployment:
+- Connection succeeded through Shared Memory.
+- Current database: master.
+- Target DB_ID: NULL (SyncBridgeCore absent).
+- CREATE ANY DATABASE permission: 1.
+- Local default instance and SQL Server 17.0.1135.8 confirmed.
+- Repository branch: feature/wp6-sprint3-core-domain.
+- Repository HEAD: 62b615e1068e65de36f1ec10e5949de1eedd4a88.
+- Exactly one source migration existed: 20261013010705_InitialCreate.
+- Migration contained 15 CreateTable operations and no cascade-delete operation.
+
+Outcome: R1 passed. No unrelated database was enumerated or accessed.

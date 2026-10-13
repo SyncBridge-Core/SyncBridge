@@ -43,6 +43,62 @@ public sealed class EquipmentVerification
             $"Equipment {equipmentCode.Value}");
     }
 
+    private EquipmentVerification(
+        BatchNumber batchNumber,
+        EquipmentCode equipmentCode,
+        OperatorId operatorId,
+        DateTimeOffset verifiedAt,
+        VerificationResult verificationResult,
+        AuditEvent auditEvidence)
+    {
+        ArgumentNullException.ThrowIfNull(batchNumber);
+        ArgumentNullException.ThrowIfNull(equipmentCode);
+        ArgumentNullException.ThrowIfNull(operatorId);
+        ArgumentNullException.ThrowIfNull(auditEvidence);
+
+        if (!Enum.IsDefined(verificationResult))
+        {
+            throw new ArgumentOutOfRangeException(nameof(verificationResult));
+        }
+
+        if (auditEvidence.BatchNumber != batchNumber ||
+            auditEvidence.OperatorId != operatorId ||
+            auditEvidence.Action != AuditEventType.EquipmentVerified ||
+            auditEvidence.AffectedEntity != nameof(EquipmentVerification) ||
+            auditEvidence.AffectedEntityId !=
+                $"{batchNumber.Value}:{equipmentCode.Value}:{operatorId.Value}:{verifiedAt:O}" ||
+            auditEvidence.OccurredAt != verifiedAt)
+        {
+            throw new ArgumentException(
+                "The audit evidence does not match the equipment verification.",
+                nameof(auditEvidence));
+        }
+
+        BatchNumber = batchNumber;
+        EquipmentCode = equipmentCode;
+        OperatorId = operatorId;
+        VerifiedAt = verifiedAt;
+        VerificationResult = verificationResult;
+        AuditEvidence = auditEvidence;
+    }
+
+    internal static EquipmentVerification Rehydrate(
+        BatchNumber batchNumber,
+        EquipmentCode equipmentCode,
+        OperatorId operatorId,
+        DateTimeOffset verifiedAt,
+        VerificationResult verificationResult,
+        AuditEvent auditEvidence)
+    {
+        return new EquipmentVerification(
+            batchNumber,
+            equipmentCode,
+            operatorId,
+            verifiedAt,
+            verificationResult,
+            auditEvidence);
+    }
+
     /// <summary>
     /// Gets the associated Batch identity.
     /// </summary>

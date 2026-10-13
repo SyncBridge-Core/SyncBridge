@@ -23,6 +23,29 @@ public sealed class BatchStepExecution
         RecipeStepId recipeStepId,
         int stepNumber,
         bool requiresSignature)
+        : this(
+            batchStepExecutionId,
+            batchNumber,
+            recipeStepId,
+            stepNumber,
+            requiresSignature,
+            StepExecutionStatus.Pending,
+            null,
+            null,
+            null)
+    {
+    }
+
+    private BatchStepExecution(
+        BatchStepExecutionId batchStepExecutionId,
+        BatchNumber batchNumber,
+        RecipeStepId recipeStepId,
+        int stepNumber,
+        bool requiresSignature,
+        StepExecutionStatus stepExecutionStatus,
+        DateTimeOffset? startedAt,
+        DateTimeOffset? completedAt,
+        OperatorId? completedBy)
     {
         ArgumentNullException.ThrowIfNull(batchStepExecutionId);
         ArgumentNullException.ThrowIfNull(batchNumber);
@@ -40,7 +63,52 @@ public sealed class BatchStepExecution
         RecipeStepId = recipeStepId;
         StepNumber = stepNumber;
         RequiresSignature = requiresSignature;
-        StepExecutionStatus = StepExecutionStatus.Pending;
+        if (!Enum.IsDefined(stepExecutionStatus))
+        {
+            throw new ArgumentOutOfRangeException(nameof(stepExecutionStatus));
+        }
+
+        var hasValidStateShape = stepExecutionStatus switch
+        {
+            StepExecutionStatus.Pending => startedAt is null && completedAt is null && completedBy is null,
+            StepExecutionStatus.InProgress => startedAt is not null && completedAt is null && completedBy is null,
+            StepExecutionStatus.Completed => startedAt is not null && completedAt is not null &&
+                completedBy is not null && completedAt >= startedAt,
+            _ => false
+        };
+
+        if (!hasValidStateShape)
+        {
+            throw new DomainException("The persisted step-execution state is structurally inconsistent.");
+        }
+
+        StepExecutionStatus = stepExecutionStatus;
+        StartedAt = startedAt;
+        CompletedAt = completedAt;
+        CompletedBy = completedBy;
+    }
+
+    internal static BatchStepExecution Rehydrate(
+        BatchStepExecutionId batchStepExecutionId,
+        BatchNumber batchNumber,
+        RecipeStepId recipeStepId,
+        int stepNumber,
+        bool requiresSignature,
+        StepExecutionStatus stepExecutionStatus,
+        DateTimeOffset? startedAt,
+        DateTimeOffset? completedAt,
+        OperatorId? completedBy)
+    {
+        return new BatchStepExecution(
+            batchStepExecutionId,
+            batchNumber,
+            recipeStepId,
+            stepNumber,
+            requiresSignature,
+            stepExecutionStatus,
+            startedAt,
+            completedAt,
+            completedBy);
     }
 
     /// <summary>

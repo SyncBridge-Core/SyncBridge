@@ -17,38 +17,27 @@ public sealed class Batch
     /// Initializes a new production batch in the created state.
     /// </summary>
     /// <param name="batchNumber">The batch identifier.</param>
-    /// <param name="productionOrderNumber">The associated production order identifier.</param>
+    /// <param name="productionOrder">The associated production order and quantity authority.</param>
     /// <param name="recipeCode">The associated recipe code.</param>
-    /// <param name="plannedQuantity">The quantity planned for production.</param>
-    /// <param name="unitOfMeasure">The unit used to measure the planned quantity.</param>
     /// <param name="createdBy">The responsible creating operator.</param>
     /// <param name="createdAt">The creation timestamp.</param>
     public Batch(
         BatchNumber batchNumber,
-        ProductionOrderNumber productionOrderNumber,
+        ProductionOrder productionOrder,
         RecipeCode recipeCode,
-        decimal plannedQuantity,
-        UnitOfMeasure unitOfMeasure,
         OperatorId createdBy,
         DateTimeOffset createdAt)
     {
         ArgumentNullException.ThrowIfNull(batchNumber);
-        ArgumentNullException.ThrowIfNull(productionOrderNumber);
+        ArgumentNullException.ThrowIfNull(productionOrder);
         ArgumentNullException.ThrowIfNull(recipeCode);
-        ArgumentNullException.ThrowIfNull(unitOfMeasure);
         ArgumentNullException.ThrowIfNull(createdBy);
 
-        if (plannedQuantity <= 0)
-        {
-            throw new DomainException("Planned quantity must be greater than zero.");
-        }
-
         BatchNumber = batchNumber;
-        ProductionOrderNumber = productionOrderNumber;
+        ProductionOrderNumber = productionOrder.ProductionOrderNumber;
         RecipeCode = recipeCode;
         BatchStatus = BatchStatus.Created;
-        PlannedQuantity = plannedQuantity;
-        UnitOfMeasure = unitOfMeasure;
+        PlannedQuantity = productionOrder.Quantity;
         RecordAudit(
             createdBy,
             AuditEventType.BatchCreated,
@@ -56,6 +45,97 @@ public sealed class Batch
             BatchNumber.Value,
             createdAt,
             BatchStatus.Created.ToString());
+    }
+
+    private Batch(
+        BatchNumber batchNumber,
+        ProductionOrderNumber productionOrderNumber,
+        RecipeCode recipeCode,
+        decimal plannedQuantity,
+        BatchStatus batchStatus,
+        IEnumerable<BatchStepExecution> stepExecutions,
+        IEnumerable<Deviation> deviations,
+        IEnumerable<AuditEvent> auditEvents)
+    {
+        ArgumentNullException.ThrowIfNull(batchNumber);
+        ArgumentNullException.ThrowIfNull(productionOrderNumber);
+        ArgumentNullException.ThrowIfNull(recipeCode);
+        ArgumentNullException.ThrowIfNull(stepExecutions);
+        ArgumentNullException.ThrowIfNull(deviations);
+        ArgumentNullException.ThrowIfNull(auditEvents);
+
+        if (plannedQuantity <= 0)
+        {
+            throw new DomainException("Planned quantity must be greater than zero.");
+        }
+
+        if (!Enum.IsDefined(batchStatus))
+        {
+            throw new ArgumentOutOfRangeException(nameof(batchStatus));
+        }
+
+        var restoredSteps = stepExecutions.ToArray();
+        var restoredDeviations = deviations.ToArray();
+        var restoredAuditEvents = auditEvents.ToArray();
+
+        if (restoredSteps.Any(execution => execution is null || execution.BatchNumber != batchNumber) ||
+            restoredSteps.GroupBy(execution => execution.BatchStepExecutionId).Any(group => group.Count() > 1) ||
+            restoredSteps.GroupBy(execution => execution.StepNumber).Any(group => group.Count() > 1))
+        {
+            throw new DomainException("Persisted step executions are structurally inconsistent.");
+        }
+
+        if (restoredDeviations.Any(deviation => deviation is null || deviation.BatchNumber != batchNumber) ||
+            restoredDeviations.GroupBy(deviation => deviation.DeviationCode).Any(group => group.Count() > 1))
+        {
+            throw new DomainException("Persisted deviations are structurally inconsistent.");
+        }
+
+        if (restoredAuditEvents.Any(auditEvent =>
+                auditEvent is null || auditEvent.BatchNumber != batchNumber) ||
+            restoredAuditEvents.GroupBy(auditEvent => auditEvent.AuditEventId).Any(group => group.Count() > 1))
+        {
+            throw new DomainException("Persisted audit evidence is structurally inconsistent.");
+        }
+
+        if ((batchStatus == BatchStatus.Exception &&
+                !restoredDeviations.Any(deviation => deviation.IsBlocking)) ||
+            (batchStatus == BatchStatus.Completed &&
+                restoredDeviations.Any(deviation => deviation.IsBlocking)))
+        {
+            throw new DomainException("The persisted Batch state conflicts with its deviations.");
+        }
+
+        BatchNumber = batchNumber;
+        ProductionOrderNumber = productionOrderNumber;
+        RecipeCode = recipeCode;
+        PlannedQuantity = plannedQuantity;
+        BatchStatus = batchStatus;
+        _stepExecutions.AddRange(restoredSteps);
+        _deviations.AddRange(restoredDeviations);
+        _auditEvents.AddRange(restoredAuditEvents);
+    }
+
+    internal static Batch Rehydrate(
+        BatchNumber batchNumber,
+        ProductionOrder productionOrder,
+        RecipeCode recipeCode,
+        BatchStatus batchStatus,
+        IEnumerable<BatchStepExecution> stepExecutions,
+        IEnumerable<Deviation> deviations,
+        IEnumerable<AuditEvent> auditEvents)
+    {
+        ArgumentNullException.ThrowIfNull(productionOrder);
+
+        return new Batch(
+            batchNumber,
+            productionOrder.ProductionOrderNumber,
+            recipeCode,
+            productionOrder.Quantity,
+            batchStatus,
+            stepExecutions,
+            deviations,
+            auditEvents);
     }
 
     /// <summary>
@@ -81,12 +161,7 @@ public sealed class Batch
     /// <summary>
     /// Gets the quantity planned for production.
     /// </summary>
-    public decimal PlannedQuantity { get; private set; }
-
-    /// <summary>
-    /// Gets the unit used to measure the planned quantity.
-    /// </summary>
-    public UnitOfMeasure UnitOfMeasure { get; private set; }
+    public decimal PlannedQuantity { get; }
 
     /// <summary>
     /// Gets the step executions registered for this Batch.

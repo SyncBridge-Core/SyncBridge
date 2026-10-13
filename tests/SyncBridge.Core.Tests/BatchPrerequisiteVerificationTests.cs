@@ -248,10 +248,8 @@ public sealed class BatchPrerequisiteVerificationTests
     {
         var batch = new Batch(
             new BatchNumber("BATCH-001"),
-            new ProductionOrderNumber("PO-001"),
+            DomainTestFixtureExtensions.CreateProductionOrder(),
             new RecipeCode("RECIPE-001"),
-            100m,
-            new UnitOfMeasure("kg"),
             new OperatorId("OP-TEST"),
             new DateTimeOffset(2026, 10, 6, 12, 0, 0, TimeSpan.Zero));
         batch.MarkReady();

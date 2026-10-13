@@ -47,10 +47,8 @@ public sealed class CompletedRecordProtectionTests
     {
         var batch = new Batch(
             new BatchNumber("BATCH-001"),
-            new ProductionOrderNumber("PO-001"),
+            DomainTestFixtureExtensions.CreateProductionOrder(),
             new RecipeCode("RECIPE-001"),
-            100m,
-            new UnitOfMeasure("kg"),
             Actor,
             Timestamp(1));
         var recipe = new Recipe(

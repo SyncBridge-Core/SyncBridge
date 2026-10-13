@@ -1,0 +1,21 @@
+Restore:
+- Command: dotnet restore src\SyncBridge.Core.slnx --verbosity minimal
+- Exit code: 0
+- All projects up to date.
+
+Build:
+- Command: dotnet build src\SyncBridge.Core.slnx --no-restore --verbosity minimal -m:1
+- Exit code: 0
+- Errors: 0
+- Warnings: 0
+
+Full test suite:
+- Command: dotnet test src\SyncBridge.Core.slnx --no-restore --no-build --verbosity minimal -m:1
+- Execution context: approved unsandboxed process so SQL integration tests could connect.
+- Exit code: 0
+- Passed: 197
+- Failed: 0
+- Skipped: 0
+- Duration: 8 seconds
+
+Accepted 191-test recovery baseline retained; six SQL Server integration tests added.

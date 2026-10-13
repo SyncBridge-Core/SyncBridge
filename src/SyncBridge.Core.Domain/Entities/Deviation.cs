@@ -77,6 +77,102 @@ public sealed class Deviation
             description);
     }
 
+    private Deviation(
+        DeviationCode deviationCode,
+        BatchNumber batchNumber,
+        BatchStepExecutionId? batchStepExecutionId,
+        string description,
+        OperatorId reportedBy,
+        DateTimeOffset openedAt,
+        DeviationStatus deviationStatus,
+        string? reviewComments,
+        string? finalDisposition,
+        DateTimeOffset? resolvedAt,
+        IEnumerable<AuditEvent> auditEvents)
+    {
+        ArgumentNullException.ThrowIfNull(deviationCode);
+        ArgumentNullException.ThrowIfNull(batchNumber);
+        ArgumentNullException.ThrowIfNull(reportedBy);
+        ArgumentNullException.ThrowIfNull(auditEvents);
+
+        if (string.IsNullOrWhiteSpace(description))
+        {
+            throw new ArgumentException("Deviation description is required.", nameof(description));
+        }
+
+        if (!Enum.IsDefined(deviationStatus))
+        {
+            throw new ArgumentOutOfRangeException(nameof(deviationStatus));
+        }
+
+        var hasReview = !string.IsNullOrWhiteSpace(reviewComments);
+        var hasDisposition = !string.IsNullOrWhiteSpace(finalDisposition);
+        var hasValidStateShape = deviationStatus switch
+        {
+            DeviationStatus.Open => !hasReview && !hasDisposition && resolvedAt is null,
+            DeviationStatus.UnderReview => hasReview && !hasDisposition && resolvedAt is null,
+            DeviationStatus.Approved => hasReview && !hasDisposition && resolvedAt is null,
+            DeviationStatus.Rejected => hasReview && !hasDisposition && resolvedAt is null,
+            DeviationStatus.Closed => hasReview && hasDisposition && resolvedAt is not null,
+            _ => false
+        };
+
+        if (!hasValidStateShape)
+        {
+            throw new DomainException("The persisted deviation state is structurally inconsistent.");
+        }
+
+        var restoredAuditEvents = auditEvents.ToArray();
+        if (restoredAuditEvents.Any(auditEvent =>
+                auditEvent is null ||
+                auditEvent.BatchNumber != batchNumber ||
+                auditEvent.AffectedEntity != nameof(Deviation) ||
+                auditEvent.AffectedEntityId != deviationCode.Value) ||
+            restoredAuditEvents.GroupBy(auditEvent => auditEvent.AuditEventId).Any(group => group.Count() > 1))
+        {
+            throw new DomainException("Persisted deviation audit evidence is structurally inconsistent.");
+        }
+
+        DeviationCode = deviationCode;
+        BatchNumber = batchNumber;
+        BatchStepExecutionId = batchStepExecutionId;
+        Description = description;
+        ReportedBy = reportedBy;
+        OpenedAt = openedAt;
+        DeviationStatus = deviationStatus;
+        ReviewComments = reviewComments;
+        FinalDisposition = finalDisposition;
+        ResolvedAt = resolvedAt;
+        _auditEvents.AddRange(restoredAuditEvents);
+    }
+
+    internal static Deviation Rehydrate(
+        DeviationCode deviationCode,
+        BatchNumber batchNumber,
+        BatchStepExecutionId? batchStepExecutionId,
+        string description,
+        OperatorId reportedBy,
+        DateTimeOffset openedAt,
+        DeviationStatus deviationStatus,
+        string? reviewComments,
+        string? finalDisposition,
+        DateTimeOffset? resolvedAt,
+        IEnumerable<AuditEvent> auditEvents)
+    {
+        return new Deviation(
+            deviationCode,
+            batchNumber,
+            batchStepExecutionId,
+            description,
+            reportedBy,
+            openedAt,
+            deviationStatus,
+            reviewComments,
+            finalDisposition,
+            resolvedAt,
+            auditEvents);
+    }
+
     /// <summary>
     /// Gets the deviation identity.
     /// </summary>

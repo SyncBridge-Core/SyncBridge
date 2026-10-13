@@ -267,10 +267,8 @@ public sealed class ElectronicSignatureGateTests
     private static Batch CreateBatch() =>
         new(
             new BatchNumber("BATCH-001"),
-            new ProductionOrderNumber("PO-001"),
+            DomainTestFixtureExtensions.CreateProductionOrder(),
             new RecipeCode("RECIPE-001"),
-            100m,
-            new UnitOfMeasure("kg"),
             new OperatorId("OP-TEST"),
             Timestamp(0));
 

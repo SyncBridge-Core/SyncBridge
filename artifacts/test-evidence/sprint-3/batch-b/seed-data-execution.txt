@@ -1,0 +1,20 @@
+Mechanism: SyncBridge.Core.Infrastructure.Persistence.Seeding.DevelopmentDataSeeder
+Registration: scoped
+
+Definitions implemented:
+- Fictional AppUsers: demo.operator and demo.quality
+- One fictional material
+- One fictional equipment item
+- One approved fictional recipe
+- Two ordered recipe steps
+- One material requirement
+- One equipment requirement
+- Two fictional demonstration ProductionOrders
+
+Repeatability controls:
+- Deterministic IDs are used for new seed records.
+- Existing records are resolved by unique business code and are not overwritten.
+- Missing child definitions are added without adding a seed-management table.
+- No Batch, execution history, deviation, electronic signature, or audit history is seeded.
+
+Execution status: NOT EXECUTED. The approved localhost SQL Server preflight failed, so seed application and rerun idempotency could not be demonstrated safely.

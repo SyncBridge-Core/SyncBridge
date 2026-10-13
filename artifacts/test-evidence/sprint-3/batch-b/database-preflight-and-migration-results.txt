@@ -1,0 +1,15 @@
+Approved target: local SQL Server instance at localhost, Windows integrated authentication, database SyncBridgeCore.
+Legacy database restriction observed: no connection, query, enumeration, or operation was performed against SyncBridge_Core.
+
+Read-only preflight command result:
+- SQL client was available.
+- Connection to localhost timed out and could not be opened.
+- Server identity, target-database existence, and create permission could not be confirmed.
+
+Safety outcome:
+- No database was created, altered, dropped, renamed, or reset.
+- The initial migration was not applied.
+- No target schema metadata query was performed.
+- Authentication was not changed and no credential/password was requested.
+
+Database acceptance status: BLOCKED by unavailable approved SQL Server endpoint.

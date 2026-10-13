@@ -9,6 +9,18 @@ internal static class DomainTestFixtureExtensions
     private static readonly DateTimeOffset TestTimestamp =
         new(2026, 10, 6, 12, 0, 0, TimeSpan.Zero);
 
+    internal static ProductionOrder CreateProductionOrder(
+        string orderNumber = "PO-001",
+        decimal quantity = 100m) =>
+        new(
+            new ProductionOrderId(Guid.Parse("22222222-2222-2222-2222-222222222222")),
+            new ProductionOrderNumber(orderNumber),
+            new ProductCode("PRODUCT-001"),
+            "Test product",
+            new RecipeId("11111111-1111-1111-1111-111111111111"),
+            quantity,
+            TestTimestamp);
+
     internal static void MarkReady(this Batch batch) =>
         batch.MarkReady(TestOperator, TestTimestamp);
 
