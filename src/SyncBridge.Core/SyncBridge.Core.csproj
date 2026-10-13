@@ -4,6 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>SyncBridge.Core-0e8764c3-0b59-4e17-8813-0c2c4ba32dc0</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

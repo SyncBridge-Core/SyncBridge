@@ -1,0 +1,23 @@
+WP-6 Sprint 3 Task 2 - SDK and Runtime Inventory
+Execution date: 2026-10-12
+
+dotnet --version
+Exit code: 0
+10.0.401
+
+dotnet --list-sdks
+Exit code: 0
+10.0.401
+
+dotnet --list-runtimes
+Exit code: 0
+Microsoft.AspNetCore.App 8.0.31
+Microsoft.AspNetCore.App 10.0.12
+Microsoft.NETCore.App 8.0.31
+Microsoft.NETCore.App 10.0.12
+Microsoft.WindowsDesktop.App 8.0.31
+Microsoft.WindowsDesktop.App 10.0.12
+
+dotnet ef --version
+Exit code: 1
+Result: dotnet-ef is not installed. Task 2 does not install tooling or create migrations; tooling installation is deferred until an authorized migration task requires it.
