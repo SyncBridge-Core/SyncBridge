@@ -200,7 +200,7 @@ internal static class BatchAggregateAssembler
             ownedEvents);
     }
 
-    private static void ValidateMaterialVerifications(
+    internal static IReadOnlyList<MaterialVerification> ValidateMaterialVerifications(
         IEnumerable<MaterialVerificationRow> rows,
         BatchRow batchRow,
         BatchNumber batchNumber,
@@ -208,6 +208,7 @@ internal static class BatchAggregateAssembler
         IReadOnlyDictionary<Guid, MaterialRow> materials,
         IReadOnlySet<string> userIds)
     {
+        var restored = new List<MaterialVerification>();
         foreach (var row in rows)
         {
             if (row.BatchId != batchRow.BatchId || !materials.TryGetValue(row.MaterialId, out var material))
@@ -220,17 +221,18 @@ internal static class BatchAggregateAssembler
             var affectedId = $"{batchNumber.Value}:{material.MaterialCode}:{row.VerifiedByUserId}:{row.VerifiedAt:O}";
             var evidence = FindSingleEvidence(auditEvents, AuditEventType.MaterialVerified, affectedId);
 
-            _ = MaterialVerification.Rehydrate(
+            restored.Add(MaterialVerification.Rehydrate(
                 batchNumber,
                 new MaterialCode(material.MaterialCode),
                 new OperatorId(row.VerifiedByUserId),
                 row.VerifiedAt,
                 result,
-                evidence);
+                evidence));
         }
+        return restored;
     }
 
-    private static void ValidateEquipmentVerifications(
+    internal static IReadOnlyList<EquipmentVerification> ValidateEquipmentVerifications(
         IEnumerable<EquipmentVerificationRow> rows,
         BatchRow batchRow,
         BatchNumber batchNumber,
@@ -238,6 +240,7 @@ internal static class BatchAggregateAssembler
         IReadOnlyDictionary<Guid, EquipmentRow> equipment,
         IReadOnlySet<string> userIds)
     {
+        var restored = new List<EquipmentVerification>();
         foreach (var row in rows)
         {
             if (row.BatchId != batchRow.BatchId || !equipment.TryGetValue(row.EquipmentId, out var equipmentRow))
@@ -250,17 +253,18 @@ internal static class BatchAggregateAssembler
             var affectedId = $"{batchNumber.Value}:{equipmentRow.EquipmentCode}:{row.VerifiedByUserId}:{row.VerifiedAt:O}";
             var evidence = FindSingleEvidence(auditEvents, AuditEventType.EquipmentVerified, affectedId);
 
-            _ = EquipmentVerification.Rehydrate(
+            restored.Add(EquipmentVerification.Rehydrate(
                 batchNumber,
                 new EquipmentCode(equipmentRow.EquipmentCode),
                 new OperatorId(row.VerifiedByUserId),
                 row.VerifiedAt,
                 result,
-                evidence);
+                evidence));
         }
+        return restored;
     }
 
-    private static void ValidateSignatures(
+    internal static IReadOnlyList<ElectronicSignature> ValidateSignatures(
         IEnumerable<ElectronicSignatureRow> rows,
         BatchRow batchRow,
         BatchNumber batchNumber,
@@ -268,6 +272,7 @@ internal static class BatchAggregateAssembler
         IEnumerable<AuditEvent> auditEvents,
         IReadOnlySet<string> userIds)
     {
+        var restored = new List<ElectronicSignature>();
         foreach (var row in rows)
         {
             if (row.BatchId != batchRow.BatchId || row.RelatedRecordType != RelatedRecordType.BatchStepExecution.Value)
@@ -284,7 +289,7 @@ internal static class BatchAggregateAssembler
 
             var signatureId = TechnicalGuidConverter.ToCanonicalString(row.SignatureId);
             var evidence = FindSingleEvidence(auditEvents, AuditEventType.ElectronicSignatureApplied, signatureId);
-            _ = ElectronicSignature.Rehydrate(
+            restored.Add(ElectronicSignature.Rehydrate(
                 new ElectronicSignatureId(signatureId),
                 batchNumber,
                 RelatedRecordType.BatchStepExecution,
@@ -292,8 +297,9 @@ internal static class BatchAggregateAssembler
                 new OperatorId(row.UserId),
                 row.Meaning,
                 row.SignedAt,
-                evidence);
+                evidence));
         }
+        return restored;
     }
 
     private static AuditEvent FindSingleEvidence(

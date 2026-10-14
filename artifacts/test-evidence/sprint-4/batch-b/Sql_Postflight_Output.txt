@@ -1,0 +1,53 @@
+DatabaseName Authentication
+------------ --------------
+SyncBridgeCore NTLM
+CoreTable
+---------
+AppUser
+AuditEvent
+Batch
+BatchStepExecution
+Deviation
+ElectronicSignature
+Equipment
+EquipmentVerification
+Material
+MaterialVerification
+ProductionOrder
+Recipe
+RecipeEquipmentRequirement
+RecipeMaterialRequirement
+RecipeStep
+MigrationId ProductVersion
+----------- --------------
+20261013010705_InitialCreate 10.0.12
+ForeignKeyCount RestrictedDeleteCount
+--------------- ---------------------
+23 23
+DmlTriggers UserProcedures UserViews
+----------- -------------- ---------
+0 0 0
+TableName ColumnName SqlType max_length is_nullable
+--------- ---------- ------- ---------- -----------
+AuditEvent AffectedEntityId nvarchar 512 0
+Deviation DeviationCode nvarchar 80 0
+DeviationCodeIndex is_unique
+------------------ ---------
+UQ_Deviation_DeviationCode 1
+TableName RowCount
+--------- --------
+AppUser 2
+Recipe 1
+RecipeStep 2
+RecipeMaterialRequirement 1
+RecipeEquipmentRequirement 1
+Material 1
+Equipment 1
+ProductionOrder 2
+Batch 0
+BatchStepExecution 0
+MaterialVerification 0
+EquipmentVerification 0
+Deviation 0
+ElectronicSignature 0
+AuditEvent 0

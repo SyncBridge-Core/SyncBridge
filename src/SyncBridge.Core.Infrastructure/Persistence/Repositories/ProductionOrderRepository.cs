@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using SyncBridge.Core.Application.Contracts.Persistence;
 using SyncBridge.Core.Domain.Entities;
+using SyncBridge.Core.Domain.Exceptions;
 using SyncBridge.Core.Domain.ValueObjects;
 using SyncBridge.Core.Infrastructure.Persistence.Assembly;
 using SyncBridge.Core.Infrastructure.Persistence.Conversion;
+using SyncBridge.Core.Infrastructure.Persistence.Exceptions;
 using SyncBridge.Core.Infrastructure.Persistence.Rows;
 using SyncBridge.Core.Infrastructure.Persistence.Validation;
 
@@ -12,6 +14,22 @@ namespace SyncBridge.Core.Infrastructure.Persistence.Repositories;
 internal sealed class ProductionOrderRepository(SyncBridgeDbContext context)
     : IProductionOrderRepository
 {
+    public async Task UpdateAsync(ProductionOrder order, CancellationToken cancellationToken = default)
+    {
+        var row = await context.ProductionOrders.SingleAsync(item => item.OrderId == order.ProductionOrderId.Value, cancellationToken);
+        row.Status = order.ProductionOrderStatus;
+    }
+
+    public Task AppendAuditAsync(AuditEvent auditEvent, CancellationToken cancellationToken = default) =>
+        AuditPersistence.AppendAsync(context, auditEvent, null, cancellationToken);
+
+    public async Task<IReadOnlyList<AuditEvent>> GetAuditAsync(ProductionOrderNumber number, CancellationToken cancellationToken = default)
+    {
+        var rows = await context.AuditEvents.AsNoTracking().Where(row => row.BatchId == null && row.AffectedEntity == nameof(ProductionOrder) && row.AffectedEntityId == number.Value)
+            .ToArrayAsync(cancellationToken);
+        return rows.OrderBy(row => row.OccurredAt).Select(row => AuditPersistence.Read(row, null)).ToArray();
+    }
+
     public async Task<ProductionOrder?> GetByNumberAsync(
         ProductionOrderNumber productionOrderNumber,
         CancellationToken cancellationToken = default)
@@ -23,7 +41,14 @@ internal sealed class ProductionOrderRepository(SyncBridgeDbContext context)
                 candidate => candidate.OrderNumber == productionOrderNumber.Value,
                 cancellationToken);
 
-        return row is null ? null : ProductionOrderAssembler.Assemble(row);
+        try
+        {
+            return row is null ? null : ProductionOrderAssembler.Assemble(row);
+        }
+        catch (Exception exception) when (exception is DomainException or ArgumentException)
+        {
+            throw new PersistenceIntegrityException("The persisted ProductionOrder is invalid.", exception);
+        }
     }
 
     public Task<bool> ExistsAsync(

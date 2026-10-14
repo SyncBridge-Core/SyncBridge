@@ -36,5 +36,9 @@ public enum AuditEventType
     /// <summary>The Batch resumed processing.</summary>
     BatchProcessingResumed,
     /// <summary>The Batch was completed.</summary>
-    BatchCompleted
+    BatchCompleted,
+    /// <summary>A production order was created before any Batch exists.</summary>
+    ProductionOrderCreated,
+    /// <summary>An existing production-order status transition was performed.</summary>
+    ProductionOrderStatusChanged
 }

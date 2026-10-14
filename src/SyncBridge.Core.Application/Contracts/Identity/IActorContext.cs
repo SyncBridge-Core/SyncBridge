@@ -11,4 +11,7 @@ public interface IActorContext
     /// Gets the responsible actor identity supplied to controlled Domain operations.
     /// </summary>
     OperatorId ActorId { get; }
+
+    /// <summary>Resolves an authenticated, active manufacturing identity and current roles.</summary>
+    Task<AuthenticatedActor?> GetActorAsync(CancellationToken cancellationToken = default);
 }

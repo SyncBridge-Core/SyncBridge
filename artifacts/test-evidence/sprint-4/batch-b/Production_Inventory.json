@@ -1,0 +1,35 @@
+{
+  "Added": [
+    "src/SyncBridge.Core.Application/Contracts/Identity/AuthenticatedActor.cs",
+    "src/SyncBridge.Core.Application/Services/ApplicationOperation.cs",
+    "src/SyncBridge.Core.Application/Services/BatchService.cs",
+    "src/SyncBridge.Core.Application/Services/OperationResult.cs",
+    "src/SyncBridge.Core.Application/Services/ProductionOrderService.cs",
+    "src/SyncBridge.Core.Infrastructure/ApplicationComposition.cs",
+    "src/SyncBridge.Core.Infrastructure/Identity/ManufacturingIdentity.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/AuditPersistence.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchCommandPersistence.cs"
+  ],
+  "Modified": [
+    "src/SyncBridge.Core.Application/Contracts/Identity/IActorContext.cs",
+    "src/SyncBridge.Core.Application/Contracts/Persistence/IApplicationUnitOfWork.cs",
+    "src/SyncBridge.Core.Application/Contracts/Persistence/IBatchRepository.cs",
+    "src/SyncBridge.Core.Application/Contracts/Persistence/IProductionOrderRepository.cs",
+    "src/SyncBridge.Core.Application/SyncBridge.Core.Application.csproj",
+    "src/SyncBridge.Core.Domain/Entities/Batch.cs",
+    "src/SyncBridge.Core.Domain/Enumerations/AuditEventType.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/ApplicationUnitOfWork.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/Assembly/BatchAggregateAssembler.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/Exceptions/PersistenceIntegrityException.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchRepository.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/ProductionOrderRepository.cs",
+    "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/RecipeRepository.cs",
+    "src/SyncBridge.Core.Infrastructure/SyncBridge.Core.Infrastructure.csproj",
+    "src/SyncBridge.Core/Program.cs",
+    "src/SyncBridge.Core/SyncBridge.Core.csproj"
+  ],
+  "AddedCount": 9,
+  "ModifiedCount": 16,
+  "NetPhysicalLines": 902,
+  "Measurement": "Against accepted HEAD; C# and project XML including comments/blank lines; excluding tests/docs/evidence"
+}

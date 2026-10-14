@@ -1,0 +1,87 @@
+[
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer",
+    "outcome": "Passed",
+    "duration": "00:00:01.7592512"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges",
+    "outcome": "Passed",
+    "duration": "00:00:00.1065406"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence",
+    "outcome": "Passed",
+    "duration": "00:00:00.5314710"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure",
+    "outcome": "Passed",
+    "duration": "00:00:00.2989846"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory",
+    "outcome": "Passed",
+    "duration": "00:00:00.1080978"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements",
+    "outcome": "Passed",
+    "duration": "00:00:00.0593734"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite",
+    "outcome": "Passed",
+    "duration": "00:00:00.9700694"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_ReconstructsAllFiveStatesAndRichEvidence",
+    "outcome": "Passed",
+    "duration": "00:00:00.1194192"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer",
+    "outcome": "Passed",
+    "duration": "00:00:00.0572074"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerApplicationServiceTests.TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation",
+    "outcome": "Passed",
+    "duration": "00:00:00.1272203"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation",
+    "outcome": "Passed",
+    "duration": "00:00:00.0567836"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence",
+    "outcome": "Passed",
+    "duration": "00:00:00.9930898"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence",
+    "outcome": "Passed",
+    "duration": "00:00:00.0892234"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused",
+    "outcome": "Passed",
+    "duration": "00:00:00.1793781"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly",
+    "outcome": "Passed",
+    "duration": "00:00:00.1034117"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerApplicationServiceTests.InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer",
+    "outcome": "Passed",
+    "duration": "00:00:00.1506882"
+  },
+  {
+    "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer",
+    "outcome": "Passed",
+    "duration": "00:00:00.1508130"
+  }
+]

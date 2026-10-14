@@ -1,0 +1,4 @@
+Published application runtime composition: PASS
+HTTPS GET /authentication: HTTP 200
+Sign-in form present: True
+SQL Server access: NONE (no accounts configured; non-resolving endpoint).

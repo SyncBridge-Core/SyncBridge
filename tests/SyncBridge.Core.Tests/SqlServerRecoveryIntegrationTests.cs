@@ -19,6 +19,7 @@ public sealed class SqlServerRecoveryCollection
 }
 
 [Collection(SqlServerRecoveryCollection.Name)]
+[Trait("Category", "LiveSqlServer")]
 public sealed class SqlServerRecoveryIntegrationTests
 {
     private const string Operator = "demo.operator";

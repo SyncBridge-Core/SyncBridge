@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using SyncBridge.Core.Application.Contracts.Persistence;
 using SyncBridge.Core.Domain.Entities;
+using SyncBridge.Core.Domain.Exceptions;
 using SyncBridge.Core.Domain.ValueObjects;
 using SyncBridge.Core.Infrastructure.Persistence.Assembly;
 using SyncBridge.Core.Infrastructure.Persistence.Conversion;
+using SyncBridge.Core.Infrastructure.Persistence.Exceptions;
 using SyncBridge.Core.Infrastructure.Persistence.Rows;
 
 namespace SyncBridge.Core.Infrastructure.Persistence.Repositories;
@@ -62,12 +64,19 @@ internal sealed class RecipeRepository(SyncBridgeDbContext context) : IRecipeRep
             .Where(row => equipmentIds.Contains(row.EquipmentId))
             .ToDictionaryAsync(row => row.EquipmentId, cancellationToken);
 
-        return RecipeAssembler.Assemble(
-            recipeRow,
-            steps,
-            materialRequirements,
-            equipmentRequirements,
-            materials,
-            equipment);
+        try
+        {
+            return RecipeAssembler.Assemble(
+                recipeRow,
+                steps,
+                materialRequirements,
+                equipmentRequirements,
+                materials,
+                equipment);
+        }
+        catch (Exception exception) when (exception is DomainException or ArgumentException)
+        {
+            throw new PersistenceIntegrityException("The persisted Recipe definition is invalid.", exception);
+        }
     }
 }

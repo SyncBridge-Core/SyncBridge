@@ -5,6 +5,12 @@ namespace SyncBridge.Core.Application.Contracts.Persistence;
 /// </summary>
 public interface IApplicationUnitOfWork
 {
+    /// <summary>Begins an isolated controlled command; concurrent changes must not bypass gates.</summary>
+    Task BeginAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>Rolls back and discards tracked command changes, including after cancellation.</summary>
+    Task RollbackAsync(CancellationToken cancellationToken = default);
+
     /// <summary>
     /// Commits all tracked changes for the current controlled command as one unit.
     /// </summary>

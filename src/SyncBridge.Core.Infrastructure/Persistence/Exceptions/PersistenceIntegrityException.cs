@@ -9,8 +9,9 @@ public sealed class PersistenceIntegrityException : Exception
     /// Initializes a persistence-integrity failure.
     /// </summary>
     /// <param name="message">The integrity failure description.</param>
-    public PersistenceIntegrityException(string message)
-        : base(message)
+    /// <param name="innerException">The original reconstruction failure for diagnostic logging.</param>
+    public PersistenceIntegrityException(string message, Exception? innerException = null)
+        : base(message, innerException)
     {
     }
 }
