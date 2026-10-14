@@ -1,0 +1,10 @@
+  SyncBridge.Core.Domain -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Domain\bin\Debug\net10.0\SyncBridge.Core.Domain.dll
+  SyncBridge.Core.Application -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\bin\Debug\net10.0\SyncBridge.Core.Application.dll
+  SyncBridge.Core.Infrastructure -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\bin\Debug\net10.0\SyncBridge.Core.Infrastructure.dll
+  SyncBridge.Core -> C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core\bin\Debug\net10.0\SyncBridge.Core.dll
+  SyncBridge.Core.Tests -> C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll
+Test run for C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\Engineering\GitHub\SyncBridge.Core\artifacts\test-evidence\sprint-4\batch-b\Sprint4_BatchB_Final_Full.trx
+
+Passed!  - Failed:     0, Passed:   251, Skipped:     0, Total:   251, Duration: 29 s - SyncBridge.Core.Tests.dll (net10.0)

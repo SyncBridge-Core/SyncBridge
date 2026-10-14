@@ -9,6 +9,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SyncBridge.Core.Application\SyncBridge.Core.Application.csproj" />
+    <!-- Build/runtime delivery only: Presentation has no compile reference to Infrastructure. -->
+    <ProjectReference Include="..\SyncBridge.Core.Infrastructure\SyncBridge.Core.Infrastructure.csproj" ReferenceOutputAssembly="false" />
   </ItemGroup>
+
+  <Target Name="CopyInfrastructureRuntime" AfterTargets="Build">
+    <ItemGroup><InfrastructureRuntime Include="..\SyncBridge.Core.Infrastructure\bin\$(Configuration)\$(TargetFramework)\**\*.dll;..\SyncBridge.Core.Infrastructure\bin\$(Configuration)\$(TargetFramework)\*.deps.json" Exclude="..\SyncBridge.Core.Infrastructure\bin\$(Configuration)\$(TargetFramework)\BuildHost*\**" /></ItemGroup>
+    <Copy SourceFiles="@(InfrastructureRuntime)" DestinationFiles="@(InfrastructureRuntime->'$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="PublishInfrastructureRuntime" AfterTargets="Publish">
+    <ItemGroup><InfrastructureRuntimePublish Include="..\SyncBridge.Core.Infrastructure\bin\$(Configuration)\$(TargetFramework)\**\*.dll;..\SyncBridge.Core.Infrastructure\bin\$(Configuration)\$(TargetFramework)\*.deps.json" Exclude="..\SyncBridge.Core.Infrastructure\bin\$(Configuration)\$(TargetFramework)\BuildHost*\**" /></ItemGroup>
+    <Copy SourceFiles="@(InfrastructureRuntimePublish)" DestinationFiles="@(InfrastructureRuntimePublish->'$(PublishDir)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
 
 </Project>

@@ -1,0 +1,30 @@
+ M src/SyncBridge.Core.Application/Contracts/Identity/IActorContext.cs
+ M src/SyncBridge.Core.Application/Contracts/Persistence/IApplicationUnitOfWork.cs
+ M src/SyncBridge.Core.Application/Contracts/Persistence/IBatchRepository.cs
+ M src/SyncBridge.Core.Application/Contracts/Persistence/IProductionOrderRepository.cs
+ M src/SyncBridge.Core.Application/SyncBridge.Core.Application.csproj
+ M src/SyncBridge.Core.Domain/Entities/Batch.cs
+ M src/SyncBridge.Core.Domain/Enumerations/AuditEventType.cs
+ M src/SyncBridge.Core.Infrastructure/Persistence/ApplicationUnitOfWork.cs
+ M src/SyncBridge.Core.Infrastructure/Persistence/Assembly/BatchAggregateAssembler.cs
+ M src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchRepository.cs
+ M src/SyncBridge.Core.Infrastructure/Persistence/Repositories/ProductionOrderRepository.cs
+ M src/SyncBridge.Core.Infrastructure/SyncBridge.Core.Infrastructure.csproj
+ M src/SyncBridge.Core/Program.cs
+ M src/SyncBridge.Core/SyncBridge.Core.csproj
+ M tests/SyncBridge.Core.Tests/SqlServerRecoveryIntegrationTests.cs
+ M tests/SyncBridge.Core.Tests/SyncBridge.Core.Tests.csproj
+?? artifacts/test-evidence/sprint-4/
+?? docs/sprint-3/WP6_Sprint3_to_Sprint4_Engineering_Handoff.docx
+?? docs/sprint-4/
+?? src/SyncBridge.Core.Application/Contracts/Identity/AuthenticatedActor.cs
+?? src/SyncBridge.Core.Application/Services/
+?? src/SyncBridge.Core.Infrastructure/ApplicationComposition.cs
+?? src/SyncBridge.Core.Infrastructure/Identity/
+?? src/SyncBridge.Core.Infrastructure/Persistence/Repositories/AuditPersistence.cs
+?? src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchCommandPersistence.cs
+?? tests/SyncBridge.Core.Tests/AuthenticationBoundaryTests.cs
+?? tests/SyncBridge.Core.Tests/SecuredApplicationServiceTests.cs
+?? tests/SyncBridge.Core.Tests/SecuredPersistenceIntegrityTests.cs
+?? tests/SyncBridge.Core.Tests/SecuredServiceFixture.cs
+?? tests/SyncBridge.Core.Tests/SqlServerApplicationServiceTests.cs

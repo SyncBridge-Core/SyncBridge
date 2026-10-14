@@ -8,6 +8,9 @@ namespace SyncBridge.Core.Application.Contracts.Persistence;
 /// </summary>
 public interface IProductionOrderRepository
 {
+    Task UpdateAsync(ProductionOrder order, CancellationToken cancellationToken = default);
+    Task AppendAuditAsync(AuditEvent auditEvent, CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<AuditEvent>> GetAuditAsync(ProductionOrderNumber number, CancellationToken cancellationToken = default);
     /// <summary>
     /// Gets a ProductionOrder by its business order number.
     /// </summary>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="2a0c60cb-af14-4302-be34-9525083379d1" name="Carlos@SB-DEV-01 2026-10-13 22:00:46" runUser="SB-DEV-01\Carlos" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-13T22:00:46.2220457-04:00" queuing="2026-10-13T22:00:46.2220468-04:00" start="2026-10-13T22:00:41.0820723-04:00" finish="2026-10-13T22:00:46.2286258-04:00" />
+  <TestSettings name="default" id="05ddbda2-65f2-4b78-8a89-21ecdd0da555">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-13_22_00_46" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="fe7d59d1-6732-47a0-9fb6-de31834a4175" testId="eb0d9230-a4aa-7857-fe12-b6f18ed97e46" testName="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure" computerName="SB-DEV-01" duration="00:00:03.3553968" startTime="2026-10-13T22:00:42.6343948-04:00" endTime="2026-10-13T22:00:46.0246666-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe7d59d1-6732-47a0-9fb6-de31834a4175">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: Tuple (TechnicalFailure, TechnicalFailure)&#xD;
+Actual:   Tuple (BusinessRuleRejected, InvalidInput)</Message>
+          <StackTrace>   at SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerBatchBIntegrationTests.cs:line 170&#xD;
+   at SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerBatchBIntegrationTests.cs:line 174&#xD;
+   at SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerBatchBIntegrationTests.cs:line 174&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="eb0d9230-a4aa-7857-fe12-b6f18ed97e46">
+      <Execution id="fe7d59d1-6732-47a0-9fb6-de31834a4175" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests" name="CorruptPersistedDomainData_IsReportedAsTechnicalFailure" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="eb0d9230-a4aa-7857-fe12-b6f18ed97e46" executionId="fe7d59d1-6732-47a0-9fb6-de31834a4175" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" passed="0" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.22]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.39]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.45]   Starting:    SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:03.90]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.90]       Expected: Tuple (TechnicalFailure, TechnicalFailure)&#xD;
+[xUnit.net 00:00:03.90]       Actual:   Tuple (BusinessRuleRejected, InvalidInput)&#xD;
+[xUnit.net 00:00:03.90]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.90]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerBatchBIntegrationTests.cs(170,0): at SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure()&#xD;
+[xUnit.net 00:00:03.90]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerBatchBIntegrationTests.cs(174,0): at SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure()&#xD;
+[xUnit.net 00:00:03.90]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerBatchBIntegrationTests.cs(174,0): at SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure()&#xD;
+[xUnit.net 00:00:03.90]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.93]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="SB-DEV-01" outcome="Error" timestamp="2026-10-13T22:00:46.0315716-04:00">
+        <Text>[xUnit.net 00:00:03.90]     SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

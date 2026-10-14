@@ -1,0 +1,6 @@
+Published HTTPS host: PASS
+Authentication page: HTTP 200
+Unconfigured identity with valid antiforgery token: HTTP 401
+Runtime Infrastructure/EF/identity DI activated without compile references from Presentation.
+No deployment credentials provisioned; no manufacturing records changed.
+Existing development certificate used; verification bypass is local test-client-only.

@@ -1,0 +1,21 @@
+{
+  "Total": 252,
+  "Passed": 252,
+  "Failed": 0,
+  "Skipped": 0,
+  "LiveSql": 17,
+  "LiveSqlPassed": 17,
+  "NonSql": 235,
+  "BuildWarnings": 0,
+  "BuildErrors": 0,
+  "Publish": "Passed",
+  "HttpsAuthenticationPage": 200,
+  "UnconfiguredLogin": 401,
+  "CoreTables": 15,
+  "RestrictedForeignKeys": 23,
+  "Migration": "20261013010705_InitialCreate",
+  "OriginalSeedRows": 11,
+  "ManufacturingHistoryResidue": 0,
+  "ProductionNetLines": 902,
+  "CommitMergePush": "Not performed"
+}

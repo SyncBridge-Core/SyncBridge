@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SyncBridge.Core.Domain\SyncBridge.Core.Domain.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.12" />
   </ItemGroup>
 
 </Project>

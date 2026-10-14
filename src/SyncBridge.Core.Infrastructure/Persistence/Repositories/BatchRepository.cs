@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using SyncBridge.Core.Application.Contracts.Persistence;
 using SyncBridge.Core.Domain.Entities;
 using SyncBridge.Core.Domain.Enumerations;
+using SyncBridge.Core.Domain.Exceptions;
 using SyncBridge.Core.Domain.ValueObjects;
 using SyncBridge.Core.Infrastructure.Persistence.Assembly;
 using SyncBridge.Core.Infrastructure.Persistence.Conversion;
@@ -11,7 +12,7 @@ using SyncBridge.Core.Infrastructure.Persistence.Validation;
 
 namespace SyncBridge.Core.Infrastructure.Persistence.Repositories;
 
-internal sealed class BatchRepository(SyncBridgeDbContext context) : IBatchRepository
+internal sealed partial class BatchRepository(SyncBridgeDbContext context) : IBatchRepository
 {
     public async Task<Batch?> GetExecutionAggregateAsync(
         BatchNumber batchNumber,
@@ -78,20 +79,27 @@ internal sealed class BatchRepository(SyncBridgeDbContext context) : IBatchRepos
             .ToArrayAsync(cancellationToken))
             .ToHashSet(StringComparer.Ordinal);
 
-        return BatchAggregateAssembler.Assemble(
-            batchRow,
-            orderRow,
-            recipeRow,
-            recipeSteps,
-            executions,
-            materialVerifications,
-            equipmentVerifications,
-            deviations,
-            signatures,
-            auditEvents,
-            materials,
-            equipment,
-            userIds);
+        try
+        {
+            return BatchAggregateAssembler.Assemble(
+                batchRow,
+                orderRow,
+                recipeRow,
+                recipeSteps,
+                executions,
+                materialVerifications,
+                equipmentVerifications,
+                deviations,
+                signatures,
+                auditEvents,
+                materials,
+                equipment,
+                userIds);
+        }
+        catch (Exception exception) when (exception is DomainException or ArgumentException)
+        {
+            throw new PersistenceIntegrityException("The persisted Batch aggregate is invalid.", exception);
+        }
     }
 
     public async Task AddAsync(Batch batch, CancellationToken cancellationToken = default)
@@ -162,20 +170,7 @@ internal sealed class BatchRepository(SyncBridgeDbContext context) : IBatchRepos
         }
 
         foreach (var auditEvent in batch.AuditEvents)
-        {
-            await context.AuditEvents.AddAsync(new AuditEventRow
-            {
-                AuditEventId = TechnicalGuidConverter.ToGuid(auditEvent.AuditEventId.Value),
-                BatchId = batchId,
-                UserId = DbdsStringLengthValidator.RequireWithinLimit(auditEvent.OperatorId.Value, 64, nameof(batch)),
-                Action = auditEvent.Action,
-                AffectedEntity = DbdsStringLengthValidator.RequireWithinLimit(auditEvent.AffectedEntity, 60, nameof(batch)),
-                AffectedEntityId = DbdsStringLengthValidator.RequireWithinLimit(auditEvent.AffectedEntityId, 256, nameof(batch)),
-                OccurredAt = auditEvent.OccurredAt,
-                ResultingState = auditEvent.ResultingState,
-                Details = auditEvent.Details
-            }, cancellationToken);
-        }
+            await AuditPersistence.AppendAsync(context, auditEvent, batchId, cancellationToken);
 
         _ = recipeRow;
     }

@@ -98,8 +98,8 @@ public sealed class Batch
             throw new DomainException("Persisted audit evidence is structurally inconsistent.");
         }
 
-        if ((batchStatus == BatchStatus.Exception &&
-                !restoredDeviations.Any(deviation => deviation.IsBlocking)) ||
+        // A resolved deviation remains in Exception until the authorized operator resumes.
+        if ((batchStatus == BatchStatus.Exception && restoredDeviations.Length == 0) ||
             (batchStatus == BatchStatus.Completed &&
                 restoredDeviations.Any(deviation => deviation.IsBlocking)))
         {

@@ -1,0 +1,9 @@
+Available regression: 235 passed; 0 failed; 0 skipped.
+Accepted non-SQL baseline: 191 cases preserved.
+New non-SQL cases: 44 passing.
+Live SQL: 10 accepted tests plus 2 new service tests NOT RUN (separate approval required).
+Build: 0 warnings; 0 errors.
+Local publish and HTTPS authentication-page smoke: PASS.
+Production inventory: 9 added; 14 modified; approximately +875 physical lines including project XML.
+Schema/migration/seed implementation changes: NONE.
+Git commit/merge/push: NONE.
