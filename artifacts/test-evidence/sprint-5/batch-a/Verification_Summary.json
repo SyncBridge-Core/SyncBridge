@@ -1,0 +1,72 @@
+[
+  {
+    "Artifact": "A3_Final_Integrated.trx",
+    "Total": 278,
+    "Passed": 278,
+    "Failed": 0,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "A3_Patched_Integrated.trx",
+    "Total": 278,
+    "Passed": 266,
+    "Failed": 12,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "Baseline_NonSql.trx",
+    "Total": 235,
+    "Passed": 235,
+    "Failed": 0,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "Browser_Host_Workflow.trx",
+    "Total": 1,
+    "Passed": 0,
+    "Failed": 1,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "Final_Integrated.trx",
+    "Total": 278,
+    "Passed": 278,
+    "Failed": 0,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "Final_NonSql.trx",
+    "Total": 261,
+    "Passed": 260,
+    "Failed": 1,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "Focused_Http_Retest.trx",
+    "Total": 27,
+    "Passed": 27,
+    "Failed": 0,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "Focused_Http.trx",
+    "Total": 27,
+    "Passed": 25,
+    "Failed": 2,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "Full_NonSql.trx",
+    "Total": 259,
+    "Passed": 259,
+    "Failed": 0,
+    "NotExecuted": 0
+  },
+  {
+    "Artifact": "LiveSql_Regression.trx",
+    "Total": 17,
+    "Passed": 17,
+    "Failed": 0,
+    "NotExecuted": 0
+  }
+]

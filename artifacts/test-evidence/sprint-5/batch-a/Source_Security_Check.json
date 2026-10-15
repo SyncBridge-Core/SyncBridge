@@ -1,0 +1,5 @@
+{
+  "FilesChecked": 27,
+  "CredentialLiteralFindings": 0,
+  "Scope": "Changed and new production files; known raw SQL transcript excluded and untouched"
+}

@@ -1,0 +1,13 @@
+[1] Listing certificates from CurrentUser\My
+[2] Found certificates: 1 certificate
+    1) 8E8EF86C71A1BF87D7B8DE76477E82D521564C21 - CN=localhost - Valid from 2026-08-02 17:15:48Z to 2027-08-02 17:15:48Z - IsHttpsDevelopmentCertificate: true - IsExportable: true
+[3] Checking certificates validity
+[4] Valid certificates: 1 certificate
+    1) 8E8EF86C71A1BF87D7B8DE76477E82D521564C21 - CN=localhost - Valid from 2026-08-02 17:15:48Z to 2027-08-02 17:15:48Z - IsHttpsDevelopmentCertificate: true - IsExportable: true
+[5] Invalid certificates: no certificates
+[118] Meets minimum version certificates: 1 certificate
+    1) 8E8EF86C71A1BF87D7B8DE76477E82D521564C21 - CN=localhost - Valid from 2026-08-02 17:15:48Z to 2027-08-02 17:15:48Z - IsHttpsDevelopmentCertificate: true - IsExportable: true
+[119] Below minimum version certificates: no certificates
+[6] Finished listing certificates.
+A valid certificate was found: 8E8EF86C71A1BF87D7B8DE76477E82D521564C21 - CN=localhost - Valid from 2026-08-02 17:15:48Z to 2027-08-02 17:15:48Z - IsHttpsDevelopmentCertificate: true - IsExportable: true
+Run the command with both --check and --trust options to ensure that the certificate is not only valid but also trusted.

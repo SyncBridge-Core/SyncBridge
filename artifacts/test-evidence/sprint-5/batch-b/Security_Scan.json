@@ -1,0 +1,38 @@
+{
+  "CandidateCount": 188,
+  "TextAndDocxChecked": 170,
+  "PrivateCredentialValuesCompared": 4,
+  "CredentialMatches": [],
+  "HighConfidenceSecretPatternMatches": [],
+  "IntentionalBinaries": [
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Batch_Audit_History.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Closed_Awaiting_Operator_Resume.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Completed_ReadOnly_Batch.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Completed_Stale_Post_Rejected.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Deviation_Exception.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_HTTPS_SignIn.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Missing_Prerequisites_Rejected.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Missing_Signature_Rejected.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Operator_Dashboard.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Order_Audit_History.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Ordered_Workflow.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Audit_Access.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Closed_Batch_Exception.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Dashboard.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Exception_Review.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Step_Signature.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Review_Missing_Verifications.jpg",
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Unreleased_Order_Rejected.jpg",
+    "docs/WP6_Sprint4_to_Sprint5_Engineering_Handoff.docx"
+  ],
+  "AcceptedScreenshotCount": 18,
+  "AcceptedScreenshotHashChanges": [],
+  "ProtectedContentsExcluded": [
+    "artifacts/test-evidence/sprint-4/batch-b/Sql_Preflight_Output.txt",
+    "docs/sprint-4/Sprint4_Git_Integration_Completion_Report.md"
+  ],
+  "Limitations": [
+    "Pattern/known-value scanning is not a formal security audit",
+    "Screenshot sanitization uses accepted A3 visual evidence plus unchanged hashes; no new browser capture"
+  ]
+}

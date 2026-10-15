@@ -1,0 +1,8 @@
+@page
+@model ReviewModel
+@{ ViewData["Title"] = "Review by Exception"; }
+<h1>Review by Exception</h1>
+<p>Shows blocking deviations and missing or failed required verifications.</p>
+@if (Model.Exceptions.Count == 0) { <p>No exceptions match these criteria.</p> }
+@foreach (var item in Model.Exceptions)
+{ <section class="border rounded p-3 mb-3"><h2 class="h5"><a asp-page="/Batches/Details" asp-route-number="@item.BatchNumber">@item.BatchNumber</a></h2><p>Blocking deviations: @string.Join(", ", item.UnresolvedDeviations)</p><p>Materials requiring verification: @string.Join(", ", item.MissingOrFailedMaterials)</p><p>Equipment requiring verification: @string.Join(", ", item.MissingOrFailedEquipment)</p></section> }

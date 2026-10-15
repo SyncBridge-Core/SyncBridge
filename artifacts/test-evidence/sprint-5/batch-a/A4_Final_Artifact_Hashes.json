@@ -1,0 +1,26 @@
+[
+  {
+    "Path": "tests/SyncBridge.Core.Tests/SqlServerTestDatabase.cs",
+    "SHA256": "63E0C8252D4AE74A23B3614D6645AAD41CECA63474D92A7DAF083034F0C19B26"
+  },
+  {
+    "Path": "tests/SyncBridge.Core.Tests/SqlServerRecoveryIntegrationTests.cs",
+    "SHA256": "C374050A9CC429F24C7BAE1D24C3E869801CA4F1CC945C817E355EFE0290ED15"
+  },
+  {
+    "Path": "tests/SyncBridge.Core.Tests/SecuredServiceFixture.cs",
+    "SHA256": "8245A7390410DE0C0CC37F85C07C503B5F6A92CB0F48FC94FA23AEC7D3E2217F"
+  },
+  {
+    "Path": "docs/sprint-5/Isolated_SQL_Test_Setup.md",
+    "SHA256": "BE122BF6F10699EAEBD99741E32FF2BDC772C4339ADDFFB9F9759A4CF7013BF5"
+  },
+  {
+    "Path": "docs/sprint-5/Sprint5_BatchA_Completion_Report.md",
+    "SHA256": "FD643F30402AEF3E63BAA3913B05586C8CC304A0C6E5EF85AA6AB9074696AB0E"
+  },
+  {
+    "Path": "docs/sprint-5/Sprint5_BatchA_Implementation_Decision_Register.md",
+    "SHA256": "C90A2E4263F6A2F71187B42C8D8229E0504E1A143847E738D270F9B443706F53"
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "Database": "SyncBridgeCore",
+  "ManufacturingTables": [
+    {
+      "Table": "AppUser",
+      "Rows": 2,
+      "OrderedRowSHA256": "8BA26A74D89FAE577BFEC52698A8C25FA5EB5B61F5AD7333DA55075AC1D35B00"
+    },
+    {
+      "Table": "AuditEvent",
+      "Rows": 21,
+      "OrderedRowSHA256": "A07D1134880A661C8360C10ACC199A90BC1213003E867CE8EFFA6EC8F8200CB8"
+    },
+    {
+      "Table": "Batch",
+      "Rows": 1,
+      "OrderedRowSHA256": "8192B414D52AD1644E61428BE4CE9C48D0DDABB2A26EE6169B60E616D0EB16F0"
+    },
+    {
+      "Table": "BatchStepExecution",
+      "Rows": 2,
+      "OrderedRowSHA256": "E78DD834139EC06C3DDD93D42CD107EA21B37D268A6E1B972BE0C0D39FFBCEFC"
+    },
+    {
+      "Table": "Deviation",
+      "Rows": 1,
+      "OrderedRowSHA256": "0F23E3F5BB962C104928F182121DA6A27ED0FCEE93B106636DCEA8B2006EF1B9"
+    },
+    {
+      "Table": "ElectronicSignature",
+      "Rows": 1,
+      "OrderedRowSHA256": "DB20C51EB0A32F9D2FC18A14EDDCB3B6F585FA3E4AE80A1EDFF8CCD303F3306A"
+    },
+    {
+      "Table": "Equipment",
+      "Rows": 1,
+      "OrderedRowSHA256": "938EA9EDC59F2FB1F8A5BAE18901CDCD2C59638304433A951F1BBE30063F97BD"
+    },
+    {
+      "Table": "EquipmentVerification",
+      "Rows": 1,
+      "OrderedRowSHA256": "69FAABECF7CE30E8A8B929A1EE907A37DFDC1C50D87760996E200CF93ECD2A0E"
+    },
+    {
+      "Table": "Material",
+      "Rows": 1,
+      "OrderedRowSHA256": "1F1DBDCC58133592F7A25BD87C08E32855ED6B2B5C8B6C6007EF699AF56C9C39"
+    },
+    {
+      "Table": "MaterialVerification",
+      "Rows": 1,
+      "OrderedRowSHA256": "5382B0702EF426E69552BBBA0566DAEB97D31E590489880174DC1AF16375A246"
+    },
+    {
+      "Table": "ProductionOrder",
+      "Rows": 3,
+      "OrderedRowSHA256": "79622CC5F73211D8BF28540EA7FE8FC5828FA29C754797B4B23FAAF194860328"
+    },
+    {
+      "Table": "Recipe",
+      "Rows": 1,
+      "OrderedRowSHA256": "59BA000CE4F2421A81B841C52F9378C7A07C741028293B2F508CD19CBEE65622"
+    },
+    {
+      "Table": "RecipeEquipmentRequirement",
+      "Rows": 1,
+      "OrderedRowSHA256": "5B876435E0E00334F5C8497FA7115F18EC18BA4FC5B25D44F4C7CB73BB0F1058"
+    },
+    {
+      "Table": "RecipeMaterialRequirement",
+      "Rows": 1,
+      "OrderedRowSHA256": "CC26267F191DB8459DBB0BFDA8B609E86BAFF3E2E975FA30CC026331BAB17D19"
+    },
+    {
+      "Table": "RecipeStep",
+      "Rows": 2,
+      "OrderedRowSHA256": "077B06D8C13DC2262675236B5E6E772F4CDE181C0CFCC8D9580F4D842EF6D432"
+    }
+  ],
+  "A3": [
+    {
+      "BatchNumber": "A3-B-20261014",
+      "Status": "Completed",
+      "OrderNumber": "A3-PO-20261014",
+      "OrderStatus": "Completed",
+      "Steps": 2,
+      "MaterialVerifications": 1,
+      "EquipmentVerifications": 1,
+      "Deviations": 1,
+      "Signatures": 1,
+      "BatchAudits": 17,
+      "OrderAudits": 4
+    }
+  ],
+  "Migrations": {
+    "MigrationId": "20261013010705_InitialCreate",
+    "ProductVersion": "10.0.12"
+  }
+}

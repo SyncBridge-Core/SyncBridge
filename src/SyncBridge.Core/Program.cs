@@ -1,7 +1,6 @@
 using System.Reflection;
 using System.Runtime.Loader;
 using System.Security.Claims;
-using System.Text.Encodings.Web;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Authentication;
@@ -78,21 +77,14 @@ app.UseAuthorization();
 app.UseRateLimiter();
 app.UseAntiforgery();
 
-// Authentication boundary only; manufacturing adapters remain in later sprints.
-app.MapGet("/authentication", (HttpContext context, IAntiforgery antiforgery) =>
-{
-    var tokens = antiforgery.GetAndStoreTokens(context);
-    var token = $"<input type=\"hidden\" name=\"{HtmlEncoder.Default.Encode(tokens.FormFieldName)}\" value=\"{HtmlEncoder.Default.Encode(tokens.RequestToken!)}\">";
-    return Results.Content($"<!doctype html><html lang=\"en\"><title>SyncBridge sign in</title><body><h1>SyncBridge sign in</h1><form method=\"post\" action=\"/authentication/login\">{token}<label>User name <input name=\"userName\" autocomplete=\"username\" required maxlength=\"100\"></label><label>Password <input name=\"password\" type=\"password\" autocomplete=\"current-password\" required maxlength=\"1024\"></label><button>Sign in</button></form><form method=\"post\" action=\"/authentication/logout\">{token}<button>Sign out</button></form></body></html>", "text/html");
-}).AllowAnonymous();
-
+// Preserve the accepted credential/cookie boundary; Razor Pages supplies the sign-in form.
 app.MapPost("/authentication/login", async (HttpContext context, IAntiforgery antiforgery, ICredentialAuthenticator credentials) =>
 {
     try { await antiforgery.ValidateRequestAsync(context); }
     catch (AntiforgeryValidationException) { return Results.BadRequest(); }
     var form = await context.Request.ReadFormAsync(context.RequestAborted);
     var identity = await credentials.AuthenticateAsync(form["userName"].ToString(), form["password"].ToString(), context.RequestAborted);
-    if (identity is null) return Results.Unauthorized();
+    if (identity is null) return Results.Text("Sign in failed. Check your credentials and active account access.", statusCode: StatusCodes.Status401Unauthorized);
     var principal = new ClaimsPrincipal(new ClaimsIdentity([new Claim(ClaimTypes.NameIdentifier, identity.UserId), new Claim(ClaimTypes.Name, identity.UserName)], CookieAuthenticationDefaults.AuthenticationScheme));
     await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties { IsPersistent = false });
     return Results.LocalRedirect("/");

@@ -1,0 +1,92 @@
+[
+  {
+    "Artifact": "A3_Batch_Audit_History.jpg",
+    "Bytes": 250897,
+    "SHA256": "E98473E00B901D706171DC06E8C8D3B154EC83F924772825C871BFCF2E070144"
+  },
+  {
+    "Artifact": "A3_Closed_Awaiting_Operator_Resume.jpg",
+    "Bytes": 154786,
+    "SHA256": "4A8FEDF529A80A86741CDBE0A2B4D2F369B5F4F817C5D14BC0DE58F5722948CD"
+  },
+  {
+    "Artifact": "A3_Completed_ReadOnly_Batch.jpg",
+    "Bytes": 163198,
+    "SHA256": "21D917EE43E47D3D7398C3A5E494A02309D7B6E33BCCAC471172A7ED3979BD6B"
+  },
+  {
+    "Artifact": "A3_Completed_Stale_Post_Rejected.jpg",
+    "Bytes": 165515,
+    "SHA256": "CB3BDCE3FAD9579FF4D4703F657FC290A47FE3DD953978DDEA14032A56BE7332"
+  },
+  {
+    "Artifact": "A3_Deviation_Exception.jpg",
+    "Bytes": 58552,
+    "SHA256": "0E6227D4247C080171333CE1B501A0D0EF4576DBA9C8EAD36EB6B5420B7E63D7"
+  },
+  {
+    "Artifact": "A3_HTTPS_SignIn.jpg",
+    "Bytes": 28312,
+    "SHA256": "7C67F9D4DD5DEB7E6A8C74463F8DCCC379B8CDBD52615DDB425551F825E94370"
+  },
+  {
+    "Artifact": "A3_Missing_Prerequisites_Rejected.jpg",
+    "Bytes": 60634,
+    "SHA256": "0A5B0B9D01F2062DF34691C3E94678121E8B2508849E1A1F873F2BD58930E208"
+  },
+  {
+    "Artifact": "A3_Missing_Signature_Rejected.jpg",
+    "Bytes": 178588,
+    "SHA256": "087A258DD1E7885846FFAE25AD33EBA07E4A7C02448DD62AF2DD064AA415C92B"
+  },
+  {
+    "Artifact": "A3_Operator_Dashboard.jpg",
+    "Bytes": 61459,
+    "SHA256": "F162CB4B51B941A0DD50D55FE7B50CAC2884AA36D8F22EEC60EB9D055B93E3E7"
+  },
+  {
+    "Artifact": "A3_Order_Audit_History.jpg",
+    "Bytes": 13179,
+    "SHA256": "3873E70621BA1497B19E48AC38DC84B4D0A91E8F606DD117290306CA7215CD46"
+  },
+  {
+    "Artifact": "A3_Ordered_Workflow.jpg",
+    "Bytes": 56573,
+    "SHA256": "8ACF8C23ED7C0A94DE2FAE54EF7AF01E8D268CDC7A4944BD9DFA936E2311A71D"
+  },
+  {
+    "Artifact": "A3_Quality_Audit_Access.jpg",
+    "Bytes": 249748,
+    "SHA256": "89848654B01B2BB682B06EEA63CFE8D1446D969C79EA9F024292AE39E8F12AE0"
+  },
+  {
+    "Artifact": "A3_Quality_Closed_Batch_Exception.jpg",
+    "Bytes": 130667,
+    "SHA256": "53989A58C266A6E7A7BD0C233F7F27FA51701C27793DAAA84AC047EAD4E94113"
+  },
+  {
+    "Artifact": "A3_Quality_Dashboard.jpg",
+    "Bytes": 57503,
+    "SHA256": "3DE552052C7B06E89698010B7841EE02CEA3304314DD11E7DEF98BCF80725FB7"
+  },
+  {
+    "Artifact": "A3_Quality_Exception_Review.jpg",
+    "Bytes": 38958,
+    "SHA256": "63D36CCC2B4622D612349C56221FD532B12ABB02DDA67B7D77581F0751AE2878"
+  },
+  {
+    "Artifact": "A3_Quality_Step_Signature.jpg",
+    "Bytes": 157806,
+    "SHA256": "BFBDEB15F14FABEDDB2E482935479FE5FBEED62BC90D397141751BDA69910941"
+  },
+  {
+    "Artifact": "A3_Review_Missing_Verifications.jpg",
+    "Bytes": 41133,
+    "SHA256": "8696F731A9A4633C2ADAC2DABB6DD397832737233C2DFAC344CC5CFC8273CB3C"
+  },
+  {
+    "Artifact": "A3_Unreleased_Order_Rejected.jpg",
+    "Bytes": 40213,
+    "SHA256": "B7F81E4AFDE01318333FBCBF75B951E87A66F5B3703A0108045D9B75F3ADD274"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "Total": 278,
+  "Passed": 277,
+  "Failed": 1,
+  "LiveSqlTotal": 17,
+  "LiveSqlPassed": 16,
+  "FailedTests": [
+    {
+      "testName": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory",
+      "outcome": "Failed"
+    }
+  ],
+  "RestoreVulnerabilityWarnings": [],
+  "Status": "Stopped for Team review; retained browser history conflicts with empty-history seed assertion; no new browser run"
+}

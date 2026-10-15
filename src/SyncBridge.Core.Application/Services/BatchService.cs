@@ -14,6 +14,18 @@ public sealed class BatchService(ApplicationOperation operations, IBatchReposito
     private static readonly string[] ReadRoles = [ManufacturingRoles.Operator, ManufacturingRoles.Supervisor, ManufacturingRoles.Quality];
     private static readonly string[] ReviewRoles = [ManufacturingRoles.Supervisor, ManufacturingRoles.Quality];
 
+    public Task<OperationResult<IReadOnlyList<BatchSummaryView>>> ListAsync(CancellationToken cancellationToken = default) =>
+        operations.RunAsync<IReadOnlyList<BatchSummaryView>>(ReadRoles, false, async (_, ct) =>
+        {
+            var result = new List<BatchSummaryView>();
+            foreach (var number in await batches.GetNumbersAsync(ct))
+            {
+                var batch = await LoadAsync(number.Value, ct);
+                result.Add(new(batch.BatchNumber.Value, batch.ProductionOrderNumber.Value, batch.BatchStatus));
+            }
+            return result;
+        }, cancellationToken);
+
     public Task<OperationResult<BatchView>> InitiateAsync(string orderNumber, string batchNumber, CancellationToken cancellationToken = default) =>
         operations.RunAsync<BatchView>(ExecutionRoles, true, async (actor, ct) =>
         {

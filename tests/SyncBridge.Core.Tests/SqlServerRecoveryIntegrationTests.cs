@@ -13,7 +13,7 @@ using SyncBridge.Core.Infrastructure.Persistence.Seeding;
 namespace SyncBridge.Core.Tests;
 
 [CollectionDefinition(Name, DisableParallelization = true)]
-public sealed class SqlServerRecoveryCollection
+public sealed class SqlServerRecoveryCollection : ICollectionFixture<SqlServerTestDatabase>
 {
     public const string Name = "SQL Server recovery";
 }
@@ -26,7 +26,7 @@ public sealed class SqlServerRecoveryIntegrationTests
     private static readonly DateTimeOffset Baseline =
         new(2026, 10, 12, 20, 0, 0, TimeSpan.Zero);
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory()
     {
         await using var provider = CreateProvider();
@@ -50,7 +50,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         Assert.Empty(await context.Deviations.ToArrayAsync());
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer()
     {
         await using var provider = CreateProvider();
@@ -89,7 +89,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         await transaction.RollbackAsync();
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence()
     {
         await using var provider = CreateProvider();
@@ -138,7 +138,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         await transaction.RollbackAsync();
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task BatchRepository_ReconstructsAllFiveStatesAndRichEvidence()
     {
         await using var provider = CreateProvider();
@@ -178,7 +178,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         await transaction.RollbackAsync();
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges()
     {
         await using var provider = CreateProvider();
@@ -330,7 +330,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         Assert.False(await verificationContext.AppUsers.AnyAsync(row => row.UserId == marker));
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite()
     {
         await using var provider = CreateProvider();
@@ -405,7 +405,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         await transaction.RollbackAsync();
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer()
     {
         await using var provider = CreateProvider();
@@ -560,7 +560,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         });
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly()
     {
         await using var provider = CreateProvider();
@@ -632,7 +632,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         });
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation()
     {
         await using var provider = CreateProvider();
@@ -665,7 +665,7 @@ public sealed class SqlServerRecoveryIntegrationTests
         await transaction.RollbackAsync();
     }
 
-    [Fact]
+    [ApprovedSqlServerFact]
     public async Task RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements()
     {
         await using var provider = CreateProvider();
@@ -711,11 +711,8 @@ public sealed class SqlServerRecoveryIntegrationTests
 
     private static ServiceProvider CreateProvider()
     {
-        var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__SyncBridgeCore");
-        Assert.False(string.IsNullOrWhiteSpace(connectionString),
-            "ConnectionStrings__SyncBridgeCore is required for SQL Server integration tests.");
         var services = new ServiceCollection();
-        services.AddSyncBridgePersistence(connectionString);
+        services.AddSyncBridgePersistence(SqlServerTestDatabase.ConnectionString);
         return services.BuildServiceProvider();
     }
 

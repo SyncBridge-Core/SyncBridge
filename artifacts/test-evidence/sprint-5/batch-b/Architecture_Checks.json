@@ -1,0 +1,71 @@
+{
+  "AcceptedProductionHashChanges": [],
+  "UnexpectedProduction": [],
+  "AcceptedA4HashChanges": [],
+  "PagePersistenceReferences": [],
+  "MigrationChanges": [],
+  "DomainChanges": [],
+  "ResolvedPkcs": [
+    "System.Security.Cryptography.Pkcs/9.0.21"
+  ],
+  "ProjectReferences": [
+    {
+      "Project": "tools\\SyncBridge.DevelopmentIdentity\\SyncBridge.DevelopmentIdentity.csproj",
+      "References": [
+        {
+          "Include": "../../src/SyncBridge.Core.Infrastructure/SyncBridge.Core.Infrastructure.csproj",
+          "ReferenceOutputAssembly": null
+        }
+      ]
+    },
+    {
+      "Project": "src\\SyncBridge.Core.Application\\SyncBridge.Core.Application.csproj",
+      "References": [
+        {
+          "Include": "..\\SyncBridge.Core.Domain\\SyncBridge.Core.Domain.csproj",
+          "ReferenceOutputAssembly": null
+        }
+      ]
+    },
+    {
+      "Project": "src\\SyncBridge.Core.Domain\\SyncBridge.Core.Domain.csproj",
+      "References": []
+    },
+    {
+      "Project": "src\\SyncBridge.Core.Infrastructure\\SyncBridge.Core.Infrastructure.csproj",
+      "References": [
+        {
+          "Include": "..\\SyncBridge.Core.Application\\SyncBridge.Core.Application.csproj",
+          "ReferenceOutputAssembly": null
+        },
+        {
+          "Include": "..\\SyncBridge.Core.Domain\\SyncBridge.Core.Domain.csproj",
+          "ReferenceOutputAssembly": null
+        }
+      ]
+    },
+    {
+      "Project": "src\\SyncBridge.Core\\SyncBridge.Core.csproj",
+      "References": [
+        {
+          "Include": "..\\SyncBridge.Core.Application\\SyncBridge.Core.Application.csproj",
+          "ReferenceOutputAssembly": null
+        },
+        {
+          "Include": "..\\SyncBridge.Core.Infrastructure\\SyncBridge.Core.Infrastructure.csproj",
+          "ReferenceOutputAssembly": "false"
+        }
+      ]
+    }
+  ],
+  "ProtectedHashChecks": [
+    {
+      "Path": "docs/sprint-4/Sprint4_Git_Integration_Completion_Report.md",
+      "HashMatches": true
+    },
+    {
+      "Path": "artifacts/test-evidence/sprint-4/batch-b/Sql_Preflight_Output.txt",
+      "HashMatches": true
+    }
+  ]
+}

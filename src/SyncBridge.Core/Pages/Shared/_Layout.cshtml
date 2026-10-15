@@ -20,11 +20,18 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @if (Model is ManufacturingPageModel manufacturing)
+                        {
+                            @if (manufacturing.IsSupervisor) { <li class="nav-item"><a class="nav-link text-dark" asp-page="/Orders/Create">Create order</a></li> }
+                            @if (manufacturing.CanReview) { <li class="nav-item"><a class="nav-link text-dark" asp-page="/Review">Review by Exception</a></li> }
+                        }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Production dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            @if (User.Identity?.IsAuthenticated == true)
+                            { <form method="post" action="/authentication/logout">@Html.AntiForgeryToken()<button class="btn btn-link">Sign out @User.Identity.Name</button></form> }
+                            else { <a class="nav-link text-dark" href="/authentication">Sign in</a> }
                         </li>
                     </ul>
                 </div>
@@ -33,6 +40,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            @if (TempData["Feedback"] is string feedback) { <p class="alert alert-success" role="status">@feedback</p> }
             @RenderBody()
         </main>
     </div>

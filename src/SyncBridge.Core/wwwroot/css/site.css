@@ -19,7 +19,19 @@ html {
 
 body {
   margin-bottom: 60px;
+  background: #f6f8fb;
 }
+
+h1, h2 { color: #173b63; }
+h2 { margin-top: 1.5rem; font-size: 1.4rem; }
+section, .table { background: white; }
+form > button { margin: .5rem 0; }
+dl { display: grid; grid-template-columns: minmax(8rem, 1fr) 3fr; gap: .25rem 1rem; }
+dd { margin: 0; overflow-wrap: anywhere; }
+.table { display: block; overflow-x: auto; }
+.table td, .table th { padding: .75rem; }
+.sign-in-panel { max-width: 34rem; margin: 3rem auto; }
+.sign-in-panel label { margin-top: .75rem; }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);

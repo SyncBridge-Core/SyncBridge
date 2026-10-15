@@ -1,0 +1,33 @@
+{
+  "ExactProtectedExclusions": [
+    "artifacts/test-evidence/sprint-4/batch-b/Sql_Preflight_Output.txt",
+    "docs/sprint-4/Sprint4_Git_Integration_Completion_Report.md"
+  ],
+  "PreservedPaddedEvidenceExclusions": [
+    "artifacts/test-evidence/sprint-5/batch-a/A3_Initial_Checkpoint_Historical.md",
+    "artifacts/test-evidence/sprint-5/batch-a/Final_SQL_Postflight.txt",
+    "artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Dependency_Chain.log",
+    "artifacts/test-evidence/sprint-5/batch-a/Sql_Postflight.txt",
+    "artifacts/test-evidence/sprint-5/batch-a/Sql_Preflight_Elevated.txt"
+  ],
+  "EvidenceDerivatives": "See Evidence_Sanitization.json for included whitespace-trimmed copies; originals remain unchanged locally.",
+  "IgnoredExclusions": [
+    "**/bin/",
+    "**/obj/",
+    ".vs/",
+    "TestResults/",
+    "*.user",
+    "*.suo"
+  ],
+  "NeverInclude": [
+    "User Secrets and generated credentials",
+    "Data Protection key stores",
+    "private keys/certificates",
+    "database files",
+    "unreviewed/new artifacts after this inventory"
+  ],
+  "IntentionalBinaries": [
+    "18 accepted A3 JPG screenshots",
+    "authoritative Sprint 4-to-5 DOCX handoff"
+  ]
+}

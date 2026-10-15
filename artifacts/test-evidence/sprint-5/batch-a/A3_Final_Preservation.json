@@ -1,0 +1,10 @@
+{
+  "ChangedBaselineProductionFiles": null,
+  "AdditionalProductionChanges": [
+    "src/SyncBridge.Core.Infrastructure/SyncBridge.Core.Infrastructure.csproj"
+  ],
+  "StagedFiles": [],
+  "Branch": "feature/wp6-sprint5-razor-pages",
+  "HEAD": "65d324bd2e0f0a82515dd20eca89efe5984baf96",
+  "MigrationChanges": []
+}

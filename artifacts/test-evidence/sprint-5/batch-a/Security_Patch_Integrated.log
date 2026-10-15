@@ -1,0 +1,15 @@
+Test run for C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:38.89]     SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory [FAIL]
+  Failed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory [139 ms]
+  Error Message:
+   Assert.Empty() Failure: Collection was not empty
+Collection: [BatchRow { BatchId = f3f3808b-a072-44c4-93ed-5039152fdda8, BatchNumber = "A3-B-20261014", CompletedAt = 2026-10-15T00:17:08.4476549+00:00, CreatedAt = 2026-10-15T00:13:57.0336675+00:00, FinalDisposition = null, ··· }]
+  Stack Trace:
+     at SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerRecoveryIntegrationTests.cs:line 47
+   at SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerRecoveryIntegrationTests.cs:line 50
+   at SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SqlServerRecoveryIntegrationTests.cs:line 50
+--- End of stack trace from previous location ---
+Results File: C:\Engineering\GitHub\SyncBridge.Core\artifacts\test-evidence\sprint-5\batch-a\Security_Patch_Integrated.trx
+
+Failed!  - Failed:     1, Passed:   277, Skipped:     0, Total:   278, Duration: 48 s - SyncBridge.Core.Tests.dll (net10.0)

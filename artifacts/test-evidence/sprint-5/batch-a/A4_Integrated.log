@@ -1,0 +1,571 @@
+Test run for C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.29]   Discovering: SyncBridge.Core.Tests
+[xUnit.net 00:00:00.62]   Discovered:  SyncBridge.Core.Tests
+[xUnit.net 00:00:00.74]   Starting:    SyncBridge.Core.Tests
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithUndefinedMeaning_ThrowsArgumentOutOfRangeException [15 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullRelatedRecordType_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullOperatorId_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullSignatureId_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullRelatedRecordId_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullBatchNumber_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.RelatedRecordType_WithBlankValue_ThrowsArgumentException [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_PreservesControlledRecordEvidence [43 ms]
+  Passed SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithSignatureRequired_PreservesSignatureDefinition [8 ms]
+  Passed SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithBlankName_ThrowsArgumentException [1 ms]
+  Passed SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithZeroStepNumber_ThrowsArgumentOutOfRangeException [< 1 ms]
+  Passed SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithSignatureNotRequired_PreservesValues [9 ms]
+  Passed SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithNegativeStepNumber_ThrowsArgumentOutOfRangeException [1 ms]
+  Passed SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithBlankInstructions_ThrowsArgumentException [1 ms]
+  Passed SyncBridge.Core.Tests.AuditEventTests.Constructor_AllowsNoBatchContext [1 ms]
+  Passed SyncBridge.Core.Tests.AuditEventTests.Constructor_PreservesApprovedAuditShape [6 ms]
+  Passed SyncBridge.Core.Tests.AuditEventTests.Constructor_WhenRequiredInputMissing_RejectsEvidence [3 ms]
+  Passed SyncBridge.Core.Tests.AuditEventTests.Evidence_RemainsUnchangedThroughPublicReadApi [2 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.Constructor_WhenNotApproved_PreservesApprovalStatus [3 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.Constructor_WithNullRecipeId_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.Steps_AreReturnedInStepNumberOrder [17 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.Constructor_WithNullRecipeCode_ThrowsArgumentNullException [16 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.AddStep_WithDuplicateStepNumber_ThrowsDomainException [6 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.Constructor_WithBlankName_ThrowsArgumentException [< 1 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.Constructor_WithBlankVersion_ThrowsArgumentException [< 1 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.Constructor_PreservesRequiredValuesAndApprovedStatus [< 1 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.RecipeTests.AddEquipmentRequirement_AddsOwnedRequirement [2 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.AddMaterialRequirement_AddsOwnedRequirement [1 ms]
+  Passed SyncBridge.Core.Tests.RecipeTests.AddStep_FromDifferentRecipe_ThrowsDomainException [1 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: Reject) [4 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: BeginReview) [626 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: Approve) [577 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: Resolve) [522 ms]
+  Passed SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.SignatureFailure_PersistsNeitherSignatureNorItsAudit [2 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidQuantity_ReturnsInvalidInputAndPersistsNothing(quantity: 1.0001) [507 ms]
+  Passed SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.RoleRevocation_IsEffectiveWithinAnExistingServiceScope [627 ms]
+  Passed SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.Architecture_InnerLayersAndPresentationHaveNoReverseRuntimeReferences [14 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidQuantity_ReturnsInvalidInputAndPersistsNothing(quantity: -1) [584 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidQuantity_ReturnsInvalidInputAndPersistsNothing(quantity: 0) [545 ms]
+  Passed SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.VerificationFailure_RollsBackCurrentResultAndAuditTogether [688 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: "demo.operator", expected: Forbidden) [484 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: "unknown.actor", expected: Unauthenticated) [571 ms]
+  Passed SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.WrongSignatureAndRejectedDeviation_CannotAdvanceWorkflow [1 s]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithDifferentRecipe_RejectsAndRemainsReady [3 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenOnlyUnrelatedEquipmentIsVerified_RejectsAndRemainsReady [1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenEquipmentVerificationMissing_RejectsAndRemainsReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenMaterialVerificationFailed_RejectsAndRemainsReady [1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithNoEquipmentRequirementsAndVerifiedMaterial_TransitionsToInProgress [1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenEquipmentVerificationBelongsToAnotherBatch_RejectsAndRemainsReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenMaterialVerificationMissing_RejectsAndRemainsReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_AfterPrerequisiteFailure_CanSucceedWithCompleteEvidence [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenOnlySubsetOfMultipleRequirementsPasses_RejectsAndRemainsReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithNoMaterialRequirementsAndVerifiedEquipment_TransitionsToInProgress [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithNoRequirements_TransitionsToInProgress [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenMaterialVerificationBelongsToAnotherBatch_RejectsAndRemainsReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenEquipmentVerificationFailed_RejectsAndRemainsReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenOnlyUnrelatedMaterialIsVerified_RejectsAndRemainsReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenAllMultiplePrerequisitesPasses_TransitionsToInProgress [2 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: "test.admin", expected: Forbidden) [659 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: "test.quality", expected: Forbidden) [735 ms]
+  Passed SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.SignaturesAreImmutableAndCompletedBatchAndChildrenAreProtected [1 s]
+  Passed SyncBridge.Core.Tests.CompletedRecordProtectionTests.CompletedBatch_RejectsEveryNormalBatchMutationWithoutNewAuditEvidence [5 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchInProgress_StartsEligibleStep [6 ms]
+  Passed SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly [10 s]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.ThreeStepRecipe_ExecutesInPrescribedOrder [12 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchCompleted_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchException_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchReady_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.CompleteStep_WhenDefinitionDoesNotRequireSignature_DoesNotRequireSignature [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchCreated_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_ThreeBeforeStepTwoCompletes_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.CreateStepExecution_WithStepFromAnotherRecipe_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhileAnotherStepIsInProgress_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_TwoBeforeStepOneCompletes_IsRejected [1 ms]
+  Passed SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.CompleteFinalStep_DoesNotCompleteBatch [< 1 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.Material_WithBlankName_IsRejected [1 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.Equipment_Constructor_PreservesOptionalCalibrationDate [5 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_WithBlankProductName_IsRejected [18 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.Material_Constructor_PreservesReferenceIdentityCodeAndName [2 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_WithNonPositiveQuantity_IsRejected(quantity: 0) [1 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_WithNonPositiveQuantity_IsRejected(quantity: -1) [< 1 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_Constructor_PreservesDbdsAlignedFields [8 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_ExistingLifecycle_RemainsEnforced [3 ms]
+  Passed SyncBridge.Core.Tests.SprintClosureModelTests.Equipment_Constructor_AllowsNoCalibrationDate [1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_DoesNotCompleteBatchOrActiveStep [3 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_AfterDeviationResolution_ReturnsToInProgress [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Completed) [1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Exception) [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Created) [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Ready) [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.OrderedExecution_RemainsBlockedInExceptionAndEnforcedAfterResumption [1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithoutDeviation_RejectsAndLeavesBatchInProgress [1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithAlreadyResolvedDeviation_RejectsAndLeavesBatchInProgress [1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.SignatureGate_RemainsRequiredAfterResumption [1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_WhenAllAssociatedDeviationsResolved_Succeeds [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithSameBatchDeviation_AssociatesDeviationAndSetsException [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.WrongBatchResolvedDeviation_CannotSatisfyResumptionGate [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_WithUnresolvedDeviation_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithWrongBatchDeviation_RejectsAndLeavesBatchInProgress [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_WithOneOfTwoDeviationsUnresolved_IsRejected [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.DbdsLengthValidator_AcceptsMaximumVerificationAuditIdentityWithoutChangingIt [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: "") [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: "00000000-0000-0000-0000-000000000000") [2 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: "not-a-guid") [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: "12345678123412341234123456789abc") [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: "12345678-1234-1234-1234-123456789ABC") [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.DbdsLengthValidator_CountsUtf16CodeUnitsAndRejectsOverflowWithoutTruncation [1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.BatchCreation_DerivesFullQuantityAndOrderNumberFromProductionOrder [1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.MultipleBatches_ForOneProductionOrder_EachReceiveTheFullQuantity [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RoundTripsExactLowercaseCanonicalText [< 1 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: null, expected: Unauthenticated) [810 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.EnumMappings_UseApprovedClosedDatabaseRepresentations [691 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.RecipeStepMapping_MatchesDbds [42 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.RecipeMapping_MatchesDbds [240 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.RecipeEquipmentRequirementMapping_MatchesDbds [1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.MaterialMapping_MatchesDbds [2 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.MaterialVerificationMapping_MatchesDbds [2 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.EquipmentVerificationMapping_MatchesDbds [1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.AuditEventMapping_ReflectsDbdsAmendmentTwo [1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.EquipmentMapping_MatchesDbds [2 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.RecipeMaterialRequirementMapping_MatchesDbds [1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.BatchMapping_MatchesDbdsAndContainsNoQuantityOrUnitColumn [1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.AddSyncBridgePersistence_RegistersRepositoriesAndUnitOfWorkAsScoped [4 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.ProductionOrderMapping_MatchesDbds [19 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.AppUserMapping_MatchesDbds [2 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.UnitOfWork_RejectsAuditEventUpdatesBeforeDatabaseAccess [308 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.BatchStepExecutionMapping_MatchesDbds [2 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.DeviationMapping_ReflectsDbdsAmendmentOne [9 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.CredentialAuthentication_RejectsBadPasswordsAndDoesNotTakeAnActorId [1 s]
+  Passed SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest [1 s]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.UnitOfWork_RejectsCompletedBatchUpdatesBeforeDatabaseAccess [246 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.ElectronicSignatureMapping_MatchesDbdsWithoutPolymorphicForeignKey [2 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.AddSyncBridgePersistence_WithBlankConnectionString_ThrowsArgumentException [< 1 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.Model_ContainsExactlyFifteenDbdsTablesInDboSchema [23 ms]
+  Passed SyncBridge.Core.Tests.PersistenceModelTests.AddSyncBridgePersistence_RegistersDbContextAsScoped [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenReady_ThrowsInvalidTransition [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenReady_ThrowsInvalidTransition [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.LifecycleMethods_WhenCompleted_RejectAllFurtherTransitions [5 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.NormalLifecycle_ReachesCompleted [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenCreated_ThrowsInvalidTransition [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenInProgress_SetsStatusToException [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInProgress_SetsStatusToCompleted [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenCreated_ThrowsInvalidTransition [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.MarkReady_WhenCreated_SetsStatusToReady [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.ResumeProcessing_WhenInException_SetsStatusToInProgress [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.Constructor_SetsStatusToCreated [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenReady_SetsStatusToInProgress [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInException_ThrowsInvalidTransition [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenCreated_ThrowsInvalidTransition [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchLifecycleTests.ExceptionLifecycle_ResumesAndReachesCompleted [< 1 ms]
+  Passed SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithNegativeQuantity_ThrowsArgumentOutOfRangeException [< 1 ms]
+  Passed SyncBridge.Core.Tests.RecipeRequirementTests.EquipmentRequirement_PreservesRecipeAndEquipmentIdentities [< 1 ms]
+  Passed SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithPositiveQuantity_PreservesQuantity [4 ms]
+  Passed SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithZeroQuantity_ThrowsArgumentOutOfRangeException [2 ms]
+  Passed SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithNullQuantity_PreservesOptionalQuantity [1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.StartStep_WhenCompleted_ThrowsInvalidBatchStepExecutionException [1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithZeroStepNumber_ThrowsArgumentOutOfRangeException [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.CompleteStep_WhenCompleted_ThrowsInvalidBatchStepExecutionException [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNullBatchNumber_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNullRecipeStepId_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.CompleteStep_WhenInProgress_SetsCompletionEvidence [16 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.StartStep_WhenPending_SetsInProgressAndStartedAt [1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_BeginsPendingAndPreservesIdentitiesAndStepNumber [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.StartStep_WhenAlreadyInProgress_ThrowsInvalidBatchStepExecutionException [2 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNullExecutionId_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNegativeStepNumber_ThrowsArgumentOutOfRangeException [1 ms]
+  Passed SyncBridge.Core.Tests.BatchStepExecutionTests.CompleteStep_WhenPending_ThrowsInvalidBatchStepExecutionException [< 1 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_PreservesApprovedEvidenceFields [< 1 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_WithNullMaterialCode_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_WithNullBatchNumber_ThrowsArgumentNullException [7 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_WithNullEquipmentCode_ThrowsArgumentNullException [3 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_WithNullBatchNumber_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_WithNullOperatorId_ThrowsArgumentNullException [1 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_PreservesApprovedEvidenceFields [< 1 ms]
+  Passed SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_WithNullOperatorId_ThrowsArgumentNullException [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Approve_WhenUnderReview_SetsApprovedAndRemainsBlocking [7 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Resolve_BeforeApproval_ThrowsInvalidDeviationStateTransitionException [1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Constructor_AtBatchLevel_PreservesEvidenceAndBeginsOpen [1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Resolve_WithoutDisposition_RejectsWithoutResolving [1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Reject_WhenUnderReview_PreservesRejectedReviewResultAndRemainsBlocking [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.BeginReview_WithBlankComments_RejectsWithoutChangingStatus [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.BeginReview_WhenOpen_PreservesCommentsAndSetsUnderReview [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.BatchOrigin_HasNoPublicMutationPath [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Constructor_WithMissingDescription_ThrowsArgumentException(description: "") [1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Constructor_WithMissingDescription_ThrowsArgumentException(description: " ") [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Constructor_WithWrongBatchStepExecution_ThrowsDomainException [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Constructor_WithSameBatchStepExecution_PreservesStepIdentity [10 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Resolve_WhenApproved_PreservesDispositionAndClosesDeviation [< 1 ms]
+  Passed SyncBridge.Core.Tests.DeviationTests.Resolve_WhenAlreadyClosed_RejectsWithoutOverwritingEvidence [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Ready) [2 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Completed) [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Created) [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Exception) [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenRequiredSignatureMissing_RejectsWithoutMutatingExecution [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureNotRequired_CompletesWithoutSignature [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureTargetsWrongRecordType_RejectsWithoutMutatingExecution [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureTargetsAnotherExecution_RejectsWithoutMutatingExecution [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureBelongsToAnotherBatch_RejectsWithoutMutatingExecution [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_DoesNotMutateAcceptedSignatureEvidence [10 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureRequiredAndMatches_CompletesStep [< 1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.SignatureEvidence_DoesNotBypassRecipeStepOrdering [1 ms]
+  Passed SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenAlreadyCompleted_RemainsRejectedWithValidSignature [1 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.IncompleteOrSignatureGatedStep_BlocksCompletionWithoutSuccessEvidence [2 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.VerificationEvidence_IsCreatedOnceAndRetainedWhenProcessingStarts [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.CreationAndLifecycleTransitions_ProduceAttributedAuditEvidence [1 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.SuccessfulCompletion_ProducesAttributedCompletedEvidence [< 1 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.RejectedResume_DoesNotProduceResumeEvidence [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.StepStartAndCompletion_ProduceExecutionEvidence [< 1 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.DeviationLifecycleAndExceptionResume_ProduceDistinctEvidence [11 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.InvalidTransition_DoesNotAddSuccessEvidence [1 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.SignedStepCompletion_RetainsOneSignatureAuditEvent [1 ms]
+  Passed SyncBridge.Core.Tests.BatchAuditEvidenceTests.UnresolvedDeviation_BlocksCompletionWithoutSuccessEvidence [1 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords [3 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OptionalPersistenceFieldsAndVerificationIdentities_SurviveUnrelatedCommands [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginAttempts_AreRateLimited [1 s]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Orders/Details?number=PO-TEST&handler=Status", field: "action", value: "Release") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.MissingAndInactiveManufacturingUser_CannotAuthenticateOrExecute [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Batches/Details?number=B-TEST&handler=Complete", field: "", value: "") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.SkippedStepsInvalidVerificationAndForeignSignatureTargets_LeaveNoPartialEvidence [881 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.ManufacturingReads_AreAvailableToAssignedManufacturingRoles(actor: "test.quality") [593 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.quality", url: "/Batches/Details?number=B-TEST&handler=Resume", field: "", value: "") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.ManufacturingReads_AreAvailableToAssignedManufacturingRoles(actor: "demo.supervisor") [724 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.ManufacturingReads_AreAvailableToAssignedManufacturingRoles(actor: "demo.operator") [692 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.supervisor", url: "/Batches/Details?number=B-TEST&handler=Ready", field: "", value: "") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.AuditMutation_IsRejectedByActualUnitOfWork [497 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: Complete) [557 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.admin", url: "/Batches/Details?number=B-TEST&handler=Complete", field: "", value: "") [920 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: StartProcessing) [661 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.admin", url: "/Orders/Details?number=PO-TEST&handler=Status", field: "action", value: "Release") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: Cancel) [633 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: Release) [654 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.quality", url: "/Batches/Details?number=B-TEST&handler=Equipment", field: "itemCode", value: "EQ-DEMO-001") [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.RoleClaimsAndDuplicateIdentifiers_CannotSpoofTrustedPermissions [601 ms]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.AuditAndExceptionReview_DenyOtherRoles(actor: "test.admin") [647 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.quality", url: "/Batches/Details?number=B-TEST&handler=Start", field: "", value: "") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.AuditAndExceptionReview_DenyOtherRoles(actor: "demo.operator") [662 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.AdditiveRoles_PermitSameActorDeviationResolutionWithoutInventedSelfApprovalRule [1 s]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.supervisor", url: "/Batches/Details?number=B-TEST&handler=StartStep", field: "stepNumber", value: "1") [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.MissingFailedPrerequisitesAndReviewQueries_RetainReady [1 s]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.quality", url: "/Orders/Details?number=PO-TEST&handler=Status", field: "action", value: "Release") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidInputMissingResourcesAndUnapprovedRecipe_AreDistinct [661 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.ElectronicSignatures_DenyUnauthorizedRoles(actor: "test.admin") [658 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.quality", url: "/Batches/Details?number=B-TEST&handler=CompleteSte"···, field: "executionId", value: "00000000-0000-0000-0000-000000000001") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.ElectronicSignatures_DenyUnauthorizedRoles(actor: "demo.supervisor") [671 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.supervisor", url: "/Batches/Details?number=B-TEST&handler=Material", field: "itemCode", value: "MAT-DEMO-001") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.EndToEndManufacturing_UsesTrustedActorsAndSurvivesFreshScopes [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.ProductionOrderAudit_ExistsWithoutBatchAndCapturesEveryStatusCommand [715 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "test.quality", url: "/Batches/Details?number=B-TEST&handler=Deviation", field: "description", value: "Unauthorized") [1 s]
+  Passed SyncBridge.Core.Tests.SecuredApplicationServiceTests.PersistenceFailure_AfterFirstWriteRollsBackAndSameScopeCannotLeakFailedChanges [591 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Batches/Details?number=B-TEST&handler=Review", field: "deviationCode", value: "D-TEST") [964 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.supervisor", url: "/Batches/Details?number=B-TEST&handler=Review", field: "deviationCode", value: "D-TEST") [990 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.supervisor", url: "/Batches/Details?number=B-TEST&handler=Sign", field: "executionId", value: "00000000-0000-0000-0000-000000000001") [773 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection [2 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.AdditiveRoles_CanReviewOwnDeviationAndResumeButCannotManageOrders [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]
+      Controlled application operation failed.
+      SyncBridge.Core.Infrastructure.Persistence.Exceptions.PersistenceIntegrityException: A persisted Batch identifier is invalid.
+       ---> System.ArgumentException: A persistence value is required. (Parameter 'number')
+         at SyncBridge.Core.Infrastructure.Persistence.Validation.DbdsStringLengthValidator.RequireWithinLimit(String value, Int32 maximumLength, String parameterName) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Validation\DbdsStringLengthValidator.cs:line 27
+         at SyncBridge.Core.Infrastructure.Persistence.Repositories.BatchRepository.<>c.<GetNumbersAsync>b__10_0(String number) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Repositories\BatchRepository.cs:line 20
+         at System.Linq.Enumerable.ArraySelectIterator`2.ToArray()
+         at SyncBridge.Core.Infrastructure.Persistence.Repositories.BatchRepository.GetNumbersAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Repositories\BatchRepository.cs:line 20
+         --- End of inner exception stack trace ---
+         at SyncBridge.Core.Infrastructure.Persistence.Repositories.BatchRepository.GetNumbersAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Repositories\BatchRepository.cs:line 22
+         at SyncBridge.Core.Application.Services.BatchService.<ListAsync>b__9_0(AuthenticatedActor _, CancellationToken ct) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\BatchService.cs:line 21
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 25
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands [730 ms]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: True) [985 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]
+      Controlled application operation failed.
+      SyncBridge.Core.Infrastructure.Persistence.Exceptions.PersistenceIntegrityException: A persisted ProductionOrder identifier is invalid.
+       ---> System.ArgumentException: A persistence value is required. (Parameter 'number')
+         at SyncBridge.Core.Infrastructure.Persistence.Validation.DbdsStringLengthValidator.RequireWithinLimit(String value, Int32 maximumLength, String parameterName) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Validation\DbdsStringLengthValidator.cs:line 27
+         at SyncBridge.Core.Infrastructure.Persistence.Repositories.ProductionOrderRepository.<>c.<GetNumbersAsync>b__2_0(String number) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Repositories\ProductionOrderRepository.cs:line 20
+         at System.Linq.Enumerable.ArraySelectIterator`2.ToArray()
+         at SyncBridge.Core.Infrastructure.Persistence.Repositories.ProductionOrderRepository.GetNumbersAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Repositories\ProductionOrderRepository.cs:line 20
+         --- End of inner exception stack trace ---
+         at SyncBridge.Core.Infrastructure.Persistence.Repositories.ProductionOrderRepository.GetNumbersAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\Repositories\ProductionOrderRepository.cs:line 22
+         at SyncBridge.Core.Application.Services.ProductionOrderService.<ListAsync>b__5_0(AuthenticatedActor _, CancellationToken ct) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ProductionOrderService.cs:line 15
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 25
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: False) [997 ms]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: "test.admin") [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: "demo.operator") [1 s]
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: "test.quality") [1 s]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]
+      Controlled application operation failed.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> System.InvalidOperationException: Induced persistence failure with private diagnostic details.
+         at SyncBridge.Core.Tests.SecuredServiceFixture.FailureInterceptor.ReaderExecutedAsync(DbCommand command, CommandExecutedEventData eventData, DbDataReader result, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SecuredServiceFixture.cs:line 176
+         at Microsoft.EntityFrameworkCore.Diagnostics.Internal.RelationalCommandDiagnosticsLogger.CommandReaderExecutedAsync(IRelationalConnection connection, DbCommand command, String logCommandText, DbContext context, Guid commandId, Guid connectionId, DbDataReader methodResult, DateTimeOffset startTime, TimeSpan duration, CommandSource commandSource, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at SyncBridge.Core.Infrastructure.Persistence.ApplicationUnitOfWork.CommitAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\ApplicationUnitOfWork.cs:line 42
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 26
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation [1 s]
+SQL isolation: SyncBridgeCore_IntegrationTests; 15 manufacturing tables; 11 seed rows; migration 20261013010705_InitialCreate.
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite [1 s]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly [455 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer [751 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer [344 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges [700 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence [439 ms]
+PERF|rows=batch:1,steps:1,material:1,equipment:1,signature:1,audit:4|save_ms=46.976|order_lookup_ms=1.953|recipe_load_ms=24.689|batch_load_ms=26.795
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory [804 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_ReconstructsAllFiveStatesAndRichEvidence [515 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements [293 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation [278 ms]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence [3 s]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer [7 s]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure [841 ms]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence [2 s]
+SQL isolation cleanup: 0 history rows; 2 reference orders; dropping owned SyncBridgeCore_IntegrationTests.
+[xUnit.net 00:01:10.62]   Finished:    SyncBridge.Core.Tests
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused [354 ms]
+  Passed SyncBridge.Core.Tests.SqlServerApplicationServiceTests.InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer [243 ms]
+  Passed SyncBridge.Core.Tests.SqlServerApplicationServiceTests.TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation [176 ms]
+Results File: C:\Engineering\GitHub\SyncBridge.Core\artifacts\test-evidence\sprint-5\batch-a\A4_Integrated.trx
+
+Test Run Successful.
+Total tests: 278
+     Passed: 278
+ Total time: 1.2024 Minutes

@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="5e5b7569-8b0b-4e59-b876-a1465f4d818e" name="Carlos@SB-DEV-01 2026-10-14 19:25:34" runUser="SB-DEV-01\Carlos" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-14T19:25:34.6867564-04:00" queuing="2026-10-14T19:25:34.6867570-04:00" start="2026-10-14T19:25:26.5955438-04:00" finish="2026-10-14T19:25:59.0396521-04:00" />
+  <TestSettings name="default" id="da993806-11e3-4c6c-9f7e-983e4c3a486b">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-14_19_25_34" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="d3794379-5566-46f5-97b0-465ba11f6bc2" testId="2433b4d7-9cc7-752c-fd9a-f3ddf37492e0" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.operator&quot;, url: &quot;/Orders/Details?number=PO-TEST&amp;handler=Status&quot;, field: &quot;action&quot;, value: &quot;Release&quot;)" computerName="SB-DEV-01" duration="00:00:01.1176470" startTime="2026-10-14T19:25:36.2355760-04:00" endTime="2026-10-14T19:25:37.3544463-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3794379-5566-46f5-97b0-465ba11f6bc2" />
+    <UnitTestResult executionId="1f75fb2f-14fb-4e9a-81b3-243718cc1458" testId="97e695be-57c8-22ce-7f26-71e431d50168" testName="SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection" computerName="SB-DEV-01" duration="00:00:02.6194276" startTime="2026-10-14T19:25:50.2749837-04:00" endTime="2026-10-14T19:25:52.8951548-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f75fb2f-14fb-4e9a-81b3-243718cc1458" />
+    <UnitTestResult executionId="dd55a31b-1fb4-49dd-90a1-1bc681db319e" testId="21a319a4-824b-dfba-52f8-de83a8008059" testName="SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest" computerName="SB-DEV-01" duration="00:00:01.0446035" startTime="2026-10-14T19:25:34.6546056-04:00" endTime="2026-10-14T19:25:35.6414336-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd55a31b-1fb4-49dd-90a1-1bc681db319e" />
+    <UnitTestResult executionId="a839efbb-2035-421b-b9ab-8d10dd29e9e8" testId="dd3e8a87-8e92-547d-4ada-ad993d503bd0" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=StartStep&quot;, field: &quot;stepNumber&quot;, value: &quot;1&quot;)" computerName="SB-DEV-01" duration="00:00:00.8172020" startTime="2026-10-14T19:25:43.3858001-04:00" endTime="2026-10-14T19:25:44.2040949-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a839efbb-2035-421b-b9ab-8d10dd29e9e8" />
+    <UnitTestResult executionId="8f0bab95-2c95-43b8-af14-6870db4cee8f" testId="19c39a10-6b31-e0bf-9a38-9093ffe9d157" testName="SyncBridge.Core.Tests.RazorWorkflowTests.AdditiveRoles_CanReviewOwnDeviationAndResumeButCannotManageOrders" computerName="SB-DEV-01" duration="00:00:01.2853826" startTime="2026-10-14T19:25:52.8962875-04:00" endTime="2026-10-14T19:25:54.1826352-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f0bab95-2c95-43b8-af14-6870db4cee8f" />
+    <UnitTestResult executionId="e66a7655-c14a-4c13-add8-a92d0ba1851b" testId="05d02df7-f25a-4d47-b0c3-1c36f221db6c" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: &quot;test.quality&quot;)" computerName="SB-DEV-01" duration="00:00:00.9776266" startTime="2026-10-14T19:25:56.7585331-04:00" endTime="2026-10-14T19:25:57.7376514-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e66a7655-c14a-4c13-add8-a92d0ba1851b" />
+    <UnitTestResult executionId="752c7756-e66e-4b54-be89-9a67eeff3f76" testId="76ae1490-3dfd-b20b-6241-2b2ee95dc8eb" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: &quot;test.admin&quot;)" computerName="SB-DEV-01" duration="00:00:00.8419161" startTime="2026-10-14T19:25:55.1100652-04:00" endTime="2026-10-14T19:25:55.9526291-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="752c7756-e66e-4b54-be89-9a67eeff3f76" />
+    <UnitTestResult executionId="240f29f6-8d90-48b9-b27e-fd7baa73277b" testId="d172ae7b-5417-ec32-6667-2bfff3e28876" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.operator&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Review&quot;, field: &quot;deviationCode&quot;, value: &quot;D-TEST&quot;)" computerName="SB-DEV-01" duration="00:00:00.8607337" startTime="2026-10-14T19:25:47.7600335-04:00" endTime="2026-10-14T19:25:48.6215976-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="240f29f6-8d90-48b9-b27e-fd7baa73277b" />
+    <UnitTestResult executionId="acf6cf27-7c94-4136-9983-44789572d103" testId="7299a3e8-c9c3-46ad-b182-021d52048f85" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.admin&quot;, url: &quot;/Orders/Details?number=PO-TEST&amp;handler=Status&quot;, field: &quot;action&quot;, value: &quot;Release&quot;)" computerName="SB-DEV-01" duration="00:00:00.7965525" startTime="2026-10-14T19:25:40.7002522-04:00" endTime="2026-10-14T19:25:41.5110359-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="acf6cf27-7c94-4136-9983-44789572d103" />
+    <UnitTestResult executionId="1071b5be-3913-486b-a684-3cc3d4edb953" testId="3f5e0371-640b-d332-1416-5381c29d177b" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Equipment&quot;, field: &quot;itemCode&quot;, value: &quot;EQ-DEMO-001&quot;)" computerName="SB-DEV-01" duration="00:00:00.9471516" startTime="2026-10-14T19:25:41.5115623-04:00" endTime="2026-10-14T19:25:42.4601396-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1071b5be-3913-486b-a684-3cc3d4edb953" />
+    <UnitTestResult executionId="e8283f9f-24e3-4118-9e9a-10b7e61bba9b" testId="eb657ab5-db4f-c481-8c8c-669da0b8a622" testName="SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords" computerName="SB-DEV-01" duration="00:00:07.4113290" startTime="2026-10-14T19:25:28.7987374-04:00" endTime="2026-10-14T19:25:36.2353226-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8283f9f-24e3-4118-9e9a-10b7e61bba9b" />
+    <UnitTestResult executionId="0bbd5388-fa9d-4d5b-a04d-c222f67a25bf" testId="88052d80-7cab-1375-aeff-d7aac201c4fd" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.admin&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Complete&quot;, field: &quot;&quot;, value: &quot;&quot;)" computerName="SB-DEV-01" duration="00:00:00.8378948" startTime="2026-10-14T19:25:39.8599646-04:00" endTime="2026-10-14T19:25:40.6996435-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0bbd5388-fa9d-4d5b-a04d-c222f67a25bf" />
+    <UnitTestResult executionId="c0dd3a19-77a5-40c0-9a5e-e342bb588499" testId="dc74f684-e431-8f94-fdb3-fff0be1ef8cd" testName="SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginAttempts_AreRateLimited" computerName="SB-DEV-01" duration="00:00:01.4731635" startTime="2026-10-14T19:25:35.6442168-04:00" endTime="2026-10-14T19:25:37.1154281-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0dd3a19-77a5-40c0-9a5e-e342bb588499" />
+    <UnitTestResult executionId="003c72c8-277c-4e17-bb67-491005bb9109" testId="d6226a89-4375-104b-fb8e-16babb7d5b07" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Material&quot;, field: &quot;itemCode&quot;, value: &quot;MAT-DEMO-001&quot;)" computerName="SB-DEV-01" duration="00:00:00.8849329" startTime="2026-10-14T19:25:45.9656555-04:00" endTime="2026-10-14T19:25:46.8509659-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="003c72c8-277c-4e17-bb67-491005bb9109" />
+    <UnitTestResult executionId="ef5dc178-50db-44e4-a05b-e2c05bf0d33e" testId="2c54208b-fe08-b42c-3bdc-916435a18f83" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Deviation&quot;, field: &quot;description&quot;, value: &quot;Unauthorized&quot;)" computerName="SB-DEV-01" duration="00:00:00.9077521" startTime="2026-10-14T19:25:46.8515614-04:00" endTime="2026-10-14T19:25:47.7598200-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef5dc178-50db-44e4-a05b-e2c05bf0d33e" />
+    <UnitTestResult executionId="2d30e3a6-20c4-41f0-911d-8c909cec8e50" testId="a052ac47-afd4-bcb1-346a-b722fd8201d3" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: &quot;demo.operator&quot;)" computerName="SB-DEV-01" duration="00:00:00.8044956" startTime="2026-10-14T19:25:55.9529855-04:00" endTime="2026-10-14T19:25:56.7582801-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d30e3a6-20c4-41f0-911d-8c909cec8e50" />
+    <UnitTestResult executionId="a60e50df-10ce-4bed-b2f3-05a2af7a9c2d" testId="e4cb5194-ae92-7822-338d-608e2a011f5d" testName="SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands" computerName="SB-DEV-01" duration="00:00:00.9262430" startTime="2026-10-14T19:25:54.1832355-04:00" endTime="2026-10-14T19:25:55.1096971-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a60e50df-10ce-4bed-b2f3-05a2af7a9c2d" />
+    <UnitTestResult executionId="f1929ba1-1dad-4798-a8d5-e286ed0b5190" testId="cb6a9b56-e202-d506-8b88-6f7c84530010" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=CompleteSte&quot;···, field: &quot;executionId&quot;, value: &quot;00000000-0000-0000-0000-000000000001&quot;)" computerName="SB-DEV-01" duration="00:00:00.8623816" startTime="2026-10-14T19:25:45.1012205-04:00" endTime="2026-10-14T19:25:45.9648503-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1929ba1-1dad-4798-a8d5-e286ed0b5190" />
+    <UnitTestResult executionId="0032b4e2-c0a9-45da-bb73-7b6350eabe27" testId="5d2db399-2a7b-15a8-b0ad-9548cbbc637b" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Start&quot;, field: &quot;&quot;, value: &quot;&quot;)" computerName="SB-DEV-01" duration="00:00:00.9242572" startTime="2026-10-14T19:25:42.4608440-04:00" endTime="2026-10-14T19:25:43.3855765-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0032b4e2-c0a9-45da-bb73-7b6350eabe27" />
+    <UnitTestResult executionId="94eca388-fc9e-414d-b6d8-de193d98583c" testId="37c07ac1-50ff-4878-20b9-90ce7ca6f819" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Sign&quot;, field: &quot;executionId&quot;, value: &quot;00000000-0000-0000-0000-000000000001&quot;)" computerName="SB-DEV-01" duration="00:00:00.7803325" startTime="2026-10-14T19:25:49.4923262-04:00" endTime="2026-10-14T19:25:50.2739545-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94eca388-fc9e-414d-b6d8-de193d98583c" />
+    <UnitTestResult executionId="8227c973-cd4b-4206-8a52-7ff6e9ea3857" testId="509172ee-5fe2-4aa9-4a3b-b2cd822f4aa9" testName="SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation" computerName="SB-DEV-01" duration="00:00:01.0947685" startTime="2026-10-14T19:25:57.7385843-04:00" endTime="2026-10-14T19:25:58.8332035-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8227c973-cd4b-4206-8a52-7ff6e9ea3857" />
+    <UnitTestResult executionId="20535e10-8f64-4908-b099-191f2fc95fe3" testId="8a5e4711-1143-0d1f-fc9c-020184bfc110" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Orders/Details?number=PO-TEST&amp;handler=Status&quot;, field: &quot;action&quot;, value: &quot;Release&quot;)" computerName="SB-DEV-01" duration="00:00:00.8954305" startTime="2026-10-14T19:25:44.2043095-04:00" endTime="2026-10-14T19:25:45.1008560-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20535e10-8f64-4908-b099-191f2fc95fe3" />
+    <UnitTestResult executionId="462250f8-068d-4075-9705-cf35789bc3f8" testId="f3a8d7a2-dc92-c11a-f6d7-7032d5f371e1" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Resume&quot;, field: &quot;&quot;, value: &quot;&quot;)" computerName="SB-DEV-01" duration="00:00:00.8360525" startTime="2026-10-14T19:25:38.2101317-04:00" endTime="2026-10-14T19:25:39.0472595-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="462250f8-068d-4075-9705-cf35789bc3f8" />
+    <UnitTestResult executionId="32833b82-8861-44f1-90de-1ed84e233955" testId="4e48deae-57d4-d437-4105-ecedf2a771fb" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.operator&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Complete&quot;, field: &quot;&quot;, value: &quot;&quot;)" computerName="SB-DEV-01" duration="00:00:00.8539369" startTime="2026-10-14T19:25:37.3552621-04:00" endTime="2026-10-14T19:25:38.2098476-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32833b82-8861-44f1-90de-1ed84e233955" />
+    <UnitTestResult executionId="49aa005f-3cc0-4dfd-83b7-2c4d5ed18e55" testId="9b14b64e-3876-895c-30ec-70739491b3fb" testName="SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly" computerName="SB-DEV-01" duration="00:00:05.7449858" startTime="2026-10-14T19:25:28.7967648-04:00" endTime="2026-10-14T19:25:34.5930726-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49aa005f-3cc0-4dfd-83b7-2c4d5ed18e55" />
+    <UnitTestResult executionId="e855dff6-2bd7-4904-a966-91dd4f940164" testId="94889a57-9753-4546-92b5-2876d5966f1f" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Ready&quot;, field: &quot;&quot;, value: &quot;&quot;)" computerName="SB-DEV-01" duration="00:00:00.8086605" startTime="2026-10-14T19:25:39.0476304-04:00" endTime="2026-10-14T19:25:39.8576580-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e855dff6-2bd7-4904-a966-91dd4f940164" />
+    <UnitTestResult executionId="ecd2db37-8430-4cc8-8e9d-e03d24a73149" testId="6c091f77-0ec0-206a-a83d-9129dfeff00b" testName="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Review&quot;, field: &quot;deviationCode&quot;, value: &quot;D-TEST&quot;)" computerName="SB-DEV-01" duration="00:00:00.8690307" startTime="2026-10-14T19:25:48.6219978-04:00" endTime="2026-10-14T19:25:49.4917640-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ecd2db37-8430-4cc8-8e9d-e03d24a73149" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Resume&quot;, field: &quot;&quot;, value: &quot;&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="f3a8d7a2-dc92-c11a-f6d7-7032d5f371e1">
+      <Execution id="462250f8-068d-4075-9705-cf35789bc3f8" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginAttempts_AreRateLimited" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="dc74f684-e431-8f94-fdb3-fff0be1ef8cd">
+      <Execution id="c0dd3a19-77a5-40c0-9a5e-e342bb588499" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.AuthenticationBoundaryTests" name="LoginAttempts_AreRateLimited" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: &quot;demo.operator&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="a052ac47-afd4-bcb1-346a-b722fd8201d3">
+      <Execution id="2d30e3a6-20c4-41f0-911d-8c909cec8e50" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectCreationPosts_AreForbiddenForNonSupervisors" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Ready&quot;, field: &quot;&quot;, value: &quot;&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="94889a57-9753-4546-92b5-2876d5966f1f">
+      <Execution id="e855dff6-2bd7-4904-a966-91dd4f940164" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Equipment&quot;, field: &quot;itemCode&quot;, value: &quot;EQ-DEMO-001&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="3f5e0371-640b-d332-1416-5381c29d177b">
+      <Execution id="1071b5be-3913-486b-a684-3cc3d4edb953" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: &quot;test.admin&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="76ae1490-3dfd-b20b-6241-2b2ee95dc8eb">
+      <Execution id="752c7756-e66e-4b54-be89-9a67eeff3f76" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectCreationPosts_AreForbiddenForNonSupervisors" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.operator&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Review&quot;, field: &quot;deviationCode&quot;, value: &quot;D-TEST&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="d172ae7b-5417-ec32-6667-2bfff3e28876">
+      <Execution id="240f29f6-8d90-48b9-b27e-fd7baa73277b" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Start&quot;, field: &quot;&quot;, value: &quot;&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="5d2db399-2a7b-15a8-b0ad-9548cbbc637b">
+      <Execution id="0032b4e2-c0a9-45da-bb73-7b6350eabe27" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="e4cb5194-ae92-7822-338d-608e2a011f5d">
+      <Execution id="a60e50df-10ce-4bed-b2f3-05a2af7a9c2d" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="MissingAndRevokedCookie_CannotAccessPagesOrPostCommands" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="97e695be-57c8-22ce-7f26-71e431d50168">
+      <Execution id="1f75fb2f-14fb-4e9a-81b3-243718cc1458" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Sign&quot;, field: &quot;executionId&quot;, value: &quot;00000000-0000-0000-0000-000000000001&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="37c07ac1-50ff-4878-20b9-90ce7ca6f819">
+      <Execution id="94eca388-fc9e-414d-b6d8-de193d98583c" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="eb657ab5-db4f-c481-8c8c-669da0b8a622">
+      <Execution id="e8283f9f-24e3-4118-9e9a-10b7e61bba9b" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Material&quot;, field: &quot;itemCode&quot;, value: &quot;MAT-DEMO-001&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="d6226a89-4375-104b-fb8e-16babb7d5b07">
+      <Execution id="003c72c8-277c-4e17-bb67-491005bb9109" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="509172ee-5fe2-4aa9-4a3b-b2cd822f4aa9">
+      <Execution id="8227c973-cd4b-4206-8a52-7ff6e9ea3857" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="21a319a4-824b-dfba-52f8-de83a8008059">
+      <Execution id="dd55a31b-1fb4-49dd-90a1-1bc681db319e" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.AuthenticationBoundaryTests" name="InactiveUserCookie_IsRejectedOnTheNextRequest" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.AdditiveRoles_CanReviewOwnDeviationAndResumeButCannotManageOrders" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="19c39a10-6b31-e0bf-9a38-9093ffe9d157">
+      <Execution id="8f0bab95-2c95-43b8-af14-6870db4cee8f" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="AdditiveRoles_CanReviewOwnDeviationAndResumeButCannotManageOrders" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Review&quot;, field: &quot;deviationCode&quot;, value: &quot;D-TEST&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="6c091f77-0ec0-206a-a83d-9129dfeff00b">
+      <Execution id="ecd2db37-8430-4cc8-8e9d-e03d24a73149" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.operator&quot;, url: &quot;/Orders/Details?number=PO-TEST&amp;handler=Status&quot;, field: &quot;action&quot;, value: &quot;Release&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="2433b4d7-9cc7-752c-fd9a-f3ddf37492e0">
+      <Execution id="d3794379-5566-46f5-97b0-465ba11f6bc2" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Deviation&quot;, field: &quot;description&quot;, value: &quot;Unauthorized&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="2c54208b-fe08-b42c-3bdc-916435a18f83">
+      <Execution id="ef5dc178-50db-44e4-a05b-e2c05bf0d33e" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.admin&quot;, url: &quot;/Orders/Details?number=PO-TEST&amp;handler=Status&quot;, field: &quot;action&quot;, value: &quot;Release&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="7299a3e8-c9c3-46ad-b182-021d52048f85">
+      <Execution id="acf6cf27-7c94-4136-9983-44789572d103" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.operator&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Complete&quot;, field: &quot;&quot;, value: &quot;&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="4e48deae-57d4-d437-4105-ecedf2a771fb">
+      <Execution id="32833b82-8861-44f1-90de-1ed84e233955" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Orders/Details?number=PO-TEST&amp;handler=Status&quot;, field: &quot;action&quot;, value: &quot;Release&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="8a5e4711-1143-0d1f-fc9c-020184bfc110">
+      <Execution id="20535e10-8f64-4908-b099-191f2fc95fe3" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: &quot;test.quality&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="05d02df7-f25a-4d47-b0c3-1c36f221db6c">
+      <Execution id="e66a7655-c14a-4c13-add8-a92d0ba1851b" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectCreationPosts_AreForbiddenForNonSupervisors" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;demo.supervisor&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=StartStep&quot;, field: &quot;stepNumber&quot;, value: &quot;1&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="dd3e8a87-8e92-547d-4ada-ad993d503bd0">
+      <Execution id="a839efbb-2035-421b-b9ab-8d10dd29e9e8" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.quality&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=CompleteSte&quot;···, field: &quot;executionId&quot;, value: &quot;00000000-0000-0000-0000-000000000001&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="cb6a9b56-e202-d506-8b88-6f7c84530010">
+      <Execution id="f1929ba1-1dad-4798-a8d5-e286ed0b5190" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: &quot;test.admin&quot;, url: &quot;/Batches/Details?number=B-TEST&amp;handler=Complete&quot;, field: &quot;&quot;, value: &quot;&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="88052d80-7cab-1375-aeff-d7aac201c4fd">
+      <Execution id="0bbd5388-fa9d-4d5b-a04d-c222f67a25bf" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="DirectPost_ForbiddenRolesCannotSubstituteActorOrRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="9b14b64e-3876-895c-30ec-70739491b3fb">
+      <Execution id="49aa005f-3cc0-4dfd-83b7-2c4d5ed18e55" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.AuthenticationBoundaryTests" name="LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="2433b4d7-9cc7-752c-fd9a-f3ddf37492e0" executionId="d3794379-5566-46f5-97b0-465ba11f6bc2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="97e695be-57c8-22ce-7f26-71e431d50168" executionId="1f75fb2f-14fb-4e9a-81b3-243718cc1458" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21a319a4-824b-dfba-52f8-de83a8008059" executionId="dd55a31b-1fb4-49dd-90a1-1bc681db319e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dd3e8a87-8e92-547d-4ada-ad993d503bd0" executionId="a839efbb-2035-421b-b9ab-8d10dd29e9e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19c39a10-6b31-e0bf-9a38-9093ffe9d157" executionId="8f0bab95-2c95-43b8-af14-6870db4cee8f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05d02df7-f25a-4d47-b0c3-1c36f221db6c" executionId="e66a7655-c14a-4c13-add8-a92d0ba1851b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="76ae1490-3dfd-b20b-6241-2b2ee95dc8eb" executionId="752c7756-e66e-4b54-be89-9a67eeff3f76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d172ae7b-5417-ec32-6667-2bfff3e28876" executionId="240f29f6-8d90-48b9-b27e-fd7baa73277b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7299a3e8-c9c3-46ad-b182-021d52048f85" executionId="acf6cf27-7c94-4136-9983-44789572d103" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f5e0371-640b-d332-1416-5381c29d177b" executionId="1071b5be-3913-486b-a684-3cc3d4edb953" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb657ab5-db4f-c481-8c8c-669da0b8a622" executionId="e8283f9f-24e3-4118-9e9a-10b7e61bba9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="88052d80-7cab-1375-aeff-d7aac201c4fd" executionId="0bbd5388-fa9d-4d5b-a04d-c222f67a25bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc74f684-e431-8f94-fdb3-fff0be1ef8cd" executionId="c0dd3a19-77a5-40c0-9a5e-e342bb588499" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6226a89-4375-104b-fb8e-16babb7d5b07" executionId="003c72c8-277c-4e17-bb67-491005bb9109" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c54208b-fe08-b42c-3bdc-916435a18f83" executionId="ef5dc178-50db-44e4-a05b-e2c05bf0d33e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a052ac47-afd4-bcb1-346a-b722fd8201d3" executionId="2d30e3a6-20c4-41f0-911d-8c909cec8e50" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4cb5194-ae92-7822-338d-608e2a011f5d" executionId="a60e50df-10ce-4bed-b2f3-05a2af7a9c2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb6a9b56-e202-d506-8b88-6f7c84530010" executionId="f1929ba1-1dad-4798-a8d5-e286ed0b5190" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d2db399-2a7b-15a8-b0ad-9548cbbc637b" executionId="0032b4e2-c0a9-45da-bb73-7b6350eabe27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37c07ac1-50ff-4878-20b9-90ce7ca6f819" executionId="94eca388-fc9e-414d-b6d8-de193d98583c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="509172ee-5fe2-4aa9-4a3b-b2cd822f4aa9" executionId="8227c973-cd4b-4206-8a52-7ff6e9ea3857" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a5e4711-1143-0d1f-fc9c-020184bfc110" executionId="20535e10-8f64-4908-b099-191f2fc95fe3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f3a8d7a2-dc92-c11a-f6d7-7032d5f371e1" executionId="462250f8-068d-4075-9705-cf35789bc3f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e48deae-57d4-d437-4105-ecedf2a771fb" executionId="32833b82-8861-44f1-90de-1ed84e233955" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b14b64e-3876-895c-30ec-70739491b3fb" executionId="49aa005f-3cc0-4dfd-83b7-2c4d5ed18e55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94889a57-9753-4546-92b5-2876d5966f1f" executionId="e855dff6-2bd7-4904-a966-91dd4f940164" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c091f77-0ec0-206a-a83d-9129dfeff00b" executionId="ecd2db37-8430-4cc8-8e9d-e03d24a73149" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="27" executed="27" passed="27" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.33]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.67]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.79]   Starting:    SyncBridge.Core.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]&#xD;
+      Controlled application operation failed.&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; System.InvalidOperationException: Induced persistence failure with private diagnostic details.&#xD;
+         at SyncBridge.Core.Tests.SecuredServiceFixture.FailureInterceptor.ReaderExecutedAsync(DbCommand command, CommandExecutedEventData eventData, DbDataReader result, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SecuredServiceFixture.cs:line 178&#xD;
+         at Microsoft.EntityFrameworkCore.Diagnostics.Internal.RelationalCommandDiagnosticsLogger.CommandReaderExecutedAsync(IRelationalConnection connection, DbCommand command, String logCommandText, DbContext context, Guid commandId, Guid connectionId, DbDataReader methodResult, DateTimeOffset startTime, TimeSpan duration, CommandSource commandSource, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at SyncBridge.Core.Infrastructure.Persistence.ApplicationUnitOfWork.CommitAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\ApplicationUnitOfWork.cs:line 42&#xD;
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 26&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:30.91]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

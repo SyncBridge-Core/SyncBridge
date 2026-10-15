@@ -82,11 +82,7 @@ internal sealed class SecuredServiceFixture : IAsyncDisposable
 
     internal static SecuredServiceFixture CreateSqlServer()
     {
-        var value = Environment.GetEnvironmentVariable("ConnectionStrings__SyncBridgeCore") ?? throw new InvalidOperationException("Approved SQL connection configuration is required.");
-        var settings = new Microsoft.Data.SqlClient.SqlConnectionStringBuilder(value);
-        if (settings.InitialCatalog != "SyncBridgeCore" || settings.DataSource != "localhost" || !settings.IntegratedSecurity)
-            throw new InvalidOperationException("Live service tests are restricted to localhost SyncBridgeCore with Windows Authentication.");
-        return new SecuredServiceFixture(value);
+        return new SecuredServiceFixture(SqlServerTestDatabase.ConnectionString);
     }
 
     internal AsyncServiceScope Scope(string? actor = null, params Claim[] extraClaims)
@@ -106,7 +102,9 @@ internal sealed class SecuredServiceFixture : IAsyncDisposable
 
     internal void ConfigureTestHost(IServiceCollection services)
     {
-        services.Configure<ManufacturingIdentityOptions>(Configuration.GetSection("ManufacturingIdentity"));
+        // Test hosts must not append accounts from a developer's real User Secrets.
+        services.PostConfigure<ManufacturingIdentityOptions>(options =>
+            options.Accounts = Configuration.GetSection("ManufacturingIdentity:Accounts").Get<List<ManufacturingAccount>>()!);
         services.AddScoped(_ => new SyncBridgeDbContext(dbOptions));
     }
 

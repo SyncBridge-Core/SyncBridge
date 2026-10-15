@@ -1,0 +1,15 @@
+{
+  "ValidityCheckExitCode": 0,
+  "TrustCheckExitCode": 7,
+  "HttpsUrl": "https://localhost:7099/authentication",
+  "ListenerAddresses": [
+    "127.0.0.1",
+    "::1"
+  ],
+  "RequestFailure": "UntrustedRoot",
+  "BrowserFailure": "ERR_CERT_AUTHORITY_INVALID",
+  "CertificateThumbprint": "8E8EF86C71A1BF87D7B8DE76477E82D521564C21",
+  "TrustChanged": false,
+  "ProposedCommand": "dotnet dev-certs https --trust",
+  "Authorization": "Pending Team authorization required by Batch A2 prompt"
+}

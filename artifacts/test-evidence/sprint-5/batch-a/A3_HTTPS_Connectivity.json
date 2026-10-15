@@ -1,0 +1,7 @@
+{
+  "HttpsUrl": "https://localhost:7099/authentication",
+  "HttpsStatus": 200,
+  "NormalCertificateValidation": true,
+  "HttpStatus": 307,
+  "RedirectLocation": "https://localhost:7099/authentication"
+}

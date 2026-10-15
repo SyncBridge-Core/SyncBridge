@@ -1,0 +1,156 @@
+ M src/SyncBridge.Core.Application/Contracts/Persistence/IBatchRepository.cs
+ M src/SyncBridge.Core.Application/Contracts/Persistence/IProductionOrderRepository.cs
+ M src/SyncBridge.Core.Application/Services/BatchService.cs
+ M src/SyncBridge.Core.Application/Services/OperationResult.cs
+ M src/SyncBridge.Core.Application/Services/ProductionOrderService.cs
+ M src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchRepository.cs
+ M src/SyncBridge.Core.Infrastructure/Persistence/Repositories/ProductionOrderRepository.cs
+ M src/SyncBridge.Core.Infrastructure/SyncBridge.Core.Infrastructure.csproj
+ M src/SyncBridge.Core/Pages/Index.cshtml
+ M src/SyncBridge.Core/Pages/Index.cshtml.cs
+ M src/SyncBridge.Core/Pages/Shared/_Layout.cshtml
+ M src/SyncBridge.Core/Program.cs
+ M src/SyncBridge.Core/wwwroot/css/site.css
+ M tests/SyncBridge.Core.Tests/AuthenticationBoundaryTests.cs
+ M tests/SyncBridge.Core.Tests/SecuredServiceFixture.cs
+ M tests/SyncBridge.Core.Tests/SqlServerRecoveryIntegrationTests.cs
+?? artifacts/test-evidence/sprint-4/batch-b/Sql_Preflight_Output.txt
+?? artifacts/test-evidence/sprint-5/batch-a/A2_Certificate_Trust.log
+?? artifacts/test-evidence/sprint-5/batch-a/A2_Certificate_Validity.log
+?? artifacts/test-evidence/sprint-5/batch-a/A2_HTTPS_Diagnostics.json
+?? artifacts/test-evidence/sprint-5/batch-a/A2_HTTPS_Host.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Account_Configuration_Check.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Active_Identity_Inventory.txt
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Batch_Audit_History.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Browser_SQL_Record_Verification.txt
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Certificate_Trust.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Certificate_Verification.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Closed_Awaiting_Operator_Resume.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Completed_ReadOnly_Batch.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Completed_Stale_Post_Rejected.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Development_Guard.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Development_Guard.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Development_Tool_Inventory.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Deviation_Exception.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Final_Checks.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Final_Integrated.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Final_Integrated.trx
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Final_Preservation.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Final_Production_Inventory.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Final_Working_Tree.txt
+?? artifacts/test-evidence/sprint-5/batch-a/A3_HTTPS_Connectivity.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_HTTPS_Host.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_HTTPS_SignIn.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Final_Verification.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Provision.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Repeat_Setup.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Repeat_Verification.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Tool_Build.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Tool_Build_Verified.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Tool_Final_Build.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Identity_Verification.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Initial_Checkpoint_Historical.md
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Missing_Prerequisites_Rejected.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Missing_Signature_Rejected.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Operator_Dashboard.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Order_Audit_History.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Ordered_Workflow.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Patched_Build.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Patched_Integrated.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Patched_Integrated.trx
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Production_Baseline.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Protected_Files.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Provisioned_Host.log
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Audit_Access.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Closed_Batch_Exception.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Dashboard.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Exception_Review.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Quality_Step_Signature.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Review_Missing_Verifications.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Sanitization_Check.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Screenshot_Index.json
+?? artifacts/test-evidence/sprint-5/batch-a/A3_Unreleased_Order_Rejected.jpg
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Advisories.log
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Architecture_Git_Checks.json
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Build.log
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Development_After.json
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Development_Before.json
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Final_Artifact_Hashes.json
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Final_Checks.json
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Final_Working_Tree.txt
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Guard_Development.log
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Guard_Development.trx
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Guard_Missing.log
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Guard_Missing.trx
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Integrated.log
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Integrated.trx
+?? artifacts/test-evidence/sprint-5/batch-a/A4_OptOut.log
+?? artifacts/test-evidence/sprint-5/batch-a/A4_OptOut.trx
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Preservation_Checks.json
+?? artifacts/test-evidence/sprint-5/batch-a/A4_ReadOnly_Preservation.ps1
+?? artifacts/test-evidence/sprint-5/batch-a/A4_SQL_Repeat.log
+?? artifacts/test-evidence/sprint-5/batch-a/A4_SQL_Repeat.trx
+?? artifacts/test-evidence/sprint-5/batch-a/A4_Verification_Summary.json
+?? artifacts/test-evidence/sprint-5/batch-a/Architecture_Git_Checks.json
+?? artifacts/test-evidence/sprint-5/batch-a/Baseline_NonSql.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Browser_Host_Workflow.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Dotnet_Environment.txt
+?? artifacts/test-evidence/sprint-5/batch-a/Evidence_Index.md
+?? artifacts/test-evidence/sprint-5/batch-a/Final_Build.log
+?? artifacts/test-evidence/sprint-5/batch-a/Final_Build_Verified.log
+?? artifacts/test-evidence/sprint-5/batch-a/Final_Integrated.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Final_Integrated_Test.log
+?? artifacts/test-evidence/sprint-5/batch-a/Final_NonSql.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Final_SQL_Postflight.txt
+?? artifacts/test-evidence/sprint-5/batch-a/Final_Working_Tree.txt
+?? artifacts/test-evidence/sprint-5/batch-a/Focused_Http.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Focused_Http_Retest.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Full_NonSql.trx
+?? artifacts/test-evidence/sprint-5/batch-a/LiveSql_Regression.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Production_Inventory.json
+?? artifacts/test-evidence/sprint-5/batch-a/Production_Size.json
+?? artifacts/test-evidence/sprint-5/batch-a/Protected_File_Checks.json
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Advisories.log
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Architecture_Checks.json
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Build.log
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Dependency_Chain.log
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Integrated.log
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Integrated.trx
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Restore.log
+?? artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Verification_Summary.json
+?? artifacts/test-evidence/sprint-5/batch-a/Source_Register.json
+?? artifacts/test-evidence/sprint-5/batch-a/Source_Security_Check.json
+?? artifacts/test-evidence/sprint-5/batch-a/Sql_Postflight.txt
+?? artifacts/test-evidence/sprint-5/batch-a/Sql_Preflight.txt
+?? artifacts/test-evidence/sprint-5/batch-a/Sql_Preflight_Elevated.txt
+?? artifacts/test-evidence/sprint-5/batch-a/Verification_Summary.json
+?? docs/WP6_Sprint4_to_Sprint5_Engineering_Handoff.docx
+?? docs/sprint-4/Sprint4_Git_Integration_Completion_Report.md
+?? docs/sprint-5/Development_Identity_Setup.md
+?? docs/sprint-5/Isolated_SQL_Test_Setup.md
+?? docs/sprint-5/Sprint5_BatchA2_HTTPS_Diagnosis_Report.md
+?? docs/sprint-5/Sprint5_BatchA3_Execution_Report.md
+?? docs/sprint-5/Sprint5_BatchA_Completion_Report.md
+?? docs/sprint-5/Sprint5_BatchA_Implementation_Decision_Register.md
+?? docs/sprint-5/Sprint5_BatchA_Requirements_and_Evidence_Matrix.md
+?? docs/sprint-5/Sprint5_BatchA_Starting_State_Report.md
+?? src/SyncBridge.Core/Pages/Audit.cshtml
+?? src/SyncBridge.Core/Pages/Audit.cshtml.cs
+?? src/SyncBridge.Core/Pages/Authentication.cshtml
+?? src/SyncBridge.Core/Pages/Authentication.cshtml.cs
+?? src/SyncBridge.Core/Pages/Batches/Details.cshtml
+?? src/SyncBridge.Core/Pages/Batches/Details.cshtml.cs
+?? src/SyncBridge.Core/Pages/Batches/Initiate.cshtml
+?? src/SyncBridge.Core/Pages/Batches/Initiate.cshtml.cs
+?? src/SyncBridge.Core/Pages/ManufacturingPageModel.cs
+?? src/SyncBridge.Core/Pages/Orders/Create.cshtml
+?? src/SyncBridge.Core/Pages/Orders/Create.cshtml.cs
+?? src/SyncBridge.Core/Pages/Orders/Details.cshtml
+?? src/SyncBridge.Core/Pages/Orders/Details.cshtml.cs
+?? src/SyncBridge.Core/Pages/Review.cshtml
+?? src/SyncBridge.Core/Pages/Review.cshtml.cs
+?? tests/SyncBridge.Core.Tests/RazorWorkflowTests.cs
+?? tests/SyncBridge.Core.Tests/SqlServerTestDatabase.cs
+?? tools/SyncBridge.DevelopmentIdentity/ApprovedDevelopmentAccounts.json
+?? tools/SyncBridge.DevelopmentIdentity/Program.cs
+?? tools/SyncBridge.DevelopmentIdentity/SyncBridge.DevelopmentIdentity.csproj
