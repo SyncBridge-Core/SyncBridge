@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="83e5b21c-ec93-4d8b-bb4f-732721913f03" name="Carlos@SB-DEV-01 2026-10-14 20:48:11" runUser="SB-DEV-01\Carlos" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-14T20:48:11.4992769-04:00" queuing="2026-10-14T20:48:11.4992776-04:00" start="2026-10-14T20:48:01.9557179-04:00" finish="2026-10-14T20:48:30.4579704-04:00" />
+  <TestSettings name="default" id="221a6a3c-65a4-4d44-bbd7-2444fcd5524f">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-14_20_48_11" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="3bbf1f77-48b7-4ca6-bc9e-0d7178b7cbf6" testId="5898227d-c19c-febc-a862-ad1b7a18e0d7" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation" computerName="SB-DEV-01" duration="00:00:00.2332561" startTime="2026-10-14T20:48:15.3099040-04:00" endTime="2026-10-14T20:48:15.5436619-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3bbf1f77-48b7-4ca6-bc9e-0d7178b7cbf6" />
+    <UnitTestResult executionId="2c9c8543-3ce0-44bb-ad89-7eca8edbfb9e" testId="4d876e58-c56d-dd82-5730-32034777e8ef" testName="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused" computerName="SB-DEV-01" duration="00:00:00.3029084" startTime="2026-10-14T20:48:29.2471977-04:00" endTime="2026-10-14T20:48:29.5508502-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c9c8543-3ce0-44bb-ad89-7eca8edbfb9e">
+      <Output>
+        <StdOut>SQL error 515: sanitized TechnicalFailure; order and audit absent after rollback; same service scope reused successfully.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c22961a2-d4ab-4aa1-a778-9fd6060fae3f" testId="f005c493-22cd-efe5-783b-ea554b9963ba" testName="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer" computerName="SB-DEV-01" duration="00:00:05.9519563" startTime="2026-10-14T20:48:19.3892178-04:00" endTime="2026-10-14T20:48:25.3314495-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c22961a2-d4ab-4aa1-a778-9fd6060fae3f">
+      <Output>
+        <StdOut>SQL end-to-end: Completed; 19 Batch audits; 2 standalone order audits; optional fields/identities preserved; fresh-scope resolved Exception resumed.&#xD;
+Fresh-scope secured Batch read: 391.724 ms on this demonstration fixture; no production-scale qualification.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="234998c2-02d6-4971-af5e-9ccf6a8b41cd" testId="a9869a35-de1e-5674-2433-f94f0b38e808" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer" computerName="SB-DEV-01" duration="00:00:00.5029612" startTime="2026-10-14T20:48:12.5246619-04:00" endTime="2026-10-14T20:48:13.0304321-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="234998c2-02d6-4971-af5e-9ccf6a8b41cd" />
+    <UnitTestResult executionId="88d2b7e0-ca5f-4089-ad95-a5f476d8ede5" testId="2b999357-02eb-d03b-655d-32aa5a986682" testName="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence" computerName="SB-DEV-01" duration="00:00:02.7893518" startTime="2026-10-14T20:48:26.4548239-04:00" endTime="2026-10-14T20:48:29.2452376-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88d2b7e0-ca5f-4089-ad95-a5f476d8ede5">
+      <Output>
+        <StdOut>SQL executed-write failures: current verification plus audit rolled back; signature plus audit rolled back; subsequent commands succeeded.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b24d6f27-005a-41b2-b91f-95158032c23b" testId="d9c6d921-ec19-b584-bbc4-ff914cbf7d02" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence" computerName="SB-DEV-01" duration="00:00:00.3955535" startTime="2026-10-14T20:48:13.5171527-04:00" endTime="2026-10-14T20:48:13.9143997-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b24d6f27-005a-41b2-b91f-95158032c23b" />
+    <UnitTestResult executionId="ad527627-5b6b-45ad-bea7-9d57744eea10" testId="268f1a75-395e-1c1c-8ab1-6fec16393b85" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory" computerName="SB-DEV-01" duration="00:00:00.6973610" startTime="2026-10-14T20:48:13.9148304-04:00" endTime="2026-10-14T20:48:14.6135468-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad527627-5b6b-45ad-bea7-9d57744eea10" />
+    <UnitTestResult executionId="1b9ba40a-2c53-45fe-ae40-6b623fc4e457" testId="45f1e58b-b6d3-d676-b52f-99e753fc456b" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements" computerName="SB-DEV-01" duration="00:00:00.2134163" startTime="2026-10-14T20:48:15.0952886-04:00" endTime="2026-10-14T20:48:15.3092480-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b9ba40a-2c53-45fe-ae40-6b623fc4e457" />
+    <UnitTestResult executionId="02d33d63-766e-4698-bad1-9d95f8cfc5c9" testId="9a5144aa-9027-66bd-9cba-6cd085211db2" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite" computerName="SB-DEV-01" duration="00:00:01.4917853" startTime="2026-10-14T20:48:09.9464446-04:00" endTime="2026-10-14T20:48:11.3764876-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02d33d63-766e-4698-bad1-9d95f8cfc5c9" />
+    <UnitTestResult executionId="6cb2d032-53a6-4cbb-88e7-c0ca1d5eabcc" testId="998aa718-1677-9d26-2741-b9bf525b17f5" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges" computerName="SB-DEV-01" duration="00:00:00.4863083" startTime="2026-10-14T20:48:13.0312862-04:00" endTime="2026-10-14T20:48:13.5168680-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6cb2d032-53a6-4cbb-88e7-c0ca1d5eabcc" />
+    <UnitTestResult executionId="4b328156-cd75-4c1e-a200-c732b815422b" testId="24bea70d-4667-4c54-98d4-afe6501c2bbf" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer" computerName="SB-DEV-01" duration="00:00:00.6467265" startTime="2026-10-14T20:48:11.8865207-04:00" endTime="2026-10-14T20:48:12.5241762-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b328156-cd75-4c1e-a200-c732b815422b" />
+    <UnitTestResult executionId="862c1aa4-105f-4b94-ae29-9dd0e786ea5f" testId="59b92c97-6706-4ba7-e246-446a967cfeda" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_ReconstructsAllFiveStatesAndRichEvidence" computerName="SB-DEV-01" duration="00:00:00.4767345" startTime="2026-10-14T20:48:14.6154266-04:00" endTime="2026-10-14T20:48:15.0936908-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="862c1aa4-105f-4b94-ae29-9dd0e786ea5f" />
+    <UnitTestResult executionId="ac3bc10b-5ea9-4e8a-9a6c-182fd2ed18e5" testId="eb0d9230-a4aa-7857-fe12-b6f18ed97e46" testName="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure" computerName="SB-DEV-01" duration="00:00:01.1211730" startTime="2026-10-14T20:48:25.3326688-04:00" endTime="2026-10-14T20:48:26.4543848-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac3bc10b-5ea9-4e8a-9a6c-182fd2ed18e5">
+      <Output>
+        <StdOut>Corrupt persisted Batch/order/recipe data: TechnicalFailure with diagnostic logging, rather than an input/business rejection.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fb181672-8ac4-41ae-92f2-0f3469cbe2b5" testId="57ec6f34-87ec-1e53-c545-3e74cbb956ea" testName="SyncBridge.Core.Tests.SqlServerApplicationServiceTests.TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation" computerName="SB-DEV-01" duration="00:00:00.2339611" startTime="2026-10-14T20:48:29.8198927-04:00" endTime="2026-10-14T20:48:30.0555745-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb181672-8ac4-41ae-92f2-0f3469cbe2b5" />
+    <UnitTestResult executionId="9d4b1396-cdda-4c2e-9722-4fa9fe6c123e" testId="54cc2709-057c-3b01-097d-a9e86c0d8e09" testName="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly" computerName="SB-DEV-01" duration="00:00:00.4894733" startTime="2026-10-14T20:48:11.4115000-04:00" endTime="2026-10-14T20:48:11.8755187-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d4b1396-cdda-4c2e-9722-4fa9fe6c123e" />
+    <UnitTestResult executionId="d8bf242b-bc9e-42ae-88f6-fb4fcf9c2bbd" testId="8ef032e0-efa9-a997-85c0-fdb3fdd30949" testName="SyncBridge.Core.Tests.SqlServerApplicationServiceTests.InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer" computerName="SB-DEV-01" duration="00:00:00.2670454" startTime="2026-10-14T20:48:29.5519985-04:00" endTime="2026-10-14T20:48:29.8196543-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8bf242b-bc9e-42ae-88f6-fb4fcf9c2bbd" />
+    <UnitTestResult executionId="0e10a867-aa2c-4e76-8fd5-7e09b448e7f5" testId="ba5a8266-4320-206a-8cbe-7c45be4ea45a" testName="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence" computerName="SB-DEV-01" duration="00:00:03.8232040" startTime="2026-10-14T20:48:15.5522300-04:00" endTime="2026-10-14T20:48:19.3776978-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e10a867-aa2c-4e76-8fd5-7e09b448e7f5">
+      <Output>
+        <StdOut>Concurrent Ready commands: TechnicalFailure, Success; SQL error codes: 1205; one transition and one transition audit.</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="eb0d9230-a4aa-7857-fe12-b6f18ed97e46">
+      <Execution id="ac3bc10b-5ea9-4e8a-9a6c-182fd2ed18e5" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests" name="CorruptPersistedDomainData_IsReportedAsTechnicalFailure" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="24bea70d-4667-4c54-98d4-afe6501c2bbf">
+      <Execution id="4b328156-cd75-4c1e-a200-c732b815422b" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="54cc2709-057c-3b01-097d-a9e86c0d8e09">
+      <Execution id="9d4b1396-cdda-4c2e-9722-4fa9fe6c123e" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerApplicationServiceTests.InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="8ef032e0-efa9-a997-85c0-fdb3fdd30949">
+      <Execution id="d8bf242b-bc9e-42ae-88f6-fb4fcf9c2bbd" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerApplicationServiceTests" name="InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="5898227d-c19c-febc-a862-ad1b7a18e0d7">
+      <Execution id="3bbf1f77-48b7-4ca6-bc9e-0d7178b7cbf6" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="45f1e58b-b6d3-d676-b52f-99e753fc456b">
+      <Execution id="1b9ba40a-2c53-45fe-ae40-6b623fc4e457" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="998aa718-1677-9d26-2741-b9bf525b17f5">
+      <Execution id="6cb2d032-53a6-4cbb-88e7-c0ca1d5eabcc" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="9a5144aa-9027-66bd-9cba-6cd085211db2">
+      <Execution id="02d33d63-766e-4698-bad1-9d95f8cfc5c9" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="ba5a8266-4320-206a-8cbe-7c45be4ea45a">
+      <Execution id="0e10a867-aa2c-4e76-8fd5-7e09b448e7f5" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests" name="ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerApplicationServiceTests.TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="57ec6f34-87ec-1e53-c545-3e74cbb956ea">
+      <Execution id="fb181672-8ac4-41ae-92f2-0f3469cbe2b5" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerApplicationServiceTests" name="TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="2b999357-02eb-d03b-655d-32aa5a986682">
+      <Execution id="88d2b7e0-ca5f-4089-ad95-a5f476d8ede5" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests" name="SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="4d876e58-c56d-dd82-5730-32034777e8ef">
+      <Execution id="2c9c8543-3ce0-44bb-ad89-7eca8edbfb9e" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests" name="SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="a9869a35-de1e-5674-2433-f94f0b38e808">
+      <Execution id="234998c2-02d6-4971-af5e-9ccf6a8b41cd" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_ReconstructsAllFiveStatesAndRichEvidence" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="59b92c97-6706-4ba7-e246-446a967cfeda">
+      <Execution id="862c1aa4-105f-4b94-ae29-9dd0e786ea5f" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="BatchRepository_ReconstructsAllFiveStatesAndRichEvidence" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="f005c493-22cd-efe5-783b-ea554b9963ba">
+      <Execution id="c22961a2-d4ab-4aa1-a778-9fd6060fae3f" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests" name="CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="d9c6d921-ec19-b584-bbc4-ff914cbf7d02">
+      <Execution id="b24d6f27-005a-41b2-b91f-95158032c23b" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="268f1a75-395e-1c1c-8ab1-6fec16393b85">
+      <Execution id="ad527627-5b6b-45ad-bea7-9d57744eea10" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests" name="DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="5898227d-c19c-febc-a862-ad1b7a18e0d7" executionId="3bbf1f77-48b7-4ca6-bc9e-0d7178b7cbf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d876e58-c56d-dd82-5730-32034777e8ef" executionId="2c9c8543-3ce0-44bb-ad89-7eca8edbfb9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f005c493-22cd-efe5-783b-ea554b9963ba" executionId="c22961a2-d4ab-4aa1-a778-9fd6060fae3f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9869a35-de1e-5674-2433-f94f0b38e808" executionId="234998c2-02d6-4971-af5e-9ccf6a8b41cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2b999357-02eb-d03b-655d-32aa5a986682" executionId="88d2b7e0-ca5f-4089-ad95-a5f476d8ede5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9c6d921-ec19-b584-bbc4-ff914cbf7d02" executionId="b24d6f27-005a-41b2-b91f-95158032c23b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="268f1a75-395e-1c1c-8ab1-6fec16393b85" executionId="ad527627-5b6b-45ad-bea7-9d57744eea10" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45f1e58b-b6d3-d676-b52f-99e753fc456b" executionId="1b9ba40a-2c53-45fe-ae40-6b623fc4e457" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a5144aa-9027-66bd-9cba-6cd085211db2" executionId="02d33d63-766e-4698-bad1-9d95f8cfc5c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="998aa718-1677-9d26-2741-b9bf525b17f5" executionId="6cb2d032-53a6-4cbb-88e7-c0ca1d5eabcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24bea70d-4667-4c54-98d4-afe6501c2bbf" executionId="4b328156-cd75-4c1e-a200-c732b815422b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59b92c97-6706-4ba7-e246-446a967cfeda" executionId="862c1aa4-105f-4b94-ae29-9dd0e786ea5f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb0d9230-a4aa-7857-fe12-b6f18ed97e46" executionId="ac3bc10b-5ea9-4e8a-9a6c-182fd2ed18e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57ec6f34-87ec-1e53-c545-3e74cbb956ea" executionId="fb181672-8ac4-41ae-92f2-0f3469cbe2b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54cc2709-057c-3b01-097d-a9e86c0d8e09" executionId="9d4b1396-cdda-4c2e-9722-4fa9fe6c123e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ef032e0-efa9-a997-85c0-fdb3fdd30949" executionId="d8bf242b-bc9e-42ae-88f6-fb4fcf9c2bbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba5a8266-4320-206a-8cbe-7c45be4ea45a" executionId="0e10a867-aa2c-4e76-8fd5-7e09b448e7f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="17" executed="17" passed="17" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.39]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.64]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.70]   Starting:    SyncBridge.Core.Tests&#xD;
+SQL isolation: SyncBridgeCore_IntegrationTests; 15 manufacturing tables; 11 seed rows; migration 20261013010705_InitialCreate.&#xD;
+PERF|rows=batch:1,steps:1,material:1,equipment:1,signature:1,audit:4|save_ms=22.566|order_lookup_ms=1.735|recipe_load_ms=15.145|batch_load_ms=24.040&#xD;
+SQL isolation cleanup: 0 history rows; 2 reference orders; dropping owned SyncBridgeCore_IntegrationTests.&#xD;
+[xUnit.net 00:00:26.56]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

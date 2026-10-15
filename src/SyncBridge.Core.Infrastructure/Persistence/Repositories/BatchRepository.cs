@@ -14,6 +14,14 @@ namespace SyncBridge.Core.Infrastructure.Persistence.Repositories;
 
 internal sealed partial class BatchRepository(SyncBridgeDbContext context) : IBatchRepository
 {
+    public async Task<IReadOnlyList<BatchNumber>> GetNumbersAsync(CancellationToken cancellationToken = default)
+    {
+        var numbers = await context.Batches.AsNoTracking().OrderBy(row => row.BatchNumber).Select(row => row.BatchNumber).ToArrayAsync(cancellationToken);
+        try { return numbers.Select(number => new BatchNumber(DbdsStringLengthValidator.RequireWithinLimit(number, 40, nameof(number)))).ToArray(); }
+        catch (Exception exception) when (exception is DomainException or ArgumentException)
+        { throw new PersistenceIntegrityException("A persisted Batch identifier is invalid.", exception); }
+    }
+
     public async Task<Batch?> GetExecutionAggregateAsync(
         BatchNumber batchNumber,
         CancellationToken cancellationToken = default)

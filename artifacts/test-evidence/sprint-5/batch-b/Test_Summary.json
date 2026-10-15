@@ -1,0 +1,20 @@
+[
+  {
+    "Artifact": "Final_Integrated.trx",
+    "Total": 278,
+    "Passed": 278,
+    "Failed": 0,
+    "Skipped": 0,
+    "LiveSql": 17,
+    "DurationSeconds": 72.316
+  },
+  {
+    "Artifact": "Final_SQL_Repeat.trx",
+    "Total": 17,
+    "Passed": 17,
+    "Failed": 0,
+    "Skipped": 0,
+    "LiveSql": 17,
+    "DurationSeconds": 28.792
+  }
+]

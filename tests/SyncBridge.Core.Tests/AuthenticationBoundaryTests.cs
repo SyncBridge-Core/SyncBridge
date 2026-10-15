@@ -90,7 +90,7 @@ public sealed class AuthenticationBoundaryTests
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         Assert.True(response.Headers.CacheControl!.NoStore);
         var html = await response.Content.ReadAsStringAsync();
-        var match = Regex.Match(html, "name=\"__RequestVerificationToken\" value=\"([^\"]+)\"");
+        var match = Regex.Match(html, "name=\"__RequestVerificationToken\"[^>]*value=\"([^\"]+)\"");
         Assert.True(match.Success);
         return WebUtility.HtmlDecode(match.Groups[1].Value);
     }

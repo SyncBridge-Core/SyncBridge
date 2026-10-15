@@ -1,0 +1,32 @@
+UserId|UserName|IsActive
+------|--------|--------
+demo.operator|demo.operator|1
+demo.quality|demo.quality|1
+OrderNumber|Quantity|Status
+-----------|--------|------
+A3-PO-20261014|10.000|Completed
+BatchNumber|Status
+-----------|------
+A3-B-20261014|Completed
+StepNumber|Status|RecordedData
+----------|------|------------
+1|Completed|Required material and equipment confirmed through the A3 browser workflow.
+2|Completed|Fictional blend completed through the interactive browser and approved by Quality.
+DeviationCode|Status|StepExecutionId|FinalDisposition
+-------------|------|---------------|----------------
+A3-D-20261014|Closed|F5B3FD05-7A0B-42AC-9874-33AA19653CBC|Fictional corrective action accepted; deviation closed for Operator resumption.
+RelatedRecordType|StepNumber|UserId|Meaning
+-----------------|----------|------|-------
+BatchStepExecution|2|demo.quality|Approval
+BatchAuditEvents
+----------------
+17
+OrderAuditEvents
+----------------
+4
+CoreTables
+----------
+15
+MigrationId
+-----------
+20261013010705_InitialCreate

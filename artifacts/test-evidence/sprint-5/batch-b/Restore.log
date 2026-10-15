@@ -1,0 +1,6 @@
+  Determining projects to restore...
+  Restored C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Domain\SyncBridge.Core.Domain.csproj (in 268 ms).
+  Restored C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core\SyncBridge.Core.csproj (in 336 ms).
+  Restored C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\SyncBridge.Core.Application.csproj (in 1.14 sec).
+  Restored C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\SyncBridge.Core.Infrastructure.csproj (in 1.06 sec).
+  Restored C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SyncBridge.Core.Tests.csproj (in 1.6 sec).

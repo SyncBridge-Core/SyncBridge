@@ -8,6 +8,7 @@ namespace SyncBridge.Core.Application.Contracts.Persistence;
 /// </summary>
 public interface IBatchRepository
 {
+    Task<IReadOnlyList<BatchNumber>> GetNumbersAsync(CancellationToken cancellationToken = default);
     Task UpdateAsync(Batch batch, CancellationToken cancellationToken = default);
     Task<BatchEvidence> GetEvidenceAsync(Batch batch, CancellationToken cancellationToken = default);
     Task SaveMaterialVerificationAsync(MaterialVerification verification, CancellationToken cancellationToken = default);

@@ -1,0 +1,23 @@
+{
+  "Date": "2026-10-14",
+  "TimeZone": "America/New_York",
+  "SDK": "10.0.401",
+  "Runtimes": [
+    "Microsoft.AspNetCore.App 8.0.31 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]",
+    "Microsoft.AspNetCore.App 10.0.12 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]",
+    "Microsoft.NETCore.App 8.0.31 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]",
+    "Microsoft.NETCore.App 10.0.12 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]",
+    "Microsoft.WindowsDesktop.App 8.0.31 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]",
+    "Microsoft.WindowsDesktop.App 10.0.12 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]"
+  ],
+  "SQLServer": "17.0.1145.4",
+  "TestDatabase": "localhost/SyncBridgeCore_IntegrationTests",
+  "ConnectionSelection": "SYNCBRIDGE_TEST_SQL_CONNECTION",
+  "TestOptIn": "SYNCBRIDGE_APPROVED_LIVE_SQL=1",
+  "AllExpectedVerificationOutcomesObserved": true,
+  "DevelopmentDataUnchanged": true,
+  "DisposableDatabaseRemoved": true,
+  "ProductionSourcePreserved": true,
+  "DiffCheckExitCode": 0,
+  "GitIntegrationPerformed": false
+}

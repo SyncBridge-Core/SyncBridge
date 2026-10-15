@@ -1,0 +1,7 @@
+@page
+@model AuditModel
+@{ ViewData["Title"] = "Audit history"; }
+<h1>Audit history: @Model.Record</h1>
+<table class="table"><thead><tr><th>Time</th><th>Actor</th><th>Action</th><th>Entity / identifier</th><th>Resulting state</th><th>Details</th></tr></thead><tbody>
+@foreach (var item in Model.Events.OrderBy(e => e.OccurredAt)) { <tr><td>@item.OccurredAt</td><td>@item.ActorId</td><td>@item.Action</td><td>@item.Entity / @item.EntityId</td><td>@item.ResultingState</td><td>@item.Details</td></tr> }
+</tbody></table>

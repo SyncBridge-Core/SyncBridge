@@ -1,0 +1,92 @@
+@page
+@model SyncBridge.Core.Pages.Batches.DetailsModel
+@using SyncBridge.Core.Domain.Enumerations
+@using SyncBridge.Core.Application.Services
+@{ ViewData["Title"] = "Batch execution"; var batch = Model.Batch; var editable = batch.Status != BatchStatus.Completed; }
+<h1>Batch @batch.BatchNumber</h1>
+<div asp-validation-summary="All" class="text-danger" role="alert"></div>
+<dl><dt>Production order</dt><dd><a asp-page="/Orders/Details" asp-route-number="@batch.OrderNumber">@batch.OrderNumber</a></dd><dt>Recipe</dt><dd>@batch.Recipe.Name (@batch.RecipeCode, version @batch.Recipe.Version)</dd><dt>Planned quantity</dt><dd>@batch.PlannedQuantity</dd><dt>Status</dt><dd>@batch.Status</dd></dl>
+@if (!editable) { <p class="alert alert-success">Completed batch — read-only manufacturing record.</p> }
+@if (Model.CanReview) { <a asp-page="/Audit" asp-route-batchNumber="@batch.BatchNumber">Batch audit history</a> }
+@if (editable && Model.IsOperator)
+{
+    @if (batch.Status == BatchStatus.Created)
+    { <form method="post" asp-page-handler="Ready" asp-route-number="@batch.BatchNumber"><button class="btn btn-primary">Mark ready</button></form> }
+    @if (batch.Status == BatchStatus.Ready)
+    { <p>Verify every required material and equipment item before starting.</p><form method="post" asp-page-handler="Start" asp-route-number="@batch.BatchNumber"><button class="btn btn-primary">Start processing</button></form> }
+    @if (batch.Status == BatchStatus.Exception)
+    { <p class="alert alert-warning">Execution is suspended. Quality must close all blocking deviations, then an Operator must explicitly resume.</p>
+      @if (batch.Deviations.All(d => d.Status == DeviationStatus.Closed))
+      { <form method="post" asp-page-handler="Resume" asp-route-number="@batch.BatchNumber"><button class="btn btn-primary">Resume processing</button></form> }
+    }
+}
+<h2>Required materials</h2>
+@foreach (var item in batch.Recipe.Materials)
+{
+    <section class="border rounded p-2 mb-2"><h3 class="h5">@item.MaterialCode</h3><p>Required quantity: @item.RequiredQuantity · Verification: @(batch.Materials.SingleOrDefault(v => v.ItemCode == item.MaterialCode)?.Result.ToString() ?? "Missing")</p>
+    @if (batch.Materials.SingleOrDefault(v => v.ItemCode == item.MaterialCode) is { } verification) { <p>Verified by @verification.ActorId at @verification.VerifiedAt</p> }
+    @if (Model.IsOperator && batch.Status is BatchStatus.Created or BatchStatus.Ready)
+    { <form method="post" asp-page-handler="Material" asp-route-number="@batch.BatchNumber"><input type="hidden" name="itemCode" value="@item.MaterialCode" /><label>Verification result <select name="result"><option value="Passed">Passed</option><option value="Failed">Failed</option></select></label><button class="btn btn-outline-primary">Save material verification</button></form> }
+    </section>
+}
+<h2>Required equipment</h2>
+@foreach (var item in batch.Recipe.Equipment)
+{
+    <section class="border rounded p-2 mb-2"><h3 class="h5">@item</h3><p>Verification: @(batch.Equipment.SingleOrDefault(v => v.ItemCode == item)?.Result.ToString() ?? "Missing")</p>
+    @if (batch.Equipment.SingleOrDefault(v => v.ItemCode == item) is { } verification) { <p>Verified by @verification.ActorId at @verification.VerifiedAt</p> }
+    @if (Model.IsOperator && batch.Status is BatchStatus.Created or BatchStatus.Ready)
+    { <form method="post" asp-page-handler="Equipment" asp-route-number="@batch.BatchNumber"><input type="hidden" name="itemCode" value="@item" /><label>Verification result <select name="result"><option value="Passed">Passed</option><option value="Failed">Failed</option></select></label><button class="btn btn-outline-primary">Save equipment verification</button></form> }
+    </section>
+}
+<h2>Ordered workflow</h2>
+@foreach (var step in batch.Recipe.Steps.OrderBy(s => s.StepNumber))
+{
+    var execution = batch.Steps.SingleOrDefault(s => s.StepNumber == step.StepNumber);
+    var previousComplete = batch.Recipe.Steps.Where(s => s.StepNumber < step.StepNumber).All(s => batch.Steps.Any(e => e.StepNumber == s.StepNumber && e.Status == StepExecutionStatus.Completed));
+    <section class="border rounded p-3 mb-3"><h3 class="h5">Step @step.StepNumber: @step.Name</h3><p style="white-space: pre-wrap">@step.Instructions</p><p>Status: @(execution?.Status.ToString() ?? "Pending") · Signature required: @step.RequiresSignature</p>
+    @if (execution?.RecordedData is not null) { <p>Recorded data: @execution.RecordedData</p> }
+    @if (batch.Status == BatchStatus.InProgress && Model.IsOperator && previousComplete && (execution is null || execution.Status == StepExecutionStatus.Pending))
+    { <form method="post" asp-page-handler="StartStep" asp-route-number="@batch.BatchNumber"><input type="hidden" name="stepNumber" value="@step.StepNumber" /><button class="btn btn-primary">Start step @step.StepNumber</button></form> }
+    @if (batch.Status == BatchStatus.InProgress && execution?.Status == StepExecutionStatus.InProgress)
+    {
+        @if (Model.IsOperator || Model.IsQuality)
+        { <form method="post" asp-page-handler="Sign" asp-route-number="@batch.BatchNumber"><input type="hidden" name="executionId" value="@execution.ExecutionId" /><label>Signature meaning <select name="meaning" asp-items="Html.GetEnumSelectList<ElectronicSignatureMeaning>()"></select></label><p>Signing records your authenticated approval for this step execution.</p><button class="btn btn-outline-primary">Sign step @step.StepNumber</button></form> }
+        @if (Model.IsOperator)
+        { <form method="post" asp-page-handler="CompleteStep" asp-route-number="@batch.BatchNumber"><input type="hidden" name="executionId" value="@execution.ExecutionId" />
+          <label class="d-block">Recorded data <textarea name="recordedData" maxlength="2000" class="form-control">@execution.RecordedData</textarea></label>
+          <label>Signature <select name="signatureId"><option value="">Select signature if required</option>@foreach (var signature in batch.Signatures.Where(s => s.ExecutionId == execution.ExecutionId)) { <option value="@signature.SignatureId">@signature.ActorId · @signature.Meaning · @signature.SignedAt</option> }</select></label>
+          <button class="btn btn-primary">Complete step @step.StepNumber</button></form> }
+    }
+    </section>
+}
+<h2>Electronic signatures</h2>
+<table class="table"><thead><tr><th>Step execution</th><th>Signer</th><th>Meaning</th><th>Signed at</th></tr></thead><tbody>
+@foreach (var signature in batch.Signatures) { <tr><td>@signature.ExecutionId</td><td>@signature.ActorId</td><td>@signature.Meaning</td><td>@signature.SignedAt</td></tr> }
+</tbody></table>
+<h2>Deviations</h2>
+@if (editable && Model.IsOperator && batch.Status is BatchStatus.InProgress or BatchStatus.Exception)
+{ <form method="post" asp-page-handler="Deviation" asp-route-number="@batch.BatchNumber" class="border rounded p-3">
+    <label class="d-block">Deviation code <input name="deviationCode" required maxlength="40" class="form-control" /></label>
+    <label class="d-block">Description <textarea name="description" required maxlength="2000" class="form-control"></textarea></label>
+    <label>Originating step (optional) <select name="executionId"><option value="">Batch</option>@foreach (var step in batch.Steps) { <option value="@step.ExecutionId">Step @step.StepNumber</option> }</select></label>
+    <button class="btn btn-primary">Record deviation</button>
+  </form> }
+@foreach (var deviation in batch.Deviations)
+{
+    <section class="border rounded p-3 my-2"><h3 class="h5">@deviation.Code · @deviation.Status</h3><p>@deviation.Description</p><p>Origin: @(deviation.ExecutionId ?? "Batch")</p><p>Review: @deviation.ReviewComments</p><p>Disposition: @deviation.FinalDisposition</p>
+    @if (editable && Model.IsQuality)
+    {
+        var actions = deviation.Status switch {
+            DeviationStatus.Open => new[] { DeviationAction.BeginReview },
+            DeviationStatus.UnderReview => new[] { DeviationAction.Approve, DeviationAction.Reject },
+            DeviationStatus.Approved => new[] { DeviationAction.Resolve },
+            _ => Array.Empty<DeviationAction>() };
+        @foreach (var action in actions)
+        { <form method="post" asp-page-handler="Review" asp-route-number="@batch.BatchNumber"><input type="hidden" name="deviationCode" value="@deviation.Code" /><input type="hidden" name="action" value="@action" />
+          @if (action is DeviationAction.BeginReview or DeviationAction.Resolve) { <label>Comments / final disposition <textarea name="commentsOrDisposition" required maxlength="@(action == DeviationAction.Resolve ? 1000 : 2000)" class="form-control"></textarea></label> }
+          <button class="btn btn-outline-primary">@action deviation</button></form> }
+    }
+    </section>
+}
+@if (Model.IsSupervisor && batch.Status == BatchStatus.InProgress && batch.Recipe.Steps.All(s => batch.Steps.Any(e => e.StepNumber == s.StepNumber && e.Status == StepExecutionStatus.Completed)))
+{ <form method="post" asp-page-handler="Complete" asp-route-number="@batch.BatchNumber"><button class="btn btn-primary">Complete batch</button></form> }

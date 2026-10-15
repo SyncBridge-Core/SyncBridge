@@ -1,0 +1,13 @@
+@page "/authentication"
+@model AuthenticationModel
+@{ ViewData["Title"] = "Sign in"; }
+<section class="sign-in-panel border rounded p-4">
+<h1>SyncBridge sign in</h1>
+<p>Manufacturing Execution System</p>
+<form method="post" action="/authentication/login">
+    @Html.AntiForgeryToken()
+    <label for="userName">User name</label><input id="userName" name="userName" autocomplete="username" required maxlength="100" class="form-control" />
+    <label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required maxlength="1024" class="form-control" />
+    <button class="btn btn-primary mt-3">Sign in</button>
+</form>
+</section>

@@ -1,10 +1,26 @@
 ﻿@page
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";
+@{ ViewData["Title"] = "Production dashboard"; }
+<h1>Production dashboard</h1>
+@if (!(Model.IsOperator || Model.IsSupervisor || Model.IsQuality))
+{
+    <p>Your account has no manufacturing permissions. Administrators manage accounts and roles through the configured identity settings.</p>
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+else
+{
+    <p>Select an order or batch to review its current state and permitted next actions.</p>
+    @if (Model.IsSupervisor) { <a class="btn btn-primary" asp-page="/Orders/Create">Create production order</a> }
+    @if (Model.CanReview) { <a class="btn btn-outline-primary" asp-page="/Review">Review by Exception</a> }
+    <h2>Production orders</h2>
+    <table class="table"><thead><tr><th>Order</th><th>Product</th><th>Quantity</th><th>Status</th></tr></thead><tbody>
+    @foreach (var order in Model.Orders)
+    { <tr><td><a asp-page="/Orders/Details" asp-route-number="@order.OrderNumber">@order.OrderNumber</a></td><td>@order.ProductName (@order.ProductCode)</td><td>@order.Quantity</td><td>@order.Status</td></tr> }
+    </tbody></table>
+    @if (Model.Orders.Count == 0) { <p>No production orders are available.</p> }
+    <h2>Batches</h2>
+    <table class="table"><thead><tr><th>Batch</th><th>Order</th><th>Status</th></tr></thead><tbody>
+    @foreach (var batch in Model.Batches)
+    { <tr><td><a asp-page="/Batches/Details" asp-route-number="@batch.BatchNumber">@batch.BatchNumber</a></td><td>@batch.OrderNumber</td><td>@batch.Status</td></tr> }
+    </tbody></table>
+    @if (Model.Batches.Count == 0) { <p>No batches are available.</p> }
+}

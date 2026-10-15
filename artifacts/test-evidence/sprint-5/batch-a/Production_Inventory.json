@@ -1,0 +1,137 @@
+[
+  {
+    "Path": "src/SyncBridge.Core.Application/Contracts/Persistence/IBatchRepository.cs",
+    "Lines": 41,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Contracts/Persistence/IProductionOrderRepository.cs",
+    "Lines": 43,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Services/BatchService.cs",
+    "Lines": 228,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Services/OperationResult.cs",
+    "Lines": 33,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Services/ProductionOrderService.cs",
+    "Lines": 71,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchRepository.cs",
+    "Lines": 204,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/ProductionOrderRepository.cs",
+    "Lines": 94,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Index.cshtml",
+    "Lines": 26,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Index.cshtml.cs",
+    "Lines": 22,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Shared/_Layout.cshtml",
+    "Lines": 60,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Program.cs",
+    "Lines": 107,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core/wwwroot/css/site.css",
+    "Lines": 43,
+    "State": "Modified"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Audit.cshtml",
+    "Lines": 7,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Audit.cshtml.cs",
+    "Lines": 20,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Authentication.cshtml",
+    "Lines": 13,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Authentication.cshtml.cs",
+    "Lines": 12,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Details.cshtml",
+    "Lines": 92,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Details.cshtml.cs",
+    "Lines": 36,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Initiate.cshtml",
+    "Lines": 10,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Initiate.cshtml.cs",
+    "Lines": 34,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/ManufacturingPageModel.cs",
+    "Lines": 52,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Create.cshtml",
+    "Lines": 13,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Create.cshtml.cs",
+    "Lines": 35,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Details.cshtml",
+    "Lines": 21,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Details.cshtml.cs",
+    "Lines": 21,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Review.cshtml",
+    "Lines": 8,
+    "State": "Added"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Review.cshtml.cs",
+    "Lines": 17,
+    "State": "Added"
+  }
+]

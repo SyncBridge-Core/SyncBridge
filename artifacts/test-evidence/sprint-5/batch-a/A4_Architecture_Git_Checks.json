@@ -1,0 +1,21 @@
+{
+  "PriorManufacturingSourceChanges": [],
+  "Pkcs": [
+    "System.Security.Cryptography.Pkcs/9.0.21"
+  ],
+  "PagePersistenceReferences": [],
+  "MigrationChanges": [],
+  "StagedFiles": [],
+  "Branch": "feature/wp6-sprint5-razor-pages",
+  "HEAD": "65d324bd2e0f0a82515dd20eca89efe5984baf96",
+  "ProtectedFiles": [
+    {
+      "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-4\\Sprint4_Git_Integration_Completion_Report.md",
+      "Hash": "A92919492BE0CEF618C506EEE5217C8244986B2988B97D5C6610218EB0A223CE"
+    },
+    {
+      "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\artifacts\\test-evidence\\sprint-4\\batch-b\\Sql_Preflight_Output.txt",
+      "Hash": "A851C5A72CE1670E0245A1122D298B009AA4FEE273F59A50F24D69192CD3E285"
+    }
+  ]
+}

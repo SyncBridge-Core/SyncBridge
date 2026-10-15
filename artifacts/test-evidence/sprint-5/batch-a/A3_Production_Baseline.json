@@ -1,0 +1,110 @@
+[
+  {
+    "Path": "src/SyncBridge.Core.Application/Contracts/Persistence/IBatchRepository.cs",
+    "SHA256": "0B414DBAC4A2D2A3F72E32655EC1B2D140E900BFA6F7C35B170CD1C52C2BE06C"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Contracts/Persistence/IProductionOrderRepository.cs",
+    "SHA256": "4F527B5985B5E26DBF181BC33A57923A5F00B2320FEF95DA2FB03BEF03D799F4"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Services/BatchService.cs",
+    "SHA256": "E1BDC020B224FDA8E5AEE50213346BA247BD6119FC7CE98FA1EF71020C90C833"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Services/OperationResult.cs",
+    "SHA256": "FCA465F06712F4637F614035BFF7D03DBF4E42A69C177A88D593FECDC9C8FE3A"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Application/Services/ProductionOrderService.cs",
+    "SHA256": "12A957202B8E57CFCC68FB40621C331D434C2AC71E285847524159AA1B9AD9AF"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/BatchRepository.cs",
+    "SHA256": "7A94A7B5F51063F5D3347274173A0274D762F0D21A7F67E8E64CF9A3A3E2324E"
+  },
+  {
+    "Path": "src/SyncBridge.Core.Infrastructure/Persistence/Repositories/ProductionOrderRepository.cs",
+    "SHA256": "3693DAE96E2AB07E0CBD7A65C8729D8841A7045D94ACA0E9476E8E5239950E34"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Index.cshtml",
+    "SHA256": "61811C87EF632624BFBCC8F7AB9FBE9D8A468C132CE23A99D2EFFEC7B88A4E90"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Index.cshtml.cs",
+    "SHA256": "583BFB0F5A747C950224E55303D8D1F2AE479B6B3BE8FD4852D6763FC8E53AF9"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Shared/_Layout.cshtml",
+    "SHA256": "491EF02214C70E4C1A1C03B8F11A4D217F8CF909C514C3833EF123942FAF6C2E"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Program.cs",
+    "SHA256": "DEEE23B70ED2A25D5FBF81AE2AFBA85AF4A6F681DC820EB38541EA6F19E991A6"
+  },
+  {
+    "Path": "src/SyncBridge.Core/wwwroot/css/site.css",
+    "SHA256": "76B3BDC9CA260C0ECEFC454759E6EECB8592CCAE589284D893D6EBFD3D1D58D6"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Audit.cshtml",
+    "SHA256": "F8496FA8DB79C40E00B5DC67CB0AD0FBD824919AD5A313DB0BB17AF4937481F1"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Audit.cshtml.cs",
+    "SHA256": "2926DA48BCF3F6BEFD2226D782209C88DEC020672B2D2DCD39916B8F3728F1BC"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Authentication.cshtml",
+    "SHA256": "B4A1176B183748E43D9A9236990F38A4FC8B8F19C1950617664FCE9ABD5FFEE9"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Authentication.cshtml.cs",
+    "SHA256": "EBABB9ED59FF70A03E8B7474403EFDCC5E3C93F3EDB9332EADBC497AEE27B99B"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Details.cshtml",
+    "SHA256": "075B61AE1FC1C7D98A01DCF252F4B5F515E525F619E83B37EBEC62C29017925B"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Details.cshtml.cs",
+    "SHA256": "4B7C03765F667ED97E80BB1CABBF1D1ADD86B4C7D6A778C351B2F99DB9A360DC"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Initiate.cshtml",
+    "SHA256": "9CA4F6D513473FCC05663F63838E2E1303C91748542B27942143709BB7B1B7D6"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Batches/Initiate.cshtml.cs",
+    "SHA256": "CCB4F33D6EC3DD35E19F3A37EF376956065DA6F33A1C2FA1D5D1B5D801F1DE6C"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/ManufacturingPageModel.cs",
+    "SHA256": "85BD18EA7342F223315507EECC9C3275285DB0B83DF7E9BC8C71DD7D130018D6"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Create.cshtml",
+    "SHA256": "95BFA60F2BE38486759B29EEA48561AD686656868E3D4FEA74DEA3F56F6B8B45"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Create.cshtml.cs",
+    "SHA256": "5E6BC548D77D1C04E57F4AA5E65C789156D4A47270F0A9BFCCC0013B36DF1C0F"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Details.cshtml",
+    "SHA256": "3F92E8A5B06BFAD08D6632D3C2A8F48A61AC0B86CB6FE535878846811D9F1318"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Orders/Details.cshtml.cs",
+    "SHA256": "D886D1DE9851326A1DFD1A133E5B1545AD23EF61B9BDF86987CDB9E50B329735"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Review.cshtml",
+    "SHA256": "EAB72E11046F0E3A5749B7C85107A493F78FC0CD19E8AB955FEE5D66931ECF33"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Pages/Review.cshtml.cs",
+    "SHA256": "B3E3A48267D5F329D90B0E8921CEC5C5226EA94F990507E3601A6EC08F4AC14C"
+  }
+]

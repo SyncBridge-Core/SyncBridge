@@ -1,0 +1,45 @@
+{
+  "HistoricalDerivatives": [
+    {
+      "Original": "artifacts\\test-evidence\\sprint-5\\batch-a\\Final_SQL_Postflight.txt",
+      "OriginalSHA256": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861",
+      "IncludedDerivative": "artifacts/test-evidence/sprint-5/batch-b/sanitized/BatchA_Final_SQL_Postflight.txt",
+      "DerivativeSHA256": "B5E43B2BC4B9D63160B89CDF57FAA9D4CF274980AA9CBB5A49ACB975722EDB92",
+      "Change": "Trailing console padding/terminal blank lines only; original preserved locally and excluded from Git proposal"
+    },
+    {
+      "Original": "artifacts\\test-evidence\\sprint-5\\batch-a\\Security_Patch_Dependency_Chain.log",
+      "OriginalSHA256": "1CE960F490E91B47E7382EA4FE727C8A5B114B41308C5AB8330F70CAFC66215B",
+      "IncludedDerivative": "artifacts/test-evidence/sprint-5/batch-b/sanitized/BatchA_Security_Patch_Dependency_Chain.log",
+      "DerivativeSHA256": "15E73CD04731FF4A32AF5AC753617712F4B3D7036C5F98F9EF0EE29A54A805F9",
+      "Change": "Trailing console padding/terminal blank lines only; original preserved locally and excluded from Git proposal"
+    },
+    {
+      "Original": "artifacts\\test-evidence\\sprint-5\\batch-a\\Sql_Postflight.txt",
+      "OriginalSHA256": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861",
+      "IncludedDerivative": "artifacts/test-evidence/sprint-5/batch-b/sanitized/BatchA_Sql_Postflight.txt",
+      "DerivativeSHA256": "B5E43B2BC4B9D63160B89CDF57FAA9D4CF274980AA9CBB5A49ACB975722EDB92",
+      "Change": "Trailing console padding/terminal blank lines only; original preserved locally and excluded from Git proposal"
+    },
+    {
+      "Original": "artifacts\\test-evidence\\sprint-5\\batch-a\\Sql_Preflight_Elevated.txt",
+      "OriginalSHA256": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861",
+      "IncludedDerivative": "artifacts/test-evidence/sprint-5/batch-b/sanitized/BatchA_Sql_Preflight_Elevated.txt",
+      "DerivativeSHA256": "B5E43B2BC4B9D63160B89CDF57FAA9D4CF274980AA9CBB5A49ACB975722EDB92",
+      "Change": "Trailing console padding/terminal blank lines only; original preserved locally and excluded from Git proposal"
+    },
+    {
+      "Original": "artifacts/test-evidence/sprint-5/batch-a/A3_Initial_Checkpoint_Historical.md",
+      "OriginalSHA256": "F15C0DE499D0245D03A8A0511325CC63BA28B55F968258176ACC76BCFE8B3971",
+      "IncludedDerivative": "artifacts/test-evidence/sprint-5/batch-b/sanitized/BatchA_A3_Initial_Checkpoint_Historical.md",
+      "DerivativeSHA256": "7D83B35C9452CC5527E401FB85247B4D82ED2E30FC9C0BD2A931CC41B4B18CB1",
+      "Change": "Trailing console padding/terminal blank lines only; original preserved locally and excluded from Git proposal"
+    }
+  ],
+  "BatchBDependencyLog": {
+    "Change": "Trailing console padding/terminal blank lines only",
+    "Path": "artifacts/test-evidence/sprint-5/batch-b/Pkcs_Dependency_Chain.log",
+    "SanitizedSHA256": "15E73CD04731FF4A32AF5AC753617712F4B3D7036C5F98F9EF0EE29A54A805F9",
+    "RawOutputSHA256": "1CE960F490E91B47E7382EA4FE727C8A5B114B41308C5AB8330F70CAFC66215B"
+  }
+}

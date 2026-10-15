@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="41c4f499-0256-4889-a5ae-d30ad973a073" name="Carlos@SB-DEV-01 2026-10-14 19:28:18" runUser="SB-DEV-01\Carlos" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-14T19:28:18.6686239-04:00" queuing="2026-10-14T19:28:18.6686258-04:00" start="2026-10-14T19:28:07.9446312-04:00" finish="2026-10-14T19:28:18.7057149-04:00" />
+  <TestSettings name="default" id="995b8a7d-caa9-486c-bc31-c8566fe3779a">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-14_19_28_18" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="781500a3-805f-447b-b964-6ac3ea79a074" testId="97e695be-57c8-22ce-7f26-71e431d50168" testName="SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection" computerName="SB-DEV-01" duration="00:00:07.5819887" startTime="2026-10-14T19:28:10.7273200-04:00" endTime="2026-10-14T19:28:18.3747432-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="781500a3-805f-447b-b964-6ac3ea79a074">
+      <Output>
+        <ErrorInfo>
+          <Message>System.Net.Http.HttpRequestException : The SSL connection could not be established, see inner exception.&#xD;
+---- System.Security.Authentication.AuthenticationException : The remote certificate is invalid because of errors in the certificate chain: UntrustedRoot</Message>
+          <StackTrace>   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)&#xD;
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.SocketsHttpHandler.&lt;SendAsync&gt;g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+   at Microsoft.AspNetCore.Mvc.Testing.Handlers.CookieContainerHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Token(HttpClient client) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 247&#xD;
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 255&#xD;
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 242&#xD;
+   at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 21&#xD;
+   at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 92&#xD;
+   at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 92&#xD;
+--- End of stack trace from previous location ---&#xD;
+----- Inner Stack Trace -----&#xD;
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)&#xD;
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="97e695be-57c8-22ce-7f26-71e431d50168">
+      <Execution id="781500a3-805f-447b-b964-6ac3ea79a074" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RazorWorkflowTests" name="UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="97e695be-57c8-22ce-7f26-71e431d50168" executionId="781500a3-805f-447b-b964-6ac3ea79a074" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" passed="0" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.35]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.77]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.91]   Starting:    SyncBridge.Core.Tests&#xD;
+warn: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer[8]&#xD;
+      The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert&#xD;
+info: Microsoft.Hosting.Lifetime[14]&#xD;
+      Now listening on: https://localhost:5445&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:08.64]       System.Net.Http.HttpRequestException : The SSL connection could not be established, see inner exception.&#xD;
+[xUnit.net 00:00:08.64]       ---- System.Security.Authentication.AuthenticationException : The remote certificate is invalid because of errors in the certificate chain: UntrustedRoot&#xD;
+[xUnit.net 00:00:08.64]       Stack Trace:&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)&#xD;
+[xUnit.net 00:00:08.65]            at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.SocketsHttpHandler.&lt;SendAsync&gt;g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at Microsoft.AspNetCore.Mvc.Testing.Handlers.CookieContainerHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs(247,0): at SyncBridge.Core.Tests.RazorWorkflowTests.Token(HttpClient client)&#xD;
+[xUnit.net 00:00:08.65]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs(255,0): at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields)&#xD;
+[xUnit.net 00:00:08.65]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs(242,0): at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor)&#xD;
+[xUnit.net 00:00:08.65]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs(21,0): at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection()&#xD;
+[xUnit.net 00:00:08.65]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs(92,0): at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection()&#xD;
+[xUnit.net 00:00:08.65]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs(92,0): at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection()&#xD;
+[xUnit.net 00:00:08.65]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:08.65]         ----- Inner Stack Trace -----&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.65]            at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:08.69]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="SB-DEV-01" outcome="Error" timestamp="2026-10-14T19:28:18.3842504-04:00">
+        <Text>[xUnit.net 00:00:08.64]     SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

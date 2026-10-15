@@ -1,0 +1,33 @@
+Test run for C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.25]   Discovering: SyncBridge.Core.Tests
+[xUnit.net 00:00:00.46]   Discovered:  SyncBridge.Core.Tests
+[xUnit.net 00:00:00.52]   Starting:    SyncBridge.Core.Tests
+SQL isolation: SyncBridgeCore_IntegrationTests; 15 manufacturing tables; 11 seed rows; migration 20261013010705_InitialCreate.
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite [1 s]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly [350 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer [496 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer [402 ms]
+PERF|rows=batch:1,steps:1,material:1,equipment:1,signature:1,audit:4|save_ms=20.273|order_lookup_ms=2.430|recipe_load_ms=12.267|batch_load_ms=24.602
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges [519 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence [262 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory [507 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_ReconstructsAllFiveStatesAndRichEvidence [328 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements [200 ms]
+  Passed SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation [230 ms]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence [4 s]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer [6 s]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure [938 ms]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence [2 s]
+  Passed SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused [547 ms]
+  Passed SyncBridge.Core.Tests.SqlServerApplicationServiceTests.InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer [507 ms]
+SQL isolation cleanup: 0 history rows; 2 reference orders; dropping owned SyncBridgeCore_IntegrationTests.
+[xUnit.net 00:00:27.38]   Finished:    SyncBridge.Core.Tests
+  Passed SyncBridge.Core.Tests.SqlServerApplicationServiceTests.TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation [808 ms]
+Results File: C:\Engineering\GitHub\SyncBridge.Core\artifacts\test-evidence\sprint-5\batch-b\Final_SQL_Repeat.trx
+
+Test Run Successful.
+Total tests: 17
+     Passed: 17
+ Total time: 28.7527 Seconds

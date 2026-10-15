@@ -8,6 +8,15 @@ namespace SyncBridge.Core.Application.Services;
 
 public sealed class ProductionOrderService(ApplicationOperation operations, IProductionOrderRepository orders, IRecipeRepository recipes, TimeProvider time)
 {
+    public Task<OperationResult<IReadOnlyList<ProductionOrderView>>> ListAsync(CancellationToken cancellationToken = default) =>
+        operations.RunAsync<IReadOnlyList<ProductionOrderView>>([ManufacturingRoles.Operator, ManufacturingRoles.Supervisor, ManufacturingRoles.Quality], false, async (_, ct) =>
+        {
+            var result = new List<ProductionOrderView>();
+            foreach (var number in await orders.GetNumbersAsync(ct))
+                result.Add(View(ApplicationOperation.Require(await orders.GetByNumberAsync(number, ct))));
+            return result;
+        }, cancellationToken);
+
     public Task<OperationResult<ProductionOrderView>> CreateAsync(CreateProductionOrderRequest request, CancellationToken cancellationToken = default) =>
         operations.RunAsync<ProductionOrderView>([ManufacturingRoles.Supervisor], true, async (actor, ct) =>
         {

@@ -1,0 +1,23 @@
+{
+  "All15DevelopmentTablesAndMigrationHistoryUnchanged": true,
+  "BeforeSHA256": "85097025688348942CE0C6768FFF5A088CA1E801CB139F4BAC4E281BF0C63044",
+  "AfterSHA256": "85097025688348942CE0C6768FFF5A088CA1E801CB139F4BAC4E281BF0C63044",
+  "TestDatabase": "SyncBridgeCore_IntegrationTests",
+  "TestDatabaseRemoved": true,
+  "SqlServerVersion": "17.0.1145.4",
+  "RetainedA3": [
+    {
+      "BatchNumber": "A3-B-20261014",
+      "Status": "Completed",
+      "OrderNumber": "A3-PO-20261014",
+      "OrderStatus": "Completed",
+      "Steps": 2,
+      "MaterialVerifications": 1,
+      "EquipmentVerifications": 1,
+      "Deviations": 1,
+      "Signatures": 1,
+      "BatchAudits": 17,
+      "OrderAudits": 4
+    }
+  ]
+}

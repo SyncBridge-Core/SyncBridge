@@ -13,6 +13,7 @@ public sealed record CreateProductionOrderRequest(string OrderNumber, string Pro
 public enum ProductionOrderAction { Release, StartProcessing, Complete, Cancel }
 public enum DeviationAction { BeginReview, Approve, Reject, Resolve }
 public sealed record ProductionOrderView(string OrderNumber, string ProductCode, string ProductName, string RecipeId, decimal Quantity, ProductionOrderStatus Status);
+public sealed record BatchSummaryView(string BatchNumber, string OrderNumber, BatchStatus Status);
 public sealed record StepView(string ExecutionId, int StepNumber, StepExecutionStatus Status, bool RequiresSignature, string? RecordedData);
 public sealed record RecipeStepView(string StepId, int StepNumber, string Name, string Instructions, bool RequiresSignature);
 public sealed record MaterialRequirementView(string MaterialCode, decimal? RequiredQuantity);

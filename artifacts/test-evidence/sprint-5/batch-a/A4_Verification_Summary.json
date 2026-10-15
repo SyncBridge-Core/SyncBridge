@@ -1,0 +1,57 @@
+[
+  {
+    "Artifact": "A4_Integrated.trx",
+    "Total": 278,
+    "Passed": 278,
+    "Failed": 0,
+    "Skipped": 0,
+    "DurationSeconds": 72.189,
+    "LiveSqlTotal": 17,
+    "Purpose": "Required passing regression",
+    "ExpectedOutcomeObserved": true
+  },
+  {
+    "Artifact": "A4_SQL_Repeat.trx",
+    "Total": 17,
+    "Passed": 17,
+    "Failed": 0,
+    "Skipped": 0,
+    "DurationSeconds": 28.502,
+    "LiveSqlTotal": 17,
+    "Purpose": "Required passing regression",
+    "ExpectedOutcomeObserved": true
+  },
+  {
+    "Artifact": "A4_Guard_Missing.trx",
+    "Total": 1,
+    "Passed": 0,
+    "Failed": 1,
+    "Skipped": 0,
+    "DurationSeconds": 2.022,
+    "LiveSqlTotal": 1,
+    "Purpose": "Deliberate negative check: expected rejection before SQL connection",
+    "ExpectedOutcomeObserved": true
+  },
+  {
+    "Artifact": "A4_Guard_Development.trx",
+    "Total": 1,
+    "Passed": 0,
+    "Failed": 1,
+    "Skipped": 0,
+    "DurationSeconds": 2.459,
+    "LiveSqlTotal": 1,
+    "Purpose": "Deliberate negative check: expected rejection before SQL connection",
+    "ExpectedOutcomeObserved": true
+  },
+  {
+    "Artifact": "A4_OptOut.trx",
+    "Total": 17,
+    "Passed": 0,
+    "Failed": 0,
+    "Skipped": 17,
+    "DurationSeconds": 2.15,
+    "LiveSqlTotal": 17,
+    "Purpose": "No opt-in: expected 17 skipped, no provisioning",
+    "ExpectedOutcomeObserved": true
+  }
+]

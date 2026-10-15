@@ -1,0 +1,5 @@
+Tracked git diff --check: exit 0; no findings.
+Proposed untracked text/DOCX-excluded raw whitespace checks: 153 files; no findings.
+Read-only git --no-index checks use per-command CR-at-EOL recognition for Windows CRLF; no repository/global configuration changed.
+Trailing padding and extra terminal blank lines: zero in proposed text paths.
+Historical originals preserved unchanged; derivative provenance in Evidence_Sanitization.json.

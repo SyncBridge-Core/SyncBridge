@@ -1,0 +1,17 @@
+[
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\tools\\SyncBridge.DevelopmentIdentity\\ApprovedDevelopmentAccounts.json",
+    "Lines": 12,
+    "SHA256": "0C73F1B34C3E4712F5BBD521A0E6FA55DF8788CE100966D5151CC97020131983"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\tools\\SyncBridge.DevelopmentIdentity\\Program.cs",
+    "Lines": 122,
+    "SHA256": "7F108751E7719F8333BA76EDEAEA48AFE2E758DF81B3F98681B6AAB1730495E8"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\tools\\SyncBridge.DevelopmentIdentity\\SyncBridge.DevelopmentIdentity.csproj",
+    "Lines": 12,
+    "SHA256": "286786C98452FBE712315703FE9FDE3EDF7ABE6CDF1524DA8C3E246D3C60CF74"
+  }
+]

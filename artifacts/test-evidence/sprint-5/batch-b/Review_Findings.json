@@ -1,0 +1,30 @@
+{
+  "Date": "2026-10-14",
+  "Timezone": "America/New_York",
+  "SDK": "10.0.401",
+  "Runtimes": [
+    "Microsoft.AspNetCore.App 8.0.31 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]",
+    "Microsoft.AspNetCore.App 10.0.12 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]",
+    "Microsoft.NETCore.App 8.0.31 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]",
+    "Microsoft.NETCore.App 10.0.12 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]",
+    "Microsoft.WindowsDesktop.App 8.0.31 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]",
+    "Microsoft.WindowsDesktop.App 10.0.12 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]"
+  ],
+  "SQLServer": "17.0.1145.4",
+  "BrowserEvidence": "Accepted A3 HTTPS two-account interactive run; not rerun in B",
+  "NoProductionOrTestSourceChangesInBatchB": true,
+  "ManufacturingPageModels": "Reviewed: all manufacturing actions call secured ProductionOrderService or BatchService",
+  "Identity": "Reviewed active exact AppUser association and server-configured additive roles; caller role claims ignored",
+  "CookieBoundary": "Existing __Host cookie, secure/httpOnly/Strict, 30min no sliding, active-user revalidation; antiforgery and login rate limit retained",
+  "Persistence": "Existing five-state Domain; immutable signatures/append-only audits/completed evidence guards; unchanged 15-table migration",
+  "SQLIsolation": "Validated exact disposable catalog, ownership marker, exclusive application lock, migration/seed and guarded drop",
+  "ReportingAndREST": "No unsupported manufacturing controllers/reporting implementation",
+  "Git": "No stage/commit/merge/push/reset/delete/next branch",
+  "Limits": [
+    "Two combined-role browser identities retained; standalone Operator/Supervisor and Admin browser sessions absent",
+    "Crafted skipped-step/browser Quality reject not executed; automated paths pass",
+    "Quality browser direct Orders/Create navigation blocked by browser client; no application HTTP status inferred",
+    "Ownership/interrupted-run/lock fault injection not repeated; accepted A4 negative guards remain historical",
+    "No formal penetration/accessibility/load/deployment/SSRS certification"
+  ]
+}

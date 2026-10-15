@@ -14,6 +14,14 @@ namespace SyncBridge.Core.Infrastructure.Persistence.Repositories;
 internal sealed class ProductionOrderRepository(SyncBridgeDbContext context)
     : IProductionOrderRepository
 {
+    public async Task<IReadOnlyList<ProductionOrderNumber>> GetNumbersAsync(CancellationToken cancellationToken = default)
+    {
+        var numbers = await context.ProductionOrders.AsNoTracking().OrderBy(row => row.OrderNumber).Select(row => row.OrderNumber).ToArrayAsync(cancellationToken);
+        try { return numbers.Select(number => new ProductionOrderNumber(DbdsStringLengthValidator.RequireWithinLimit(number, 40, nameof(number)))).ToArray(); }
+        catch (Exception exception) when (exception is DomainException or ArgumentException)
+        { throw new PersistenceIntegrityException("A persisted ProductionOrder identifier is invalid.", exception); }
+    }
+
     public async Task UpdateAsync(ProductionOrder order, CancellationToken cancellationToken = default)
     {
         var row = await context.ProductionOrders.SingleAsync(item => item.OrderId == order.ProductionOrderId.Value, cancellationToken);

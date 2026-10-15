@@ -1,0 +1,1 @@
+Set ASPNETCORE_ENVIRONMENT=Development. Use --provision <approved-manifest.json> or --verify. Passwords use hidden prompts by default; --generate-passwords provisions random local development passwords, --stored-development-passwords verifies those privately stored passwords, and --passwords-stdin accepts a JSON map.

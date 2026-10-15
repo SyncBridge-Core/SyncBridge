@@ -1,0 +1,10 @@
+@page
+@model SyncBridge.Core.Pages.Batches.InitiateModel
+@{ ViewData["Title"] = "Initiate batch"; }
+<h1>Initiate batch</h1>
+<div asp-validation-summary="All" class="text-danger" role="alert"></div>
+<form method="post">
+    <label asp-for="OrderNumber">Production order number</label><input asp-for="OrderNumber" class="form-control" />
+    <label asp-for="BatchNumber"></label><input asp-for="BatchNumber" class="form-control" />
+    <button class="btn btn-primary mt-3">Initiate batch</button>
+</form>

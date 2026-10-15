@@ -1,0 +1,12 @@
+[
+  {
+    "UserId": "demo.operator",
+    "UserName": "demo.operator",
+    "Roles": ["Production Operator", "Production Supervisor"]
+  },
+  {
+    "UserId": "demo.quality",
+    "UserName": "demo.quality",
+    "Roles": ["Quality Engineer"]
+  }
+]

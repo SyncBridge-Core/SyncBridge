@@ -1,0 +1,49 @@
+{
+  "Branch": "feature/wp6-sprint5-razor-pages",
+  "HEAD": "65d324bd2e0f0a82515dd20eca89efe5984baf96",
+  "Upstream": "origin/feature/wp6-sprint5-razor-pages",
+  "MainDivergence": "0\t0",
+  "UpstreamDivergence": "0\t0",
+  "StagedFiles": [],
+  "PendingCategories": [
+    {
+      "Name": "AuthoritativeHandoff",
+      "Count": 1
+    },
+    {
+      "Name": "DevelopmentTool",
+      "Count": 3
+    },
+    {
+      "Name": "Documentation",
+      "Count": 13
+    },
+    {
+      "Name": "Evidence",
+      "Count": 138
+    },
+    {
+      "Name": "Production",
+      "Count": 28
+    },
+    {
+      "Name": "Tests",
+      "Count": 5
+    }
+  ],
+  "PendingStates": [
+    {
+      "Name": "TrackedModified",
+      "Count": 16
+    },
+    {
+      "Name": "Untracked",
+      "Count": 172
+    }
+  ],
+  "ExactProtectedExclusions": [
+    "artifacts/test-evidence/sprint-4/batch-b/Sql_Preflight_Output.txt",
+    "docs/sprint-4/Sprint4_Git_Integration_Completion_Report.md"
+  ],
+  "NoGitIntegrationPerformed": true
+}

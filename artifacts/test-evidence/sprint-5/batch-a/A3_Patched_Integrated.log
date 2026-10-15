@@ -1,0 +1,137 @@
+Test run for C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:08.12]     SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly [FAIL]
+  Failed SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly [4 s]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: Found
+Actual:   Unauthorized
+  Stack Trace:
+     at SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\AuthenticationBoundaryTests.cs:line 30
+   at SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\AuthenticationBoundaryTests.cs:line 46
+   at SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\AuthenticationBoundaryTests.cs:line 46
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:08.59]     SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords [7 s]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 182
+   at SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 192
+   at SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 192
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:09.88]     SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest [FAIL]
+[xUnit.net 00:00:09.98]     SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Orders/Details?number=PO-TEST&handler=Status", field: "action", value: "Release") [FAIL]
+  Failed SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest [1 s]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: Found
+Actual:   Unauthorized
+  Stack Trace:
+     at SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\AuthenticationBoundaryTests.cs:line 56
+   at SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\AuthenticationBoundaryTests.cs:line 65
+   at SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\AuthenticationBoundaryTests.cs:line 65
+--- End of stack trace from previous location ---
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Orders/Details?number=PO-TEST&handler=Status", field: "action", value: "Release") [1 s]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 110
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 119
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 119
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:11.69]     SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Batches/Details?number=B-TEST&handler=Complete", field: "", value: "") [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Batches/Details?number=B-TEST&handler=Complete", field: "", value: "") [1 s]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 110
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 119
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 119
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:28.13]     SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Batches/Details?number=B-TEST&handler=Review", field: "deviationCode", value: "D-TEST") [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: "demo.operator", url: "/Batches/Details?number=B-TEST&handler=Review", field: "deviationCode", value: "D-TEST") [1 s]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 110
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 119
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(String actor, String url, String field, String value) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 119
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:32.07]     SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection [1 s]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 21
+   at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 85
+   at SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 85
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:34.46]     SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands [FAIL]
+[xUnit.net 00:00:35.36]     SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: True) [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands [800 ms]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 205
+   at SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 214
+   at SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 214
+--- End of stack trace from previous location ---
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: True) [892 ms]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(Boolean batchIdentifier) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 225
+   at SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(Boolean batchIdentifier) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 235
+   at SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(Boolean batchIdentifier) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 235
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:36.29]     SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: False) [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: False) [922 ms]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(Boolean batchIdentifier) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 225
+   at SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(Boolean batchIdentifier) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 235
+   at SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(Boolean batchIdentifier) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 235
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:38.37]     SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: "demo.operator") [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: "demo.operator") [839 ms]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 130
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 133
+   at SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 133
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:40.38]     SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation [FAIL]
+  Failed SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation [848 ms]
+  Error Message:
+   /authentication/login: expected Found, got Unauthorized. Sign in failed. Check your credentials and active account access.
+  Stack Trace:
+     at SyncBridge.Core.Tests.RazorWorkflowTests.Post(HttpClient client, String url, HttpStatusCode status, ValueTuple`2[] fields) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 266
+   at SyncBridge.Core.Tests.RazorWorkflowTests.Login(WebApplicationFactory`1 factory, String actor) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 250
+   at SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 163
+   at SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 173
+   at SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RazorWorkflowTests.cs:line 173
+--- End of stack trace from previous location ---
+Results File: C:\Engineering\GitHub\SyncBridge.Core\artifacts\test-evidence\sprint-5\batch-a\A3_Patched_Integrated.trx
+
+Failed!  - Failed:    12, Passed:   266, Skipped:     0, Total:   278, Duration: 56 s - SyncBridge.Core.Tests.dll (net10.0)

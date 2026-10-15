@@ -1,0 +1,21 @@
+@page
+@model SyncBridge.Core.Pages.Orders.DetailsModel
+@using SyncBridge.Core.Domain.Enumerations
+@using SyncBridge.Core.Application.Services
+@{ ViewData["Title"] = "Production order"; }
+<h1>Production order @Model.Order.OrderNumber</h1>
+<div asp-validation-summary="All" class="text-danger" role="alert"></div>
+<dl><dt>Product</dt><dd>@Model.Order.ProductName (@Model.Order.ProductCode)</dd><dt>Recipe identity</dt><dd>@Model.Order.RecipeId</dd><dt>Quantity</dt><dd>@Model.Order.Quantity</dd><dt>Status</dt><dd>@Model.Order.Status</dd></dl>
+@if (Model.IsSupervisor)
+{
+    var actions = Model.Order.Status switch {
+        ProductionOrderStatus.Planned => new[] { ProductionOrderAction.Release, ProductionOrderAction.Cancel },
+        ProductionOrderStatus.Released => new[] { ProductionOrderAction.StartProcessing, ProductionOrderAction.Cancel },
+        ProductionOrderStatus.InProcess => new[] { ProductionOrderAction.Complete, ProductionOrderAction.Cancel },
+        _ => Array.Empty<ProductionOrderAction>() };
+    @foreach (var action in actions)
+    { <form method="post" asp-page-handler="Status" asp-route-number="@Model.Order.OrderNumber" class="d-inline"><input type="hidden" name="action" value="@action" /><button class="btn btn-outline-primary">@action</button></form> }
+}
+@if (Model.IsOperator && Model.Order.Status is ProductionOrderStatus.Released or ProductionOrderStatus.InProcess)
+{ <a asp-page="/Batches/Initiate" asp-route-orderNumber="@Model.Order.OrderNumber" class="btn btn-primary">Initiate batch</a> }
+@if (Model.CanReview) { <a asp-page="/Audit" asp-route-orderNumber="@Model.Order.OrderNumber">Order audit history</a> }

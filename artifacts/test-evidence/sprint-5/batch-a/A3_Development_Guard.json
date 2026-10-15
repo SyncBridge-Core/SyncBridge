@@ -1,0 +1,6 @@
+{
+  "Environment": "Production",
+  "ExitCode": 1,
+  "ExpectedExitCode": 1,
+  "RejectedBeforeCredentialOrDatabaseAccess": true
+}
