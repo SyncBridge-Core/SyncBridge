@@ -1,0 +1,46 @@
+[
+  {
+    "Path": "artifacts/test-evidence/sprint-4/batch-b/Sql_Preflight_Output.txt",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/A3_Initial_Checkpoint_Historical.md",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Final_SQL_Postflight.txt",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Dependency_Chain.log",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Sql_Postflight.txt",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Sql_Preflight_Elevated.txt",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "docs/WP6_Sprint5_to_Sprint6_Engineering_Handoff.docx",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "docs/sprint-4/Sprint4_Git_Integration_Completion_Report.md",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "docs/sprint-5/Sprint5_Git_Commit_Completion_Report.md",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "docs/sprint-5/Sprint5_Git_Integration_Completion_Report.md",
+    "Reason": "protected inherited original; preserve, exclude"
+  },
+  {
+    "Path": "ignored build/user outputs and all private credentials, keys, certificates and databases",
+    "Reason": "outside approved inclusion inventory"
+  }
+]

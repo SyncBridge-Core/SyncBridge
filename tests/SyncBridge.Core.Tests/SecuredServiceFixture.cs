@@ -106,6 +106,8 @@ internal sealed class SecuredServiceFixture : IAsyncDisposable
         services.PostConfigure<ManufacturingIdentityOptions>(options =>
             options.Accounts = Configuration.GetSection("ManufacturingIdentity:Accounts").Get<List<ManufacturingAccount>>()!);
         services.AddScoped(_ => new SyncBridgeDbContext(dbOptions));
+        // HTTP commands and direct scenario preparation must share one manufacturing clock.
+        services.AddSingleton(provider.GetRequiredService<TimeProvider>());
     }
 
     internal async Task PrepareAsync(string batch = "B-TEST")

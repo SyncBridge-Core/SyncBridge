@@ -1,0 +1,42 @@
+[
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\artifacts\\test-evidence\\sprint-4\\batch-b\\Sql_Preflight_Output.txt",
+    "Hash": "A851C5A72CE1670E0245A1122D298B009AA4FEE273F59A50F24D69192CD3E285"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\artifacts\\test-evidence\\sprint-5\\batch-a\\A3_Initial_Checkpoint_Historical.md",
+    "Hash": "F15C0DE499D0245D03A8A0511325CC63BA28B55F968258176ACC76BCFE8B3971"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\artifacts\\test-evidence\\sprint-5\\batch-a\\Final_SQL_Postflight.txt",
+    "Hash": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\artifacts\\test-evidence\\sprint-5\\batch-a\\Security_Patch_Dependency_Chain.log",
+    "Hash": "1CE960F490E91B47E7382EA4FE727C8A5B114B41308C5AB8330F70CAFC66215B"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\artifacts\\test-evidence\\sprint-5\\batch-a\\Sql_Postflight.txt",
+    "Hash": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\artifacts\\test-evidence\\sprint-5\\batch-a\\Sql_Preflight_Elevated.txt",
+    "Hash": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\WP6_Sprint5_to_Sprint6_Engineering_Handoff.docx",
+    "Hash": "E4A7A73696C0C604204F0C432052DE8720063ECFBD6D11ADB4E852E39883FA54"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-4\\Sprint4_Git_Integration_Completion_Report.md",
+    "Hash": "A92919492BE0CEF618C506EEE5217C8244986B2988B97D5C6610218EB0A223CE"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-5\\Sprint5_Git_Commit_Completion_Report.md",
+    "Hash": "409AD124411D17B2C15C7F4940F7317BFFFD0AC8848A2A815F923906385A5EE1"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-5\\Sprint5_Git_Integration_Completion_Report.md",
+    "Hash": "8272FE11B2B31A511DFB43A459F33162D3A7F705E5F9C94DCA5F06E810176DAB"
+  }
+]

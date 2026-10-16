@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="d51d549e-6ac6-4212-a620-0f762b42bc62" name="Carlos@SB-DEV-01 2026-10-15 19:50:09" runUser="SB-DEV-01\Carlos" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-15T19:50:09.4657200-04:00" queuing="2026-10-15T19:50:09.4657206-04:00" start="2026-10-15T19:49:59.4111598-04:00" finish="2026-10-15T19:50:19.2804157-04:00" />
+  <TestSettings name="default" id="847d0fca-9406-4310-98e3-8464fcf48ce9">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-15_19_50_09" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="5a578c10-d588-4fdf-93dd-63cf829aeddb" testId="94b70171-0ab8-b7b1-c43b-4ed8bc1e291e" testName="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/production-orders/PO-DEMO-001&quot;, post: False)" computerName="SB-DEV-01" duration="00:00:00.9589074" startTime="2026-10-15T19:50:12.3836259-04:00" endTime="2026-10-15T19:50:13.3441938-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a578c10-d588-4fdf-93dd-63cf829aeddb" />
+    <UnitTestResult executionId="92c12fa4-254b-4541-9e2a-70790f9e4cee" testId="9a47bd4d-b73d-93c5-b8b2-459fdf02193b" testName="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches/B-TEST/steps/1/start&quot;, post: True)" computerName="SB-DEV-01" duration="00:00:00.8072876" startTime="2026-10-15T19:50:09.4427199-04:00" endTime="2026-10-15T19:50:10.2128271-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92c12fa4-254b-4541-9e2a-70790f9e4cee" />
+    <UnitTestResult executionId="014d6e66-cd35-41c9-911a-949761610f0a" testId="a4ed4a38-4dc3-d555-2808-cb56d2ec3508" testName="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches/B-TEST/deviations&quot;, post: True)" computerName="SB-DEV-01" duration="00:00:00.7232879" startTime="2026-10-15T19:50:11.6603855-04:00" endTime="2026-10-15T19:50:12.3834077-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="014d6e66-cd35-41c9-911a-949761610f0a" />
+    <UnitTestResult executionId="1c059d39-1f3c-49b3-9e15-ba64e4cda0c8" testId="7208d81e-90b2-927f-6a35-104a04840125" testName="SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence" computerName="SB-DEV-01" duration="00:00:01.0702607" startTime="2026-10-15T19:50:16.8480531-04:00" endTime="2026-10-15T19:50:17.9870787-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c059d39-1f3c-49b3-9e15-ba64e4cda0c8">
+      <Output>
+        <ErrorInfo>
+          <Message>/api/batches/B-TEST/deviations: UnprocessableEntity, expected ServiceUnavailable</Message>
+          <StackTrace>   at SyncBridge.Core.Tests.RestApiTests.Post(HttpClient client, String url, Object body, HttpStatusCode expected) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 165&#xD;
+   at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 127&#xD;
+   at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 136&#xD;
+   at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 136&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d5d285fe-7598-48da-b7b3-5c5ae743e25d" testId="4aca997e-1441-15dd-1c2b-48d733a8c52b" testName="SyncBridge.Core.Tests.RestApiTests.StepWorkflow_PreservesOrderApprovalAuditCompletedProtectionAndDeviationOrigin" computerName="SB-DEV-01" duration="00:00:08.2126839" startTime="2026-10-15T19:50:01.1599605-04:00" endTime="2026-10-15T19:50:09.3939806-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5d285fe-7598-48da-b7b3-5c5ae743e25d" />
+    <UnitTestResult executionId="6af916c3-f4ce-49a8-950f-f81f7dfcba03" testId="304d5e13-97b8-0fe1-55ac-6c48eb923d8e" testName="SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: &quot;test.admin&quot;)" computerName="SB-DEV-01" duration="00:00:01.0209869" startTime="2026-10-15T19:50:15.8266586-04:00" endTime="2026-10-15T19:50:16.8477786-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6af916c3-f4ce-49a8-950f-f81f7dfcba03" />
+    <UnitTestResult executionId="521f4ed6-1f79-43bf-9757-9589152b24af" testId="a69e466e-4c14-cf54-e642-e7043f4fc4cf" testName="SyncBridge.Core.Tests.RestApiTests.ContextAndInitiation_ValidateInputEligibilityTrustedActorAndAdditiveRoles" computerName="SB-DEV-01" duration="00:00:01.1007756" startTime="2026-10-15T19:50:18.0328849-04:00" endTime="2026-10-15T19:50:19.0966102-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="521f4ed6-1f79-43bf-9757-9589152b24af" />
+    <UnitTestResult executionId="70f1fd75-2a95-453d-b5a3-b76df2cee1b4" testId="c69f4b58-8e07-ac86-80de-f726f191bcb0" testName="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches/B-TEST/steps/id/complete&quot;, post: True)" computerName="SB-DEV-01" duration="00:00:00.7557528" startTime="2026-10-15T19:50:10.2158210-04:00" endTime="2026-10-15T19:50:10.9777087-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70f1fd75-2a95-453d-b5a3-b76df2cee1b4" />
+    <UnitTestResult executionId="80ede594-90eb-4e14-8873-872ea462e970" testId="f82357c3-c9ee-2848-b58f-1abca360510a" testName="SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: &quot;test.quality&quot;)" computerName="SB-DEV-01" duration="00:00:01.1492813" startTime="2026-10-15T19:50:14.6764258-04:00" endTime="2026-10-15T19:50:15.8261272-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80ede594-90eb-4e14-8873-872ea462e970" />
+    <UnitTestResult executionId="2d425088-dd88-4352-9a9e-e20db8926cac" testId="bc3ed691-58b3-2fd9-0ce3-8c1e561f16ee" testName="SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: &quot;demo.supervisor&quot;)" computerName="SB-DEV-01" duration="00:00:01.3298486" startTime="2026-10-15T19:50:13.3447999-04:00" endTime="2026-10-15T19:50:14.6755365-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d425088-dd88-4352-9a9e-e20db8926cac" />
+    <UnitTestResult executionId="4380c7ff-31d1-4fde-b35b-73c5e92482fc" testId="53176b7f-2ea2-f05f-4342-c9edb1a9819f" testName="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches&quot;, post: True)" computerName="SB-DEV-01" duration="00:00:00.6772386" startTime="2026-10-15T19:50:10.9806948-04:00" endTime="2026-10-15T19:50:11.6590838-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4380c7ff-31d1-4fde-b35b-73c5e92482fc" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches/B-TEST/steps/id/complete&quot;, post: True)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="c69f4b58-8e07-ac86-80de-f726f191bcb0">
+      <Execution id="70f1fd75-2a95-453d-b5a3-b76df2cee1b4" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="Anonymous_Is401WithoutRedirect" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: &quot;demo.supervisor&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="bc3ed691-58b3-2fd9-0ce3-8c1e561f16ee">
+      <Execution id="2d425088-dd88-4352-9a9e-e20db8926cac" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="NonOperators_CannotForgeMutationAuthority" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.ContextAndInitiation_ValidateInputEligibilityTrustedActorAndAdditiveRoles" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="a69e466e-4c14-cf54-e642-e7043f4fc4cf">
+      <Execution id="521f4ed6-1f79-43bf-9757-9589152b24af" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="ContextAndInitiation_ValidateInputEligibilityTrustedActorAndAdditiveRoles" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches/B-TEST/steps/1/start&quot;, post: True)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="9a47bd4d-b73d-93c5-b8b2-459fdf02193b">
+      <Execution id="92c12fa4-254b-4541-9e2a-70790f9e4cee" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="Anonymous_Is401WithoutRedirect" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches/B-TEST/deviations&quot;, post: True)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="a4ed4a38-4dc3-d555-2808-cb56d2ec3508">
+      <Execution id="014d6e66-cd35-41c9-911a-949761610f0a" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="Anonymous_Is401WithoutRedirect" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: &quot;test.admin&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="304d5e13-97b8-0fe1-55ac-6c48eb923d8e">
+      <Execution id="6af916c3-f4ce-49a8-950f-f81f7dfcba03" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="NonOperators_CannotForgeMutationAuthority" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="7208d81e-90b2-927f-6a35-104a04840125">
+      <Execution id="1c059d39-1f3c-49b3-9e15-ba64e4cda0c8" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/production-orders/PO-DEMO-001&quot;, post: False)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="94b70171-0ab8-b7b1-c43b-4ed8bc1e291e">
+      <Execution id="5a578c10-d588-4fdf-93dd-63cf829aeddb" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="Anonymous_Is401WithoutRedirect" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: &quot;/api/batches&quot;, post: True)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="53176b7f-2ea2-f05f-4342-c9edb1a9819f">
+      <Execution id="4380c7ff-31d1-4fde-b35b-73c5e92482fc" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="Anonymous_Is401WithoutRedirect" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: &quot;test.quality&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="f82357c3-c9ee-2848-b58f-1abca360510a">
+      <Execution id="80ede594-90eb-4e14-8873-872ea462e970" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="NonOperators_CannotForgeMutationAuthority" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestApiTests.StepWorkflow_PreservesOrderApprovalAuditCompletedProtectionAndDeviationOrigin" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="4aca997e-1441-15dd-1c2b-48d733a8c52b">
+      <Execution id="d5d285fe-7598-48da-b7b3-5c5ae743e25d" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestApiTests" name="StepWorkflow_PreservesOrderApprovalAuditCompletedProtectionAndDeviationOrigin" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="94b70171-0ab8-b7b1-c43b-4ed8bc1e291e" executionId="5a578c10-d588-4fdf-93dd-63cf829aeddb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a47bd4d-b73d-93c5-b8b2-459fdf02193b" executionId="92c12fa4-254b-4541-9e2a-70790f9e4cee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a4ed4a38-4dc3-d555-2808-cb56d2ec3508" executionId="014d6e66-cd35-41c9-911a-949761610f0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7208d81e-90b2-927f-6a35-104a04840125" executionId="1c059d39-1f3c-49b3-9e15-ba64e4cda0c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4aca997e-1441-15dd-1c2b-48d733a8c52b" executionId="d5d285fe-7598-48da-b7b3-5c5ae743e25d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="304d5e13-97b8-0fe1-55ac-6c48eb923d8e" executionId="6af916c3-f4ce-49a8-950f-f81f7dfcba03" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a69e466e-4c14-cf54-e642-e7043f4fc4cf" executionId="521f4ed6-1f79-43bf-9757-9589152b24af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c69f4b58-8e07-ac86-80de-f726f191bcb0" executionId="70f1fd75-2a95-453d-b5a3-b76df2cee1b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f82357c3-c9ee-2848-b58f-1abca360510a" executionId="80ede594-90eb-4e14-8873-872ea462e970" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc3ed691-58b3-2fd9-0ce3-8c1e561f16ee" executionId="2d425088-dd88-4352-9a9e-e20db8926cac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="53176b7f-2ea2-f05f-4342-c9edb1a9819f" executionId="4380c7ff-31d1-4fde-b35b-73c5e92482fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="11" executed="11" passed="10" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.24]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.44]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.50]   Starting:    SyncBridge.Core.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:17.40]       /api/batches/B-TEST/deviations: UnprocessableEntity, expected ServiceUnavailable&#xD;
+[xUnit.net 00:00:17.40]       Stack Trace:&#xD;
+[xUnit.net 00:00:17.41]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs(165,0): at SyncBridge.Core.Tests.RestApiTests.Post(HttpClient client, String url, Object body, HttpStatusCode expected)&#xD;
+[xUnit.net 00:00:17.41]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs(127,0): at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence()&#xD;
+[xUnit.net 00:00:17.41]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs(136,0): at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence()&#xD;
+[xUnit.net 00:00:17.41]         C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs(136,0): at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence()&#xD;
+[xUnit.net 00:00:17.41]         --- End of stack trace from previous location ---&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:18.51]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="SB-DEV-01" outcome="Error" timestamp="2026-10-15T19:50:18.0021547-04:00">
+        <Text>[xUnit.net 00:00:17.39]     SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

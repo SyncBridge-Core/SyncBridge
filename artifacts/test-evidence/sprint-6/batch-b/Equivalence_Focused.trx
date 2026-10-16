@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f9617e7a-cb84-44c0-aa65-cd9a2579d77f" name="Carlos@SB-DEV-01 2026-10-15 20:16:40" runUser="SB-DEV-01\Carlos" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-15T20:16:40.3097557-04:00" queuing="2026-10-15T20:16:40.3097563-04:00" start="2026-10-15T20:16:31.0036386-04:00" finish="2026-10-15T20:16:49.2818026-04:00" />
+  <TestSettings name="default" id="6384a8c3-59db-4140-8d84-a10e6ce31921">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-15_20_16_40" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="259ee0c3-2717-49ff-b3c1-d4b864c88af3" testId="0766e157-91d4-a165-a040-a8285f6b135f" testName="SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: &quot;demo.supervisor&quot;)" computerName="SB-DEV-01" duration="00:00:01.4117475" startTime="2026-10-15T20:16:40.2768400-04:00" endTime="2026-10-15T20:16:41.6468758-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="259ee0c3-2717-49ff-b3c1-d4b864c88af3" />
+    <UnitTestResult executionId="1da66f79-c634-4ee3-a460-3033c04eb3e5" testId="a699ffea-2583-e7c8-5091-e4bef85cc291" testName="SyncBridge.Core.Tests.UiApiEquivalenceTests.PairedHttpWorkflows_HaveEquivalentManufacturingEvidence(environment: &quot;Development&quot;)" computerName="SB-DEV-01" duration="00:00:11.4148181" startTime="2026-10-15T20:16:33.2742930-04:00" endTime="2026-10-15T20:16:44.7014793-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1da66f79-c634-4ee3-a460-3033c04eb3e5">
+      <Output>
+        <StdOut>Razor Development: {"Status":4,"PlannedQuantity":12.125,"RecipeCode":"RCP-DEMO-001","Steps":[{"StepNumber":1,"Status":2,"RequiresSignature":false,"RecordedData":"Equivalent evidence"},{"StepNumber":2,"Status":2,"RequiresSignature":true,"RecordedData":"Signed evidence"}],"Deviations":[{"Description":"Equivalent interruption","Status":4,"ReviewComments":"Reviewed","FinalDisposition":"Resolved"}],"Signatures":[{"ActorId":"test.quality","Meaning":0}],"Audit":[{"Action":1,"ActorId":"demo.operator","ResultingState":"Ready"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":2,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":9,"ActorId":"test.quality","ResultingState":"UnderReview"},{"Action":10,"ActorId":"test.quality","ResultingState":"Approved"},{"Action":12,"ActorId":"test.quality","ResultingState":"Closed"},{"Action":14,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":15,"ActorId":"demo.supervisor","ResultingState":"Completed"},{"Action":0,"ActorId":"demo.operator","ResultingState":"Created"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":13,"ActorId":"demo.operator","ResultingState":"Exception"},{"Action":8,"ActorId":"demo.operator","ResultingState":"Open"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":7,"ActorId":"test.quality","ResultingState":"Approval"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"}]}&#xD;
+REST Development: {"Status":4,"PlannedQuantity":12.125,"RecipeCode":"RCP-DEMO-001","Steps":[{"StepNumber":1,"Status":2,"RequiresSignature":false,"RecordedData":"Equivalent evidence"},{"StepNumber":2,"Status":2,"RequiresSignature":true,"RecordedData":"Signed evidence"}],"Deviations":[{"Description":"Equivalent interruption","Status":4,"ReviewComments":"Reviewed","FinalDisposition":"Resolved"}],"Signatures":[{"ActorId":"test.quality","Meaning":0}],"Audit":[{"Action":1,"ActorId":"demo.operator","ResultingState":"Ready"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":2,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":9,"ActorId":"test.quality","ResultingState":"UnderReview"},{"Action":10,"ActorId":"test.quality","ResultingState":"Approved"},{"Action":12,"ActorId":"test.quality","ResultingState":"Closed"},{"Action":14,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":15,"ActorId":"demo.supervisor","ResultingState":"Completed"},{"Action":0,"ActorId":"demo.operator","ResultingState":"Created"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":13,"ActorId":"demo.operator","ResultingState":"Exception"},{"Action":8,"ActorId":"demo.operator","ResultingState":"Open"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":7,"ActorId":"test.quality","ResultingState":"Approval"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"}]}&#xD;
+PASS: normalized UI/API state, ordered execution/data, deviation, signature and exact audit action/actor/state sequence match.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="165d506c-d303-410e-8e27-30835fd0faa8" testId="9011d4fe-8fc7-3980-8b78-cec2975132bd" testName="SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: &quot;test.admin&quot;)" computerName="SB-DEV-01" duration="00:00:06.9232162" startTime="2026-10-15T20:16:33.2783665-04:00" endTime="2026-10-15T20:16:40.2248465-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="165d506c-d303-410e-8e27-30835fd0faa8" />
+    <UnitTestResult executionId="d4a5d65f-0cd9-4242-9103-4e8f4898a3e6" testId="f4d5b030-1718-bf0b-1459-52e4f4863ea5" testName="SyncBridge.Core.Tests.RestBoundaryRegressionTests.ContextReads_RespectBothAdaptersWithoutMutation(environment: &quot;Production&quot;)" computerName="SB-DEV-01" duration="00:00:01.1122958" startTime="2026-10-15T20:16:45.4011475-04:00" endTime="2026-10-15T20:16:46.5135947-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4a5d65f-0cd9-4242-9103-4e8f4898a3e6" />
+    <UnitTestResult executionId="a2f86cdf-6dab-430a-b92a-1fdba6013033" testId="d133be49-3079-b8af-2a94-0340c9cf3484" testName="SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: &quot;test.quality&quot;)" computerName="SB-DEV-01" duration="00:00:01.4258741" startTime="2026-10-15T20:16:41.6513064-04:00" endTime="2026-10-15T20:16:43.0741543-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2f86cdf-6dab-430a-b92a-1fdba6013033" />
+    <UnitTestResult executionId="d0ea671e-522d-4c46-93e9-c302aacf4fd9" testId="cce55c18-e54f-6b59-d951-8b6c158af2ce" testName="SyncBridge.Core.Tests.RestBoundaryRegressionTests.AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters(environment: &quot;Development&quot;)" computerName="SB-DEV-01" duration="00:00:01.1903302" startTime="2026-10-15T20:16:43.0831141-04:00" endTime="2026-10-15T20:16:44.2703274-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0ea671e-522d-4c46-93e9-c302aacf4fd9" />
+    <UnitTestResult executionId="18257dff-e330-4261-86d9-3b86350d67ea" testId="f819fc1f-4fb8-d1f6-1a17-2639113c901f" testName="SyncBridge.Core.Tests.RestBoundaryRegressionTests.AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters(environment: &quot;Production&quot;)" computerName="SB-DEV-01" duration="00:00:01.1265631" startTime="2026-10-15T20:16:44.2705315-04:00" endTime="2026-10-15T20:16:45.3998938-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18257dff-e330-4261-86d9-3b86350d67ea" />
+    <UnitTestResult executionId="f18fdf55-c5dc-4e7e-abde-c10d8e3221cc" testId="73f7c04b-26f6-a2ad-b8c2-9892ea87926f" testName="SyncBridge.Core.Tests.UiApiEquivalenceTests.PairedHttpWorkflows_HaveEquivalentManufacturingEvidence(environment: &quot;Production&quot;)" computerName="SB-DEV-01" duration="00:00:04.3765592" startTime="2026-10-15T20:16:44.7038893-04:00" endTime="2026-10-15T20:16:49.0803176-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f18fdf55-c5dc-4e7e-abde-c10d8e3221cc">
+      <Output>
+        <StdOut>Razor Production: {"Status":4,"PlannedQuantity":12.125,"RecipeCode":"RCP-DEMO-001","Steps":[{"StepNumber":1,"Status":2,"RequiresSignature":false,"RecordedData":"Equivalent evidence"},{"StepNumber":2,"Status":2,"RequiresSignature":true,"RecordedData":"Signed evidence"}],"Deviations":[{"Description":"Equivalent interruption","Status":4,"ReviewComments":"Reviewed","FinalDisposition":"Resolved"}],"Signatures":[{"ActorId":"test.quality","Meaning":0}],"Audit":[{"Action":1,"ActorId":"demo.operator","ResultingState":"Ready"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":2,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":9,"ActorId":"test.quality","ResultingState":"UnderReview"},{"Action":10,"ActorId":"test.quality","ResultingState":"Approved"},{"Action":12,"ActorId":"test.quality","ResultingState":"Closed"},{"Action":14,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":15,"ActorId":"demo.supervisor","ResultingState":"Completed"},{"Action":0,"ActorId":"demo.operator","ResultingState":"Created"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":13,"ActorId":"demo.operator","ResultingState":"Exception"},{"Action":8,"ActorId":"demo.operator","ResultingState":"Open"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":7,"ActorId":"test.quality","ResultingState":"Approval"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"}]}&#xD;
+REST Production: {"Status":4,"PlannedQuantity":12.125,"RecipeCode":"RCP-DEMO-001","Steps":[{"StepNumber":1,"Status":2,"RequiresSignature":false,"RecordedData":"Equivalent evidence"},{"StepNumber":2,"Status":2,"RequiresSignature":true,"RecordedData":"Signed evidence"}],"Deviations":[{"Description":"Equivalent interruption","Status":4,"ReviewComments":"Reviewed","FinalDisposition":"Resolved"}],"Signatures":[{"ActorId":"test.quality","Meaning":0}],"Audit":[{"Action":1,"ActorId":"demo.operator","ResultingState":"Ready"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":4,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Failed"},{"Action":3,"ActorId":"demo.operator","ResultingState":"Passed"},{"Action":2,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":9,"ActorId":"test.quality","ResultingState":"UnderReview"},{"Action":10,"ActorId":"test.quality","ResultingState":"Approved"},{"Action":12,"ActorId":"test.quality","ResultingState":"Closed"},{"Action":14,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":15,"ActorId":"demo.supervisor","ResultingState":"Completed"},{"Action":0,"ActorId":"demo.operator","ResultingState":"Created"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":13,"ActorId":"demo.operator","ResultingState":"Exception"},{"Action":8,"ActorId":"demo.operator","ResultingState":"Open"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"},{"Action":5,"ActorId":"demo.operator","ResultingState":"InProgress"},{"Action":7,"ActorId":"test.quality","ResultingState":"Approval"},{"Action":6,"ActorId":"demo.operator","ResultingState":"Completed"}]}&#xD;
+PASS: normalized UI/API state, ordered execution/data, deviation, signature and exact audit action/actor/state sequence match.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ab0a9091-925f-447b-89c0-281674ea299f" testId="cbdfbe3a-bb1b-d75c-83f2-a9cfd764d0a7" testName="SyncBridge.Core.Tests.RestBoundaryRegressionTests.ContextReads_RespectBothAdaptersWithoutMutation(environment: &quot;Development&quot;)" computerName="SB-DEV-01" duration="00:00:00.9074091" startTime="2026-10-15T20:16:46.5141314-04:00" endTime="2026-10-15T20:16:47.4227762-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab0a9091-925f-447b-89c0-281674ea299f" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.RestBoundaryRegressionTests.AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters(environment: &quot;Production&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="f819fc1f-4fb8-d1f6-1a17-2639113c901f">
+      <Execution id="18257dff-e330-4261-86d9-3b86350d67ea" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestBoundaryRegressionTests" name="AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.UiApiEquivalenceTests.PairedHttpWorkflows_HaveEquivalentManufacturingEvidence(environment: &quot;Development&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="a699ffea-2583-e7c8-5091-e4bef85cc291">
+      <Execution id="1da66f79-c634-4ee3-a460-3033c04eb3e5" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.UiApiEquivalenceTests" name="PairedHttpWorkflows_HaveEquivalentManufacturingEvidence" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: &quot;test.admin&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="9011d4fe-8fc7-3980-8b78-cec2975132bd">
+      <Execution id="165d506c-d303-410e-8e27-30835fd0faa8" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestBoundaryRegressionTests" name="BothAdapters_RejectForgedAuthorityOnEverySelectedMutation" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: &quot;demo.supervisor&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="0766e157-91d4-a165-a040-a8285f6b135f">
+      <Execution id="259ee0c3-2717-49ff-b3c1-d4b864c88af3" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestBoundaryRegressionTests" name="BothAdapters_RejectForgedAuthorityOnEverySelectedMutation" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestBoundaryRegressionTests.ContextReads_RespectBothAdaptersWithoutMutation(environment: &quot;Development&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="cbdfbe3a-bb1b-d75c-83f2-a9cfd764d0a7">
+      <Execution id="ab0a9091-925f-447b-89c0-281674ea299f" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestBoundaryRegressionTests" name="ContextReads_RespectBothAdaptersWithoutMutation" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestBoundaryRegressionTests.AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters(environment: &quot;Development&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="cce55c18-e54f-6b59-d951-8b6c158af2ce">
+      <Execution id="d0ea671e-522d-4c46-93e9-c302aacf4fd9" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestBoundaryRegressionTests" name="AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.UiApiEquivalenceTests.PairedHttpWorkflows_HaveEquivalentManufacturingEvidence(environment: &quot;Production&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="73f7c04b-26f6-a2ad-b8c2-9892ea87926f">
+      <Execution id="f18fdf55-c5dc-4e7e-abde-c10d8e3221cc" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.UiApiEquivalenceTests" name="PairedHttpWorkflows_HaveEquivalentManufacturingEvidence" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestBoundaryRegressionTests.ContextReads_RespectBothAdaptersWithoutMutation(environment: &quot;Production&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="f4d5b030-1718-bf0b-1459-52e4f4863ea5">
+      <Execution id="d4a5d65f-0cd9-4242-9103-4e8f4898a3e6" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestBoundaryRegressionTests" name="ContextReads_RespectBothAdaptersWithoutMutation" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: &quot;test.quality&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="d133be49-3079-b8af-2a94-0340c9cf3484">
+      <Execution id="a2f86cdf-6dab-430a-b92a-1fdba6013033" />
+      <TestMethod codeBase="C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.RestBoundaryRegressionTests" name="BothAdapters_RejectForgedAuthorityOnEverySelectedMutation" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="0766e157-91d4-a165-a040-a8285f6b135f" executionId="259ee0c3-2717-49ff-b3c1-d4b864c88af3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a699ffea-2583-e7c8-5091-e4bef85cc291" executionId="1da66f79-c634-4ee3-a460-3033c04eb3e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9011d4fe-8fc7-3980-8b78-cec2975132bd" executionId="165d506c-d303-410e-8e27-30835fd0faa8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4d5b030-1718-bf0b-1459-52e4f4863ea5" executionId="d4a5d65f-0cd9-4242-9103-4e8f4898a3e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d133be49-3079-b8af-2a94-0340c9cf3484" executionId="a2f86cdf-6dab-430a-b92a-1fdba6013033" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cce55c18-e54f-6b59-d951-8b6c158af2ce" executionId="d0ea671e-522d-4c46-93e9-c302aacf4fd9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f819fc1f-4fb8-d1f6-1a17-2639113c901f" executionId="18257dff-e330-4261-86d9-3b86350d67ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73f7c04b-26f6-a2ad-b8c2-9892ea87926f" executionId="f18fdf55-c5dc-4e7e-abde-c10d8e3221cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbdfbe3a-bb1b-d75c-83f2-a9cfd764d0a7" executionId="ab0a9091-925f-447b-89c0-281674ea299f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="9" executed="9" passed="9" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.64]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.87]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.97]   Starting:    SyncBridge.Core.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]&#xD;
+      Controlled application operation failed.&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; System.InvalidOperationException: Induced persistence failure with private diagnostic details.&#xD;
+         at SyncBridge.Core.Tests.SecuredServiceFixture.FailureInterceptor.ReaderExecutedAsync(DbCommand command, CommandExecutedEventData eventData, DbDataReader result, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SecuredServiceFixture.cs:line 176&#xD;
+         at Microsoft.EntityFrameworkCore.Diagnostics.Internal.RelationalCommandDiagnosticsLogger.CommandReaderExecutedAsync(IRelationalConnection connection, DbCommand command, String logCommandText, DbContext context, Guid commandId, Guid connectionId, DbDataReader methodResult, DateTimeOffset startTime, TimeSpan duration, CommandSource commandSource, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at SyncBridge.Core.Infrastructure.Persistence.ApplicationUnitOfWork.CommitAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\ApplicationUnitOfWork.cs:line 42&#xD;
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 26&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]&#xD;
+      Controlled application operation failed.&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; System.InvalidOperationException: Induced persistence failure with private diagnostic details.&#xD;
+         at SyncBridge.Core.Tests.SecuredServiceFixture.FailureInterceptor.ReaderExecutedAsync(DbCommand command, CommandExecutedEventData eventData, DbDataReader result, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SecuredServiceFixture.cs:line 176&#xD;
+         at Microsoft.EntityFrameworkCore.Diagnostics.Internal.RelationalCommandDiagnosticsLogger.CommandReaderExecutedAsync(IRelationalConnection connection, DbCommand command, String logCommandText, DbContext context, Guid commandId, Guid connectionId, DbDataReader methodResult, DateTimeOffset startTime, TimeSpan duration, CommandSource commandSource, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at SyncBridge.Core.Infrastructure.Persistence.ApplicationUnitOfWork.CommitAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\ApplicationUnitOfWork.cs:line 42&#xD;
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 26&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Production&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Production&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Production&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]&#xD;
+      Controlled application operation failed.&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; System.InvalidOperationException: Induced persistence failure with private diagnostic details.&#xD;
+         at SyncBridge.Core.Tests.SecuredServiceFixture.FailureInterceptor.ReaderExecutedAsync(DbCommand command, CommandExecutedEventData eventData, DbDataReader result, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SecuredServiceFixture.cs:line 176&#xD;
+         at Microsoft.EntityFrameworkCore.Diagnostics.Internal.RelationalCommandDiagnosticsLogger.CommandReaderExecutedAsync(IRelationalConnection connection, DbCommand command, String logCommandText, DbContext context, Guid commandId, Guid connectionId, DbDataReader methodResult, DateTimeOffset startTime, TimeSpan duration, CommandSource commandSource, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at SyncBridge.Core.Infrastructure.Persistence.ApplicationUnitOfWork.CommitAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\ApplicationUnitOfWork.cs:line 42&#xD;
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 26&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+fail: SyncBridge.Core.Application.Services.ApplicationOperation[0]&#xD;
+      Controlled application operation failed.&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; System.InvalidOperationException: Induced persistence failure with private diagnostic details.&#xD;
+         at SyncBridge.Core.Tests.SecuredServiceFixture.FailureInterceptor.ReaderExecutedAsync(DbCommand command, CommandExecutedEventData eventData, DbDataReader result, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\SecuredServiceFixture.cs:line 176&#xD;
+         at Microsoft.EntityFrameworkCore.Diagnostics.Internal.RelationalCommandDiagnosticsLogger.CommandReaderExecutedAsync(IRelationalConnection connection, DbCommand command, String logCommandText, DbContext context, Guid commandId, Guid connectionId, DbDataReader methodResult, DateTimeOffset startTime, TimeSpan duration, CommandSource commandSource, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at SyncBridge.Core.Infrastructure.Persistence.ApplicationUnitOfWork.CommitAsync(CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Infrastructure\Persistence\ApplicationUnitOfWork.cs:line 42&#xD;
+         at SyncBridge.Core.Application.Services.ApplicationOperation.RunAsync[T](String[] roles, Boolean mutation, Func`3 execute, CancellationToken cancellationToken) in C:\Engineering\GitHub\SyncBridge.Core\src\SyncBridge.Core.Application\Services\ApplicationOperation.cs:line 26&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:16.83]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

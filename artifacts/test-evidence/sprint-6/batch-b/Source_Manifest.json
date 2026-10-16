@@ -1,0 +1,30 @@
+[
+  {
+    "Path": "src/SyncBridge.Core/Program.cs",
+    "SHA256": "A4E0CA0990701BAB7319EF39FF7DB265AEBAC0FC04DE89E30F462F64630CBE88"
+  },
+  {
+    "Path": "src/SyncBridge.Core/Controllers/ManufacturingController.cs",
+    "SHA256": "A0E00CACF82402CF76A099E1F46EA20E47E4E2DF0D72D7C67519B113CBB6AA13"
+  },
+  {
+    "Path": "tests/SyncBridge.Core.Tests/RestApiTests.cs",
+    "SHA256": "729D1CAA7B9F65224B9905FC4357E7E85805CD693559799451DBDED3039E364C"
+  },
+  {
+    "Path": "tests/SyncBridge.Core.Tests/UiApiEquivalenceTests.cs",
+    "SHA256": "F5071A552EDF240C377A4FCAB2BA3C4660F894B318CF3D478763C850523CC1B8"
+  },
+  {
+    "Path": "tests/SyncBridge.Core.Tests/RestBoundaryRegressionTests.cs",
+    "SHA256": "2CCD41AA7F5FD24826B27C93B8F7BB661A516E7EBD93C8879DC65C482D00F23A"
+  },
+  {
+    "Path": "tests/SyncBridge.Core.Tests/SecuredServiceFixture.cs",
+    "SHA256": "D56E00ECC2A5C8DED9D2F2A9DAB50E0628B76CF1CA8209533DC36478391394A5"
+  },
+  {
+    "Path": "tests/SyncBridge.Core.Tests/SqlServerBatchBIntegrationTests.cs",
+    "SHA256": "A5BB713FBCE8142278523E42B2FD9AE664B0F0DAD515BBB02BDA874567A321CE"
+  }
+]

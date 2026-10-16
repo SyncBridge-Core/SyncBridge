@@ -1,0 +1,27 @@
+[
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-6\\New folder-1\\Sprint6_BatchA_Endpoint_Matrix.md",
+    "MatchesEntry": true,
+    "AuthorizedChange": "none"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-6\\New folder-1\\Sprint6_BatchA_Evidence_Index.md",
+    "MatchesEntry": true,
+    "AuthorizedChange": "none"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-6\\New folder-1\\Sprint6_BatchA_Implementation_Decision_Register.md",
+    "MatchesEntry": false,
+    "AuthorizedChange": "Labeled Batch B addendum only"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-6\\New folder-1\\Sprint6_BatchA_Implementation_Report.md",
+    "MatchesEntry": true,
+    "AuthorizedChange": "none"
+  },
+  {
+    "Path": "C:\\Engineering\\GitHub\\SyncBridge.Core\\docs\\sprint-6\\New folder-1\\Sprint6_BatchA_Verification_Report.md",
+    "MatchesEntry": true,
+    "AuthorizedChange": "none"
+  }
+]
