@@ -1,0 +1,12 @@
+{
+  "ControllerPersistenceMatches": 0,
+  "InnerLayerChangedFiles": [],
+  "ProjectChanges": [],
+  "MigrationFiles": [
+    "20261013010705_InitialCreate.cs",
+    "20261013010705_InitialCreate.Designer.cs",
+    "SyncBridgeDbContextModelSnapshot.cs"
+  ],
+  "ControllerSHA256": "A0E00CACF82402CF76A099E1F46EA20E47E4E2DF0D72D7C67519B113CBB6AA13",
+  "ProgramSHA256": "A4E0CA0990701BAB7319EF39FF7DB265AEBAC0FC04DE89E30F462F64630CBE88"
+}

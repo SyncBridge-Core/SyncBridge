@@ -1,0 +1,15 @@
+Test run for C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:17.39]     SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence [FAIL]
+  Failed SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence [1 s]
+  Error Message:
+   /api/batches/B-TEST/deviations: UnprocessableEntity, expected ServiceUnavailable
+  Stack Trace:
+     at SyncBridge.Core.Tests.RestApiTests.Post(HttpClient client, String url, Object body, HttpStatusCode expected) in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 165
+   at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 127
+   at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 136
+   at SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence() in C:\Engineering\GitHub\SyncBridge.Core\tests\SyncBridge.Core.Tests\RestApiTests.cs:line 136
+--- End of stack trace from previous location ---
+Results File: C:\Engineering\GitHub\SyncBridge.Core\artifacts\test-evidence\sprint-6\batch-a\Rest_Final.trx
+
+Failed!  - Failed:     1, Passed:    10, Skipped:     0, Total:    11, Duration: 17 s - SyncBridge.Core.Tests.dll (net10.0)

@@ -1,0 +1,70 @@
+[
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerApplicationServiceTests.InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerApplicationServiceTests.TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer",
+    "Outcome": "Passed"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_ReconstructsAllFiveStatesAndRichEvidence",
+    "Outcome": "Passed"
+  }
+]

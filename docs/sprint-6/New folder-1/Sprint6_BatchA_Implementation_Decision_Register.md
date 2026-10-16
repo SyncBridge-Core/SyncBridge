@@ -1,0 +1,21 @@
+# Sprint 6 Batch A implementation decision register
+
+Date: 2026-10-15. These are bounded implementation choices, not new ADRs or Team acceptance.
+
+1. Use one native ApiController in the existing Web project, with the five routes recorded before coding in the endpoint matrix. Step start and completion remain separate atomic service commands. Initiation creates a Created batch; it does not automatically mark Ready or begin processing. This follows the accepted service semantics.
+2. Reuse Application view records as JSON responses and introduce only three small Presentation request records. No actor or role field is bound into a command. Existing ApplicationOperation checks trusted active AppUser roles, including additive permissions, before reads and again inside command transactions.
+3. Retain native cookie authentication. All controller routes require authentication; operation-specific authorization remains in the exact secured services. API cookie challenges return structured 401/403 without browser redirect headers. Browser redirect behavior is preserved.
+4. Require native MVC antiforgery validation on all unsafe controller methods. Use the existing authentication Page to obtain the request token and send it as RequestVerificationToken alongside its cookie. A small always-run result filter converts antiforgery failures to ProblemDetails. No token/authentication endpoint or new authentication system is introduced.
+5. Map existing service outcomes to 400/401/403/404/422/503; successful initiation returns 201 with BatchView, other operations return 200. No API batch GET route is added solely to manufacture a Location header. ApiController model validation supplies structured errors. A native exception-handler branch returns generic 500 ProblemDetails for unhandled API faults, including Development hosts. Responses disable caching through MVC.
+
+Already determined by authority and inherited acceptance: D1–D11 and OQ-1/2/3/3A/4; five-state Domain lifecycle, required material/equipment prerequisites, ordered steps, BatchStepExecution signature target, immutable signatures, append-only audit, explicit Operator resume, Quality disposition, terminal Completed, original migration/15 tables, optional fields, serializable service transactions and Infrastructure composition. No changes to these decisions or to golden documents were made.
+
+No material/equipment verification mutation, signature-creation, resume, order administration, generic status, reporting, SSRS/EBR or integration endpoints are exposed. UI workflows provide prerequisites and approvals for the selected API operations.
+
+## Batch B addendum — 2026-10-15
+
+The Batch A entries above are retained verbatim. No new ADR, manufacturing rule, role policy, production route, service or persistence design is introduced.
+
+6. Reuse one test-only HTTP scenario for the real Razor Pages and REST adapters, executed against SQLite in Development/Production and against actual SQL Server in Production. Compare normalized manufacturing fields and exact audit action/actor/result sequence; generated identifiers and absolute times differ. Assert persisted timestamp ordering, completing/reporting/signing actors, originating associations and single signature counts separately.
+7. Reuse SecuredServiceFixture.ConfigureTestHost with its existing SQL options and native cookie login. Assert the HTTP host's provider is SQL Server and catalog is the guarded integration catalog. Expose the existing S4B-prefixed, canonical-GUID test-owned cleanup method as internal for reuse, with its validation and SQL unchanged. No new test database mechanism or manufacturing inserts/updates bypass the service path; cleanup alone deletes exact test-owned records inside the disposable database.
+8. Correct test-host clock composition: register the fixture's existing advancing TimeProvider in ConfigureTestHost, so direct Application setup and HTTP manufacturing commands share one clock. The initial passing integrated output exposed mixed test/system times; final assertions require BatchCreated first, BatchCompleted last and batch/step timestamp containment. This is a test-only correction; production time, Domain rules and accepted historical Batch A evidence are unchanged.

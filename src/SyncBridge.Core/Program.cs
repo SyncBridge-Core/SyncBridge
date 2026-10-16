@@ -34,6 +34,18 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.Cookie.SameSite = SameSiteMode.Strict;
     options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
     options.SlidingExpiration = false;
+    options.Events.OnRedirectToLogin = async context =>
+    {
+        if (context.Request.Path.StartsWithSegments("/api"))
+            await Results.Problem(statusCode: 401, title: "Unauthenticated").ExecuteAsync(context.HttpContext);
+        else context.Response.Redirect(context.RedirectUri);
+    };
+    options.Events.OnRedirectToAccessDenied = async context =>
+    {
+        if (context.Request.Path.StartsWithSegments("/api"))
+            await Results.Problem(statusCode: 403, title: "Forbidden").ExecuteAsync(context.HttpContext);
+        else context.Response.Redirect(context.RedirectUri);
+    };
     options.Events.OnValidatePrincipal = async context =>
     {
         var previous = context.HttpContext.User;
@@ -57,6 +69,7 @@ builder.Services.AddRateLimiter(options =>
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddControllers(options => options.Filters.Add<SyncBridge.Core.Controllers.ApiAntiforgeryResultFilter>());
 
 var app = builder.Build();
 
@@ -67,6 +80,11 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+// Keep API faults structured and confidential in every hosting environment.
+app.UseWhen(context => context.Request.Path.StartsWithSegments("/api"), api =>
+    api.UseExceptionHandler(error => error.Run(context =>
+        Results.Problem(statusCode: 500, title: "The operation could not be completed.").ExecuteAsync(context))));
 
 app.UseHttpsRedirection();
 
@@ -99,6 +117,7 @@ app.MapPost("/authentication/logout", async (HttpContext context, IAntiforgery a
 }).RequireAuthorization();
 
 app.MapStaticAssets();
+app.MapControllers();
 app.MapRazorPages()
    .WithStaticAssets();
 

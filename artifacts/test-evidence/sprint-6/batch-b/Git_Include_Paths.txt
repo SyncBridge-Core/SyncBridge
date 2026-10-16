@@ -1,0 +1,82 @@
+artifacts/test-evidence/sprint-6/batch-a/Build_Final.log
+artifacts/test-evidence/sprint-6/batch-a/Build.log
+artifacts/test-evidence/sprint-6/batch-a/Development_After.json
+artifacts/test-evidence/sprint-6/batch-a/Development_Before.json
+artifacts/test-evidence/sprint-6/batch-a/Golden_Hashes.json
+artifacts/test-evidence/sprint-6/batch-a/Inherited_Artifacts.json
+artifacts/test-evidence/sprint-6/batch-a/NonSql_Catalog.json
+artifacts/test-evidence/sprint-6/batch-a/NonSql_Final.log
+artifacts/test-evidence/sprint-6/batch-a/NonSql_Final.trx
+artifacts/test-evidence/sprint-6/batch-a/Preservation_Comparison.txt
+artifacts/test-evidence/sprint-6/batch-a/Rest_Final.log
+artifacts/test-evidence/sprint-6/batch-a/Rest_Final.trx
+artifacts/test-evidence/sprint-6/batch-a/Rest_Focused.trx
+artifacts/test-evidence/sprint-6/batch-a/Rest_Retest.log
+artifacts/test-evidence/sprint-6/batch-a/Rest_Verified.log
+artifacts/test-evidence/sprint-6/batch-a/Rest_Verified.trx
+artifacts/test-evidence/sprint-6/batch-a/Restore_Elevated.log
+artifacts/test-evidence/sprint-6/batch-a/Restore.log
+artifacts/test-evidence/sprint-6/batch-a/Source_Documents.json
+artifacts/test-evidence/sprint-6/batch-a/SQL_Catalog.json
+artifacts/test-evidence/sprint-6/batch-a/SQL_Final.log
+artifacts/test-evidence/sprint-6/batch-a/SQL_Final.trx
+artifacts/test-evidence/sprint-6/batch-a/Working_Inventory.txt
+artifacts/test-evidence/sprint-6/batch-b/Architecture.json
+artifacts/test-evidence/sprint-6/batch-b/BatchA_Production_Diff.txt
+artifacts/test-evidence/sprint-6/batch-b/BatchA_Report_Comparison.json
+artifacts/test-evidence/sprint-6/batch-b/BatchA_Report_Hashes.json
+artifacts/test-evidence/sprint-6/batch-b/Build_ClockCorrected.log
+artifacts/test-evidence/sprint-6/batch-b/Build_Final.log
+artifacts/test-evidence/sprint-6/batch-b/Build.log
+artifacts/test-evidence/sprint-6/batch-b/Decision_Register_Preservation.json
+artifacts/test-evidence/sprint-6/batch-b/Development_After.json
+artifacts/test-evidence/sprint-6/batch-b/Development_Before.json
+artifacts/test-evidence/sprint-6/batch-b/Diff_Check.txt
+artifacts/test-evidence/sprint-6/batch-b/Equivalence_Focused.log
+artifacts/test-evidence/sprint-6/batch-b/Equivalence_Focused.trx
+artifacts/test-evidence/sprint-6/batch-b/Equivalence_Results_Final.txt
+artifacts/test-evidence/sprint-6/batch-b/Equivalence_Results.txt
+artifacts/test-evidence/sprint-6/batch-b/Final_Git_Inventory.txt
+artifacts/test-evidence/sprint-6/batch-b/Git_Exclusions.json
+artifacts/test-evidence/sprint-6/batch-b/Git_Include_Paths.txt
+artifacts/test-evidence/sprint-6/batch-b/Git_Inclusion_Manifest.json
+artifacts/test-evidence/sprint-6/batch-b/Inherited_Preservation.json
+artifacts/test-evidence/sprint-6/batch-b/Integrated_Final.log
+artifacts/test-evidence/sprint-6/batch-b/Integrated_Final.trx
+artifacts/test-evidence/sprint-6/batch-b/Integrated.log
+artifacts/test-evidence/sprint-6/batch-b/Integrated.trx
+artifacts/test-evidence/sprint-6/batch-b/Package_Advisories.log
+artifacts/test-evidence/sprint-6/batch-b/Preflight_Inventory.txt
+artifacts/test-evidence/sprint-6/batch-b/Preservation_Comparison.json
+artifacts/test-evidence/sprint-6/batch-b/Readiness_Inventory.ps1
+artifacts/test-evidence/sprint-6/batch-b/Remote_Refs.txt
+artifacts/test-evidence/sprint-6/batch-b/Restore.log
+artifacts/test-evidence/sprint-6/batch-b/Sensitive_Content_Check.json
+artifacts/test-evidence/sprint-6/batch-b/Source_Documents.json
+artifacts/test-evidence/sprint-6/batch-b/Source_Manifest.json
+artifacts/test-evidence/sprint-6/batch-b/SQL_Disposal.json
+artifacts/test-evidence/sprint-6/batch-b/SQL_Final_Repeat.log
+artifacts/test-evidence/sprint-6/batch-b/SQL_Final_Repeat.trx
+artifacts/test-evidence/sprint-6/batch-b/SQL_HTTP_Reconciliation.txt
+artifacts/test-evidence/sprint-6/batch-b/SQL_Repeat.log
+artifacts/test-evidence/sprint-6/batch-b/SQL_Repeat.trx
+artifacts/test-evidence/sprint-6/batch-b/Test_Catalog_Final.json
+artifacts/test-evidence/sprint-6/batch-b/Test_Catalog.json
+docs/sprint-6/New folder-1/Sprint6_BatchA_Endpoint_Matrix.md
+docs/sprint-6/New folder-1/Sprint6_BatchA_Evidence_Index.md
+docs/sprint-6/New folder-1/Sprint6_BatchA_Implementation_Decision_Register.md
+docs/sprint-6/New folder-1/Sprint6_BatchA_Implementation_Report.md
+docs/sprint-6/New folder-1/Sprint6_BatchA_Verification_Report.md
+docs/sprint-6/New folder-2/Sprint6_BatchB_Integrated_Verification_Report.md
+docs/sprint-6/New folder-2/Sprint6_Final_Closure_Report_Proposed.md
+docs/sprint-6/New folder-2/Sprint6_Final_Engineering_Verification_Report.md
+docs/sprint-6/New folder-2/Sprint6_Final_Evidence_Index.md
+docs/sprint-6/New folder-2/Sprint6_Final_Requirements_and_Evidence_Matrix.md
+docs/sprint-6/New folder-2/Sprint6_Git_Readiness_Report.md
+src/SyncBridge.Core/Controllers/ManufacturingController.cs
+src/SyncBridge.Core/Program.cs
+tests/SyncBridge.Core.Tests/RestApiTests.cs
+tests/SyncBridge.Core.Tests/RestBoundaryRegressionTests.cs
+tests/SyncBridge.Core.Tests/SecuredServiceFixture.cs
+tests/SyncBridge.Core.Tests/SqlServerBatchBIntegrationTests.cs
+tests/SyncBridge.Core.Tests/UiApiEquivalenceTests.cs

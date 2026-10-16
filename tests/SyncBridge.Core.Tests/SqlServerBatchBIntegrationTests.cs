@@ -242,7 +242,7 @@ public sealed class SqlServerBatchBIntegrationTests(ITestOutputHelper output)
         for (Exception? current = exception; current is not null; current = current.InnerException)
             if (current is SqlException sql) foreach (SqlError error in sql.Errors) yield return error.Number;
     }
-    private static async Task Cleanup(SecuredServiceFixture fixture, string order)
+    internal static async Task Cleanup(SecuredServiceFixture fixture, string order)
     {
         if (!order.StartsWith("S4B-", StringComparison.Ordinal) || !Guid.TryParseExact(order[4..], "N", out _)) throw new InvalidOperationException("Cleanup requires an exact test-owned order number.");
         await using var scope = fixture.Scope();

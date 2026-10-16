@@ -1,0 +1,11 @@
+{
+  "OriginalBatchATextMatchesWithOriginalEncodingAndWhitespace": true,
+  "MatchingFormats": [
+    {
+      "Newline": "LF",
+      "TrailingNewlines": 1,
+      "BOM": false
+    }
+  ],
+  "Scope": "Only labeled B addendum added; Batch A front matter compared to entry SHA with newline/encoding variants"
+}

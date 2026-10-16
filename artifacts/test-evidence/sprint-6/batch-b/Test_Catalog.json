@@ -1,0 +1,1512 @@
+[
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.supervisor\", url: \"/Batches/Details?number=B-TEST&handler=Ready\", field: \"\", value: \"\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.2566250"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters(environment: \"Production\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.4699212"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.Constructor_WhenNotApproved_PreservesApprovalStatus",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004632"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_WithNullBatchNumber_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007691"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlVerificationAndSignatureFailures_RollBackBothStateAndEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:02.9813618"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.DbdsLengthValidator_CountsUtf16CodeUnitsAndRejectsOverflowWithoutTruncation",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0059447"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: Cancel)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8271810"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.SignatureGate_RemainsRequiredAfterResumption",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0057432"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.AdditiveRoles_CanReviewOwnDeviationAndResumeButCannotManageOrders",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.5794289"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenCreated_ThrowsInvalidTransition",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004032"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.BatchOrigin_HasNoPublicMutationPath",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007662"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: Complete)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6328132"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNullBatchNumber_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005419"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.CreateStepExecution_WithStepFromAnotherRecipe_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012381"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_WithNullOperatorId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0009005"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_WithBlankProductName_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0011929"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithUndefinedMeaning_ThrowsArgumentOutOfRangeException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0019552"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_TwoBeforeStepOneCompletes_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0030128"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: \"test.quality\", expected: Forbidden)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5646142"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenOnlySubsetOfMultipleRequirementsPasses_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001985"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ScalarBoundariesAndAllProductionOrderStatuses_RoundTripExactly",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.3780625"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_ThreeBeforeStepTwoCompletes_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0018527"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_WithNonPositiveQuantity_IsRejected(quantity: -1)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007189"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.Material_Constructor_PreservesReferenceIdentityCodeAndName",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0081165"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_WithNullMaterialCode_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0017222"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: Release)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5804311"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.RecipeEquipmentRequirementMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0018016"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.StartStep_WhenCompleted_ThrowsInvalidBatchStepExecutionException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012626"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Resolve_WhenAlreadyClosed_RejectsWithoutOverwritingEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007791"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.quality\", url: \"/Batches/Details?number=B-TEST&handler=Start\", field: \"\", value: \"\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3703356"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: Reject)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8875807"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.UiApiEquivalenceTests.PairedHttpWorkflows_HaveEquivalentManufacturingEvidence(environment: \"Development\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:13.0966980"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_PreservesApprovedEvidenceFields",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0025883"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithNegativeStepNumber_ThrowsArgumentOutOfRangeException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003511"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_ExistingLifecycle_RemainsEnforced",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0028422"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.ContextReads_RespectBothAdaptersWithoutMutation(environment: \"Production\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.1797339"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: \"unknown.actor\", expected: Unauthenticated)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5994328"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.AuditEventTests.Constructor_WhenRequiredInputMissing_RejectsEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0018851"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: \"/api/batches\", post: True)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9662580"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.WrongBatchResolvedDeviation_CannotSatisfyResumptionGate",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004039"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.MissingAndInactiveManufacturingUser_CannotAuthenticateOrExecute",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8602033"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchCreated_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007722"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.Steps_AreReturnedInStepNumberOrder",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0169770"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: False)",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.0286252"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenOnlyUnrelatedMaterialIsVerified_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003418"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.InvalidTransition_DoesNotAddSuccessEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0011061"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.AuthenticationBoundaryTests.InactiveUserCookie_IsRejectedOnTheNextRequest",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3094330"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.StepWorkflow_PreservesOrderApprovalAuditCompletedProtectionAndDeviationOrigin",
+    "Outcome": "Passed",
+    "Duration": "00:00:05.1270435"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.DeviationLifecycleAndExceptionResume_ProduceDistinctEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0156649"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.admin\", url: \"/Orders/Details?number=PO-TEST&handler=Status\", field: \"action\", value: \"Release\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.5813866"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_WithNullBatchNumber_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007538"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.StartStep_WhenAlreadyInProgress_ThrowsInvalidBatchStepExecutionException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005216"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.OptionalDeviationActivity_RemainsNullThroughBothAdapters",
+    "Outcome": "Passed",
+    "Duration": "00:00:03.0785451"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Constructor_WithSameBatchStepExecution_PreservesStepIdentity",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0009656"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_WithUnresolvedDeviation_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003870"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.CompleteStep_WhenPending_ThrowsInvalidBatchStepExecutionException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004410"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_DoesNotMutateAcceptedSignatureEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0189586"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchCompleted_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0008289"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithDifferentRecipe_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012912"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.AuditAndExceptionReview_DenyOtherRoles(actor: \"demo.operator\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6925183"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.IncompleteOrSignatureGatedStep_BlocksCompletionWithoutSuccessEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0035942"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithoutDeviation_RejectsAndLeavesBatchInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0053234"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.RejectedResume_DoesNotProduceResumeEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0113501"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.InvalidBindingAntiforgeryAndTechnicalFailure_ReturnMeaningfulFeedbackWithoutMutation",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.2599744"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.ManufacturingReads_AreAvailableToAssignedManufacturingRoles(actor: \"demo.operator\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.7523824"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Completed)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0015037"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Resolve_BeforeApproval_ThrowsInvalidDeviationStateTransitionException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0070021"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.UnitOfWork_RejectsAuditEventUpdatesBeforeDatabaseAccess",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.2397623"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.quality\", url: \"/Orders/Details?number=PO-TEST&handler=Status\", field: \"action\", value: \"Release\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.4552670"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.SkippedStepsInvalidVerificationAndForeignSignatureTargets_LeaveNoPartialEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9724026"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.AuditEventTests.Constructor_AllowsNoBatchContext",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007976"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureRequiredAndMatches_CompletesStep",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007261"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.quality\", url: \"/Batches/Details?number=B-TEST&handler=Resume\", field: \"\", value: \"\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.4019943"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: \"test.quality\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.2548763"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenMaterialVerificationMissing_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001782"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.ElectronicSignatures_DenyUnauthorizedRoles(actor: \"demo.supervisor\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5816877"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Created)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0000656"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenAllMultiplePrerequisitesPasses_TransitionsToInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0014571"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Ready)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0101965"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: \"demo.supervisor\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.4455482"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithAlreadyResolvedDeviation_RejectsAndLeavesBatchInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0009118"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RecipeAndProductionOrderRepositories_RoundTripThroughSqlServer",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.2412553"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_Constructor_PreservesDbdsAlignedFields",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0076029"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.AuditEventTests.Evidence_RemainsUnchangedThroughPublicReadApi",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0015854"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.supervisor\", url: \"/Batches/Details?number=B-TEST&handler=Material\", field: \"itemCode\", value: \"MAT-DEMO-001\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:05.3010921"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RoundTripsExactLowercaseCanonicalText",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006211"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.VerificationEvidence_IsCreatedOnceAndRetainedWhenProcessingStarts",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0031752"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.UnhandledFault_IsGenericJsonInEveryEnvironment(environment: \"Development\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.4202821"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithZeroQuantity_ThrowsArgumentOutOfRangeException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003849"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.MaterialMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0043353"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.UiApiEquivalenceTests.PairedHttpWorkflows_HaveEquivalentManufacturingEvidence(environment: \"Production\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:06.4205880"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureNotRequired_CompletesWithoutSignature",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003780"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.AdditiveRoles_PermitSameActorDeviationResolutionWithoutInventedSelfApprovalRule",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.2038298"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: \"/api/batches/B-TEST/deviations\", post: True)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9999529"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_BeginsPendingAndPreservesIdentitiesAndStepNumber",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003735"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_DoesNotCompleteBatchOrActiveStep",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0535242"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenAlreadyCompleted_RemainsRejectedWithValidSignature",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004703"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.Material_WithBlankName_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0021114"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: \"test.admin\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:05.2238876"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.CompletedRecordProtectionTests.CompletedBatch_RejectsEveryNormalBatchMutationWithoutNewAuditEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0037948"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidInputMissingResourcesAndUnapprovedRecipe_AreDistinct",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6044117"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.ExceptionLifecycle_ResumesAndReachesCompleted",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002888"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.CompleteFinalStep_DoesNotCompleteBatch",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0027260"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.NormalLifecycle_ReachesCompleted",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001873"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInException_ThrowsInvalidTransition",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005350"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithSignatureNotRequired_PreservesValues",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006412"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_AddsAndReconstructsWithoutGeneratingEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.4664184"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.StepStartAndCompletion_ProduceExecutionEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0017016"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.MultipleBatches_ForOneProductionOrder_EachReceiveTheFullQuantity",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0013147"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenCreated_ThrowsInvalidTransition",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0013282"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithZeroStepNumber_ThrowsArgumentOutOfRangeException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007777"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenMaterialVerificationFailed_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004709"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullBatchNumber_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005703"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.AntiforgeryAndRevocation_BlockBeforeMutationOnBothAdapters(environment: \"Development\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:02.3267004"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.CompleteStep_WhenCompleted_ThrowsInvalidBatchStepExecutionException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0013375"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.EquipmentVerificationMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0020320"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.Equipment_Constructor_AllowsNoCalibrationDate",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006173"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.ProductionOrder_WithNonPositiveQuantity_IsRejected(quantity: 0)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0059521"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.ProductionOrderAudit_ExistsWithoutBatchAndCapturesEveryStatusCommand",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6398872"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_AfterPrerequisiteFailure_CanSucceedWithCompleteEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002195"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Completed)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0045840"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenOnlyUnrelatedEquipmentIsVerified_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0010580"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullRelatedRecordId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006457"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SprintClosureModelTests.Equipment_Constructor_PreservesOptionalCalibrationDate",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0185354"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.AuditEventTests.Constructor_PreservesApprovedAuditShape",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0068803"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.DbdsLengthValidator_AcceptsMaximumVerificationAuditIdentityWithoutChangingIt",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0022510"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.AddSyncBridgePersistence_RegistersDbContextAsScoped",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0008128"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Constructor_AtBatchLevel_PreservesEvidenceAndBeginsOpen",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0142721"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithBlankName_ThrowsArgumentException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007919"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.MaterialVerification_PreservesApprovedEvidenceFields",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0113294"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.operator\", url: \"/Orders/Details?number=PO-TEST&handler=Status\", field: \"action\", value: \"Release\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3413082"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.DeviationMapping_ReflectsDbdsAmendmentOne",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0031555"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_OutsideInProgressBatch_IsRejected(batchStatus: Exception)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0000487"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginLogout_RequireAntiforgeryAndIssueSecureCookieForValidatedUserOnly",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.6012816"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.PersistenceFailure_AfterFirstWriteRollsBackAndSameScopeCannotLeakFailedChanges",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5866770"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.Constructor_WithBlankName_ThrowsArgumentException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003305"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.ManufacturingReads_AreAvailableToAssignedManufacturingRoles(actor: \"test.quality\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.7759070"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.StartStep_WhenPending_SetsInProgressAndStartedAt",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002830"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: \"demo.supervisor\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.4451590"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderStatusTransitions_AreSupervisorOnly(action: StartProcessing)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.7325536"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.BeginReview_WhenOpen_PreservesCommentsAndSetsUnderReview",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001916"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.quality\", url: \"/Batches/Details?number=B-TEST&handler=Deviation\", field: \"description\", value: \"Unauthorized\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.1264899"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenInProgress_SetsStatusToCompleted",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003749"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.CreationAndLifecycleTransitions_ProduceAttributedAuditEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0043378"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.supervisor\", url: \"/Batches/Details?number=B-TEST&handler=Review\", field: \"deviationCode\", value: \"D-TEST\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.2341988"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullSignatureId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004912"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenEquipmentVerificationFailed_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006954"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenEquipmentVerificationBelongsToAnotherBatch_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001832"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.BeginReview_WithBlankComments_RejectsWithoutChangingStatus",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0010541"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Exception)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0009820"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithNegativeQuantity_ThrowsArgumentOutOfRangeException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0020781"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.MarkReady_WhenCreated_SetsStatusToReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002146"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureTargetsAnotherExecution_RejectsWithoutMutatingExecution",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004234"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.MissingFailedPrerequisitesAndReviewQueries_RetainReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.0554212"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: \"demo.operator\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.0724411"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenRequiredSignatureMissing_RejectsWithoutMutatingExecution",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012439"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Constructor_WithMissingDescription_ThrowsArgumentException(description: \" \")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0010437"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.AuditEventMapping_ReflectsDbdsAmendmentTwo",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0015751"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenReady_ThrowsInvalidTransition",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002473"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DbdsAmendmentsAndOptionalFields_RoundTripWithoutTruncationOrOverwrite",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6291428"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.EnumMappings_UseApprovedClosedDatabaseRepresentations",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5796897"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CorruptPersistedDomainData_IsReportedAsTechnicalFailure",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3285484"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.supervisor\", url: \"/Batches/Details?number=B-TEST&handler=Sign\", field: \"executionId\", value: \"00000000-0000-0000-0000-000000000001\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.1971654"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenMaterialVerificationBelongsToAnotherBatch_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0007981"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.CompleteStep_WhenInProgress_SetsCompletionEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004004"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.CompleteStep_WhenDefinitionDoesNotRequireSignature_DoesNotRequireSignature",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0008160"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.PrerequisitesAntiforgeryMalformedInputAndFaults_LeaveNoPartialEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.7892243"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhileAnotherStepIsInProgress_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0009092"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.AuditAndExceptionReview_DenyOtherRoles(actor: \"test.admin\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.7453731"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.OrderedExecution_RemainsBlockedInExceptionAndEnforcedAfterResumption",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0052890"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Constructor_WithWrongBatchStepExecution_ThrowsDomainException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0071763"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: null, expected: Unauthenticated)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6449723"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.ThreeStepRecipe_ExecutesInPrescribedOrder",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0077283"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.SignedStepCompletion_RetainsOneSignatureAuditEvent",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0011276"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: \"test.quality\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.6304240"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: \"12345678123412341234123456789abc\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0000512"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.QualityRejection_RemainsBlockingAndAdministratorCannotReadManufacturingRecords",
+    "Outcome": "Passed",
+    "Duration": "00:00:08.5554144"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureBelongsToAnotherBatch_RejectsWithoutMutatingExecution",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002811"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.AddStep_WithDuplicateStepNumber_ThrowsDomainException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012415"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_WhenAllAssociatedDeviationsResolved_Succeeds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006249"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.ApprovedUnitOfWork_RejectsEvidenceAndCompletedBatchMutation",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.4931848"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.AddMaterialRequirement_AddsOwnedRequirement",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012664"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.StartProcessing_WhenReady_SetsStatusToInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003325"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithNoMaterialRequirementsAndVerifiedEquipment_TransitionsToInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001794"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Approve_WhenUnderReview_SetsApprovedAndRemainsBlocking",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0277300"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeRequirementTests.EquipmentRequirement_PreservesRecipeAndEquipmentIdentities",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006079"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.UC001To004_HttpWorkflow_PreservesPrerequisitesSignaturesResolutionResumeAndCompletedProtection",
+    "Outcome": "Passed",
+    "Duration": "00:00:04.5074500"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.CompleteStep_WhenSignatureTargetsWrongRecordType_RejectsWithoutMutatingExecution",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0024244"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.RoleRevocation_IsEffectiveWithinAnExistingServiceScope",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5650851"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Constructor_WithMissingDescription_ThrowsArgumentException(description: \"\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0091105"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.UnitOfWork_RejectsCompletedBatchUpdatesBeforeDatabaseAccess",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.1208189"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.Constructor_PreservesRequiredValuesAndApprovedStatus",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004492"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: \"test.admin\", expected: Forbidden)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5835483"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchReady_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005201"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithNoRequirements_TransitionsToInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0032758"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerApplicationServiceTests.TrustedActorAndManufacturingRead_UseAcceptedSqlServerFoundation",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.1721901"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: \"/api/batches/B-TEST/steps/id/complete\", post: True)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9075292"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.supervisor\", url: \"/Batches/Details?number=B-TEST&handler=StartStep\", field: \"stepNumber\", value: \"1\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.5780085"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OrderCreation_DeniesInvalidActorsBeforeMutation(actor: \"demo.operator\", expected: Forbidden)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6257781"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.ContextAndInitiation_ValidateInputEligibilityTrustedActorAndAdditiveRoles",
+    "Outcome": "Passed",
+    "Duration": "00:00:02.1611640"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.AuthenticationBoundaryTests.LoginAttempts_AreRateLimited",
+    "Outcome": "Passed",
+    "Duration": "00:00:02.0686002"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithNullQuantity_PreservesOptionalQuantity",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004946"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: \"00000000-0000-0000-0000-000000000000\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005744"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.operator\", url: \"/Batches/Details?number=B-TEST&handler=Review\", field: \"deviationCode\", value: \"D-TEST\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.0397879"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.Complete_WhenCreated_ThrowsInvalidTransition",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002409"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.BothAdapters_RejectForgedAuthorityOnEverySelectedMutation(user: \"test.quality\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.5716096"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: \"\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0011101"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.ElectronicSignatures_DenyUnauthorizedRoles(actor: \"test.admin\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.5805766"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithZeroStepNumber_ThrowsArgumentOutOfRangeException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003936"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.SqlServerConstraintsAndUnitOfWork_RejectInvalidAndPartialChanges",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.4560723"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNullExecutionId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002723"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.AddEquipmentRequirement_AddsOwnedRequirement",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005700"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.EquipmentMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0036444"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestSqlEquivalenceTests.PairedHttpWorkflows_PersistEquivalentEvidenceThroughActualSqlServer",
+    "Outcome": "Passed",
+    "Duration": "00:01:11.0057719"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.VerificationFailure_RollsBackCurrentResultAndAuditTogether",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.7093871"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.LifecycleMethods_WhenCompleted_RejectAllFurtherTransitions",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0026560"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: Resolve)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6762838"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.WrongSignatureAndRejectedDeviation_CannotAdvanceWorkflow",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9958246"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.MissingAndRevokedCookie_CannotAccessPagesOrPostCommands",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9864711"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.AddSyncBridgePersistence_WithBlankConnectionString_ThrowsArgumentException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0018116"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerApplicationServiceTests.InducedServiceFailure_RollsBackOrderAndAuditOnSqlServer",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.2162965"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_PreservesControlledRecordEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0258823"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenReady_ThrowsInvalidTransition",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0011505"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.ManufacturingReads_AreAvailableToAssignedManufacturingRoles(actor: \"demo.supervisor\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6868637"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.Constructor_WithNullRecipeCode_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0010279"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.ProductionOrderMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0016378"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.Model_ContainsExactlyFifteenDbdsTablesInDboSchema",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0224420"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_AfterDeviationResolution_ReturnsToInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003601"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.AddSyncBridgePersistence_RegistersRepositoriesAndUnitOfWorkAsScoped",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0041780"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.MaterialVerificationMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0020825"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.ResumeProcessing_WithOneOfTwoDeviationsUnresolved_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002331"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.EnterException_WhenInProgress_SetsStatusToException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002714"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Created)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001258"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.quality\", url: \"/Batches/Details?number=B-TEST&handler=CompleteSte\"···, field: \"executionId\", value: \"00000000-0000-0000-0000-000000000001\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.6421226"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.Architecture_InnerLayersAndPresentationHaveNoReverseRuntimeReferences",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0013706"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.Constructor_WithNullRecipeId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005625"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.quality\", url: \"/Batches/Details?number=B-TEST&handler=Equipment\", field: \"itemCode\", value: \"EQ-DEMO-001\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3117129"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Resolve_WhenApproved_PreservesDispositionAndClosesDeviation",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0071861"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: \"not-a-guid\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0000469"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RemainingUniqueAndCompositeConstraints_AreEnforcedBySqlServer",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6258146"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidQuantity_ReturnsInvalidInputAndPersistsNothing(quantity: 0)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6440723"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchException_IsRejected",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005217"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: Approve)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6512083"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithSameBatchDeviation_AssociatesDeviationAndSetsException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0024187"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.RecipeStepMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0268637"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"test.admin\", url: \"/Batches/Details?number=B-TEST&handler=Complete\", field: \"\", value: \"\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3624988"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Reject_WhenUnderReview_PreservesRejectedReviewResultAndRemainsBlocking",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0008214"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectPost_ForbiddenRolesCannotSubstituteActorOrRole(actor: \"demo.operator\", url: \"/Batches/Details?number=B-TEST&handler=Complete\", field: \"\", value: \"\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3879244"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithBlankInstructions_ThrowsArgumentException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004512"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WithNoEquipmentRequirementsAndVerifiedMaterial_TransitionsToInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002237"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.SuccessfulCompletion_ProducesAttributedCompletedEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0008445"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.BatchRepository_ReconstructsAllFiveStatesAndRichEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8665241"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.Constructor_WithBlankVersion_ThrowsArgumentException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002966"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.OrderedWorkflowExecutionTests.StartStep_WhenBatchInProgress_StartsEligibleStep",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0082186"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.RoleClaimsAndDuplicateIdentifiers_CannotSpoofTrustedPermissions",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6876646"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.ResumeProcessing_WhenInException_SetsStatusToInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0123201"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.SignatureFailure_PersistsNeitherSignatureNorItsAudit",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9375848"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.BatchMapping_MatchesDbdsAndContainsNoQuantityOrUnitColumn",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012369"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidQuantity_ReturnsInvalidInputAndPersistsNothing(quantity: -1)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8016491"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_FromInvalidBatchState_IsRejected(status: Ready)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0000455"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.DevelopmentSeed_IsRepeatableAndCreatesNoManufacturingHistory",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.6556268"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.UnhandledFault_IsGenericJsonInEveryEnvironment(environment: \"Production\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3835457"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.SqlConstraintFailure_IsSanitizedRolledBackAndServiceScopeCanBeReused",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.3763364"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.BatchStepExecutionMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0015035"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeTests.AddStep_FromDifferentRecipe_ThrowsDomainException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006556"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.EndToEndManufacturing_UsesTrustedActorsAndSurvivesFreshScopes",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.2459256"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNullRecipeStepId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0003330"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.AuditMutation_IsRejectedByActualUnitOfWork",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.7822467"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeRequirementTests.MaterialRequirement_WithPositiveQuantity_PreservesQuantity",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0088083"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: \"/api/batches/B-TEST/steps/1/start\", post: True)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8802852"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_WithNullEquipmentCode_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0013096"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestBoundaryRegressionTests.ContextReads_RespectBothAdaptersWithoutMutation(environment: \"Development\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3105956"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.NonOperators_CannotForgeMutationAuthority(actor: \"test.admin\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.3968202"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.RecipeMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0032789"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchDeviationLifecycleTests.EnterException_WithWrongBatchDeviation_RejectsAndLeavesBatchInProgress",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005526"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.RelatedRecordType_WithBlankValue_ThrowsArgumentException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004285"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.InvalidQuantity_ReturnsInvalidInputAndPersistsNothing(quantity: 1.0001)",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.2004063"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerRecoveryIntegrationTests.RepresentativePersistenceOperations_ProduceBoundedBaselineMeasurements",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.3554277"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RestApiTests.Anonymous_Is401WithoutRedirect(route: \"/api/production-orders/PO-DEMO-001\", post: False)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8905102"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredPersistenceIntegrityTests.SignaturesAreImmutableAndCompletedBatchAndChildrenAreProtected",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.0025322"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureGateTests.SignatureEvidence_DoesNotBypassRecipeStepOrdering",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0013762"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.DeviationDisposition_IsQualityOnly(action: BeginReview)",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.6577591"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.BatchCreation_DerivesFullQuantityAndOrderNumberFromProductionOrder",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0123678"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.DirectCreationPosts_AreForbiddenForNonSupervisors(actor: \"test.admin\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.0499644"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.DeviationTests.Resolve_WithoutDisposition_RejectsWithoutResolving",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0027496"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.RecipeMaterialRequirementMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0028730"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RecipeStepTests.Constructor_WithSignatureRequired_PreservesSignatureDefinition",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006346"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.VerificationEvidenceTests.EquipmentVerification_WithNullOperatorId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0006081"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchStepExecutionTests.Constructor_WithNegativeStepNumber_ThrowsArgumentOutOfRangeException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0002382"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.ConcurrentCommands_OnSameBatchPermitOneTransitionWithoutDuplicateEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:03.7584523"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.AppUserMapping_MatchesDbds",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0012239"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceModelTests.ElectronicSignatureMapping_MatchesDbdsWithoutPolymorphicForeignKey",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0029728"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.PersistenceBoundaryTests.TechnicalGuidConverter_RejectsInvalidOrNoncanonicalText(value: \"12345678-1234-1234-1234-123456789ABC\")",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0000184"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.CredentialAuthentication_RejectsBadPasswordsAndDoesNotTakeAnActorId",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.8597122"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchPrerequisiteVerificationTests.StartProcessing_WhenEquipmentVerificationMissing_RejectsAndRemainsReady",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0001836"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchLifecycleTests.Constructor_SetsStatusToCreated",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0004723"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SecuredApplicationServiceTests.OptionalPersistenceFieldsAndVerificationIdentities_SurviveUnrelatedCommands",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.9130356"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.BatchAuditEvidenceTests.UnresolvedDeviation_BlocksCompletionWithoutSuccessEvidence",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0011952"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullRelatedRecordType_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005943"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.ElectronicSignatureTests.Constructor_WithNullOperatorId_ThrowsArgumentNullException",
+    "Outcome": "Passed",
+    "Duration": "00:00:00.0005042"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.RazorWorkflowTests.CorruptDashboardIdentifier_IsTechnicalFailureRatherThanCallerValidation(batchIdentifier: True)",
+    "Outcome": "Passed",
+    "Duration": "00:00:01.1411986"
+  },
+  {
+    "Name": "SyncBridge.Core.Tests.SqlServerBatchBIntegrationTests.CompleteManufacturingPath_RoundTripsSecurityOptionalFieldsAndEvidenceOnSqlServer",
+    "Outcome": "Passed",
+    "Duration": "00:00:04.9141537"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "Path": "artifacts/test-evidence/sprint-4/batch-b/Sql_Preflight_Output.txt",
+    "SHA256": "A851C5A72CE1670E0245A1122D298B009AA4FEE273F59A50F24D69192CD3E285",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/A3_Initial_Checkpoint_Historical.md",
+    "SHA256": "F15C0DE499D0245D03A8A0511325CC63BA28B55F968258176ACC76BCFE8B3971",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Final_SQL_Postflight.txt",
+    "SHA256": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Security_Patch_Dependency_Chain.log",
+    "SHA256": "1CE960F490E91B47E7382EA4FE727C8A5B114B41308C5AB8330F70CAFC66215B",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Sql_Postflight.txt",
+    "SHA256": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "artifacts/test-evidence/sprint-5/batch-a/Sql_Preflight_Elevated.txt",
+    "SHA256": "E9466D39C8B83FB20DB5BE45A483F958C7FC4D0E205A73151F593381E9D93861",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "docs/WP6_Sprint5_to_Sprint6_Engineering_Handoff.docx",
+    "SHA256": "E4A7A73696C0C604204F0C432052DE8720063ECFBD6D11ADB4E852E39883FA54",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "docs/sprint-4/Sprint4_Git_Integration_Completion_Report.md",
+    "SHA256": "A92919492BE0CEF618C506EEE5217C8244986B2988B97D5C6610218EB0A223CE",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "docs/sprint-5/Sprint5_Git_Commit_Completion_Report.md",
+    "SHA256": "409AD124411D17B2C15C7F4940F7317BFFFD0AC8848A2A815F923906385A5EE1",
+    "MatchesBatchA": true
+  },
+  {
+    "Path": "docs/sprint-5/Sprint5_Git_Integration_Completion_Report.md",
+    "SHA256": "8272FE11B2B31A511DFB43A459F33162D3A7F705E5F9C94DCA5F06E810176DAB",
+    "MatchesBatchA": true
+  }
+]
