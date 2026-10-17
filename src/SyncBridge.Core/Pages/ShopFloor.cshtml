@@ -1,0 +1,45 @@
+@page "/shop-floor"
+@model ShopFloorModel
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VECTRONIX | MX-200 Operator Terminal</title>
+    <link rel="stylesheet" href="~/css/shop-floor.css" asp-append-version="true" />
+    <script src="~/js/shop-floor.js" asp-append-version="true" defer></script>
+</head>
+<body>
+<main class="terminal">
+    <header class="terminal-header">
+        <div><h1>VECTRONIX <span>| MX-200</span></h1><p>Industrial Mixer · Operator Terminal</p></div>
+        <span id="mes-status" class="mes-status">MES ready</span>
+    </header>
+    <section aria-labelledby="lookup-heading">
+        <h2 id="lookup-heading">Manufacturing order lookup</h2>
+        <form id="order-lookup" data-api-url="@Url.Content("~/api/production-orders/")" novalidate>
+            <label for="order-number">Production Order Number</label>
+            <div class="lookup-controls">
+                <input id="order-number" name="orderNumber" type="text" maxlength="40" required autocomplete="off" autocapitalize="none" spellcheck="false" autofocus aria-describedby="lookup-feedback" />
+                <button type="submit">Retrieve</button>
+            </div>
+        </form>
+        <p id="lookup-feedback" role="status" aria-live="polite">Enter or scan a Production Order Number.</p>
+        <noscript><p>Enable JavaScript to retrieve Production Order context.</p></noscript>
+    </section>
+    <section aria-labelledby="context-heading" id="manufacturing-context" aria-busy="false">
+        <h2 id="context-heading">Manufacturing context</h2>
+        <dl id="order-context" hidden>
+            <div><dt>Order</dt><dd data-field="orderNumber"></dd></div>
+            <div><dt>Product code</dt><dd data-field="productCode"></dd></div>
+            <div><dt>Product</dt><dd data-field="productName"></dd></div>
+            <div><dt>Recipe ID</dt><dd data-field="recipeId"></dd></div>
+            <div><dt>Quantity</dt><dd data-field="quantity"></dd></div>
+            <div><dt>Status</dt><dd data-field="status"></dd></div>
+        </dl>
+    </section>
+    <footer>VECTRONIX Industrial Automation Systems · Vectronix MX-200 Industrial Mixer<br />Read-only Production Order context via SyncBridge Core REST services.</footer>
+</main>
+</body>
+</html>

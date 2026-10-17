@@ -1,0 +1,10 @@
+  SyncBridge.Core.Domain -> [repository]\src\SyncBridge.Core.Domain\bin\Debug\net10.0\SyncBridge.Core.Domain.dll
+  SyncBridge.Core.Application -> [repository]\src\SyncBridge.Core.Application\bin\Debug\net10.0\SyncBridge.Core.Application.dll
+  SyncBridge.Core.Infrastructure -> [repository]\src\SyncBridge.Core.Infrastructure\bin\Debug\net10.0\SyncBridge.Core.Infrastructure.dll
+  SyncBridge.Core -> [repository]\src\SyncBridge.Core\bin\Debug\net10.0\SyncBridge.Core.dll
+  SyncBridge.Core.Tests -> [repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll
+Test run for [repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: [repository]\artifacts\test-evidence\sprint-6.1\Focused.trx
+
+Passed!  - Failed:     0, Passed:    12, Skipped:     0, Total:    12, Duration: 13 s - SyncBridge.Core.Tests.dll (net10.0)

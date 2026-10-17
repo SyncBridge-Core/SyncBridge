@@ -6,6 +6,7 @@
 <p>Manufacturing Execution System</p>
 <form method="post" action="/authentication/login">
     @Html.AntiForgeryToken()
+    <input type="hidden" name="returnUrl" value="@Request.Query["ReturnUrl"]" />
     <label for="userName">User name</label><input id="userName" name="userName" autocomplete="username" required maxlength="100" class="form-control" />
     <label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required maxlength="1024" class="form-control" />
     <button class="btn btn-primary mt-3">Sign in</button>

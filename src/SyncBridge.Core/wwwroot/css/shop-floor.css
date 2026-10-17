@@ -1,0 +1,27 @@
+:root { color-scheme: dark; font-family: "Segoe UI", Arial, sans-serif; color: #f5f8fc; background: #0b1017; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 16px; }
+.terminal { max-width: 1000px; margin: 0 auto; padding: 24px; background: #11273e; border: 1px solid #36536c; border-radius: 12px; }
+.terminal-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid #36536c; padding-bottom: 24px; margin-bottom: 24px; }
+h1 { font-size: 22px; margin: 0; letter-spacing: .02em; }
+h1 span { color: #5ed4f4; }
+.terminal-header p { font-size: 12px; text-transform: uppercase; margin: 6px 0 0; color: #b1d5f2; }
+.mes-status { border-radius: 20px; padding: 5px 10px; background: #1e3c54; color: #b1d5f2; font-size: 13px; white-space: nowrap; }
+.mes-status.linked { background: #103f38; color: #80efbe; }
+h2 { font-size: 16px; text-transform: uppercase; margin: 20px 0 12px; }
+form { background: #203c57; border-radius: 6px; padding: 14px; }
+label { display: block; margin-bottom: 8px; color: #c0e0f8; font-size: 14px; }
+.lookup-controls { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; border: 1px solid #bacddd; background: #fff; color: #123650; }
+input, button { font: inherit; font-size: 18px; border-radius: 6px; padding: 12px; min-height: 48px; }
+button { border: 1px solid #499ed2; background: #287eb2; color: #fff; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: .65; cursor: wait; }
+:focus-visible { outline: 3px solid #6ce3ff; outline-offset: 3px; }
+#lookup-feedback { color: #c0e0f8; min-height: 24px; overflow-wrap: anywhere; }
+#lookup-feedback.error { color: #ffcebc; }
+dl { margin: 0; }
+dl > div { display: flex; justify-content: space-between; gap: 24px; padding: 20px 0; border-bottom: 1px solid #2d4b65; }
+dt { color: #b1d5f2; }
+dd { margin: 0; text-align: right; font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
+footer { font-size: 12px; line-height: 1.8; color: #b1d5f2; border-top: 1px solid #36536c; margin-top: 24px; padding-top: 16px; }
+@media (max-width: 540px) { body { padding: 8px; } .terminal { padding: 16px; } .lookup-controls { flex-direction: column; } h1 { font-size: 18px; } dl > div { gap: 12px; } }

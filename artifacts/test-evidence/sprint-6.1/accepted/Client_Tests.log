@@ -1,0 +1,25 @@
+✔ scanner value preserved, encoded GET, text-only rendering and stale-data clearance (5.4601ms)
+✔ invalid input "" makes no request (1.2391ms)
+✔ invalid input "   " makes no request (1.0103ms)
+✔ invalid input "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" makes no request (1.7779ms)
+✔ invalid input "PO\u0001" makes no request (2.1715ms)
+✔ HTTP 400 feedback (2.248ms)
+✔ HTTP 401 feedback (1.4596ms)
+✔ HTTP 403 feedback (1.5925ms)
+✔ HTTP 404 feedback (1.2799ms)
+✔ HTTP 500 feedback (3.5513ms)
+✔ HTTP 503 feedback (1.0039ms)
+✔ unexpected DTO null (1.7163ms)
+✔ unexpected DTO {} (1.2981ms)
+✔ unexpected DTO {"orderNumber":"PO-1","productCode":"P","productName":"<img src=x onerror=alert(1)>","recipeId":"R","quantity":12.125,"status":99} (1.2157ms)
+✔ unexpected DTO {"orderNumber":"PO-1","productCode":"P","productName":"<img src=x onerror=alert(1)>","recipeId":"R","quantity":"12","status":1} (1.286ms)
+✔ network failure stays generic and retry remains possible (0.9946ms)
+✔ duplicate submit is blocked while retrieval is pending (0.999ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 201.3485

@@ -1,0 +1,109 @@
+WP-6 Sprint 6.1 VECTRONIX MX-200 implementation and verification report
+Execution date: 2026-10-16, America/New_York
+Disposition: Local implementation verified; Team acceptance and Git integration pending.
+
+1. Git baseline and branch
+Repository origin: https://github.com/SyncBridge-Core/SyncBridge.git
+Accepted baseline and final HEAD: 60dbecd1dfb94df8cc70fe77ee22cb5d5411738f.
+Created and checked out codex/wp6-sprint6.1-shop-floor-rest-demo directly from that exact commit.
+Preflight: initial checkout was codex/wp6-sprint7-ssrs-ebr at the same commit, synchronized with its remote; index empty. Local main and origin/main matched, divergence 0/0. Live git ls-remote confirmed remote main and Sprint 7 at the accepted commit and no Sprint 6.1 branch. Local branch inventory also contained no Sprint 6.1 branch. Remote origin/HEAD still points to an older feature branch; the explicit accepted commit was used.
+The first sandboxed remote read and branch checkout needed expanded execution permissions; authorized retries succeeded. No reset, clean, stash, rebase, commit, merge, push or publication occurred. Main and Sprint 7 refs remain unchanged.
+
+2. Working-tree preservation
+Initial tracked edit: src/SyncBridge.Core/Properties/launchSettings.json changes the HTTPS bind address from localhost to 0.0.0.0. It was retained byte-for-byte and is not Sprint 6.1 implementation.
+Preservation_Before.json inventories 55 pre-existing untracked files plus ignored local files/build products and the launch edit. Preservation_After.json confirms all 57 protected files unchanged: the 55 historical untracked files, ignored SyncBridge.Core.csproj.user, and launchSettings.json. No evidence files were moved or removed. Build outputs under bin/obj were regenerated. Ignored .vs content was inventoried, not modified intentionally; the hidden .suo metadata read reported an error, so no complete .vs byte-preservation claim is made.
+Development_Before.json and Development_After.json match for all 15 table row hashes/counts, retained A3 evidence, and migration history. Database_Preservation.json records all three comparisons true. No credential provisioning or user-secrets writes occurred. Protected legacy SyncBridge_Core was not accessed.
+
+3. Sources and implementation inspected
+Authoritative documents read from C:/Engineering/Golden_Documents: SyncBridge_Core_SRS_Corrected.docx, SyncBridge_Core_SDD_Corrected.docx, Indy-1-SyncBridge-DBDS_v2.docx, WP-6_Implementation_Execution_Plan_Realigned.docx. Read docs/WP6_Sprint6_to_Sprint7_Engineering_Handoff.docx and prior Sprint 6 requirements/evidence matrix. Source_Documents.json compares current source hashes with accepted Sprint 6 evidence.
+The current realigned plan hash differs from Sprint 6's recorded hash; the current document includes a Sprint 8 REST documentation/Postman add-on. This execution did not alter that file or implement the add-on. SRS, SDD, amended DBDS and prior Sprint 5 handoff hashes match the accepted evidence. The separately named Sprint 6.1 Shop-Floor REST Demo Application document was not supplied or located in the inspected Golden Documents/Sprint_6_1 folder; the explicitly executed Sprint 6.1 prompt supplied the bounded scope.
+Inspected source files (paths relative to repository root):
+  src/SyncBridge.Core/Controllers/ManufacturingController.cs
+  src/SyncBridge.Core/Program.cs
+  src/SyncBridge.Core/Pages/Authentication.cshtml and Authentication.cshtml.cs
+  src/SyncBridge.Core/Pages/ManufacturingPageModel.cs
+  src/SyncBridge.Core/Pages/Shared/_Layout.cshtml
+  src/SyncBridge.Core/Pages/_ViewImports.cshtml
+  src/SyncBridge.Core/Properties/launchSettings.json
+  src/SyncBridge.Core/appsettings.json and appsettings.Development.json
+  src/SyncBridge.Core/SyncBridge.Core.csproj
+  src/SyncBridge.Core.Application/Contracts/Identity/AuthenticatedActor.cs
+  src/SyncBridge.Core.Application/Services/ProductionOrderService.cs
+  src/SyncBridge.Core.Application/Services/ApplicationOperation.cs
+  src/SyncBridge.Core.Application/Services/OperationResult.cs
+  src/SyncBridge.Core.Domain/ValueObjects/ProductionOrderNumber.cs
+  src/SyncBridge.Core.Domain/Enumerations/ProductionOrderStatus.cs
+  src/SyncBridge.Core.Infrastructure/Identity/ManufacturingIdentity.cs
+  tests/SyncBridge.Core.Tests/RazorWorkflowTests.cs
+  tests/SyncBridge.Core.Tests/RestApiTests.cs
+  tests/SyncBridge.Core.Tests/SecuredServiceFixture.cs
+  tests/SyncBridge.Core.Tests/SqlServerTestDatabase.cs
+  tests/SyncBridge.Core.Tests/SyncBridge.Core.Tests.csproj
+  tools/SyncBridge.DevelopmentIdentity/Program.cs and ApprovedDevelopmentAccounts.json
+  docs/sprint-5/Development_Identity_Setup.md and Isolated_SQL_Test_Setup.md
+  artifacts/test-evidence/sprint-5/batch-a/A4_ReadOnly_Preservation.ps1
+
+4. Actual REST contract and security
+GET /api/production-orders/{orderNumber}, ManufacturingController.GetOrder, delegates to existing ProductionOrderService.GetAsync. Default MVC System.Text.Json behavior produces camelCase fields; enums are numeric, with no string-enum converter configured.
+ProductionOrderView fields: orderNumber (string), productCode (string), productName (string), recipeId (string), quantity (decimal JSON number), status (integer enum). Status values: 0 Planned, 1 Released, 2 InProcess, 3 Completed, 4 Cancelled. No equipment or MES-connection field exists in this DTO.
+API: cookie authentication; current active trusted actor required. Existing service read policy permits Production Operator, Production Supervisor or Quality Engineer; Administrator alone is forbidden. Anonymous API calls return JSON 401 without redirect. Controlled outcomes map to 400 invalid input, 401 unauthenticated, 403 forbidden, 404 missing, 422 business rejection and 503 technical failure; unhandled API faults are generic 500 ProblemDetails. Order text must be nonblank and at most 40 characters; the service does not impose a PO-number regex or trim the value. GET does not mutate records.
+The new page inherits authenticated/no-store ManufacturingPageModel, resolves the actor through the existing IActorContext, and returns server-side 403 unless IsOperator is true. It does not use role claims from the cookie: the accepted identity implementation deliberately trusts current server configuration and active AppUser association instead.
+Live --verify confirms demo.operator is active with Production Operator and Production Supervisor; demo.quality has Quality Engineer. Identity.log records only public identities/roles.
+
+5. Visual reference
+Used the supplied codex-clipboard-9119472a-6a94-4123-9780-dd4f904c96de.png. Implemented its navy terminal, cyan VECTRONIX/MX-200 branding, steel-blue lookup panel, white input, blue Retrieve button, MES badge and ruled inline context rows. No screenshot sample manufacturing values were copied. Equipment appears only as fixed OEM identity in the footer. MES Linked appears after successful real retrieval, rather than claiming connectivity before retrieval.
+
+6. Files added or changed
+Production additions:
+  src/SyncBridge.Core/Pages/ShopFloor.cshtml
+  src/SyncBridge.Core/Pages/ShopFloor.cshtml.cs
+  src/SyncBridge.Core/wwwroot/css/shop-floor.css
+  src/SyncBridge.Core/wwwroot/js/shop-floor.js
+Production modifications:
+  src/SyncBridge.Core/Pages/Authentication.cshtml (encoded hidden return URL)
+  src/SyncBridge.Core/Program.cs (validated local return URL; fallback /)
+Tests added:
+  tests/SyncBridge.Core.Tests/ShopFloorTests.cs
+  tests/shop-floor-client.test.cjs
+Evidence and this report added under artifacts/test-evidence/sprint-6.1 and docs/sprint-6.1.
+The pre-existing launchSettings.json edit remains separately identified.
+
+7. Route and behavior
+Route: /shop-floor. Verified local URL: https://localhost:7099/shop-floor.
+Standalone OEM Razor page with one plain text input, one Retrieve button and one inline context panel. Native form submit handles Enter as well as button clicks. No scanner interception/library, casing transformation or trimming. Input regains focus and selection after retrieval. Invalid/empty/control-character input is rejected clearly. Encoded values are sent unchanged to the API. Duplicate pending submissions are blocked; requests time out after 15 seconds. Old results are cleared before another retrieval. Feedback distinguishes invalid input, missing orders, expired sessions, forbidden access, unexpected responses and other failures. Values use textContent only.
+The existing cookie login previously always redirected to /. The small Presentation change accepts only .NET-validated local return URLs, preserving / when absent/unsafe. Existing cookie, antiforgery, rate-limit, credential and API policies remain in place.
+
+8. Real HTTP and persisted context evidence
+The shipped JavaScript calls fetch(data-api-url + encodeURIComponent(number)), GET, credentials same-origin, cache no-store, redirect error, Accept application/json. The page has no order service/repository/SQL dependency.
+After the user signed in, browser input PO-DEMO-001 + Enter retrieved actual accepted persisted context: PRODUCT-DEMO-001, Fictional Demonstration Product, recipe 10000000-0000-0000-0000-000000000001, quantity 100, status Planned. Live_Order.json records the six-field raw response (quantity 100.000). Live_HTTP.json verifies real HTTPS/cookie login return and operator HMI/API 200; Quality HMI 403 while API remains 200. Verify-LiveHmi.ps1 uses private existing credentials without persisting them and checks missing order 404 and excessive length 400. TestServer tests independently compare retrieved DTO to repository-persisted scenario data.
+
+9. Build and test execution
+dotnet build src/SyncBridge.Core.slnx --no-restore --disable-build-servers: succeeded, 0 warnings, 0 errors (Build.log).
+Focused ShopFloorTests: 12 passed, 0 failed, 0 skipped (Focused.log/Focused.trx); this invocation also compiled the added C# tests successfully.
+Full dotnet test --no-build --no-restore: 314 passed, 0 failed, 0 skipped; 296 non-SQL and all 18 opted-in live SQL tests (Regression.log/Regression.trx/Test_Catalog.json). Focused tests are included in these 314, not additional unique tests.
+node --test tests/shop-floor-client.test.cjs: 17 passed, 0 failed, 0 skipped (Client_Tests.log), rerun after final badge wording adjustment. Covers encoded exact scanner values, safe text rendering, stale-data clearing, invalid inputs, 400/401/403/404/500/503, malformed DTO, network error and duplicate submit.
+Total unique automated cases: 331, all passed. The final client-only badge wording adjustment was verified with the 17 client cases and actual browser reload; the full .NET suite preceded that wording-only change.
+SQL opt-in used existing SYNCBRIDGE_APPROVED_LIVE_SQL=1 plus the exact disposable localhost SyncBridgeCore_IntegrationTests connection, existing ownership-marker/identity/lock guards and existing disposal code. SQL_Disposal.json confirms zero databases with that name after the suite. No extra independent SQL repeat was run for this increment.
+
+10. Desktop browser and responsive evidence
+Codex in-app desktop browser: unauthenticated redirect to /authentication?ReturnUrl=%2Fshop-floor; after user login, returned to HMI. Enter and button retrieval succeeded; unknown order displayed clear not-found feedback and hid stale results; empty input showed validation feedback. Screenshots: Hmi_Desktop.png, Hmi_Tablet_Viewport.png (800x1280 viewport), Hmi_Narrow.png (390x844), Hmi_NotFound.png. DOM checks showed scrollWidth == innerWidth at 800 and 390 pixels. Temporary viewport override reset afterward; successful HMI left open.
+Physical Android tablet: NOT EXECUTED. Physical keyboard-wedge barcode scanner: NOT EXECUTED. Browser typing/Enter demonstrates the input path only. No physical-device or formal accessibility/performance certification is claimed.
+
+11. Security and architecture review
+No new endpoint/controller/package/framework; no Domain/Application/Infrastructure/schema/migration/seed changes. No manufacturing mutation controls, signatures, equipment verification, batch authorization/start/progression, quality disposition, deviations or SSRS/EBR implementation. No direct data access from HMI. Existing API authorization remains unchanged and exercised across all test roles. Login external/protocol-relative/backslash return URLs fall back to /; antiforgery and current account validation remain active. All displayed API values enter text nodes; diagnostic bodies are not shown. No TLS certificate-validation bypass or HTTP fallback was added. The accepted local SQL test/development certificate settings were reused. git diff --check passed.
+
+12. Requirements and design traceability
+FR-001 User Authentication and Authorization: inherited cookie authentication, live trusted Operator page restriction, negative role/revocation tests, safe login return; existing API roles preserved.
+FR-002 Production Order Management: read-only persisted six-field order context; HttpRetrieval test and live PO-DEMO-001; no management mutations added.
+FR-012 REST API Services: actual same-origin GET to accepted route; existing controller/service/DTO reused; browser and live HTTPS evidence.
+NFR-001 Security: trusted role resolution, no-store, local redirect validation, encoded route value, safe text rendering, generic failures; focused/client/full security regressions.
+NFR-004 Usability: navy reference, labeled plain input, 48px controls, Enter/focus/repeated entry, inline feedback, narrow/tablet viewport checks. Physical Android/scanner evidence pending.
+NFR-005 Maintainability: four small Presentation additions and two login edits; no dependencies; existing service and test infrastructure reused.
+ADR-002 ASP.NET Core Razor Pages: /shop-floor Razor page with thin page model.
+ADR-005 REST APIs: existing HTTP/JSON route and shared Application authorization/services; no parallel backend or persistence path.
+ADR-009 Dependency Injection: existing IActorContext resolution through accepted base-page DI; existing controller/service composition unchanged.
+
+13. Final inventory and acceptance considerations
+Final_Git_Inventory.txt records tracked edits, all new implementation/tests/evidence/report paths and preserved untracked/ignored paths. Historical untracked artifacts remain under sprint-4, sprint-5, sprint-6/git-closure and docs; ignored .vs, bin/obj and csproj.user remain present. Index remains empty. Sprint 7 and main refs unchanged. Work is uncommitted and unpublished.
+Team considerations: physical Android/scanner demonstration remains pending; the separately named Sprint 6.1 application document was unavailable; the external realigned plan differs from the previously recorded hash and includes the later Sprint 8 add-on. No implementation scope expansion was taken from that add-on. The process-only development SQL connection was necessary because stored app connection configuration was absent; it must be supplied when starting the application again. Existing user secrets and all accepted demo data were retained.
+No unresolved implementation/test failure. Team acceptance and any later commit/merge/push require separate authorization.
