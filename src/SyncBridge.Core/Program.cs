@@ -105,7 +105,8 @@ app.MapPost("/authentication/login", async (HttpContext context, IAntiforgery an
     if (identity is null) return Results.Text("Sign in failed. Check your credentials and active account access.", statusCode: StatusCodes.Status401Unauthorized);
     var principal = new ClaimsPrincipal(new ClaimsIdentity([new Claim(ClaimTypes.NameIdentifier, identity.UserId), new Claim(ClaimTypes.Name, identity.UserName)], CookieAuthenticationDefaults.AuthenticationScheme));
     await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties { IsPersistent = false });
-    return Results.LocalRedirect("/");
+    var returnUrl = form["returnUrl"].ToString();
+    return Results.LocalRedirect(Microsoft.AspNetCore.Http.HttpResults.RedirectHttpResult.IsLocalUrl(returnUrl) ? returnUrl : "/");
 }).AllowAnonymous().RequireRateLimiting("login");
 
 app.MapPost("/authentication/logout", async (HttpContext context, IAntiforgery antiforgery) =>

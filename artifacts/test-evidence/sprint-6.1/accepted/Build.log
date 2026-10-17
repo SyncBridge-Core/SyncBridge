@@ -1,0 +1,11 @@
+  SyncBridge.Core.Domain -> [repository]\src\SyncBridge.Core.Domain\bin\Debug\net10.0\SyncBridge.Core.Domain.dll
+  SyncBridge.Core.Application -> [repository]\src\SyncBridge.Core.Application\bin\Debug\net10.0\SyncBridge.Core.Application.dll
+  SyncBridge.Core.Infrastructure -> [repository]\src\SyncBridge.Core.Infrastructure\bin\Debug\net10.0\SyncBridge.Core.Infrastructure.dll
+  SyncBridge.Core -> [repository]\src\SyncBridge.Core\bin\Debug\net10.0\SyncBridge.Core.dll
+  SyncBridge.Core.Tests -> [repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:26.94

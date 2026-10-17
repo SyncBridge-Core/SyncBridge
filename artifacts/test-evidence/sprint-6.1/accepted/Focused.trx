@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="d41cfd6a-e859-4e79-833d-3239b241e63d" name="[local-test-runner] 2026-10-16 17:47:01" runUser="[local-test-user]" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-16T17:47:01.7212889-04:00" queuing="2026-10-16T17:47:01.7212901-04:00" start="2026-10-16T17:46:54.4587730-04:00" finish="2026-10-16T17:47:10.3361188-04:00" />
+  <TestSettings name="default" id="1f575f50-45cc-4045-a7ca-0fe6c0a3951e">
+    <Deployment runDeploymentRoot="Carlos_SB-DEV-01_2026-10-16_17_47_01" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="5adbbc83-1de0-4e6b-a4a7-2ad24446c352" testId="d0080f08-0b85-30d8-93a6-187ce620769e" testName="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;/\\attacker.invalid/&quot;, expected: &quot;/&quot;)" computerName="SB-DEV-01" duration="00:00:00.8087759" startTime="2026-10-16T17:47:04.0687216-04:00" endTime="2026-10-16T17:47:04.8778786-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5adbbc83-1de0-4e6b-a4a7-2ad24446c352" />
+    <UnitTestResult executionId="728250ef-f1b4-43a8-b3d0-e0ec68140f81" testId="fd2d2f75-50ab-133e-4458-3f514a309760" testName="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;test.multirole&quot;, expected: OK)" computerName="SB-DEV-01" duration="00:00:00.7279174" startTime="2026-10-16T17:47:07.6964076-04:00" endTime="2026-10-16T17:47:08.4251962-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="728250ef-f1b4-43a8-b3d0-e0ec68140f81" />
+    <UnitTestResult executionId="922bd3fb-1343-4716-8540-8c705428971d" testId="90b2587e-d237-ab11-dad6-989b7fb3ea3a" testName="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;&quot;, expected: &quot;/&quot;)" computerName="SB-DEV-01" duration="00:00:00.7380056" startTime="2026-10-16T17:47:02.5546993-04:00" endTime="2026-10-16T17:47:03.2917000-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="922bd3fb-1343-4716-8540-8c705428971d" />
+    <UnitTestResult executionId="f42a1bd0-6c9c-4ac8-a63b-e9fc2b16cc75" testId="746ab528-c2ac-83a4-6b32-92c0397eb086" testName="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;/shop-floor?terminal=mx200&quot;, expected: &quot;/shop-floor?terminal=mx200&quot;)" computerName="SB-DEV-01" duration="00:00:05.3965519" startTime="2026-10-16T17:46:56.2432938-04:00" endTime="2026-10-16T17:47:01.6629874-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f42a1bd0-6c9c-4ac8-a63b-e9fc2b16cc75" />
+    <UnitTestResult executionId="08aa1d48-9845-43d2-8cf5-02dd511b2464" testId="312fc97b-e91e-a46f-89c5-073eba5ff29c" testName="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;test.quality&quot;, expected: Forbidden)" computerName="SB-DEV-01" duration="00:00:00.6659532" startTime="2026-10-16T17:47:08.4257268-04:00" endTime="2026-10-16T17:47:09.0922943-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="08aa1d48-9845-43d2-8cf5-02dd511b2464" />
+    <UnitTestResult executionId="f847fbaa-dee4-454a-8c07-5ebafb075452" testId="4bb120b1-67ba-4670-abf2-6c2823c4e1d0" testName="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;/shop-floor&quot;, expected: &quot;/shop-floor&quot;)" computerName="SB-DEV-01" duration="00:00:00.8858495" startTime="2026-10-16T17:47:01.6926336-04:00" endTime="2026-10-16T17:47:02.5520388-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f847fbaa-dee4-454a-8c07-5ebafb075452" />
+    <UnitTestResult executionId="ee2a5f5c-28c6-449d-a2ba-9c0bd8ef923e" testId="ec096271-71e7-9fb5-e11e-fea1f2d6d9a3" testName="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;https://attacker.invalid/&quot;, expected: &quot;/&quot;)" computerName="SB-DEV-01" duration="00:00:00.7745793" startTime="2026-10-16T17:47:03.2920639-04:00" endTime="2026-10-16T17:47:04.0676588-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee2a5f5c-28c6-449d-a2ba-9c0bd8ef923e" />
+    <UnitTestResult executionId="e08b28f7-aa65-40b5-91fd-b245bf837b40" testId="808f974a-3a5f-9c4a-a1dc-b263774f2a97" testName="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;test.admin&quot;, expected: Forbidden)" computerName="SB-DEV-01" duration="00:00:00.7517446" startTime="2026-10-16T17:47:05.5748316-04:00" endTime="2026-10-16T17:47:06.3268070-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e08b28f7-aa65-40b5-91fd-b245bf837b40" />
+    <UnitTestResult executionId="0d094be5-fb13-42c7-8b30-a64f42a8df92" testId="61609a92-eca7-69cc-ee10-4d10e2e6cf95" testName="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;demo.supervisor&quot;, expected: Forbidden)" computerName="SB-DEV-01" duration="00:00:00.7339015" startTime="2026-10-16T17:47:06.3270265-04:00" endTime="2026-10-16T17:47:07.0613941-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d094be5-fb13-42c7-8b30-a64f42a8df92" />
+    <UnitTestResult executionId="d69d7595-6782-41d3-b19e-aaf67eb408b2" testId="61f1360a-bde5-7dfe-5fc7-cc2f393291b3" testName="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;//attacker.invalid/&quot;, expected: &quot;/&quot;)" computerName="SB-DEV-01" duration="00:00:00.6923159" startTime="2026-10-16T17:47:04.8782910-04:00" endTime="2026-10-16T17:47:05.5720561-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d69d7595-6782-41d3-b19e-aaf67eb408b2" />
+    <UnitTestResult executionId="c3bfa999-ae5c-49f3-bb1c-19d2adb549db" testId="61acd81a-f57a-137b-d21e-dedd99a33712" testName="SyncBridge.Core.Tests.ShopFloorTests.HttpRetrieval_UsesPersistedDtoWithoutMutation_AndRevocationBlocksPage" computerName="SB-DEV-01" duration="00:00:01.0661054" startTime="2026-10-16T17:47:09.0930121-04:00" endTime="2026-10-16T17:47:10.1603860-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3bfa999-ae5c-49f3-bb1c-19d2adb549db" />
+    <UnitTestResult executionId="5b96264a-5f7f-48cb-b6b0-418aff96e746" testId="dab5a098-f443-9f51-bda7-983d8b157508" testName="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;demo.operator&quot;, expected: OK)" computerName="SB-DEV-01" duration="00:00:00.6327674" startTime="2026-10-16T17:47:07.0615788-04:00" endTime="2026-10-16T17:47:07.6960285-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b96264a-5f7f-48cb-b6b0-418aff96e746" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;//attacker.invalid/&quot;, expected: &quot;/&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="61f1360a-bde5-7dfe-5fc7-cc2f393291b3">
+      <Execution id="d69d7595-6782-41d3-b19e-aaf67eb408b2" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Login_PreservesOnlySafeLocalReturnUrls" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;https://attacker.invalid/&quot;, expected: &quot;/&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="ec096271-71e7-9fb5-e11e-fea1f2d6d9a3">
+      <Execution id="ee2a5f5c-28c6-449d-a2ba-9c0bd8ef923e" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Login_PreservesOnlySafeLocalReturnUrls" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;/shop-floor&quot;, expected: &quot;/shop-floor&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="4bb120b1-67ba-4670-abf2-6c2823c4e1d0">
+      <Execution id="f847fbaa-dee4-454a-8c07-5ebafb075452" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Login_PreservesOnlySafeLocalReturnUrls" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;test.quality&quot;, expected: Forbidden)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="312fc97b-e91e-a46f-89c5-073eba5ff29c">
+      <Execution id="08aa1d48-9845-43d2-8cf5-02dd511b2464" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Page_EnforcesTrustedOperatorRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;demo.operator&quot;, expected: OK)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="dab5a098-f443-9f51-bda7-983d8b157508">
+      <Execution id="5b96264a-5f7f-48cb-b6b0-418aff96e746" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Page_EnforcesTrustedOperatorRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;/shop-floor?terminal=mx200&quot;, expected: &quot;/shop-floor?terminal=mx200&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="746ab528-c2ac-83a4-6b32-92c0397eb086">
+      <Execution id="f42a1bd0-6c9c-4ac8-a63b-e9fc2b16cc75" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Login_PreservesOnlySafeLocalReturnUrls" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;demo.supervisor&quot;, expected: Forbidden)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="61609a92-eca7-69cc-ee10-4d10e2e6cf95">
+      <Execution id="0d094be5-fb13-42c7-8b30-a64f42a8df92" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Page_EnforcesTrustedOperatorRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;&quot;, expected: &quot;/&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="90b2587e-d237-ab11-dad6-989b7fb3ea3a">
+      <Execution id="922bd3fb-1343-4716-8540-8c705428971d" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Login_PreservesOnlySafeLocalReturnUrls" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;test.multirole&quot;, expected: OK)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="fd2d2f75-50ab-133e-4458-3f514a309760">
+      <Execution id="728250ef-f1b4-43a8-b3d0-e0ec68140f81" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Page_EnforcesTrustedOperatorRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Page_EnforcesTrustedOperatorRole(actor: &quot;test.admin&quot;, expected: Forbidden)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="808f974a-3a5f-9c4a-a1dc-b263774f2a97">
+      <Execution id="e08b28f7-aa65-40b5-91fd-b245bf837b40" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Page_EnforcesTrustedOperatorRole" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.HttpRetrieval_UsesPersistedDtoWithoutMutation_AndRevocationBlocksPage" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="61acd81a-f57a-137b-d21e-dedd99a33712">
+      <Execution id="c3bfa999-ae5c-49f3-bb1c-19d2adb549db" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="HttpRetrieval_UsesPersistedDtoWithoutMutation_AndRevocationBlocksPage" />
+    </UnitTest>
+    <UnitTest name="SyncBridge.Core.Tests.ShopFloorTests.Login_PreservesOnlySafeLocalReturnUrls(returnUrl: &quot;/\\attacker.invalid/&quot;, expected: &quot;/&quot;)" storage="c:\engineering\github\syncbridge.core\tests\syncbridge.core.tests\bin\debug\net10.0\syncbridge.core.tests.dll" id="d0080f08-0b85-30d8-93a6-187ce620769e">
+      <Execution id="5adbbc83-1de0-4e6b-a4a7-2ad24446c352" />
+      <TestMethod codeBase="[repository]\tests\SyncBridge.Core.Tests\bin\Debug\net10.0\SyncBridge.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="SyncBridge.Core.Tests.ShopFloorTests" name="Login_PreservesOnlySafeLocalReturnUrls" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="d0080f08-0b85-30d8-93a6-187ce620769e" executionId="5adbbc83-1de0-4e6b-a4a7-2ad24446c352" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd2d2f75-50ab-133e-4458-3f514a309760" executionId="728250ef-f1b4-43a8-b3d0-e0ec68140f81" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90b2587e-d237-ab11-dad6-989b7fb3ea3a" executionId="922bd3fb-1343-4716-8540-8c705428971d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="746ab528-c2ac-83a4-6b32-92c0397eb086" executionId="f42a1bd0-6c9c-4ac8-a63b-e9fc2b16cc75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="312fc97b-e91e-a46f-89c5-073eba5ff29c" executionId="08aa1d48-9845-43d2-8cf5-02dd511b2464" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4bb120b1-67ba-4670-abf2-6c2823c4e1d0" executionId="f847fbaa-dee4-454a-8c07-5ebafb075452" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec096271-71e7-9fb5-e11e-fea1f2d6d9a3" executionId="ee2a5f5c-28c6-449d-a2ba-9c0bd8ef923e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="808f974a-3a5f-9c4a-a1dc-b263774f2a97" executionId="e08b28f7-aa65-40b5-91fd-b245bf837b40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61609a92-eca7-69cc-ee10-4d10e2e6cf95" executionId="0d094be5-fb13-42c7-8b30-a64f42a8df92" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61f1360a-bde5-7dfe-5fc7-cc2f393291b3" executionId="d69d7595-6782-41d3-b19e-aaf67eb408b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61acd81a-f57a-137b-d21e-dedd99a33712" executionId="c3bfa999-ae5c-49f3-bb1c-19d2adb549db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dab5a098-f443-9f51-bda7-983d8b157508" executionId="5b96264a-5f7f-48cb-b6b0-418aff96e746" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="12" executed="12" passed="12" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.43]   Discovering: SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.70]   Discovered:  SyncBridge.Core.Tests&#xD;
+[xUnit.net 00:00:00.78]   Starting:    SyncBridge.Core.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: [repository]\src\SyncBridge.Core&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:14.76]   Finished:    SyncBridge.Core.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
