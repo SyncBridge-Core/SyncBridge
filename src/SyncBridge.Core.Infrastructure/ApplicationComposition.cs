@@ -5,6 +5,8 @@ using SyncBridge.Core.Application.Contracts.Identity;
 using SyncBridge.Core.Application.Services;
 using SyncBridge.Core.Infrastructure.Identity;
 using SyncBridge.Core.Infrastructure.Persistence;
+using SyncBridge.Core.Application.Contracts.Reporting;
+using SyncBridge.Core.Infrastructure.Reporting;
 
 namespace SyncBridge.Core.Infrastructure;
 
@@ -24,5 +26,10 @@ public static class ApplicationComposition
         services.AddScoped<ApplicationOperation>();
         services.AddScoped<ProductionOrderService>();
         services.AddScoped<BatchService>();
+        services.AddScoped<IReportBatchReader, ReportBatchReader>();
+        services.AddScoped<BatchReportService>();
+        services.Configure<SsrsReportingOptions>(configuration.GetSection("Reporting"));
+        services.AddHttpClient<IBatchReportRenderer, SsrsReportRenderer>(client => client.Timeout = TimeSpan.FromSeconds(45))
+            .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler { UseDefaultCredentials = true, AllowAutoRedirect = false, UseProxy = false });
     }
 }

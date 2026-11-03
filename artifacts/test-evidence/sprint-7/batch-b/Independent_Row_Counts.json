@@ -1,0 +1,100 @@
+[
+  {
+    "Batch": "A3-B-20261014",
+    "Dataset": "Identification",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "A3-B-20261014",
+    "Dataset": "Workflow",
+    "IndependentRows": 2,
+    "RenderedRows": 2,
+    "Pass": true
+  },
+  {
+    "Batch": "A3-B-20261014",
+    "Dataset": "Materials",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "A3-B-20261014",
+    "Dataset": "Equipment",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "A3-B-20261014",
+    "Dataset": "Deviations",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "A3-B-20261014",
+    "Dataset": "Signatures",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "A3-B-20261014",
+    "Dataset": "Audit",
+    "IndependentRows": 17,
+    "RenderedRows": 17,
+    "Pass": true
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Dataset": "Identification",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Dataset": "Workflow",
+    "IndependentRows": 2,
+    "RenderedRows": 2,
+    "Pass": true
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Dataset": "Materials",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Dataset": "Equipment",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Dataset": "Deviations",
+    "IndependentRows": 1,
+    "RenderedRows": 1,
+    "Pass": true
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Dataset": "Signatures",
+    "IndependentRows": 2,
+    "RenderedRows": 2,
+    "Pass": true
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Dataset": "Audit",
+    "IndependentRows": 18,
+    "RenderedRows": 18,
+    "Pass": true
+  }
+]

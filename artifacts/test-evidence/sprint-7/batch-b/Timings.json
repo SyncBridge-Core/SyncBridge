@@ -1,0 +1,22 @@
+[
+  {
+    "Batch": "A3-B-20261014",
+    "Format": "Browser",
+    "Milliseconds": 5895.6486
+  },
+  {
+    "Batch": "A3-B-20261014",
+    "Format": "Pdf",
+    "Milliseconds": 3834.0811
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Format": "Browser",
+    "Milliseconds": 1244.1362
+  },
+  {
+    "Batch": "B-DEMO-20261023-001",
+    "Format": "Pdf",
+    "Milliseconds": 1461.3382
+  }
+]

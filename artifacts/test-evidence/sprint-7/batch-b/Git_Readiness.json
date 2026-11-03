@@ -1,0 +1,16 @@
+{
+  "Sprint6IsAncestorOfMain": true,
+  "Sprint61IsAncestorOfMain": true,
+  "Branch": "codex/wp6-sprint7-ssrs-ebr",
+  "Head": "60dbecd1dfb94df8cc70fe77ee22cb5d5411738f",
+  "LocalMain": "c432dd9b604b1d6022c8a0b01e5e2a0e0de0e3f0",
+  "RemoteTrackingMain": "c432dd9b604b1d6022c8a0b01e5e2a0e0de0e3f0",
+  "RemoteTrackingSprint7": "60dbecd1dfb94df8cc70fe77ee22cb5d5411738f",
+  "LiveRemoteRefs": [
+    "60dbecd1dfb94df8cc70fe77ee22cb5d5411738f\trefs/heads/codex/wp6-sprint7-ssrs-ebr",
+    "c432dd9b604b1d6022c8a0b01e5e2a0e0de0e3f0\trefs/heads/main"
+  ],
+  "StagedPaths": [],
+  "TrackedWhitespacePass": true,
+  "PublicationGate": "Pending Sam review and formal Team Batch B acceptance; no staging/commit/merge/push performed"
+}

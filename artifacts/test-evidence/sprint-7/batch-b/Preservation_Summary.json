@@ -1,0 +1,32 @@
+{
+  "ProtectedEngineeringFiles": 310,
+  "ProtectedFailures": [],
+  "BuildCacheFiles": 1910,
+  "BuildCacheChanged": 0,
+  "ManufacturingFingerprintRows": 16,
+  "ManufacturingSnapshotsIdentical": true,
+  "SsrsSettingsIdentical": true,
+  "PermissionsIdentical": true,
+  "DatasetInstances": 14,
+  "Records": 50,
+  "Fields": 522,
+  "IndependentCountsPass": true,
+  "Tests": {
+    "total": "319",
+    "executed": "319",
+    "passed": "319",
+    "failed": "0",
+    "error": "0",
+    "timeout": "0",
+    "aborted": "0",
+    "inconclusive": "0",
+    "passedButRunAborted": "0",
+    "notRunnable": "0",
+    "notExecuted": "0",
+    "disconnected": "0",
+    "warning": "0",
+    "completed": "0",
+    "inProgress": "0",
+    "pending": "0"
+  }
+}
