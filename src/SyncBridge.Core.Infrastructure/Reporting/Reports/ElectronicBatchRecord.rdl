@@ -1,0 +1,1443 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>Completed-batch EBR from the approved normalized operational evidence. Read-only SSRS rendering.</Description>
+  <DataSources>
+    <DataSource Name="Manufacturing">
+      <DataSourceReference>/SyncBridge/SyncBridgeCoreReadOnly</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Identification">
+      <Query>
+        <DataSourceName>Manufacturing</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BatchId">
+            <Value>=Parameters!BatchId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT COALESCE(CONVERT(nvarchar(max),b.BatchId,127),N'Not recorded') AS [BatchId],
+ COALESCE(CONVERT(nvarchar(max),b.BatchNumber,127),N'Not recorded') AS [BatchNumber],
+ COALESCE(CONVERT(nvarchar(max),b.Status,127),N'Not recorded') AS [BatchStatus],
+ COALESCE(CONVERT(nvarchar(max),b.CreatedAt,127),N'Not recorded') AS [CreatedAt],
+ COALESCE(CONVERT(nvarchar(max),b.StartedAt,127),N'Not recorded') AS [StartedAt],
+ COALESCE(CONVERT(nvarchar(max),b.CompletedAt,127),N'Not recorded') AS [CompletedAt],
+ COALESCE(CONVERT(nvarchar(max),b.FinalDisposition,127),N'Not recorded') AS [FinalDisposition],
+ COALESCE(CONVERT(nvarchar(max),o.OrderId,127),N'Not recorded') AS [OrderId],
+ COALESCE(CONVERT(nvarchar(max),o.OrderNumber,127),N'Not recorded') AS [OrderNumber],
+ COALESCE(CONVERT(nvarchar(max),o.ProductCode,127),N'Not recorded') AS [ProductCode],
+ COALESCE(CONVERT(nvarchar(max),o.ProductName,127),N'Not recorded') AS [ProductName],
+ COALESCE(CONVERT(nvarchar(max),o.Quantity,127),N'Not recorded') AS [PlannedQuantity],
+ COALESCE(CONVERT(nvarchar(max),o.Status,127),N'Not recorded') AS [OrderStatus],
+ COALESCE(CONVERT(nvarchar(max),r.RecipeId,127),N'Not recorded') AS [RecipeId],
+ COALESCE(CONVERT(nvarchar(max),r.RecipeCode,127),N'Not recorded') AS [RecipeCode],
+ COALESCE(CONVERT(nvarchar(max),r.Name,127),N'Not recorded') AS [RecipeName],
+ COALESCE(CONVERT(nvarchar(max),r.Version,127),N'Not recorded') AS [RecipeVersion],
+ COALESCE(CONVERT(nvarchar(max),SUSER_SNAME(),127),N'Not recorded') AS [ExecutionIdentity]
+FROM dbo.Batch b JOIN dbo.ProductionOrder o ON o.OrderId=b.OrderId JOIN dbo.Recipe r ON r.RecipeId=o.RecipeId
+WHERE b.BatchId=TRY_CONVERT(uniqueidentifier,@BatchId) AND DATALENGTH(CONVERT(nvarchar(max),@BatchId))=72 AND b.Status=N'Completed'
+ORDER BY b.BatchId;</CommandText>
+        <Timeout>30</Timeout>
+      </Query>
+      <Fields>
+        <Field Name="BatchId">
+          <DataField>BatchId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BatchNumber">
+          <DataField>BatchNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BatchStatus">
+          <DataField>BatchStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CreatedAt">
+          <DataField>CreatedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartedAt">
+          <DataField>StartedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompletedAt">
+          <DataField>CompletedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinalDisposition">
+          <DataField>FinalDisposition</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderId">
+          <DataField>OrderId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderNumber">
+          <DataField>OrderNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProductCode">
+          <DataField>ProductCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProductName">
+          <DataField>ProductName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlannedQuantity">
+          <DataField>PlannedQuantity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderStatus">
+          <DataField>OrderStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RecipeId">
+          <DataField>RecipeId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RecipeCode">
+          <DataField>RecipeCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RecipeName">
+          <DataField>RecipeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RecipeVersion">
+          <DataField>RecipeVersion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExecutionIdentity">
+          <DataField>ExecutionIdentity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Workflow">
+      <Query>
+        <DataSourceName>Manufacturing</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BatchId">
+            <Value>=Parameters!BatchId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT COALESCE(CONVERT(nvarchar(max),s.StepNumber,127),N'Not recorded') AS [StepNumber],
+ COALESCE(CONVERT(nvarchar(max),s.StepExecutionId,127),N'Not recorded') AS [StepExecutionId],
+ COALESCE(CONVERT(nvarchar(max),s.RecipeStepId,127),N'Not recorded') AS [RecipeStepId],
+ COALESCE(CONVERT(nvarchar(max),r.Name,127),N'Not recorded') AS [StepName],
+ COALESCE(CONVERT(nvarchar(max),r.Instructions,127),N'Not recorded') AS [Instructions],
+ COALESCE(CONVERT(nvarchar(max),r.RequiresSignature,127),N'Not recorded') AS [RequiresSignature],
+ COALESCE(CONVERT(nvarchar(max),s.Status,127),N'Not recorded') AS [ExecutionStatus],
+ COALESCE(CONVERT(nvarchar(max),s.StartedAt,127),N'Not recorded') AS [StartedAt],
+ COALESCE(CONVERT(nvarchar(max),s.CompletedAt,127),N'Not recorded') AS [CompletedAt],
+ COALESCE(CONVERT(nvarchar(max),s.CompletedByUserId,127),N'Not recorded') AS [CompletedByUserId],
+ COALESCE(CONVERT(nvarchar(max),u.DisplayName,127),N'Not recorded') AS [CompletedByName],
+ COALESCE(CONVERT(nvarchar(max),s.RecordedData,127),N'Not recorded') AS [RecordedData]
+FROM dbo.Batch b JOIN dbo.BatchStepExecution s ON s.BatchId=b.BatchId JOIN dbo.RecipeStep r ON r.RecipeStepId=s.RecipeStepId LEFT JOIN dbo.AppUser u ON u.UserId=s.CompletedByUserId
+WHERE b.BatchId=TRY_CONVERT(uniqueidentifier,@BatchId) AND DATALENGTH(CONVERT(nvarchar(max),@BatchId))=72 AND b.Status=N'Completed'
+ORDER BY s.StepNumber,s.StepExecutionId;</CommandText>
+        <Timeout>30</Timeout>
+      </Query>
+      <Fields>
+        <Field Name="StepNumber">
+          <DataField>StepNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StepExecutionId">
+          <DataField>StepExecutionId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RecipeStepId">
+          <DataField>RecipeStepId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StepName">
+          <DataField>StepName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Instructions">
+          <DataField>Instructions</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RequiresSignature">
+          <DataField>RequiresSignature</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExecutionStatus">
+          <DataField>ExecutionStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartedAt">
+          <DataField>StartedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompletedAt">
+          <DataField>CompletedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompletedByUserId">
+          <DataField>CompletedByUserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompletedByName">
+          <DataField>CompletedByName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RecordedData">
+          <DataField>RecordedData</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Materials">
+      <Query>
+        <DataSourceName>Manufacturing</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BatchId">
+            <Value>=Parameters!BatchId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT COALESCE(CONVERT(nvarchar(max),v.VerificationId,127),N'Not recorded') AS [VerificationId],
+ COALESCE(CONVERT(nvarchar(max),v.MaterialId,127),N'Not recorded') AS [MaterialId],
+ COALESCE(CONVERT(nvarchar(max),m.MaterialCode,127),N'Not recorded') AS [MaterialCode],
+ COALESCE(CONVERT(nvarchar(max),m.Name,127),N'Not recorded') AS [MaterialName],
+ COALESCE(CONVERT(nvarchar(max),v.LotNumber,127),N'Not recorded') AS [LotNumber],
+ COALESCE(CONVERT(nvarchar(max),v.IsAccepted,127),N'Not recorded') AS [IsAccepted],
+ COALESCE(CONVERT(nvarchar(max),v.VerifiedByUserId,127),N'Not recorded') AS [VerifiedByUserId],
+ COALESCE(CONVERT(nvarchar(max),u.DisplayName,127),N'Not recorded') AS [VerifiedByName],
+ COALESCE(CONVERT(nvarchar(max),v.VerifiedAt,127),N'Not recorded') AS [VerifiedAt],
+ COALESCE(CONVERT(nvarchar(max),v.Comments,127),N'Not recorded') AS [Comments]
+FROM dbo.Batch b JOIN dbo.MaterialVerification v ON v.BatchId=b.BatchId JOIN dbo.Material m ON m.MaterialId=v.MaterialId LEFT JOIN dbo.AppUser u ON u.UserId=v.VerifiedByUserId
+WHERE b.BatchId=TRY_CONVERT(uniqueidentifier,@BatchId) AND DATALENGTH(CONVERT(nvarchar(max),@BatchId))=72 AND b.Status=N'Completed'
+ORDER BY v.VerifiedAt,v.VerificationId;</CommandText>
+        <Timeout>30</Timeout>
+      </Query>
+      <Fields>
+        <Field Name="VerificationId">
+          <DataField>VerificationId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaterialId">
+          <DataField>MaterialId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaterialCode">
+          <DataField>MaterialCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaterialName">
+          <DataField>MaterialName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LotNumber">
+          <DataField>LotNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsAccepted">
+          <DataField>IsAccepted</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VerifiedByUserId">
+          <DataField>VerifiedByUserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VerifiedByName">
+          <DataField>VerifiedByName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VerifiedAt">
+          <DataField>VerifiedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Comments">
+          <DataField>Comments</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Equipment">
+      <Query>
+        <DataSourceName>Manufacturing</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BatchId">
+            <Value>=Parameters!BatchId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT COALESCE(CONVERT(nvarchar(max),v.VerificationId,127),N'Not recorded') AS [VerificationId],
+ COALESCE(CONVERT(nvarchar(max),v.EquipmentId,127),N'Not recorded') AS [EquipmentId],
+ COALESCE(CONVERT(nvarchar(max),e.EquipmentCode,127),N'Not recorded') AS [EquipmentCode],
+ COALESCE(CONVERT(nvarchar(max),e.Name,127),N'Not recorded') AS [EquipmentName],
+ COALESCE(CONVERT(nvarchar(max),e.CalibrationDueDate,127),N'Not recorded') AS [CalibrationDueDate],
+ COALESCE(CONVERT(nvarchar(max),v.IsReady,127),N'Not recorded') AS [IsReady],
+ COALESCE(CONVERT(nvarchar(max),v.CalibrationValid,127),N'Not recorded') AS [CalibrationValid],
+ COALESCE(CONVERT(nvarchar(max),v.VerifiedByUserId,127),N'Not recorded') AS [VerifiedByUserId],
+ COALESCE(CONVERT(nvarchar(max),u.DisplayName,127),N'Not recorded') AS [VerifiedByName],
+ COALESCE(CONVERT(nvarchar(max),v.VerifiedAt,127),N'Not recorded') AS [VerifiedAt],
+ COALESCE(CONVERT(nvarchar(max),v.Comments,127),N'Not recorded') AS [Comments]
+FROM dbo.Batch b JOIN dbo.EquipmentVerification v ON v.BatchId=b.BatchId JOIN dbo.Equipment e ON e.EquipmentId=v.EquipmentId LEFT JOIN dbo.AppUser u ON u.UserId=v.VerifiedByUserId
+WHERE b.BatchId=TRY_CONVERT(uniqueidentifier,@BatchId) AND DATALENGTH(CONVERT(nvarchar(max),@BatchId))=72 AND b.Status=N'Completed'
+ORDER BY v.VerifiedAt,v.VerificationId;</CommandText>
+        <Timeout>30</Timeout>
+      </Query>
+      <Fields>
+        <Field Name="VerificationId">
+          <DataField>VerificationId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EquipmentId">
+          <DataField>EquipmentId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EquipmentCode">
+          <DataField>EquipmentCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EquipmentName">
+          <DataField>EquipmentName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CalibrationDueDate">
+          <DataField>CalibrationDueDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsReady">
+          <DataField>IsReady</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CalibrationValid">
+          <DataField>CalibrationValid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VerifiedByUserId">
+          <DataField>VerifiedByUserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VerifiedByName">
+          <DataField>VerifiedByName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VerifiedAt">
+          <DataField>VerifiedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Comments">
+          <DataField>Comments</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Deviations">
+      <Query>
+        <DataSourceName>Manufacturing</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BatchId">
+            <Value>=Parameters!BatchId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT COALESCE(CONVERT(nvarchar(max),d.DeviationId,127),N'Not recorded') AS [DeviationId],
+ COALESCE(CONVERT(nvarchar(max),d.DeviationCode,127),N'Not recorded') AS [DeviationCode],
+ COALESCE(CONVERT(nvarchar(max),d.StepExecutionId,127),N'Not recorded') AS [StepExecutionId],
+ COALESCE(CONVERT(nvarchar(max),d.Description,127),N'Not recorded') AS [Description],
+ COALESCE(CONVERT(nvarchar(max),d.Status,127),N'Not recorded') AS [DeviationStatus],
+ COALESCE(CONVERT(nvarchar(max),d.ReportedByUserId,127),N'Not recorded') AS [ReportedByUserId],
+ COALESCE(CONVERT(nvarchar(max),u.DisplayName,127),N'Not recorded') AS [ReportedByName],
+ COALESCE(CONVERT(nvarchar(max),d.OpenedAt,127),N'Not recorded') AS [OpenedAt],
+ COALESCE(CONVERT(nvarchar(max),d.ReviewComments,127),N'Not recorded') AS [ReviewComments],
+ COALESCE(CONVERT(nvarchar(max),d.FinalDisposition,127),N'Not recorded') AS [FinalDisposition],
+ COALESCE(CONVERT(nvarchar(max),d.ResolvedAt,127),N'Not recorded') AS [ResolvedAt]
+FROM dbo.Batch b JOIN dbo.Deviation d ON d.BatchId=b.BatchId LEFT JOIN dbo.AppUser u ON u.UserId=d.ReportedByUserId
+WHERE b.BatchId=TRY_CONVERT(uniqueidentifier,@BatchId) AND DATALENGTH(CONVERT(nvarchar(max),@BatchId))=72 AND b.Status=N'Completed'
+ORDER BY d.OpenedAt,d.DeviationId;</CommandText>
+        <Timeout>30</Timeout>
+      </Query>
+      <Fields>
+        <Field Name="DeviationId">
+          <DataField>DeviationId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DeviationCode">
+          <DataField>DeviationCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StepExecutionId">
+          <DataField>StepExecutionId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DeviationStatus">
+          <DataField>DeviationStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportedByUserId">
+          <DataField>ReportedByUserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportedByName">
+          <DataField>ReportedByName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OpenedAt">
+          <DataField>OpenedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReviewComments">
+          <DataField>ReviewComments</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinalDisposition">
+          <DataField>FinalDisposition</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ResolvedAt">
+          <DataField>ResolvedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Signatures">
+      <Query>
+        <DataSourceName>Manufacturing</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BatchId">
+            <Value>=Parameters!BatchId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT COALESCE(CONVERT(nvarchar(max),s.SignatureId,127),N'Not recorded') AS [SignatureId],
+ COALESCE(CONVERT(nvarchar(max),s.RelatedRecordType,127),N'Not recorded') AS [RelatedRecordType],
+ COALESCE(CONVERT(nvarchar(max),s.RelatedRecordId,127),N'Not recorded') AS [RelatedRecordId],
+ COALESCE(CONVERT(nvarchar(max),s.UserId,127),N'Not recorded') AS [UserId],
+ COALESCE(CONVERT(nvarchar(max),u.UserName,127),N'Not recorded') AS [UserName],
+ COALESCE(CONVERT(nvarchar(max),u.DisplayName,127),N'Not recorded') AS [DisplayName],
+ COALESCE(CONVERT(nvarchar(max),s.Meaning,127),N'Not recorded') AS [Meaning],
+ COALESCE(CONVERT(nvarchar(max),s.SignedAt,127),N'Not recorded') AS [SignedAt]
+FROM dbo.Batch b JOIN dbo.ElectronicSignature s ON s.BatchId=b.BatchId LEFT JOIN dbo.AppUser u ON u.UserId=s.UserId
+WHERE b.BatchId=TRY_CONVERT(uniqueidentifier,@BatchId) AND DATALENGTH(CONVERT(nvarchar(max),@BatchId))=72 AND b.Status=N'Completed'
+ORDER BY s.SignedAt,s.SignatureId;</CommandText>
+        <Timeout>30</Timeout>
+      </Query>
+      <Fields>
+        <Field Name="SignatureId">
+          <DataField>SignatureId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RelatedRecordType">
+          <DataField>RelatedRecordType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RelatedRecordId">
+          <DataField>RelatedRecordId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserName">
+          <DataField>UserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Meaning">
+          <DataField>Meaning</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SignedAt">
+          <DataField>SignedAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Audit">
+      <Query>
+        <DataSourceName>Manufacturing</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BatchId">
+            <Value>=Parameters!BatchId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT COALESCE(CONVERT(nvarchar(max),a.AuditEventId,127),N'Not recorded') AS [AuditEventId],
+ COALESCE(CONVERT(nvarchar(max),a.UserId,127),N'Not recorded') AS [UserId],
+ COALESCE(CONVERT(nvarchar(max),u.UserName,127),N'Not recorded') AS [UserName],
+ COALESCE(CONVERT(nvarchar(max),u.DisplayName,127),N'Not recorded') AS [DisplayName],
+ COALESCE(CONVERT(nvarchar(max),a.Action,127),N'Not recorded') AS [Action],
+ COALESCE(CONVERT(nvarchar(max),a.AffectedEntity,127),N'Not recorded') AS [AffectedEntity],
+ COALESCE(CONVERT(nvarchar(max),a.AffectedEntityId,127),N'Not recorded') AS [AffectedEntityId],
+ COALESCE(CONVERT(nvarchar(max),a.OccurredAt,127),N'Not recorded') AS [OccurredAt],
+ COALESCE(CONVERT(nvarchar(max),a.ResultingState,127),N'Not recorded') AS [ResultingState],
+ COALESCE(CONVERT(nvarchar(max),a.Details,127),N'Not recorded') AS [Details]
+FROM dbo.Batch b JOIN dbo.AuditEvent a ON a.BatchId=b.BatchId LEFT JOIN dbo.AppUser u ON u.UserId=a.UserId
+WHERE b.BatchId=TRY_CONVERT(uniqueidentifier,@BatchId) AND DATALENGTH(CONVERT(nvarchar(max),@BatchId))=72 AND b.Status=N'Completed'
+ORDER BY a.OccurredAt,a.AuditEventId;</CommandText>
+        <Timeout>30</Timeout>
+      </Query>
+      <Fields>
+        <Field Name="AuditEventId">
+          <DataField>AuditEventId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserName">
+          <DataField>UserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Action">
+          <DataField>Action</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AffectedEntity">
+          <DataField>AffectedEntity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AffectedEntityId">
+          <DataField>AffectedEntityId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OccurredAt">
+          <DataField>OccurredAt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ResultingState">
+          <DataField>ResultingState</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Details">
+          <DataField>Details</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="BatchId">
+      <DataType>String</DataType>
+      <Prompt>Completed batch identity</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="View">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Report content</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>All</Value>
+            <Label>All</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Summary</Value>
+            <Label>Summary</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Deviations</Value>
+            <Label>Deviations</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <AutoRefresh>0</AutoRefresh>
+  <Body>
+    <ReportItems>
+      <Textbox Name="Title">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="SYNCBRIDGE CORE" &amp; vbCrLf &amp; IIF(Parameters!View.Value="Summary","Batch Summary",IIF(Parameters!View.Value="Deviations","Deviation Report","Electronic Batch Record"))</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <Color>#FFFFFF</Color>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Style>
+          <PaddingLeft>7pt</PaddingLeft>
+          <PaddingRight>7pt</PaddingRight>
+          <PaddingTop>5pt</PaddingTop>
+          <PaddingBottom>5pt</PaddingBottom>
+          <BackgroundColor>#19384A</BackgroundColor>
+        </Style>
+        <Top>0in</Top>
+        <Left>0in</Left>
+        <Height>0.85in</Height>
+        <Width>7.5in</Width>
+      </Textbox>
+      <Textbox Name="IdentificationBanner">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Batch " &amp; First(Fields!BatchNumber.Value,"Identification") &amp; "  |  Status: " &amp; First(Fields!BatchStatus.Value,"Identification") &amp; vbCrLf &amp; "Read-only manufacturing evidence. Not recorded denotes a persisted null; flags preserve database values (1 = true, 0 = false)."</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>10pt</FontSize>
+                  <Color>#172B3A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Style>
+          <PaddingLeft>7pt</PaddingLeft>
+          <PaddingRight>7pt</PaddingRight>
+          <PaddingTop>5pt</PaddingTop>
+          <PaddingBottom>5pt</PaddingBottom>
+          <BottomBorder>
+            <Color>#D5E0E6</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </BottomBorder>
+        </Style>
+        <Top>0.92in</Top>
+        <Left>0in</Left>
+        <Height>0.6in</Height>
+        <Width>7.5in</Width>
+      </Textbox>
+      <Tablix Name="IdentificationEvidence">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="IdentificationHeading">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>01  Manufacturing identification and final disposition</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <Color>#FFFFFF</Color>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BackgroundColor>#19384A</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.55in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="IdentificationRecord">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="Batch Id: " &amp; Fields!BatchId.Value &amp; vbCrLf &amp; "Batch Number: " &amp; Fields!BatchNumber.Value &amp; vbCrLf &amp; "Batch Status: " &amp; Fields!BatchStatus.Value &amp; vbCrLf &amp; "Created At: " &amp; Fields!CreatedAt.Value &amp; vbCrLf &amp; "Started At: " &amp; Fields!StartedAt.Value &amp; vbCrLf &amp; "Completed At: " &amp; Fields!CompletedAt.Value &amp; vbCrLf &amp; "Final Disposition: " &amp; Fields!FinalDisposition.Value &amp; vbCrLf &amp; "Order Id: " &amp; Fields!OrderId.Value &amp; vbCrLf &amp; "Order Number: " &amp; Fields!OrderNumber.Value &amp; vbCrLf &amp; "Product Code: " &amp; Fields!ProductCode.Value &amp; vbCrLf &amp; "Product Name: " &amp; Fields!ProductName.Value &amp; vbCrLf &amp; "Planned Quantity: " &amp; Fields!PlannedQuantity.Value &amp; vbCrLf &amp; "Order Status: " &amp; Fields!OrderStatus.Value &amp; vbCrLf &amp; "Recipe Id: " &amp; Fields!RecipeId.Value &amp; vbCrLf &amp; "Recipe Code: " &amp; Fields!RecipeCode.Value &amp; vbCrLf &amp; "Recipe Name: " &amp; Fields!RecipeName.Value &amp; vbCrLf &amp; "Recipe Version: " &amp; Fields!RecipeVersion.Value &amp; vbCrLf &amp; "Execution Identity: " &amp; Fields!ExecutionIdentity.Value</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#172B3A</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BottomBorder>
+                          <Color>#D5E0E6</Color>
+                          <Style>Solid</Style>
+                          <Width>0.5pt</Width>
+                        </BottomBorder>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="IdentificationDetails" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Identification</DataSetName>
+        <NoRowsMessage>No records recorded for this batch.</NoRowsMessage>
+        <KeepTogether>false</KeepTogether>
+        <Top>1.65in</Top>
+        <Left>0in</Left>
+        <Height>0.9in</Height>
+        <Width>7.5in</Width>
+      </Tablix>
+      <Tablix Name="WorkflowEvidence">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="WorkflowHeading">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>02  Ordered workflow execution</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <Color>#FFFFFF</Color>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BackgroundColor>#19384A</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.55in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="WorkflowRecord">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="Step Number: " &amp; Fields!StepNumber.Value &amp; vbCrLf &amp; "Step Execution Id: " &amp; Fields!StepExecutionId.Value &amp; vbCrLf &amp; "Recipe Step Id: " &amp; Fields!RecipeStepId.Value &amp; vbCrLf &amp; "Step Name: " &amp; Fields!StepName.Value &amp; vbCrLf &amp; "Instructions: " &amp; Fields!Instructions.Value &amp; vbCrLf &amp; "Requires Signature: " &amp; Fields!RequiresSignature.Value &amp; vbCrLf &amp; "Execution Status: " &amp; Fields!ExecutionStatus.Value &amp; vbCrLf &amp; "Started At: " &amp; Fields!StartedAt.Value &amp; vbCrLf &amp; "Completed At: " &amp; Fields!CompletedAt.Value &amp; vbCrLf &amp; "Completed By User Id: " &amp; Fields!CompletedByUserId.Value &amp; vbCrLf &amp; "Completed By Name: " &amp; Fields!CompletedByName.Value &amp; vbCrLf &amp; "Recorded Data: " &amp; Fields!RecordedData.Value</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#172B3A</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BottomBorder>
+                          <Color>#D5E0E6</Color>
+                          <Style>Solid</Style>
+                          <Width>0.5pt</Width>
+                        </BottomBorder>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="WorkflowDetails" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Workflow</DataSetName>
+        <NoRowsMessage>No records recorded for this batch.</NoRowsMessage>
+        <KeepTogether>false</KeepTogether>
+        <Top>2.7in</Top>
+        <Left>0in</Left>
+        <Height>0.9in</Height>
+        <Width>7.5in</Width>
+        <Visibility>
+          <Hidden>=Parameters!View.Value&lt;&gt;"All"</Hidden>
+        </Visibility>
+      </Tablix>
+      <Tablix Name="MaterialsEvidence">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="MaterialsHeading">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>03  Material verification evidence</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <Color>#FFFFFF</Color>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BackgroundColor>#19384A</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.55in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="MaterialsRecord">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="Verification Id: " &amp; Fields!VerificationId.Value &amp; vbCrLf &amp; "Material Id: " &amp; Fields!MaterialId.Value &amp; vbCrLf &amp; "Material Code: " &amp; Fields!MaterialCode.Value &amp; vbCrLf &amp; "Material Name: " &amp; Fields!MaterialName.Value &amp; vbCrLf &amp; "Lot Number: " &amp; Fields!LotNumber.Value &amp; vbCrLf &amp; "Is Accepted: " &amp; Fields!IsAccepted.Value &amp; vbCrLf &amp; "Verified By User Id: " &amp; Fields!VerifiedByUserId.Value &amp; vbCrLf &amp; "Verified By Name: " &amp; Fields!VerifiedByName.Value &amp; vbCrLf &amp; "Verified At: " &amp; Fields!VerifiedAt.Value &amp; vbCrLf &amp; "Comments: " &amp; Fields!Comments.Value</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#172B3A</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BottomBorder>
+                          <Color>#D5E0E6</Color>
+                          <Style>Solid</Style>
+                          <Width>0.5pt</Width>
+                        </BottomBorder>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="MaterialsDetails" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Materials</DataSetName>
+        <NoRowsMessage>No records recorded for this batch.</NoRowsMessage>
+        <KeepTogether>false</KeepTogether>
+        <Top>3.75in</Top>
+        <Left>0in</Left>
+        <Height>0.9in</Height>
+        <Width>7.5in</Width>
+        <Visibility>
+          <Hidden>=Parameters!View.Value&lt;&gt;"All"</Hidden>
+        </Visibility>
+      </Tablix>
+      <Tablix Name="EquipmentEvidence">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="EquipmentHeading">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>04  Equipment readiness evidence</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <Color>#FFFFFF</Color>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BackgroundColor>#19384A</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.55in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="EquipmentRecord">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="Verification Id: " &amp; Fields!VerificationId.Value &amp; vbCrLf &amp; "Equipment Id: " &amp; Fields!EquipmentId.Value &amp; vbCrLf &amp; "Equipment Code: " &amp; Fields!EquipmentCode.Value &amp; vbCrLf &amp; "Equipment Name: " &amp; Fields!EquipmentName.Value &amp; vbCrLf &amp; "Calibration Due Date: " &amp; Fields!CalibrationDueDate.Value &amp; vbCrLf &amp; "Is Ready: " &amp; Fields!IsReady.Value &amp; vbCrLf &amp; "Calibration Valid: " &amp; Fields!CalibrationValid.Value &amp; vbCrLf &amp; "Verified By User Id: " &amp; Fields!VerifiedByUserId.Value &amp; vbCrLf &amp; "Verified By Name: " &amp; Fields!VerifiedByName.Value &amp; vbCrLf &amp; "Verified At: " &amp; Fields!VerifiedAt.Value &amp; vbCrLf &amp; "Comments: " &amp; Fields!Comments.Value</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#172B3A</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BottomBorder>
+                          <Color>#D5E0E6</Color>
+                          <Style>Solid</Style>
+                          <Width>0.5pt</Width>
+                        </BottomBorder>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="EquipmentDetails" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Equipment</DataSetName>
+        <NoRowsMessage>No records recorded for this batch.</NoRowsMessage>
+        <KeepTogether>false</KeepTogether>
+        <Top>4.800000000000001in</Top>
+        <Left>0in</Left>
+        <Height>0.9in</Height>
+        <Width>7.5in</Width>
+        <Visibility>
+          <Hidden>=Parameters!View.Value&lt;&gt;"All"</Hidden>
+        </Visibility>
+      </Tablix>
+      <Tablix Name="DeviationsEvidence">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="DeviationsHeading">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>05  Deviation review and quality disposition</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <Color>#FFFFFF</Color>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BackgroundColor>#19384A</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.55in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="DeviationsRecord">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="Deviation Id: " &amp; Fields!DeviationId.Value &amp; vbCrLf &amp; "Deviation Code: " &amp; Fields!DeviationCode.Value &amp; vbCrLf &amp; "Step Execution Id: " &amp; Fields!StepExecutionId.Value &amp; vbCrLf &amp; "Description: " &amp; Fields!Description.Value &amp; vbCrLf &amp; "Deviation Status: " &amp; Fields!DeviationStatus.Value &amp; vbCrLf &amp; "Reported By User Id: " &amp; Fields!ReportedByUserId.Value &amp; vbCrLf &amp; "Reported By Name: " &amp; Fields!ReportedByName.Value &amp; vbCrLf &amp; "Opened At: " &amp; Fields!OpenedAt.Value &amp; vbCrLf &amp; "Review Comments: " &amp; Fields!ReviewComments.Value &amp; vbCrLf &amp; "Final Disposition: " &amp; Fields!FinalDisposition.Value &amp; vbCrLf &amp; "Resolved At: " &amp; Fields!ResolvedAt.Value</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#172B3A</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BottomBorder>
+                          <Color>#D5E0E6</Color>
+                          <Style>Solid</Style>
+                          <Width>0.5pt</Width>
+                        </BottomBorder>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="DeviationsDetails" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Deviations</DataSetName>
+        <NoRowsMessage>No records recorded for this batch.</NoRowsMessage>
+        <KeepTogether>false</KeepTogether>
+        <Top>5.85in</Top>
+        <Left>0in</Left>
+        <Height>0.9in</Height>
+        <Width>7.5in</Width>
+        <Visibility>
+          <Hidden>=Parameters!View.Value="Summary"</Hidden>
+        </Visibility>
+      </Tablix>
+      <Tablix Name="SignaturesEvidence">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="SignaturesHeading">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>06  Immutable electronic approvals</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <Color>#FFFFFF</Color>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BackgroundColor>#19384A</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.55in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="SignaturesRecord">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="Signature Id: " &amp; Fields!SignatureId.Value &amp; vbCrLf &amp; "Related Record Type: " &amp; Fields!RelatedRecordType.Value &amp; vbCrLf &amp; "Related Record Id: " &amp; Fields!RelatedRecordId.Value &amp; vbCrLf &amp; "User Id: " &amp; Fields!UserId.Value &amp; vbCrLf &amp; "User Name: " &amp; Fields!UserName.Value &amp; vbCrLf &amp; "Display Name: " &amp; Fields!DisplayName.Value &amp; vbCrLf &amp; "Meaning: " &amp; Fields!Meaning.Value &amp; vbCrLf &amp; "Signed At: " &amp; Fields!SignedAt.Value</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#172B3A</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BottomBorder>
+                          <Color>#D5E0E6</Color>
+                          <Style>Solid</Style>
+                          <Width>0.5pt</Width>
+                        </BottomBorder>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="SignaturesDetails" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Signatures</DataSetName>
+        <NoRowsMessage>No records recorded for this batch.</NoRowsMessage>
+        <KeepTogether>false</KeepTogether>
+        <Top>6.9in</Top>
+        <Left>0in</Left>
+        <Height>0.9in</Height>
+        <Width>7.5in</Width>
+        <Visibility>
+          <Hidden>=Parameters!View.Value&lt;&gt;"All"</Hidden>
+        </Visibility>
+      </Tablix>
+      <Tablix Name="AuditEvidence">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="AuditHeading">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>07  Chronological audit history</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <Color>#FFFFFF</Color>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BackgroundColor>#19384A</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.55in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="AuditRecord">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="Audit Event Id: " &amp; Fields!AuditEventId.Value &amp; vbCrLf &amp; "User Id: " &amp; Fields!UserId.Value &amp; vbCrLf &amp; "User Name: " &amp; Fields!UserName.Value &amp; vbCrLf &amp; "Display Name: " &amp; Fields!DisplayName.Value &amp; vbCrLf &amp; "Action: " &amp; Fields!Action.Value &amp; vbCrLf &amp; "Affected Entity: " &amp; Fields!AffectedEntity.Value &amp; vbCrLf &amp; "Affected Entity Id: " &amp; Fields!AffectedEntityId.Value &amp; vbCrLf &amp; "Occurred At: " &amp; Fields!OccurredAt.Value &amp; vbCrLf &amp; "Resulting State: " &amp; Fields!ResultingState.Value &amp; vbCrLf &amp; "Details: " &amp; Fields!Details.Value</Value>
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#172B3A</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>7pt</PaddingLeft>
+                        <PaddingRight>7pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>5pt</PaddingBottom>
+                        <BottomBorder>
+                          <Color>#D5E0E6</Color>
+                          <Style>Solid</Style>
+                          <Width>0.5pt</Width>
+                        </BottomBorder>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="AuditDetails" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Audit</DataSetName>
+        <NoRowsMessage>No records recorded for this batch.</NoRowsMessage>
+        <KeepTogether>false</KeepTogether>
+        <Top>7.950000000000001in</Top>
+        <Left>0in</Left>
+        <Height>0.9in</Height>
+        <Width>7.5in</Width>
+        <Visibility>
+          <Hidden>=Parameters!View.Value&lt;&gt;"All"</Hidden>
+        </Visibility>
+      </Tablix>
+    </ReportItems>
+    <Height>9in</Height>
+  </Body>
+  <Width>7.5in</Width>
+  <Page>
+    <PageHeight>11in</PageHeight>
+    <PageWidth>8.5in</PageWidth>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.45in</TopMargin>
+    <BottomMargin>0.45in</BottomMargin>
+    <PageFooter>
+      <Height>0.35in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Footer">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="SyncBridge Core | " &amp; Parameters!BatchId.Value &amp; " | Page " &amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+                  <Style>
+                    <FontFamily>Segoe UI</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <Color>#172B3A</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+            </Paragraph>
+          </Paragraphs>
+          <Style>
+            <PaddingLeft>7pt</PaddingLeft>
+            <PaddingRight>7pt</PaddingRight>
+            <PaddingTop>5pt</PaddingTop>
+            <PaddingBottom>5pt</PaddingBottom>
+            <BottomBorder>
+              <Color>#D5E0E6</Color>
+              <Style>Solid</Style>
+              <Width>0.5pt</Width>
+            </BottomBorder>
+          </Style>
+          <Top>0in</Top>
+          <Left>0in</Left>
+          <Height>0.3in</Height>
+          <Width>7.5in</Width>
+        </Textbox>
+      </ReportItems>
+    </PageFooter>
+  </Page>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+</Report>

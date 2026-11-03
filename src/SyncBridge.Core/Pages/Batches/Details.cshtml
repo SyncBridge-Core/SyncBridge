@@ -7,6 +7,15 @@
 <div asp-validation-summary="All" class="text-danger" role="alert"></div>
 <dl><dt>Production order</dt><dd><a asp-page="/Orders/Details" asp-route-number="@batch.OrderNumber">@batch.OrderNumber</a></dd><dt>Recipe</dt><dd>@batch.Recipe.Name (@batch.RecipeCode, version @batch.Recipe.Version)</dd><dt>Planned quantity</dt><dd>@batch.PlannedQuantity</dd><dt>Status</dt><dd>@batch.Status</dd></dl>
 @if (!editable) { <p class="alert alert-success">Completed batch — read-only manufacturing record.</p> }
+@if (!editable && Model.CanReview)
+{
+    <nav aria-label="Completed batch reports" class="d-flex flex-wrap gap-3 mb-3">
+        <a asp-page="/Batches/Report" asp-route-number="@batch.BatchNumber">View Electronic Batch Record</a>
+        <a asp-page="/Batches/Report" asp-route-number="@batch.BatchNumber" asp-route-format="Pdf">Export EBR as PDF</a>
+        <a asp-page="/Batches/Report" asp-route-number="@batch.BatchNumber" asp-route-content="BatchSummary">Batch summary</a>
+        <a asp-page="/Batches/Report" asp-route-number="@batch.BatchNumber" asp-route-content="Deviations">Deviation report</a>
+    </nav>
+}
 @if (Model.CanReview) { <a asp-page="/Audit" asp-route-batchNumber="@batch.BatchNumber">Batch audit history</a> }
 @if (editable && Model.IsOperator)
 {

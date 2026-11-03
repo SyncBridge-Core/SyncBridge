@@ -1,0 +1,93 @@
+[
+  {
+    "File": "A3-B-20261014.pdf",
+    "Pages": 6,
+    "PageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "FieldsChecked": 252,
+    "MissingFields": [],
+    "AllPagesHaveBody": true,
+    "AllPagesNumbered": true,
+    "FormWidgets": 0,
+    "Images": [
+      "A3-B-20261014.page-1.png",
+      "A3-B-20261014.page-2.png",
+      "A3-B-20261014.page-3.png",
+      "A3-B-20261014.page-4.png",
+      "A3-B-20261014.page-5.png",
+      "A3-B-20261014.page-6.png"
+    ]
+  },
+  {
+    "File": "B-DEMO-20261023-001.pdf",
+    "Pages": 7,
+    "PageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "FieldsChecked": 270,
+    "MissingFields": [],
+    "AllPagesHaveBody": true,
+    "AllPagesNumbered": true,
+    "FormWidgets": 0,
+    "Images": [
+      "B-DEMO-20261023-001.page-1.png",
+      "B-DEMO-20261023-001.page-2.png",
+      "B-DEMO-20261023-001.page-3.png",
+      "B-DEMO-20261023-001.page-4.png",
+      "B-DEMO-20261023-001.page-5.png",
+      "B-DEMO-20261023-001.page-6.png",
+      "B-DEMO-20261023-001.page-7.png"
+    ]
+  }
+]
